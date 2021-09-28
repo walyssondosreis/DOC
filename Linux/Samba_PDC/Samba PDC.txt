@@ -1,0 +1,67 @@
+
+
+
+# Definindo Ip Fixo em maquina linux
+-------------------
+sudo mcedit /etc/network/interfaces
+-------------------
+auto eth0
+iface eth0 inet static
+address 172.31.32.164
+netmask 255.255.255.0
+network 172.31.32.0
+broadcast 172.31.32.255
+gateway 172.31.32.203
+dns-nameserver 8.8.8.8
+dns-nameserver 208.67.222.222
+
+-------------------
+sudo mcedit /etc/dhcp/dhclient.conf
+-------------------
+supersede domain-name "opendns.com";
+prepend domain-name-servers 208.67.222.222, 208.67.220.220;
+supersede domain-name "google.com";
+prepend domain-name-servers 8.8.8.8, 8.8.4.4;
+------------------
+sudo /etc/init.d/networking restart
+-------------------
+*Reinicie o computador: restart
+===============================================
+- Instalar Samba
+sudo apt-get install samba
+===============================================
+# Instalar Webmin
+
+echo "deb http://download.webmin.com/download/repository sarge contrib" | sudo tee -a /etc/apt/sources.list
+echo "deb http://webmin.mirror.somersettechsolutions.co.uk/repository sarge contrib" | sudo tee -a /etc/apt/sources.list
+wget -q http://www.webmin.com/jcameron-key.asc -O- | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install webmin apt-transport-https
+
+# Servido Samba AD
+sudo service samba stop
+sudo mv /etc/samba/smb.conf /etc/samba/smb.conf.bkp
+sudo samba-tool domain provision --use-rfc2307 --use-xattrs=yes --use-ntvfs --interactive
+-------------------
+Realm = vox.intra
+Dns Forwar = 172.31.32.203
+-------------------
+sudo cp /var/lib/samba/private/krb5.conf /etc/
+sudo samba-tool domain level show
+sudo samba-tool domain level raise --domain-level 2008_R2 --forest-level 2008_R2
+sudo service samba status
+sudo service samba-ad-dc status
+sudo netstat -tlpen | more
+
+# ME SALVOU QUANDO ERRO SAMBA MASK
+sudo rm /lib/systemd/system/samba.service 
+sudo systemctl enable samba.service nmbd.service
+sudo systemctl start samba
+-------------------------------------------------
+Referências:
+https://www.hardware.com.br/artigos/samba-dominio/
+https://purainfo.com.br/configurando-endereo-ip-esttico-no-ubuntu-server-derivados/
+https://www.edivaldobrito.com.br/instalar-o-webmin-no-ubuntu/
+https://www.vivaolinux.com.br/dica/resolv.conf-com-servidor-DNS-fixo-%28sem-gambiarra%29
+https://askubuntu.com/questions/143819/how-do-i-configure-my-static-dns-in-interfaces
+

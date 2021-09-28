@@ -1,0 +1,47 @@
+
+sudo passwd root
+sudo apt install proftpd  # Instalar cliente de FTP
+hostname # Netbios deve ser o mesmo nome do servidor
+
+testparm # Verifica se dominio foi configurado como pdc
+
+sudo smbpasswd -a root # Define senha p/ usuário root do samba
+sudo mkdir -p /var/samba/netlogon # Criar diretorio netlogon
+sudo chmod 755 /var/samba/netlogon/ 
+sudo mkdir /var/profiles
+sudo chmod 755 /var/profiles
+
+
+netlogon.bat
+---------------------------
+net use H: /HOME
+net time \\srvPDC /set /yes
+--------------------------
+
+# Cadastrar Máquina no Dominio
+sudo useradd -d /dev/null -s /bin/false MEUPC$
+sudo passwd -l MEUPC$
+sudo smbpasswd -a -m MEUPC
+---------------------------
+# Cadastrar Usuario 
+sudo adduser <nome_usuario>
+sudo smbpasswd -a <nome_usuario>
+sudo mkdir /home/<home_usuario>/profile.pds
+sudo chown -R <nome_usuario>.<nome_usuario> /home/<nome_usuario>/profile.pds
+
+---------------------------
+
+# Windows.reg
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\LanmanWorkstation\Parameters]
+"DomainCompatibilityMode"=dword:00000001
+"DNSNameResolutionRequired"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\NetworkProvider\HardenedPaths]
+"\\\\*\\netlogon"="RequireMutualAuthentication=0,RequireIntegrity=0,RequirePrivacy=0"
+
+----------------
+
+
+
