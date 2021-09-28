@@ -2,7 +2,7 @@
 git clone URL
 git status
 git add *
-git commit -m "Minhas Alterações"
+git commit -m "Minhas AlteraÃ§Ãµes"
 git push // PUBLICA DO PC PARA O SERVIDOR
 git pull // BAIXA DO SERVIDOR PARA O PC
 
