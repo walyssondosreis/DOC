@@ -1,0 +1,15 @@
+In Ubuntu 16.04, open terminal (Ctrl+Alt+T) and run the command below instead:
+
+timedatectl set-local-rtc 1 --adjust-system-clock
+
+To check out if your system uses Local time, just run:
+
+timedatectl
+
+you’ll the local time zone is in use in the Warning section.
+
+
+Finally restart and switch to Windows, adjust system clock time if need and done.
+
+Referência:
+https://ubuntuhandbook.org/index.php/2016/05/time-differences-ubuntu-1604-windows-10/

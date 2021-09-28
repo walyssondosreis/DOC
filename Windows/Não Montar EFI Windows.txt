@@ -1,0 +1,29 @@
+Siga as instruções do usuário Japelo_1976 em esta discussão me ajudou.
+
+Você tem que excluir o arquivo de registro com regedit para o volume que você deseja remover a letra da unidade.
+
+Abra o Windows Powershell ou a linha de comando como administrador:
+Start → Clique com o botão direito em Powershell → Run as administrator
+
+Abra o diskpart:% diskpart
+
+Identifique a partição EFI aparecendo no Explorer:
+list volume
+
+Selecione a partição EFI (substituindo X pela letra da unidade correta):% select volume X
+
+Remova a letra da unidade da partição EFI (substituindo X pela letra da unidade correta):% remove letter=X
+
+Saia do diskpart:% exit
+
+Abra o regedit:
+Start → Digite regedit
+
+Encontre a chave / pasta correta:% Computer\HKEY_LOCAL_MACHINE\SYSTEM\MountedDevices
+
+Se a letra da unidade de partições EFI ainda estiver no registro, exclua o valor:
+por exemplo. \DosDevices\X:
+
+Feche o RegEdit e reinicie.
+
+https://sobrelinux.info/questions/397299/how-to-hide-efi-partition

@@ -1,0 +1,29 @@
+Tutorial para quebrar senha do Windows 8
+
+Iniciar a máquina pelo live cd do Linux;
+Acessar a pasta Windows/system32 da instalação do Windows 8;
+Localizar o arquivo OSK.EXE e renomear para OSK.EXE.BKP;
+Localizar o arquivo CMD.EXE e fazer uma cópia do mesmo;
+Renomear a cópia do CMD.EXE para OSK.EXE;
+Reinicie a máquina pelo HD;
+Na tela de logon clique sobre o ícone da central de facilidades ;
+Selecione “Teclado Virtual” e o prompt de comando abrirá;
+Digite o comando “control userpasswords2” e tecle enter;
+Escolha o usuário que deseja quebrar a senha e clique em redefinir senha;
+Cadastre uma nova senha ou deixe em branco;
+Reinicie a máquina e seja feliz!
+
+COMANDOS:
+
+- fdisk -L
+- mount /dev/sda2/ /mnt/
+- cd /mnt
+- Ls
+- cd Windows/
+- cd System32
+- find cmd.exe
+- find osk.exe
+- cp cmd.exe osk.exe
+- reboot
+
+FONTE: http://bithelp.com.br/base/index.php?action=artikel&cat=3&id=53&artlang=pt-br

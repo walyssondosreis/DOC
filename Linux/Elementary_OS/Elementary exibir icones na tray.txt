@@ -1,0 +1,18 @@
+
+sudo add-apt-repository ppa:yunnxx/elementary
+sudo apt update
+sudo apt install indicator-application wingpanel-indicator-ayatana
+
+#Edite o arquivo:
+sudo /etc/xdg/autostart/indicator-application.desktop
+
+#Alterar a linha para:
+OnlyShowIn=Unity;GNOME;Pantheon;
+
+#Caso o ícone de wifi fique duplicado execute e reinicie:
+sudo mv /etc/xdg/autostart/nm-applet.desktop /etc/xdg/autostart/nm-applet.desktop-old
+
+Referências:
+https://elementaryos.stackexchange.com/questions/17452/how-to-display-system-tray-icons-in-elementary-os-juno
+
+https://elementaryos.stackexchange.com/questions/21547/double-wi-fi-icon-after-installing-wingpanel-indicator-ayatana

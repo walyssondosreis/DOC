@@ -1,0 +1,37 @@
+GtkStressTesting # Testa sistema
+MyPaint # Para desenhar
+Gnome Drawing # Estilo paint simples para desenhar
+VSCodium # Mesmo que VSCode da microsoft
+FFaudioConverter # Conversor de audio utilizando ffmpeg
+WinFF # Converte audio e video
+Curlew # Converte arquivos em diversos formatos
+GifCurry # Cria gifs a partir de videos
+Peek # Cria gifs a partir da própria tela
+HomeServer # Ferramenta para compartilhamento de arquivos e pastar na rede local.
+Akira # Cria prototipos de interfaces
+Alacrity # Terminal que roda em GPU
+Fondo # Busca imagens e wallpapers
+QSnapStore # Loja de aplicativos Snaps
+Fragments # Baixador simples de torrent
+Polo File Maneger # Gerenciador de arquivos 
+grsync # Ferramenta para sincronização de arquivos e backup
+e-Dex UI # Terminal completo futurista com gerenciador de arquivos
+Font Finder # Busca fontes de texto para serem usadas no sistema. 
+Minder # Para trabalhar com mapas mentais
+Ochotona Backup # Backup de arquivos
+Vorta # Backup de arquivos.
+Pulse Effects # Equalizador de audio
+Seletor de Cor # Trabalha com cores e codigos para usar em edições.
+Delta Chat # Aplicativo tipo Whatsapp porém q trabalha com base em emails.
+Bottles # Interface para Wine tipo Lutris
+EasyTAG # Editor de tag para arquivos
+Apostrophe # Editor de texto markdown.
+Typora # Editor de texto markdown. 
+Sweet home 3d # Aplicativo para desenhar casa em 3d.
+Natron # Equivale ao After Effects da adobe porém trabalha com nodes em vez de trilhas.
+
+--------------------------------------------------
+EXTENSÕES::::
+Floating Dock # Dock para Gnome
+
+

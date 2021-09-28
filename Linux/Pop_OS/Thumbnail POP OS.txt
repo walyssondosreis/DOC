@@ -1,0 +1,9 @@
+Thumbnails POP OS
+
+sudo apt install libdvdnav4 libdvd-pkg gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly libdvd-pkg
+sudo apt install ubuntu-restricted-extras
+sudo dpkg-reconfigure libdvd-pkg
+
+Referências:
+https://www.reddit.com/r/pop_os/comments/hwq7j9/thumbnails_for_mp4mkv_in_nautilus/
+https://support.system76.com/articles/codecs/
