@@ -1,7 +1,13 @@
-
-
-
-# Definindo Ip Fixo em maquina linux
+===============================================
+# Instalar Ubuntu Server 16
+===============================================
+# Habilitar e logar como root
+sudo passwd root
+===============================================
+# Instalar servidor de arquivos FTP
+sudo apt install proftpd
+===============================================
+# Definir Ip Fixo em maquina linux
 -------------------
 sudo mcedit /etc/network/interfaces
 -------------------
@@ -14,50 +20,70 @@ broadcast 172.31.32.255
 gateway 172.31.32.203
 dns-nameserver 8.8.8.8
 dns-nameserver 208.67.222.222
-
--------------------
-sudo mcedit /etc/dhcp/dhclient.conf
--------------------
-supersede domain-name "opendns.com";
-prepend domain-name-servers 208.67.222.222, 208.67.220.220;
-supersede domain-name "google.com";
-prepend domain-name-servers 8.8.8.8, 8.8.4.4;
 ------------------
-sudo /etc/init.d/networking restart
+sudo /etc/init.d/networking restart # Reinicia o serviço de rede
 -------------------
 *Reinicie o computador: restart
 ===============================================
-- Instalar Samba
+# Instalar Samba
 sudo apt-get install samba
 ===============================================
 # Instalar Webmin
-
 echo "deb http://download.webmin.com/download/repository sarge contrib" | sudo tee -a /etc/apt/sources.list
 echo "deb http://webmin.mirror.somersettechsolutions.co.uk/repository sarge contrib" | sudo tee -a /etc/apt/sources.list
 wget -q http://www.webmin.com/jcameron-key.asc -O- | sudo apt-key add -
 sudo apt-get update
 sudo apt-get install webmin apt-transport-https
-
-# Servido Samba AD
-sudo service samba stop
+===============================================
+# Copiar arq já configurado smb.conf para /etc/samba/
+* Lembrar de fazer bkp do arq original.
 sudo mv /etc/samba/smb.conf /etc/samba/smb.conf.bkp
-sudo samba-tool domain provision --use-rfc2307 --use-xattrs=yes --use-ntvfs --interactive
--------------------
-Realm = vox.intra
-Dns Forwar = 172.31.32.203
--------------------
-sudo cp /var/lib/samba/private/krb5.conf /etc/
-sudo samba-tool domain level show
-sudo samba-tool domain level raise --domain-level 2008_R2 --forest-level 2008_R2
-sudo service samba status
-sudo service samba-ad-dc status
-sudo netstat -tlpen | more
-
-# ME SALVOU QUANDO ERRO SAMBA MASK
-sudo rm /lib/systemd/system/samba.service 
-sudo systemctl enable samba.service nmbd.service
-sudo systemctl start samba
+===============================================
+# Definir permisões e diretórios para usuários Samba
+sudo smbpasswd -a root
+sudo mkdir -p /var/samba/netlogon
+sudo chmod 755 /var/samba/netlogon/ 
+sudo mkdir /var/profiles
+sudo chmod 755 /var/profiles
+testparm # Verifica se dominio foi configurado como pdc
+hostname # Netbios deve ser o mesmo nome do servidor
+===============================================
+# Criar arquivo netlogon.bat em /var/samba/netlogon/
+sudo touch /var/samba/netlogon/netlogon.bat
+sudo mcedit /var/samba/netlogon/netlogon.bat
 -------------------------------------------------
+# netlogon.bat
+-------------------------------------------------
+net use H: /HOME
+net time \\srvPDC /set /yes
+-------------------------------------------------
+===============================================
+# Host cliente executar arq de registro
+-------------------------------------------------
+# Windows.reg
+-------------------------------------------------
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\LanmanWorkstation\Parameters]
+"DomainCompatibilityMode"=dword:00000001
+"DNSNameResolutionRequired"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\NetworkProvider\HardenedPaths]
+"\\\\*\\netlogon"="RequireMutualAuthentication=0,RequireIntegrity=0,RequirePrivacy=0"
+-------------------------------------------------
+===============================================
+# Cadastrar Máquina no Dominio
+sudo useradd -d /dev/null -s /bin/false MEUPC$
+sudo passwd -l MEUPC$
+sudo smbpasswd -a -m MEUPC
+===============================================
+# Cadastrar Usuario 
+sudo adduser <nome_usuario>
+sudo smbpasswd -a <nome_usuario>
+sudo mkdir /home/<home_usuario>/profile.pds
+sudo chown -R <nome_usuario>.<nome_usuario> /home/<nome_usuario>/profile.pds
+===============================================
+
 Referências:
 https://www.hardware.com.br/artigos/samba-dominio/
 https://purainfo.com.br/configurando-endereo-ip-esttico-no-ubuntu-server-derivados/
