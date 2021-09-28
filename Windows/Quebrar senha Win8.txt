@@ -11,7 +11,7 @@ Selecione  Teclado Virtual e o prompt de comando abrir;
 Digite o comando control userpasswords2 e tecle enter;
 Escolha o usu�rio que deseja quebrar a senha e clique em redefinir senha;
 Cadastre uma nova senha ou deixe em branco;
-Reinicie a m�quina e seja feliz!
+Reinicie a maquina e seja feliz!
 
 COMANDOS:
 
