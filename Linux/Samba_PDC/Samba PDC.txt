@@ -47,7 +47,7 @@ sudo mv /etc/samba/smb.conf /etc/samba/smb.conf.bkp
 # Definir permisões e diretórios para usuários Samba
 sudo smbpasswd -a root
 sudo mkdir -p /var/samba/netlogon
-sudo chmod 755 /var/samba/netlogon/ 
+sudo chmod 775 /var/samba/netlogon/ 
 sudo mkdir /var/profiles
 sudo chmod 777 /var/profiles #
 testparm # Verifica se dominio foi configurado como pdc
@@ -92,7 +92,13 @@ sudo chown -R <nome_usuario>.<nome_usuario> /home/<nome_usuario>/profile.pds
 sudo /etc/init.d/samba/ start # Iniciar Samba
 sudo /etc/init.d/samba/ restart # Reiniciar Samba
 sudo /etc/init.d/samba/ stop # Parar Samba
-
+===============================================
+# No Terminal Windows Desabilite o perfil temporário
+Executar : gpedit.msc
+Configuração do computador > 
+Modelos administrativos > 
+Sistema > Perfis de usuário > 
+"Não Conectar usuários com perfis temporários" : Habilitar
 ===============================================
 Referências:
 https://www.hardware.com.br/artigos/samba-dominio/
@@ -100,4 +106,5 @@ https://purainfo.com.br/configurando-endereo-ip-esttico-no-ubuntu-server-derivad
 https://www.edivaldobrito.com.br/instalar-o-webmin-no-ubuntu/
 https://www.vivaolinux.com.br/dica/resolv.conf-com-servidor-DNS-fixo-%28sem-gambiarra%29
 https://askubuntu.com/questions/143819/how-do-i-configure-my-static-dns-in-interfaces
+https://www.terralab.com.br/lib/exe/fetch.php?media=terralab:tecnologias:tutorial_samba.pdf
 
