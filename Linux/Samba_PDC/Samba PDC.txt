@@ -43,15 +43,14 @@ sudo apt-get install webmin apt-transport-https
 # Copiar arq já configurado smb.conf para /etc/samba/
 * Lembrar de fazer bkp do arq original.
 sudo mv /etc/samba/smb.conf /etc/samba/smb.conf.bkp
+*Parâmetro Netbios deve ser o mesmo nome do servidor
 ===============================================
 # Definir permisões e diretórios para usuários Samba
 sudo smbpasswd -a root
 sudo mkdir -p /var/samba/netlogon
 sudo chmod 775 /var/samba/netlogon/ 
-sudo mkdir /var/profiles
-sudo chmod 777 /var/profiles #
-testparm # Verifica se dominio foi configurado como pdc
-hostname # Netbios deve ser o mesmo nome do servidor
+sudo mkdir /var/profiles  # Criar diretório onde ficará os arq perf do usuario.
+sudo chmod 777 /var/profiles
 ===============================================
 # Criar arquivo netlogon.bat em /var/samba/netlogon/
 sudo touch /var/samba/netlogon/netlogon.bat
@@ -82,17 +81,17 @@ sudo useradd -d /dev/null -s /bin/false MEUPC$
 sudo passwd -l MEUPC$
 sudo smbpasswd -a -m MEUPC
 ===============================================
-# Cadastrar Usuario 
+# Cadastrar Usuario no Dominio
 sudo adduser <nome_usuario>
 sudo smbpasswd -a <nome_usuario>
-sudo mkdir /home/<home_usuario>/profile.pds
-sudo chown -R <nome_usuario>.<nome_usuario> /home/<nome_usuario>/profile.pds
 ===============================================
 # Comandos Úteis
 sudo /etc/init.d/samba/ start # Iniciar Samba
 sudo /etc/init.d/samba/ restart # Reiniciar Samba
 sudo /etc/init.d/samba/ stop # Parar Samba
 smbstatus # Retorna lista de usuários e maquinas logadas
+testparm # Verifica erro no arquivo samba para pdc
+hostname # Verifica nome do servidor/maquina
 ===============================================
 # No Terminal Windows Desabilite o perfil temporário
 Executar : gpedit.msc
