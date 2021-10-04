@@ -9,6 +9,12 @@
 # Habilitar e logar como root
 sudo passwd root
 ===============================================
+# Instalar servidor SSH
+sudo apt install openssh-server
+* Alterar parâmetro para root logar via ssh
+mcedit /etc/ssh/ssdh_config
+* PermitRootLogin yes
+===============================================
 # Instalar servidor de arquivos FTP
 sudo apt install proftpd
 ===============================================
