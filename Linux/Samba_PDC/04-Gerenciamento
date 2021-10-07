@@ -1,0 +1,18 @@
+===============================================
+# Cadastrar Máquina no Dominio
+sudo useradd -d /dev/null -s /bin/false MEUPC$
+sudo passwd -l MEUPC$
+sudo smbpasswd -a -m MEUPC
+===============================================
+# Cadastrar Usuario no Dominio
+sudo adduser <nome_usuario>
+sudo smbpasswd -a <nome_usuario>
+===============================================
+# Comandos Úteis
+sudo /etc/init.d/samba/ start # Iniciar Samba
+sudo /etc/init.d/samba/ restart # Reiniciar Samba
+sudo /etc/init.d/samba/ stop # Parar Samba
+smbstatus # Retorna lista de usuários e maquinas logadas
+
+===============================================
+Referências:
