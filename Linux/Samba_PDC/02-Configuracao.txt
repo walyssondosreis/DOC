@@ -79,43 +79,6 @@ net use H: /HOME
 net time \\srvPDC /set /yes
 -------------------------------------------------
 ===============================================
-# Host cliente executar arq de registro
--------------------------------------------------
-# Windows.reg
--------------------------------------------------
-Windows Registry Editor Version 5.00
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\LanmanWorkstation\Parameters]
-"DomainCompatibilityMode"=dword:00000001
-"DNSNameResolutionRequired"=dword:00000000
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\NetworkProvider\HardenedPaths]
-"\\\\*\\netlogon"="RequireMutualAuthentication=0,RequireIntegrity=0,RequirePrivacy=0"
--------------------------------------------------
-===============================================
-# Cadastrar Máquina no Dominio
-sudo useradd -d /dev/null -s /bin/false MEUPC$
-sudo passwd -l MEUPC$
-sudo smbpasswd -a -m MEUPC
-===============================================
-# Cadastrar Usuario no Dominio
-sudo adduser <nome_usuario>
-sudo smbpasswd -a <nome_usuario>
-===============================================
-# Comandos Úteis
-sudo /etc/init.d/samba/ start # Iniciar Samba
-sudo /etc/init.d/samba/ restart # Reiniciar Samba
-sudo /etc/init.d/samba/ stop # Parar Samba
-smbstatus # Retorna lista de usuários e maquinas logadas
-testparm # Verifica erro no arquivo samba para pdc
-===============================================
-# No Terminal Windows Desabilite o perfil temporário
-Executar : gpedit.msc
-Configuração do computador > 
-Modelos administrativos > 
-Sistema > Perfis de usuário > 
-"Não Conectar usuários com perfis temporários" : Habilitar
-===============================================
 # Alterar Script de logon p/ aplicar Wallpaper em terminais
 > Editar smb.conf colocando em [global] logon script = logon.cmd
 > Copiar arquivo logon.cmd para diretório /var/samba/netlogon/
