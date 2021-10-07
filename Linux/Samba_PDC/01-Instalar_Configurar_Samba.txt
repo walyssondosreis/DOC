@@ -2,39 +2,6 @@
 /var/profiles/ # Local onde fica o perfil do usuário e seus arquivos
 /var/samba/netlogon/ # Local onde fica o script de logon nos terminais Windows
 /etc/samba/ # Local onde fica o arquivo de configuração samba (smb.conf)
-
-===============================================
-# Instalar Ubuntu Server 16
-===============================================
-# Habilitar e logar como root
-sudo passwd root
-===============================================
-# Instalar servidor SSH
-sudo apt install openssh-server
-* Alterar parâmetro para root logar via ssh
-mcedit /etc/ssh/sshd_config
-* PermitRootLogin yes
-===============================================
-# Instalar servidor de arquivos FTP
-sudo apt install proftpd
-===============================================
-# Definir Ip Fixo em maquina linux
--------------------
-sudo mcedit /etc/network/interfaces
--------------------
-auto eth0
-iface eth0 inet static
-address 172.31.32.164
-netmask 255.255.255.0
-network 172.31.32.0
-broadcast 172.31.32.255
-gateway 172.31.32.203
-dns-nameserver 8.8.8.8
-dns-nameserver 208.67.222.222
-------------------
-sudo /etc/init.d/networking restart # Reinicia o serviço de rede
--------------------
-*Reinicie o computador: restart
 ===============================================
 # Instalar Samba
 sudo apt-get install samba krb5-user krb5-config winbind libpam-winbind libnss-winbind
@@ -93,18 +60,7 @@ host -t SRV _ldap._tcp.voxconexao.lan # Registro TCP LDAP SRV
 * Verifique a autenticação no Kerberos
 kinit administrator@VOXCONEXAO.LAN
 klist  # Lista usuários autenticados
-===============================================
-# Instalar Webmin
-echo "deb http://download.webmin.com/download/repository sarge contrib" | sudo tee -a /etc/apt/sources.list
-echo "deb http://webmin.mirror.somersettechsolutions.co.uk/repository sarge contrib" | sudo tee -a /etc/apt/sources.list
-wget -q http://www.webmin.com/jcameron-key.asc -O- | sudo apt-key add -
-sudo apt-get update
-sudo apt-get install webmin apt-transport-https
-===============================================
-# Copiar arq já configurado smb.conf para /etc/samba/
-* Lembrar de fazer bkp do arq original.
-sudo mv /etc/samba/smb.conf /etc/samba/smb.conf.bkp
-*Parâmetro Netbios deve ser o mesmo nome do servidor
+
 ===============================================
 # Definir permisões e diretórios para usuários Samba
 sudo smbpasswd -a root
@@ -152,7 +108,6 @@ sudo /etc/init.d/samba/ restart # Reiniciar Samba
 sudo /etc/init.d/samba/ stop # Parar Samba
 smbstatus # Retorna lista de usuários e maquinas logadas
 testparm # Verifica erro no arquivo samba para pdc
-hostname # Verifica nome do servidor/maquina
 ===============================================
 # No Terminal Windows Desabilite o perfil temporário
 Executar : gpedit.msc
