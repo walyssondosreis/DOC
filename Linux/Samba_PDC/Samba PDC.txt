@@ -12,7 +12,7 @@ sudo passwd root
 # Instalar servidor SSH
 sudo apt install openssh-server
 * Alterar parâmetro para root logar via ssh
-mcedit /etc/ssh/ssdh_config
+mcedit /etc/ssh/sshd_config
 * PermitRootLogin yes
 ===============================================
 # Instalar servidor de arquivos FTP
@@ -37,7 +37,52 @@ sudo /etc/init.d/networking restart # Reinicia o serviço de rede
 *Reinicie o computador: restart
 ===============================================
 # Instalar Samba
-sudo apt-get install samba
+sudo apt-get install samba krb5-user krb5-config winbind libpam-winbind libnss-winbind
+*Opções a serem configuradas na instalação:
+Default Kerberos version 5 realm: VOXCONEXAO.LAN  #Colocar em Maiúsculo
+Servidores Kerberos para seu realm: voxconexao.lan #Colocar em Minusculo
+Servidor administrativo para seu realm Kerberos: voxconexao.lan #Colocar em Minusculo
+===============================================
+# Provisionar Samba AD
+* Antes de continuar desabilite os serviços do samba
+sudo systemctl stop samba-ad-dc.service smbd.service nmbd.service winbind.service
+sudo systemctl disable samba-ad-dc.service smbd.service nmbd.service winbind.service
+* Faça backup do arquivo de configuração samba original
+sudo mv /etc/samba/smb.conf /etc/samba/smb.conf.initial
+* Inicie o provisionamento do domínio
+sudo samba-tool domain provision --use-rfc2307 --interactive
+* Opções a serem configuradas no aprovisionamento:
+Realm: VOXCONEXAO.LAN # Colocar em Maiusculo
+Domain: *Manter em branco
+Server Role : *Manter em branco
+DNS backend : *Manter em branco
+DNS forwarder: 172.31.32.203
+Administrator password: Vox******'1n*
+* Faça backup do arquivo conf Kerberos e copie o novo 
+sudo mv /etc/krb5.conf /etc/krb5.conf.initial
+sudo ln -s /var/lib/samba/private/krb5.conf /etc/
+* Habilite novamente os servidos samba
+sudo systemctl start samba-ad-dc.service
+sudo systemctl enable samba-ad-dc.service
+===============================================
+# Teste e Verificação de domínio
+* Verificar nível de domínio compativel com Windows Server 2008 R2
+sudo samba-tool domain level show
+* Configure DNS no arquivo Interfaces
+sudo mcedit /etc/network/interfaces
+* Adicione ao arquivo:
+dns-nameservers 127.0.0.1 172.31.32.203
+dns-search voxconexao.lan
+* Configure o DNS no arquivo Resolv.conf
+sudo mcedit /etc/resolv.conf
+* Adicione ao arquivo:
+nameserver 172.31.32.203
+nameserver 172.31.32.10
+search voxconexao.lan
+* Reinicie o servidor e solicite seu domínio
+
+
+
 ===============================================
 # Instalar Webmin
 echo "deb http://download.webmin.com/download/repository sarge contrib" | sudo tee -a /etc/apt/sources.list
@@ -121,5 +166,5 @@ https://askubuntu.com/questions/143819/how-do-i-configure-my-static-dns-in-inter
 https://www.terralab.com.br/lib/exe/fetch.php?media=terralab:tecnologias:tutorial_samba.pdf
 https://ubuntuforum-br.org/index.php?topic=51291.0
 https://www.vivaolinux.com.br/dica/Samba-Carregar-wallpaper-nas-estacoes-Windows-durante-logon
-
+https://www.tecmint.com/install-samba4-active-directory-ubuntu/
 
