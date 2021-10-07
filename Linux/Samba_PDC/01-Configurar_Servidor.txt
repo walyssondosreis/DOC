@@ -1,0 +1,41 @@
+===============================================
+# Instalar Ubuntu Server 16
+===============================================
+# Habilitar e logar como root
+sudo passwd root
+===============================================
+# Instalar servidor SSH
+sudo apt install openssh-server
+* Alterar parâmetro para root logar via ssh
+mcedit /etc/ssh/sshd_config
+* PermitRootLogin yes
+===============================================
+# Instalar servidor de arquivos FTP
+sudo apt install proftpd
+===============================================
+# Definir Ip Fixo em maquina linux
+-------------------
+sudo mcedit /etc/network/interfaces
+-------------------
+auto eth0
+iface eth0 inet static
+address 172.31.32.164
+netmask 255.255.255.0
+network 172.31.32.0
+broadcast 172.31.32.255
+gateway 172.31.32.203
+dns-nameserver 8.8.8.8
+dns-nameserver 208.67.222.222
+------------------
+sudo /etc/init.d/networking restart # Reinicia o serviço de rede
+-------------------
+*Reinicie o computador: restart
+
+===============================================
+# Instalar Webmin
+echo "deb http://download.webmin.com/download/repository sarge contrib" | sudo tee -a /etc/apt/sources.list
+echo "deb http://webmin.mirror.somersettechsolutions.co.uk/repository sarge contrib" | sudo tee -a /etc/apt/sources.list
+wget -q http://www.webmin.com/jcameron-key.asc -O- | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install webmin apt-transport-https
+===============================================
