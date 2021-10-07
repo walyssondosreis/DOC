@@ -65,7 +65,7 @@ sudo ln -s /var/lib/samba/private/krb5.conf /etc/
 sudo systemctl start samba-ad-dc.service
 sudo systemctl enable samba-ad-dc.service
 ===============================================
-# Teste e Verificação de domínio
+# Configuração de DNS no domínio
 * Verificar nível de domínio compativel com Windows Server 2008 R2
 sudo samba-tool domain level show
 * Configure DNS no arquivo Interfaces
@@ -79,10 +79,20 @@ sudo mcedit /etc/resolv.conf
 nameserver 172.31.32.203
 nameserver 172.31.32.10
 search voxconexao.lan
-* Reinicie o servidor e solicite seu domínio
-
-
-
+* Reinicie o servidor 
+===============================================
+# Testando Domínio
+ping -c3 voxconexao.lan           #Domain Name 
+ping -c3 ntvox01.voxconexao.lan   #FQDN 
+ping -c3 ntvox01                  #Host
+* Execute consultas no Samba AD
+host -t A voxconexao.lan
+host -t A ntvox01.voxconexao.lan
+host -t SRV _kerberos._udp.voxconexao.lan # UDP Kerberos SRV record
+host -t SRV _ldap._tcp.voxconexao.lan # Registro TCP LDAP SRV
+* Verifique a autenticação no Kerberos
+kinit administrator@VOXCONEXAO.LAN
+klist  # Lista usuários autenticados
 ===============================================
 # Instalar Webmin
 echo "deb http://download.webmin.com/download/repository sarge contrib" | sudo tee -a /etc/apt/sources.list
