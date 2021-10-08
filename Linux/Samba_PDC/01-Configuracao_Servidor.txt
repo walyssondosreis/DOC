@@ -37,5 +37,6 @@ echo "deb http://download.webmin.com/download/repository sarge contrib" | sudo t
 echo "deb http://webmin.mirror.somersettechsolutions.co.uk/repository sarge contrib" | sudo tee -a /etc/apt/sources.list
 wget -q http://www.webmin.com/jcameron-key.asc -O- | sudo apt-key add -
 sudo apt-get update
-sudo apt-get install webmin apt-transport-https
+sudo apt install apt-transport-https
+sudo apt install webmin 
 ===============================================
