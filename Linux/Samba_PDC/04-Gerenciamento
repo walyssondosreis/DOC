@@ -84,5 +84,21 @@ sudo /etc/init.d/samba/ stop # Parar Samba
 smbstatus # Retorna lista de usuários e maquinas logadas
 
 ===============================================
+
+# Visualizar usuarios no ubuntu
+
+less /etc/passwd
+*Apenas nomes de Usuarios
+cut -d : -f 1 /etc/passwd
+
+# Visualizar grupos no ubuntu
+less /etc/group
+cut -d : -f 1 /etc/group
+
+# Visualizar usuarios logados na maq local
+w
+who
+===============================================
 Referências:
 https://www.tecmint.com/manage-samba4-active-directory-linux-command-line/
+https://www.hostinger.com.br/tutoriais/usuarios-sistema-linux
