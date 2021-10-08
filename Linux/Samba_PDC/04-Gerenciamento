@@ -33,13 +33,14 @@ sudo systemctl restart samba-ad-dc.service # Reinicie o samba
 sudo pam-auth-update
 * Na tela de configuração do pam todas as opções são marcadas
 sudo mcedit /etc/nsswitch.conf
+* Certifique da opcao 'Create home directory on login'
 * Adicione winbind ao final das linhas de senha e grupo ficando
 passwd: compat winbind
 group: compat winbind
 * Edite o arquivo abaixo e remova a opção use_authtok
 sudo mcedit /etc/pam.d/common-password
 password       [success=1 default=ignore]      pam_winbind.so try_first_pass
-* remova  a opção use_autok toda vez q pam-auth-update for atualizado
+* comente a linha q tem opção use_autok e adicione a linha acima abaixo .toda vez q pam-auth-update for atualizado
 * O Servido wimbindd já esta incluso no samba , portanto remova o serviço antigo 
 sudo systemctl disable winbind.service
 sudo systemctl stop winbind.service
@@ -53,7 +54,7 @@ getent group | grep TESTE
 # Autenticar no sistema com usuário SAMBA AD
 su - your_ad_user # Loga com usuario, se for a primeira vez sera criado a pasta do usuario em /home  
 passwd # Altera a senha de um usuario Samba AD logado
-usermod -aG sudo 'DOMAIN \ your_domain_user' # Coloca usuado samba ao grupo sudo e dá privilegios root no sistema local
+usermod -aG sudo 'DOMAIN\your_domain_user' # Coloca usuado samba ao grupo sudo e dá privilegios root no sistema local
 * Para dar privilégios root a todos os usuario de um grupo adicione a linha ao arquivo apos a linha privilegios de root
 sudo mcedit /etc/sudoers
 %TESTE\\domain\ meugrupo ALL=(ALL:ALL) ALL
@@ -64,6 +65,13 @@ sudo mcedit /etc/sudoers
 sudo useradd -d /dev/null -s /bin/false MEUPC$
 sudo passwd -l MEUPC$
 sudo smbpasswd -a -m MEUPC
+
+# Cadastrar Máquina já adicionando em um grupo
+sudo useradd -g MEUGRUPO -d /dev/null -s /bin/false MEUPC$ 
+sudo passwd -l MEUPC$
+sudo smbpasswd -a -m MEUPC
+
+* obs: O cadastro de máquina só é válido para terminais Windows
 ===============================================
 # Cadastrar Usuario no Dominio
 sudo adduser <nome_usuario>
