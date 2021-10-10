@@ -36,10 +36,16 @@ sudo /etc/init.d/networking restart # Reinicia o serviço de rede
 
 ===============================================
 # Instalar Webmin
-echo "deb http://download.webmin.com/download/repository sarge contrib" | sudo tee -a /etc/apt/sources.list
-wget -q http://www.webmin.com/jcameron-key.asc -O- | sudo apt-key add -
-sudo apt-get update
+* Certifique que o Perl 5 esta instalado
+* Pearl 5 pode estar em /usr/local/bin/perl ou /usr/bin/perl
 sudo apt install apt-transport-https
-sudo apt-get update
-sudo apt install webmin 
+cd /tmp
+wget http://prdownloads.sourceforge.net/webadmin/webmin-1.981.tar.gz
+gunzip webmin-1.981.tar.gz
+tar xf webmin-1.981.tar
+cd webmin-1.981
+./setup.sh /usr/local/webmin
+
 ===============================================
+Referências:
+https://www.webmin.com/tgz.html
