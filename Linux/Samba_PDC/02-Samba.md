@@ -1,4 +1,12 @@
-# Informações de Diretórios
+# SAMBA 4 Active Directory Domain Controller  
+## Instalação e configuração do Samba modo AD-DC
+
+
+
+
+
+~~~
+* Informações de Diretórios
 /var/profiles/ # Local onde fica o perfil do usuário e seus arquivos
 /var/samba/netlogon/ # Local onde fica o script de logon nos terminais Windows
 /etc/samba/ # Local onde fica o arquivo de configuração samba (smb.conf)
@@ -85,7 +93,10 @@ net time \\srvPDC /set /yes
 * A imagem para papel de parede deve ser salva em um diretório q será montado p/ usuário
 * A imagem para papel de parede só pode ser .bmp (Bitmap)
 ===============================================
-Referências:
+
+~~~
+-------------
+## Referências:
 https://www.hardware.com.br/artigos/samba-dominio/
 https://purainfo.com.br/configurando-endereo-ip-esttico-no-ubuntu-server-derivados/
 https://www.edivaldobrito.com.br/instalar-o-webmin-no-ubuntu/
