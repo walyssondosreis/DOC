@@ -36,7 +36,7 @@
       ~~~
     * Reinicie o serviço de rede:
     * `/etc/init.d/networking restart`
-* Instale o Webmin para facilitar a gerência e o monitoramento do servidor:
+* Instale o **Webmin** para facilitar a gerência e o monitoramento do servidor:
     * Certifique que o Perl 5 esta instalado:
       * `perl --version` 
     * Verifique o local da instalação /usr/local/bin/perl ou /usr/bin/perl
