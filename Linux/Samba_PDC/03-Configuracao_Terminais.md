@@ -1,3 +1,10 @@
+# SAMBA 4 Active Directory Domain Controller  
+## Configuração de Terminais
+
+
+
+
+~~~
 WINDOWS TERMINAL
 
 ===============================================
@@ -30,7 +37,8 @@ sudo apt install cid cid-gtk
 sudo cid-gtk
 sudo cid status
 sudo service cid status
+~~~
+-----
+## Referências:
+https://mundodacomputacaointegral.blogspot.com/2020/01/ingressando-maquina-linux-no-dominio-ad.html  
 
-===============================================
-Referências:
-https://mundodacomputacaointegral.blogspot.com/2020/01/ingressando-maquina-linux-no-dominio-ad.html
