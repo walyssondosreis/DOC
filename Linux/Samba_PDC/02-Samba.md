@@ -30,8 +30,8 @@
       * `mv /etc/krb5.conf /etc/krb5.conf.initial`
       * `ln -s /var/lib/samba/private/krb5.conf /etc/`
     * Habilite novamente os servidos do Samba:
-      * `systemctl start samba-ad-dc.service`
       * `systemctl enable samba-ad-dc.service`
+      * `systemctl start samba-ad-dc.service`
 * Configuração de DNS no domínio:
     * Verifique o nível do domínio aprovisionado se é compativel ao *Windows Server 2008 R2*:
       * `samba-tool domain level show`
