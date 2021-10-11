@@ -52,7 +52,9 @@
          ~~~
     * Reinicie o serviço de rede:
       * `/etc/init.d/networking restart`
-
+* O serviço wimbindd já esta incluso no samba, portanto desabilite o serviço antigo:
+    * `systemctl disable winbind.service`
+    * `systemctl stop winbind.service`
 * Testando domínio aprovisionado:
     * `ping -c3 meudominio.lan`     *(Solicita nome de domínio)* 
     * `ping -c3 srv`                *(Solicita nome do servidor local)*
