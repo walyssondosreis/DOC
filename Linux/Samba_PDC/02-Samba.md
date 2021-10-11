@@ -13,12 +13,12 @@
       * Servidor administrativo para seu realm Kerberos: meudominio.lan
 * Faça o provisionamento do Samba AD:
     * Antes de continuar desabilite os serviços do samba:
-      * `sudo systemctl stop samba-ad-dc.service smbd.service nmbd.service winbind.service`
-      * `sudo systemctl disable samba-ad-dc.service smbd.service nmbd.service winbind.service`
+      * `systemctl stop samba-ad-dc.service smbd.service nmbd.service winbind.service`
+      * `systemctl disable samba-ad-dc.service smbd.service nmbd.service winbind.service`
     * Faça backup do arquivo de configuração original do samba:
-      * `sudo mv /etc/samba/smb.conf /etc/samba/smb.conf.initial`
+      * `mv /etc/samba/smb.conf /etc/samba/smb.conf.initial`
     * Inicie o provisionamento do domínio:
-      * `sudo samba-tool domain provision --use-rfc2307 --interactive`
+      * `samba-tool domain provision --use-rfc2307 --interactive`
         * Opções a serem configuradas no aprovisionamento:
         * Realm: MEUDOMINIO.LAN *(Digite em Maiúsculo)*
         * Domain: *(Manter padrão: Apenas Confirme)*
@@ -27,16 +27,16 @@
         * DNS forwarder: 192.164.0.254
         * Administrator password: *(Digite uma senha Forte)*
     * Faça backup do arquivo conf Kerberos e copie o novo:
-      * `sudo mv /etc/krb5.conf /etc/krb5.conf.initial`
-      * `sudo ln -s /var/lib/samba/private/krb5.conf /etc/`
+      * `mv /etc/krb5.conf /etc/krb5.conf.initial`
+      * `ln -s /var/lib/samba/private/krb5.conf /etc/`
     * Habilite novamente os servidos do Samba:
-      * `sudo systemctl start samba-ad-dc.service`
-      * `sudo systemctl enable samba-ad-dc.service`
+      * `systemctl start samba-ad-dc.service`
+      * `systemctl enable samba-ad-dc.service`
 * Configuração de DNS no domínio:
     * Verifique o nível do domínio aprovisionado se é compativel ao *Windows Server 2008 R2*:
-      * `sudo samba-tool domain level show`
+      * `samba-tool domain level show`
     * Configure o DNS no arquivo *interfaces*:
-      * `sudo mcedit /etc/network/interfaces`
+      * `mcedit /etc/network/interfaces`
       * Adicione ao arquivo:
          ~~~
          dns-nameservers 127.0.0.1 192.168.0.254
