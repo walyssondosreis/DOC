@@ -1,6 +1,31 @@
 # SAMBA 4 Active Directory Domain Controller  
 ## Gerenciamento Servidor Samba-AD-DC
 
+* Cadastrar máquina no dominio:
+  * `useradd -d /dev/null -s /bin/false meupc$`
+  * `passwd -l meupc$`
+  * `smbpasswd -a -m meupc`
+
+* Cadastrar máquina já adicionando em um grupo existente:
+  * `sudo useradd -g meugrupo -d /dev/null -s /bin/false meupc$` 
+  * `sudo passwd -l meupc$`
+  * `sudo smbpasswd -a -m meupc`
+  * Obs: O cadastro de máquina só é necessário para terminais Windows.
+
+* Cadastrar usuario no dominio:
+  * `sudo adduser meuusuario`
+  * `sudo smbpasswd -a meuusuario`
+
+* Comandos uteis
+  * `sudo /etc/init.d/samba/ start` - *Inicia serviço do Samba*
+  * `sudo /etc/init.d/samba/ restart`  - *Reinicia serviço do Samba*
+  * `sudo /etc/init.d/samba/ stop` - *Interrompe serviço do Samba*
+  * `sudo systemctl start samba-ad-dc.service` - *Inicia serviço do Samba*
+  * `sudo systemctl restart samba-ad-dc.service` - *Reinicia serviço do Samba*
+  * `sudo systemctl stop samba-ad-dc.service` - *Interrompe serviço do Samba*
+  * `smbstatus` - *Retorna informações de login de usuários no domínio*
+  * `testparm` - *Verifica se há erros no arquivo smb.conf*
+
 ~~~
 samba-tool -h # Exibe todas as opções da ferramenta samba tool
 samba-tool user add meuusuario  # Cria usuario no Samba
@@ -27,24 +52,7 @@ samba-tool domain passwordsettings set --min-pwd-age=0
 samba-tool domain passwordsettings set --max-pwd-age=0
 samba-tool domain passwordsettings set --min-pwd-length=4
 ===============================================
-# Autenticação local do Samba usando contas do Active Directory
-* Adicione linhas ao escopo global do /etc/samba/smb.conf
-winbind enum users = yes
-winbind enum groups = yes
-# Execute o testparm para verificar se há erro no smb.conf
-testparm 
-sudo systemctl restart samba-ad-dc.service # Reinicie o samba
-sudo pam-auth-update
-* Na tela de configuração do pam todas as opções são marcadas
-sudo mcedit /etc/nsswitch.conf
-* Certifique da opcao 'Create home directory on login'
-* Adicione winbind ao final das linhas de senha e grupo ficando
-passwd: compat winbind
-group: compat winbind
-* Edite o arquivo abaixo e remova a opção use_authtok
-sudo mcedit /etc/pam.d/common-password
-password       [success=1 default=ignore]      pam_winbind.so try_first_pass
-* comente a linha q tem opção use_autok e adicione a linha acima abaixo .toda vez q pam-auth-update for atualizado
+
 * O Servido wimbindd já esta incluso no samba , portanto remova o serviço antigo 
 sudo systemctl disable winbind.service
 sudo systemctl stop winbind.service
@@ -55,37 +63,11 @@ wbinfo -i your_domain_user
 getent passwd | grep TESTE
 getent group | grep TESTE
 ===============================================
-# Autenticar no sistema com usuário SAMBA AD
-su - your_ad_user # Loga com usuario, se for a primeira vez sera criado a pasta do usuario em /home  
-passwd # Altera a senha de um usuario Samba AD logado
+
 usermod -aG sudo 'DOMAIN\your_domain_user' # Coloca usuado samba ao grupo sudo e dá privilegios root no sistema local
 * Para dar privilégios root a todos os usuario de um grupo adicione a linha ao arquivo apos a linha privilegios de root
 sudo mcedit /etc/sudoers
 %TESTE\\domain\ meugrupo ALL=(ALL:ALL) ALL
-
-================================================================================================================
-===============================================
-# Cadastrar Máquina no Dominio
-sudo useradd -d /dev/null -s /bin/false MEUPC$
-sudo passwd -l MEUPC$
-sudo smbpasswd -a -m MEUPC
-
-# Cadastrar Máquina já adicionando em um grupo
-sudo useradd -g MEUGRUPO -d /dev/null -s /bin/false MEUPC$ 
-sudo passwd -l MEUPC$
-sudo smbpasswd -a -m MEUPC
-
-* obs: O cadastro de máquina só é válido para terminais Windows
-===============================================
-# Cadastrar Usuario no Dominio
-sudo adduser <nome_usuario>
-sudo smbpasswd -a <nome_usuario>
-===============================================
-# Comandos Úteis
-sudo /etc/init.d/samba/ start # Iniciar Samba
-sudo /etc/init.d/samba/ restart # Reiniciar Samba
-sudo /etc/init.d/samba/ stop # Parar Samba
-smbstatus # Retorna lista de usuários e maquinas logadas
 
 ===============================================
 
