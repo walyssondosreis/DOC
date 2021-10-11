@@ -67,6 +67,152 @@
       * `klist`  *(Lista usuários autenticados)*
 * No Webmin atualize os módulos:
     * Menu Esquerdo > Refresh Modules 
+
+## Arquivo SMB.CONF:
+~~~
+# PDC 
+# by Walysson dos Reis
+
+[global]
+	logon home = \\%L\%U\.profiles
+	local master = yes
+	preferred master = yes
+	domain logons = yes
+ok	workgroup = vox
+	ntlm auth = yes
+ok	netbios name = ntvox01
+	client lanman auth = yes
+	server string = Dominio Vox Conexao
+	domain master = yes
+	use client driver = yes
+	os level = 100
+	security = user
+	client ntlmv2 auth = yes
+	logon path = \\%L\profiles\%U
+	logon script = logon.cmd
+#	logon script = netlogon.bat 
+	encrypt passwords = yes
+	lanman auth = yes
+	server max protocol = NT1
+
+[netlogon]
+	browseable = no
+	comment = Servico de Logon
+	path = /var/samba/netlogon
+
+[homes]
+	valid users = %S
+	comment = Diretorio Home
+	writeable = yes
+	public = yes
+	browseable = No
+
+[profiles]
+	path = /home/.profiles
+	create mask = 0650
+	directory mask = 0750
+	available = yes
+	browseable = no
+	public = no
+	writable = yes
+ 
+[Publico]
+	writeable = yes
+	public = yes
+	comment = Area publica do dominio
+	path = /home/vox/publico
+
+[Auditoria]
+	path = /home/vox/auditoria
+	write list = @auditoria
+	valid users = @auditoria
+
+[Central Gerencia de Redes]
+	path = /home/vox/cgr
+	write list = @cgr
+	valid users = @cgr
+
+[Comercial]
+	path = /home/vox/comercial
+	write list = @comercial
+	valid users = @comercial
+
+[Compras]
+	path = /home/vox/compras
+	write list = @compras
+	valid users = @compras
+
+[Diretoria]
+	path = /home/vox/diretoria
+	write list = @diretoria
+	valid users = @diretoria
+
+[Departamento Pessoal]
+	path = /home/vox/dp
+	write list = @dp
+	valid users = @dp
+
+[Financeiro]
+	path = /home/vox/financeiro
+	write list = @financeiro
+	valid users = @financeiro
+
+[Financeiro Gerencia]
+	path = /home/vox/financeirogr
+	write list = @financeiro_ger
+	valid users = @financeiro_ger
+
+[Central de Relacionamentos]
+	path = /home/vox/cr
+	write list = @cr
+	valid users = @cr
+
+[LGPD]
+	path = /home/vox/lgpd
+	write list = @lgpd
+	valid users = @lgpd
+
+[Marketing]
+	path = /home/vox/marketing
+	write list = @marketing
+	valid users = @marketing
+
+[Operacoes]
+	path = /home/vox/operacoes
+	write list = @operacoes
+	valid users = @operacoes
+
+[RAC]
+	path = /home/vox/rac
+	write list = @rac
+	valid users = @rac
+
+[RH_RAC]
+	path = /home/vox/rh_rac
+	write list = @rh_rac
+	valid users = @rh_rac
+
+[Vendas a Distancia]
+	path = /home/vox/vad
+	write list = @vad
+	valid users = @vad
+
+[Recursos Humanos]
+	path = /home/vox/rh
+    write list = @rh
+	valid users = @rh
+
+[RH_DEV]
+	path = /home/vox/rh_dev
+	write list = @rh_dev
+	valid users = @rh_dev
+
+[Tecnologia da Informacao]
+	path = /home/vox/ti
+	write list = @ti
+	valid users = @ti
+
+~~~
 ~~~
 ===============================================
 # Definir permisões e diretórios para usuários Samba
