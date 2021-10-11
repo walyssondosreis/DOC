@@ -1,3 +1,7 @@
+# SAMBA 4 Active Directory Domain Controller  
+## Gerenciamento Servidor Samba-AD-DC
+
+~~~
 samba-tool -h # Exibe todas as opções da ferramenta samba tool
 samba-tool user add meuusuario  # Cria usuario no Samba
 samba-tool user add -h  
@@ -98,7 +102,8 @@ cut -d : -f 1 /etc/group
 # Visualizar usuarios logados na maq local
 w
 who
-===============================================
-Referências:
-https://www.tecmint.com/manage-samba4-active-directory-linux-command-line/
-https://www.hostinger.com.br/tutoriais/usuarios-sistema-linux
+~~~
+--------------
+## Referências:
+https://www.tecmint.com/manage-samba4-active-directory-linux-command-line/  
+https://www.hostinger.com.br/tutoriais/usuarios-sistema-linux  
