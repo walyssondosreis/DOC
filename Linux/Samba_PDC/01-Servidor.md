@@ -52,5 +52,7 @@
     * Webmin > Webmin Configuration > SSL Encryption : Enable SSL
 --------
 ## Referências
-<https://www.webmin.com/tgz.html>  
+https://www.webmin.com/tgz.html  
+https://purainfo.com.br/configurando-endereo-ip-esttico-no-ubuntu-server-derivados/  
+
 
