@@ -32,42 +32,41 @@
     * Habilite novamente os servidos do Samba:
       * `sudo systemctl start samba-ad-dc.service`
       * `sudo systemctl enable samba-ad-dc.service`
+* Configuração de DNS no domínio:
+    * Verifique o nível do domínio aprovisionado se é compativel ao *Windows Server 2008 R2*:
+      * `sudo samba-tool domain level show`
+    * Configure o DNS no arquivo *interfaces*:
+      * `sudo mcedit /etc/network/interfaces`
+      * Adicione ao arquivo:
+         ~~~
+         dns-nameservers 127.0.0.1 192.168.0.254
+         dns-search meudominio.lan
+         ~~~
+    * Configure o DNS no arquivo *resolv.conf*:
+      * `mcedit /etc/resolv.conf`
+      * Adicione ao arquivo:
+         ~~~
+         nameserver 192.168.0.254
+         nameserver 192.168.0.1
+         search meudominio.lan
+         ~~~
+    * Reinicie o serviço de rede:
+      * `/etc/init.d/networking restart`
+
+* Testando domínio aprovisionado:
+    * `ping -c3 meudominio.lan`     *(Solicita nome de domínio)* 
+    * `ping -c3 srv`                *(Solicita nome do servidor local)*
+    * `ping -c3 srv.meudominio.lan` *(Solicita FQDN)*
+    * Execute consultas no Samba AD-DC:
+      * `host -t A meudominio.lan`
+      * `host -t A srv.meudominio.lan`
+      * `host -t SRV _kerberos._udp.meudominio.lan` 
+      * `host -t SRV _ldap._tcp.meudominio.lan` 
+    * Verifique a autenticação no Kerberos:
+      * `kinit administrator@VOXCONEXAO.LAN`
+      * `klist`  *(Lista usuários autenticados)*
 
 ~~~
-* 
-
-===============================================
-
-===============================================
-# Configuração de DNS no domínio
-* Verificar nível de domínio compativel com Windows Server 2008 R2
-sudo samba-tool domain level show
-* Configure DNS no arquivo Interfaces
-sudo mcedit /etc/network/interfaces
-* Adicione ao arquivo:
-dns-nameservers 127.0.0.1 172.31.32.203
-dns-search voxconexao.lan
-* Configure o DNS no arquivo Resolv.conf
-sudo mcedit /etc/resolv.conf
-* Adicione ao arquivo:
-nameserver 172.31.32.203
-nameserver 172.31.32.10
-search voxconexao.lan
-* Reinicie o servidor 
-===============================================
-# Testando Domínio
-ping -c3 voxconexao.lan           #Domain Name 
-ping -c3 ntvox01.voxconexao.lan   #FQDN 
-ping -c3 ntvox01                  #Host
-* Execute consultas no Samba AD
-host -t A voxconexao.lan
-host -t A ntvox01.voxconexao.lan
-host -t SRV _kerberos._udp.voxconexao.lan # UDP Kerberos SRV record
-host -t SRV _ldap._tcp.voxconexao.lan # Registro TCP LDAP SRV
-* Verifique a autenticação no Kerberos
-kinit administrator@VOXCONEXAO.LAN
-klist  # Lista usuários autenticados
-
 ===============================================
 # Definir permisões e diretórios para usuários Samba
 sudo smbpasswd -a root
@@ -92,17 +91,12 @@ net time \\srvPDC /set /yes
 * A imagem para papel de parede deve ser salva em um diretório q será montado p/ usuário
 * A imagem para papel de parede só pode ser .bmp (Bitmap)
 ===============================================
-
 ~~~
 -------------
 ## Referências:
 https://www.hardware.com.br/artigos/samba-dominio/  
-https://purainfo.com.br/configurando-endereo-ip-esttico-no-ubuntu-server-derivados/  
-https://www.edivaldobrito.com.br/instalar-o-webmin-no-ubuntu/  
-https://www.vivaolinux.com.br/dica/resolv.conf-com-servidor-DNS-fixo-%28sem-gambiarra%29  
-https://askubuntu.com/questions/143819/how-do-i-configure-my-static-dns-in-interfaces  
 https://www.terralab.com.br/lib/exe/fetch.php?media=terralab:tecnologias:tutorial_samba.pdf  
 https://ubuntuforum-br.org/index.php?topic=51291.0  
 https://www.vivaolinux.com.br/dica/Samba-Carregar-wallpaper-nas-estacoes-Windows-durante-logon  
-https://www.tecmint.com/install-samba4-active-directory-ubuntu/  
+https://www.tecmint.com/install-samba4-active-directory-ubuntu/
 
