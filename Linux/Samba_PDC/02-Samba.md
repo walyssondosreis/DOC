@@ -65,7 +65,8 @@
     * Verifique a autenticação no Kerberos:
       * `kinit administrator@VOXCONEXAO.LAN`
       * `klist`  *(Lista usuários autenticados)*
-
+* No Webmin atualize os módulos:
+    * Menu Esquerdo > Refresh Modules 
 ~~~
 ===============================================
 # Definir permisões e diretórios para usuários Samba
