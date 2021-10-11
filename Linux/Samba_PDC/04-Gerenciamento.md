@@ -1,20 +1,42 @@
 # SAMBA 4 Active Directory Domain Controller  
 ## Gerenciamento Servidor Samba-AD-DC
 
-* Cadastrar máquina no dominio:
+* Criar conta de máquina no dominio:
   * `useradd -d /dev/null -s /bin/false meupc$`
   * `passwd -l meupc$`
   * `smbpasswd -a -m meupc`
 
-* Cadastrar máquina já adicionando em um grupo existente:
+* Criar conta de máquina já adicionando em um grupo existente:
   * `sudo useradd -g meugrupo -d /dev/null -s /bin/false meupc$` 
   * `sudo passwd -l meupc$`
   * `sudo smbpasswd -a -m meupc`
   * Obs: O cadastro de máquina só é necessário para terminais Windows.
 
-* Cadastrar usuario no dominio:
-  * `sudo adduser meuusuario`
-  * `sudo smbpasswd -a meuusuario`
+* Manipulação de **Usuários Samba**:
+  * `adduser meuusuario` - *Cria usuário no servidor local*
+  * `smbpasswd -a meuusuario` - *Adiciona usuário criado a lista de usuários do Samba*
+  * `samba-tool user list`  - *Lista usuarios*
+  * `samba-tool user setpassword meuusuario` - *Redefine senha de usuário*
+  * `samba-tool user disable meusuario` - *Desabilita usuario*
+  * `samba-tool user enable meuusuario` - *Habilita usuario*
+
+* Manipulação de **Grupos Samba**:
+  * `samba-tool group add –h` - *Ajuda para o comando*  
+  * `samba-tool group add meugrupo` - *Cria grupo* 
+  * `samba-tool group delete meugrupo` - *Deleta grupo*
+  * `samba-tool group list` - *Lista grupos*
+  * `samba-tool group listmembers meugrupo` - *Lista membros de um grupo*
+  * `samba-tool group addmembers meugrupo meuusuario` - *Adiciona usuário a grupo*
+  * `samba-tool group remove members meugrupo meuusuario` - *Remove usuário de grupo*
+
+* Manipulação de **Politica de Senhas do Domínio**:
+  * `samba-tool domain passwordsettings show` - *Exibe definições de política de senha*
+  * `samba-tool domain passwordsettings -h` - *Ajuda para o comando*
+  * `samba-tool domain passwordsettings set --complexity=off` - *Altera complexidade de senha*
+  * `samba-tool domain passwordsettings set --history-length=0` - *Quantidade de senhas memorizadas*
+  * `samba-tool domain passwordsettings set --min-pwd-age=0` - *Tempo mínimo para renovação de senha*
+  * `samba-tool domain passwordsettings set --max-pwd-age=0` - *Tempo máximo para renovação de senha*
+  * `samba-tool domain passwordsettings set --min-pwd-length=4` - *Tamanho mínimo de senha aceitável*
 
 * Comandos uteis
   * `sudo /etc/init.d/samba/ start` - *Inicia serviço do Samba*
@@ -25,44 +47,13 @@
   * `sudo systemctl stop samba-ad-dc.service` - *Interrompe serviço do Samba*
   * `smbstatus` - *Retorna informações de login de usuários no domínio*
   * `testparm` - *Verifica se há erros no arquivo smb.conf*
+  * `wbinfo -g` - *Lista grupos usando ferramenta wimbindd*
+  * `wbinfo -u` - *Lista usuários usando ferramenta wimbindd*
+  * `wbinfo -i meusuario` - *Consulta informação de login de usuario usando ferramenta wimbindd*
+  * `getent passwd | grep MEUDOMINIO` - *Lista usuários consultando diretamente arquivos*
+  * `getent group | grep MEUDOMINIO` - *Lista grupos consultando diretamente arquivos*
 
 ~~~
-samba-tool -h # Exibe todas as opções da ferramenta samba tool
-samba-tool user add meuusuario  # Cria usuario no Samba
-samba-tool user add -h  
-samba-tool user add your_domain_user --given-name = your_name --surname = your_username --mail-address=your_domain_user@tecmint.lan --login-shell = /bin/bash
-samba-tool user list # Lista todos os usuarios Samba do dominio
-samba-tool user delete your_domain_user # Exclui usuario do samba
-samba-tool user setpassword your_domain_user # Redefinir senha usuario samba
-samba-tool user disable your_domain_user # Desabilita usuario samba
-samba-tool user enable your_domain_user # Habilita usuario samba
-samba-tool group add –h  
-samba-tool group add your_domain_group
-samba-tool group delete your_domain_group
-samba-tool group list
-samba-tool group listmembers "grupo seu_dominio"
-samba-tool group addmembers your_domain_group your_domain_user
-samba-tool group remove members your_domain_group your_domain_user
-* Alterar Politica de Senhas do Domínio
-samba-tool domain passwordsettings show
-samba-tool domain passwordsettings -h 
-samba-tool domain passwordsettings set --complexity=off
-samba-tool domain passwordsettings set --history-length=0
-samba-tool domain passwordsettings set --min-pwd-age=0
-samba-tool domain passwordsettings set --max-pwd-age=0
-samba-tool domain passwordsettings set --min-pwd-length=4
-===============================================
-
-* O Servido wimbindd já esta incluso no samba , portanto remova o serviço antigo 
-sudo systemctl disable winbind.service
-sudo systemctl stop winbind.service
-# Usando wbinfo para consulta de usuarios e grupos ferramento do serviço wimbindd
-wbinfo -g
-wbinfo -u
-wbinfo -i your_domain_user
-getent passwd | grep TESTE
-getent group | grep TESTE
-===============================================
 
 usermod -aG sudo 'DOMAIN\your_domain_user' # Coloca usuado samba ao grupo sudo e dá privilegios root no sistema local
 * Para dar privilégios root a todos os usuario de um grupo adicione a linha ao arquivo apos a linha privilegios de root
