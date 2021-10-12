@@ -70,6 +70,35 @@
 * No Webmin atualize os módulos:
     * Menu Esquerdo > Refresh Modules 
 
+* Autenticação local Samba usando contas de usuários do domínio
+    * Adicione ao arquivo smb.conf na sessão global:
+    	*  mcedit /etc/samba/smb.conf 
+    	 ~~~
+	  template shell = /bin/bash
+	  winbind use default domain = true
+	  winbind offline logon = false
+	  winbind nss info = rfc2307
+	  winbind enum users = yes
+	  winbind enum groups = yes
+     	 ~~~
+    * testparm
+    * systemctl restart samba-ad-dc.service
+    * pam-auth-update
+    * Marque todas as opções
+    * Edite o arquivo nsswitch.conf e adicione as linhas de passwd e group:
+    * mcedit /etc/nsswitch.conf
+    ~~~
+    passwd: compat winbind
+    group:  compat winbind
+    ...
+    ~~~
+    * mcedit /etc/pam.d/common-password
+    * Remova use_authtok da linha:
+    ~~~
+    password [success=1 default=ignore] pam_winbind.so try_first_pass
+    ~~~
+    * Sempre que o modulo PAM for atualizado este ultimo passo deverá ser feito
+
 ## Arquivo SMB.CONF:
 ~~~
 # PDC 
