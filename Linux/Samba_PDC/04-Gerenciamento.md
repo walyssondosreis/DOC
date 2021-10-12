@@ -23,6 +23,12 @@
   * `samba-tool user disable meusuario` - *Desabilita usuario*
   * `samba-tool user enable meuusuario` - *Habilita usuario*
 
+* Logando com usuário do Samba-AD-DC no servidor local:
+  * su - meusuario
+  * Será exibida a mensagem a primeira vez informado ter sido criado pasta do usuario. 
+  * id - Mostra id do usuario logado
+  * passwd - Troca senha do usuario Samba logado.
+
 * Manipulação de **Grupos Samba**:
   * `samba-tool group add –h` - *Ajuda para o comando*  
   * `samba-tool group add meugrupo` - *Cria grupo* 
@@ -56,15 +62,14 @@
   * `getent passwd | grep MEUDOMINIO` - *Lista usuários consultando diretamente arquivos*
   * `getent group | grep MEUDOMINIO` - *Lista grupos consultando diretamente arquivos*
 
+* Conceder poderes root a usuário Samba-AD-DC
+  * usermod -aG sudo 'DOMAIN\your_domain_user' - Coloca usuado samba ao grupo sudo e dá privilegios root no sistema local
+  * Para dar privilégios root a todos os usuario de um grupo adicione a linha ao arquivo apos a linha privilegios de root
+    * sudo mcedit /etc/sudoers
+     ~~~
+     %TESTE\\domain\ meugrupo ALL=(ALL:ALL) ALL
+     ~~~
 ~~~
-
-usermod -aG sudo 'DOMAIN\your_domain_user' # Coloca usuado samba ao grupo sudo e dá privilegios root no sistema local
-* Para dar privilégios root a todos os usuario de um grupo adicione a linha ao arquivo apos a linha privilegios de root
-sudo mcedit /etc/sudoers
-%TESTE\\domain\ meugrupo ALL=(ALL:ALL) ALL
-
-===============================================
-
 # Visualizar usuarios no ubuntu
 
 less /etc/passwd
