@@ -15,6 +15,9 @@
 * Manipulação de **Usuários Samba**:
   * `adduser meuusuario` - *Cria usuário no servidor local*
   * `smbpasswd -a meuusuario` - *Adiciona usuário criado a lista de usuários do Samba*
+  * `samba-tool user add meuusuario`  - *Cria usuario*
+  * `samba-tool user add -h`  - *Ajuda para o comando*
+  * `samba-tool user delete meusuario`  - *Deleta usuario*
   * `samba-tool user list`  - *Lista usuarios*
   * `samba-tool user setpassword meuusuario` - *Redefine senha de usuário*
   * `samba-tool user disable meusuario` - *Desabilita usuario*
