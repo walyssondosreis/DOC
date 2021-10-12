@@ -36,6 +36,11 @@
       ~~~
     * Reinicie o serviço de rede:
     * `/etc/init.d/networking restart`
+
+* Instale o Servidor de tempo NTP
+    * apt-get install ntp ntpdate
+
+
 * Instale o **Webmin** para facilitar a gerência e o monitoramento do servidor:
     * Certifique que o Perl 5 esta instalado:
       * `perl --version` 
