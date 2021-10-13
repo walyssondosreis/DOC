@@ -1,7 +1,7 @@
 # SAMBA 4 Active Directory Domain Controller  
 ## Configuração de Terminais
 ### Windows
-* Defina no host como DNS primário o endereço do servidor Samba-AD-DC: 192.168.0.1
+* Antes de ingressar no domínio defina no host como DNS primário o endereço do servidor Samba-AD-DC: 192.168.0.1
 
 ### Linux
 * `sudo add-apt-repository ppa:emoraes25/cid`
