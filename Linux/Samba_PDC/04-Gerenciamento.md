@@ -9,6 +9,7 @@
   * `samba-tool user enable meuusuario` - *Habilita usuario*
   * `samba-tool user delete meusuario`  - *Deleta usuario*
   * `samba-tool user add -h`  - *Ajuda para o comando*
+  * `adduser meuusuario` - *Cria usuario local*
   * `smbpasswd -a meuusuario` - *Adiciona usuário local a lista de usuários do Samba*
 
 * Manipulação de **Grupos Samba**:
