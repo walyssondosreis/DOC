@@ -40,24 +40,8 @@
 * Instale o Servidor de tempo NTP
     * apt-get install ntp ntpdate
 
-
-* Instale o **Webmin** para facilitar a gerência e o monitoramento do servidor:
-    * Certifique que o Perl 5 esta instalado:
-      * `perl --version` 
-    * Verifique o local da instalação /usr/local/bin/perl ou /usr/bin/perl
-    * `cd /tmp`
-    * `wget http://prdownloads.sourceforge.net/webadmin/webmin-1.981.tar.gz`
-    * `gunzip webmin-1.981.tar.gz`
-    * `tar xf webmin-1.981.tar`
-    * `cd webmin-1.981`
-    * `./setup.sh /usr/local/webmin`
-    * Durante instalação Webmin solicitará algumas definições de parâmetro
-    * O Webmin estará instalado e acessivel no endereço http://192.168.0.1:10000
-    * Configure a conexão SSL no Webmin para acesso por HTTPS
-    * Webmin > Webmin Configuration > SSL Encryption : Enable SSL
 --------
 ## Referências
-https://www.webmin.com/tgz.html  
 https://purainfo.com.br/configurando-endereo-ip-esttico-no-ubuntu-server-derivados/  
 
 
