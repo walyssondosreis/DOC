@@ -1,15 +1,23 @@
 # SAMBA 4 Active Directory Domain Controller  
-## Configuração de Terminais
-### Windows
-* Antes de ingressar no domínio defina no host como DNS primário o endereço do servidor Samba-AD-DC: 192.168.0.1
+## Configuração de Terminais e Gerenciamento RSAT
 
-### Linux
-* `sudo add-apt-repository ppa:emoraes25/cid`
-* `sudo apt update`
-* `sudo apt install cid cid-gtk`
-* `sudo cid-gtk`
-* `sudo cid status`
-* `sudo service cid status`
+* Ingresso de terminal Windows no domínio:
+  * Defina no host como DNS primário o endereço do servidor Samba-AD-DC: 192.168.0.1
+  * Caso precise alterar o nome do host reinicie a maquina Windows antes de ingressar no domínio: meupc01
+  * Ingresse a maquina no domínio: meudominio.lan
+
+* Ingresso de terminal Linux no domínio:
+  * `sudo add-apt-repository ppa:emoraes25/cid`
+  * `sudo apt update`
+  * `sudo apt install cid cid-gtk`
+  * `sudo cid-gtk`
+  * `sudo cid status`
+  * `sudo service cid status`
+
+* Intalação de ferramenta RSAT no Windows:
+  * Baixa a ferramenta RSAT de acordo com sistema operacional Windows a ser intalado:
+    * [RSAT Windows 7 x64](https://thesystemcenterblog.files.wordpress.com/2021/02/9ec67-rsat-tools-for-windows-7-64-bit.zip)
+  * Após instalado as opções de recurso de gerenciamento para o host:     
 ~~~
 ===============================================
 # Alterar Script de logon p/ aplicar Wallpaper em terminais
