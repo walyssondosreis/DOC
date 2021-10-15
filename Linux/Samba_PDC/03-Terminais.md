@@ -38,12 +38,7 @@
     *  "Clique com botão direito do mouse na GPO criada" > Editar: Editor de Gerenciamento de Diretiva de Grupo
     *  Navegue até o arquivo conforme abaixo: 
     ![image](https://user-images.githubusercontent.com/38730743/137502541-ed5af11d-3d33-4b61-a45f-edc888b7d67a.png)
-    * Habilite e insira como caminho de perfil: \\\srv.meudominio.lan\profiles\\%USERNAME% 
-  * GPO para deinifinições de hora (NTP):
-    * Esta GPO será utilizada para configurar sincronia de hora dos terminais com o servidor
-    * Gerenciamento de Diretiva de Grupo > "Clique com botão direito do mouse no nome do domínio" > Criar GPO
-    *  "Clique com botão direito do mouse na GPO criada" > Editar: Editor de Gerenciamento de Diretiva de Grupo
-    *  Navegue até o arquivo conforme abaixo:    
+    * Habilite e insira como caminho de perfil: \\\srv.meudominio.lan\profiles\\%USERNAME%  
    
   * GPO para Definição de Wallpaper:
     * Esta GPO será utilizada para configurar o papel de parede dos usuários
