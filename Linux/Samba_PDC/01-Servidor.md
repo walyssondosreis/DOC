@@ -1,25 +1,25 @@
 # SAMBA 4 Active Directory Domain Controller
 ## Instalação e configuração do servidor linux
 
-* Distribuição linux utilizada: *Ubuntu 16.04.7 Server*  
+1. Distribuição linux utilizada: *Ubuntu 16.04.7 Server*  
     * Particionamento recomendado para servidor:
       * **/swap**: Equivalente a memória RAM 
       * **/boot**: 500 Mb
       * **/** : Minímo 100 Gb
       * **/home**: Restante disponível de armazenamento
 
-* Habilite e logue como root para facilitar as alterações que serão feitas:  
+1. Habilite e logue como root para facilitar as alterações que serão feitas:  
     * `sudo passwd root`
     * `exit` 
-* Instale os pacotes utilitários:  
+1. Instale os pacotes utilitários:  
     * `apt install openssh-server`
     * `apt install proftpd`
     * `apt install mc`
     * `apt install tree`
-* Configure a permissão de login root via SSH:
+1. Configure a permissão de login root via SSH:
     * `mcedit /etc/ssh/sshd_config`
     * Altere a linha para: *PermitRootLogin* **yes** 
-* Configure o IP fixo no servidor linux:
+1. Configure o IP fixo no servidor linux:
     * `mcedit /etc/network/interfaces`
     * Altere a configuração referente a placa de rede eth0 (Nome da placa pode variar) como a baixo:
       ~~~ 
@@ -36,7 +36,7 @@
     * Reinicie o serviço de rede:
     * `/etc/init.d/networking restart`
 
-* Instale e configure o Servidor de tempo NTP:
+1. Instale e configure o Servidor de tempo NTP:
     * `apt-get install ntp ntpdate`
     * `mcedit /etc/ntp.conf`
     * Verique no site https://www.pool.ntp.org/ a zona de NTP mais próxima a sua região
