@@ -39,6 +39,7 @@
     *  Navegue até o arquivo conforme abaixo: 
     ![image](https://user-images.githubusercontent.com/38730743/137502541-ed5af11d-3d33-4b61-a45f-edc888b7d67a.png)
     * Habilite e insira como caminho de perfil: \\\srv.meudominio.lan\profiles\\%USERNAME%  
+    * No CMD o comando: `gpupdate /force` - Força a aplicação/atualização das GPOs
    
   * GPO para Definição de Wallpaper:
     * Esta GPO será utilizada para configurar o papel de parede dos usuários
@@ -48,7 +49,8 @@
     ![wallpaper](https://user-images.githubusercontent.com/38730743/137504908-a06d1fcd-27d8-41b7-a894-e18eb8b0cb7a.png)
     * Habilite e insira em nome do papel de parede como: \\\srv.meudominio.lan\sysvol\\meudominio.lan\imgem01.bmp
     * OBS: O Windows trabalha melhor com papeis de parede no forma Bitmap (.bmp)
-
+    * No CMD o comando: `gpupdate /force` - Força a aplicação/atualização das GPOs
+ 
   * GPO para Mapeamento de Pastas:
     * Esta GPO será utilizada para mapeamento de pastas compartilhadas
     * Gerenciamento de Diretiva de Grupo > "Clique com botão direito do mouse no nome do domínio" > Criar GPO
@@ -57,6 +59,7 @@
     ![map](https://user-images.githubusercontent.com/38730743/137506498-e93451dc-daed-49a5-b8c6-425eb620e2a4.png)
     *  "Clique com botão direito do mouse em Mapas de Unidade" > Novo > Unidade Mapeada
     *  Em "Local" insira o caminho da pasta compartilhada: \\\srv.meudominio.lan\minhapastacomp 
+    *  No CMD o comando: `gpupdate /force` - Força a aplicação/atualização das GPOs
 -----
 ## Referências:
 https://mundodacomputacaointegral.blogspot.com/2020/01/ingressando-maquina-linux-no-dominio-ad.html   
