@@ -1,18 +1,22 @@
 # SAMBA 4 Active Directory Domain Controller  
 ## Instalação e configuração do Samba modo AD-DC
 
-* Diretórios importantes para o Samba AD-DC:
-    * **/etc/samba** : Local onde fica o arquivo de configuração samba (smb.conf)
-    * **/home/sysvol/meudominio.lan/Netlogon** : Local onde fica o script de logon nos terminais
-    * **/home/sysvol/meudominio.lan/Profiles** : Local onde fica os arquivos de perfil do usuário
-    * **/var/lib/samba/sysvol** : Local Original de Volume Montado pelo Samba.
-* Instale o Samba:
+1. Diretórios importantes para o Samba AD-DC:
+    * **/etc/samba** : Local do arquivo de configuração samba (smb.conf)
+    * **/home/sysvol/meudominio.lan/Netlogon** : Local dos script de logon nos terminais
+    * **/home/sysvol/meudominio.lan/Profiles** : Local dos arquivos de perfil do usuário
+    * **/home/sysvol/meudominio.lan/Polices** : Local das diretivas de segurança do AD
+    * **/home/sysvol/meudominio.lan/Logs** : Local dos arquivos de log via auditoria
+    * **/home/sysvol/meudominio.lan/Arquivos** : Local das pastas compartilhadas
+    * **/home/sysvol/meudominio.lan/Recycle** : Local de lixeira das pastas compartilhadas
+    * **/var/lib/samba/sysvol** : Local Original de Volume Montado pelo Samba
+1. Instale o Samba:
     * `apt install samba krb5-user krb5-config winbind libpam-winbind libnss-winbind`
     * Opções a serem definidas na instalação:
       * Default Kerberos version 5 realm: MEUDOMINIO.LAN  *(Digite em Maiúsculo)*
       * Servidores Kerberos para seu realm: meudominio.lan
       * Servidor administrativo para seu realm Kerberos: meudominio.lan
-* Faça o provisionamento do Samba AD:
+1. Faça o provisionamento do Samba AD:
     * Antes de continuar desabilite os serviços do samba:
       * `systemctl stop samba-ad-dc.service smbd.service nmbd.service winbind.service`
       * `systemctl disable samba-ad-dc.service smbd.service nmbd.service winbind.service`
@@ -25,7 +29,7 @@
         * Domain: *(Manter padrão: Apenas Confirme)*
         * Server Role : *(Manter padrão: Apenas Confirme)*
         * DNS backend : *(Manter padrão: Apenas Confirme)*
-        * DNS forwarder: 192.164.0.254
+        * DNS forwarder: 192.164.0.254 *(Gateway)*
         * Administrator password: *(Digite uma senha Forte)*
     * Faça backup do arquivo conf Kerberos e copie o novo:
       * `mv /etc/krb5.conf /etc/krb5.conf.initial`
@@ -33,7 +37,7 @@
     * Habilite novamente os servidos do Samba:
       * `systemctl enable samba-ad-dc.service`
       * `systemctl start samba-ad-dc.service`
-* Configuração de DNS no domínio:
+1. Configuração de DNS no domínio:
     * Verifique o nível do domínio aprovisionado se é compativel ao *Windows Server 2008 R2*:
       * `samba-tool domain level show`
     * Configure o DNS no arquivo *interfaces*:
@@ -53,10 +57,10 @@
          ~~~
     * Reinicie o serviço de rede:
       * `/etc/init.d/networking restart`
-* O serviço wimbindd já esta incluso no samba, portanto desabilite o serviço antigo:
+1. O serviço wimbindd já esta incluso no samba, portanto desabilite o serviço antigo:
     * `systemctl disable winbind.service`
     * `systemctl stop winbind.service`
-* Testando domínio aprovisionado:
+1. Testando domínio aprovisionado:
     * `ping -c3 meudominio.lan`     *(Solicita nome de domínio)* 
     * `ping -c3 srv`                *(Solicita nome do servidor local)*
     * `ping -c3 srv.meudominio.lan` *(Solicita FQDN)*
@@ -68,7 +72,7 @@
     * Verifique a autenticação no Kerberos:
       * `kinit administrator@VOXCONEXAO.LAN`
       * `klist`  *(Lista usuários autenticados)*
-* Autenticação local Samba usando contas de usuários do domínio
+1. Autenticação local Samba usando contas de usuários do domínio:
     * Adicione ao arquivo smb.conf na sessão global:
     	*  mcedit /etc/samba/smb.conf 
     	 ~~~
@@ -79,53 +83,91 @@
 	  winbind enum users = yes
 	  winbind enum groups = yes
      	 ~~~
-    * testparm
-    * systemctl restart samba-ad-dc.service
-    * pam-auth-update
+    * `testparm`
+    * `systemctl restart samba-ad-dc.service`
+    * `pam-auth-update`
     * Marque todas as opções
-    * Edite o arquivo nsswitch.conf e adicione as linhas de passwd e group:
-    * mcedit /etc/nsswitch.conf
+    * Edite o arquivo *nsswitch.conf* e adicione as linhas de *passwd* e *group*:
+    * `mcedit /etc/nsswitch.conf`
     ~~~
     passwd: compat winbind
     group:  compat winbind
     ...
     ~~~
-    * mcedit /etc/pam.d/common-password
+    * `mcedit /etc/pam.d/common-password`
     * Remova use_authtok da linha:
     ~~~
     password [success=1 default=ignore] pam_winbind.so try_first_pass
     ~~~
     * Sempre que o modulo PAM for atualizado este ultimo passo deverá ser feito
 
+* **OBS: Ao criar diretórios e arquivos para utilização do Samba considere:** 
+	* `chmod -R 775 meudiretorio` - *Altera permissões de acesso, leitura e escrita para diretório/arquivo*
+	* `chown -R root:"domain users" meudiretorio` - *Atribui proprietário e grupo ao diretório/arquivo*
+	* `ls -alh | grep meudiretorio` - *Exibe as permissões e propriedades do diretório/arquivo*
+
 ## Arquivo SMB.CONF:
 ~~~
-MEU ARQUIVO SAMBA COMENTADO
-~~~
-~~~
-===============================================
-# Definir permisões e diretórios para usuários Samba
-sudo smbpasswd -a root
-sudo mkdir -p /var/samba/netlogon
-sudo chmod 775 /var/samba/netlogon/ 
-sudo mkdir /var/profiles  # Criar diretório onde ficará os arq perf do usuario.
-sudo chmod 777 /var/profiles
-===============================================
-# Criar arquivo netlogon.bat em /var/samba/netlogon/
-sudo touch /var/samba/netlogon/netlogon.bat
-sudo mcedit /var/samba/netlogon/netlogon.bat
--------------------------------------------------
-# netlogon.bat
--------------------------------------------------
-net use H: /HOME
-net time \\srvPDC /set /yes
--------------------------------------------------
-===============================================
-# Alterar Script de logon p/ aplicar Wallpaper em terminais
-> Editar smb.conf colocando em [global] logon script = logon.cmd
-> Copiar arquivo logon.cmd para diretório /var/samba/netlogon/
-* A imagem para papel de parede deve ser salva em um diretório q será montado p/ usuário
-* A imagem para papel de parede só pode ser .bmp (Bitmap)
-===============================================
+# SAMBA ACTIVE DIRECTORY CONTROLLER DOMAIN
+# by Walysson Pereira dos Reis @walyssondosreis
+
+# Parametros Globais
+
+[global]
+	workgroup = MEUDOMINIO
+	realm = MEUDOMINIO.LAN
+	netbios name = SRV
+	server role = active directory domain controller
+	dns forwarder = 192.168.0.254 # Gateway
+	idmap_ldb:use rfc2307 = yes
+	template shell = /bin/bash
+	winbind use default domain = true
+	winbind offline logon = false
+	winbind nss info = rfc2307
+	winbind enum users = yes
+	winbind enum groups =yes
+	recycle:keeptree = yes
+	recycle:versions = yes
+	recycle:exclude = *.~*, ~*.*, *.bak, *.old, *.iso, *.tmp
+	recycle:exclude_dir = temp,cache,tmp1
+	log file = /home/sysvol/meudominio.lan/Logs/samba_full_audit.log
+	max log size = 1000
+	vfs objects = full_audit
+	full_audit:success = open,opendir,write,unlink,rename,mkdir,rmdir,chmod,chown
+	full_audit:prefix = %U|%I|%S
+	full_audit:failure = none
+	full_audit:facility = local5
+	full_audit:priority = notice
+
+#================================================
+# Compartilhamento de pastas do Samba-AD-DC
+
+[sysvol]
+	comment = Volume do Sistema
+	browseable = No
+	path = /home/sysvol
+	read only = No
+[netlogon]
+	comment = Servico de Logon
+	browseable = No
+	path = /home/sysvol/meudominio.lan/Netlogon
+	read only = No
+[profiles]
+	comment = Perfis dos Usuarios
+	browseable = No
+	path = /home/sysvol/meudomino.lan/Profiles
+	read only = No
+
+#=================================================
+# Compartilhamentos de Pastas
+
+[Minha Pasta Compartilhada]
+	comment = Pasta Compartilhada
+	browseable = yes 
+	path = /home/sysvol/meudominio.lan/Arquivos/MinhaPasta  
+	read only = No
+	vfs objects = recycle
+	recycle:repository = /home/sysvol/meudominio.lan/Recycle/%U
 ~~~
 -------------
 ## Referências:
