@@ -1,6 +1,7 @@
 # SAMBA 4 Active Directory Domain Controller  
-## Configuração de Terminais e Gerenciamento RSAT
+## Manipulação e Gerenciamento de Terminais
 
+### Configuração de Terminais
 * Ingresso de terminal Windows no domínio:
   * Defina no host como DNS primário o endereço do servidor Samba-AD-DC: 192.168.0.1
   * Caso precise alterar o nome do host reinicie a maquina Windows antes de ingressar no domínio: meupc01
@@ -14,20 +15,31 @@
   * `sudo cid status`
   * `sudo service cid status`
 
-* Intalação de ferramenta RSAT no Windows:
+* Intalação de ferramenta RSAT no host Windows administrador:
+  * O conjunto de ferramentas RSAT serve para gerenciar o servidor AD remotamente através de uma máquina Windows 
   * Baixa a ferramenta RSAT de acordo com sistema operacional Windows a ser intalado:
     * [RSAT Windows 7 x64](https://thesystemcenterblog.files.wordpress.com/2021/02/9ec67-rsat-tools-for-windows-7-64-bit.zip)
   * Ative as opções de recurso de gerenciamento para o host conforme a imagem abaixo:    
-  ![rsat](https://github.com/walyssondosreis/DOC/blob/main/Linux/Samba_PDC/Imagens/rsat.png?raw=true) 
-~~~
-===============================================
-# Alterar Script de logon p/ aplicar Wallpaper em terminais
-> Editar smb.conf colocando em [global] logon script = logon.cmd
-> Copiar arquivo logon.cmd para diretório /var/samba/netlogon/
-* A imagem para papel de parede deve ser salva em um diretório q será montado p/ usuário
-* A imagem para papel de parede só pode ser .bmp (Bitmap)
-===============================================
-~~~
+  ![image](https://user-images.githubusercontent.com/38730743/137502630-cf2cb84a-7bba-4d04-aeb9-da579f1605de.png)
+
+### Gerenciamento RSAT Active Directory 
+* Sobre as ferramentas: 
+    * As ferramantas de gerenciamento de servidor pode ser encontradas em:
+    * Painel de Controle > Ferramentas Administrativas
+  * Ferramentas mais utilizadas:
+    * Gerenciamento de Diretiva de Grupo
+    * Gerenciamento de Impressão
+    * Gerenciamento do Computador
+    * Usuários e Computadores do Active Directory
+* Criação de diretiva de grupo (GPO):
+  * GPO para Roaming Profile:
+    * Esta GPO será utilizada para configurar o perfil dos usuários como remoto (no servidor)
+    * Gerenciamento de Diretiva de Grupo > "Clique com botão direito do mouse no nome do domínio" > Criar GPO : Renomeie como "GPO_RoamingProfile"
+    *  "Clique com botão direito do mouse na GPO criada" > Editar: Editor de Gerenciamento de Diretiva de Grupo
+    *  Navegue até o arquivo conforme abaixo:  
+    ![image](https://user-images.githubusercontent.com/38730743/137502541-ed5af11d-3d33-4b61-a45f-edc888b7d67a.png)
+
+
 -----
 ## Referências:
 https://mundodacomputacaointegral.blogspot.com/2020/01/ingressando-maquina-linux-no-dominio-ad.html   
