@@ -129,9 +129,19 @@ net time \\srvPDC /set /yes
 ~~~
 -------------
 ## Referências:
-https://www.hardware.com.br/artigos/samba-dominio/  
-https://www.terralab.com.br/lib/exe/fetch.php?media=terralab:tecnologias:tutorial_samba.pdf  
-https://ubuntuforum-br.org/index.php?topic=51291.0  
-https://www.vivaolinux.com.br/dica/Samba-Carregar-wallpaper-nas-estacoes-Windows-durante-logon  
-https://www.tecmint.com/install-samba4-active-directory-ubuntu/
+https://www.hardware.com.br/artigos/samba-dominio/   
+https://www.hardware.com.br/livros/linux-redes/usando-samba-como-controlador-dominio-pdc.html  
+https://wiki.samba.org/index.php/Setting_up_Samba_as_an_Active_Directory_Domain_Controller  
+https://guiafoca.org/guiaonline/avancado/ch18s07.html  
+http://www.bosontreinamentos.com.br/linux/samba-4-como-addc/  
+http://www.bosontreinamentos.com.br/linux/samba-4-instalacao-e-provisionamento/  
+https://sites.google.com/site/professorandrecampos/projeto-de-redes/samba---li  
+https://www.guiafoca.org/guiaonline/avancado/ch18s14.html  
+https://guiafoca.org/guiaonline/avancado/ch18s07.html#s-samba-dom-contasmac  
+https://www.tecmint.com/install-samba4-active-directory-ubuntu/  
+https://www.blogdainformatica.com.br/configurando-uma-lixeira-no-servidor-samba-linux-auditoria/  
+https://www.vivaolinux.com.br/dica/Lixeira-no-Samba  
+https://lucasatrindade.wordpress.com/2018/06/05/auditando-logs-samba4/  
+https://www.hardware.com.br/tutoriais/samba-configuracao-avancada/pagina7.html  
+https://hamacker.wordpress.com/2007/08/15/servidor-samba-lixeira-e-auditoria/  
 
