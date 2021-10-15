@@ -43,9 +43,9 @@
     * Substitua no arquivo aberto os servidos padrão pelos verificados:
      ~~~
      server 0.south-america.pool.ntp.org iburst
-	  server 1.south-america.pool.ntp.org iburst
-	  server 2.south-america.pool.ntp.org iburst
-	  server 3.south-america.pool.ntp.org iburst
+     server 1.south-america.pool.ntp.org iburst
+     server 2.south-america.pool.ntp.org iburst
+     server 3.south-america.pool.ntp.org iburst
      ~~~
     * Ainda com arquivo aberto vá uma linha abaixo da instrução driftfile e adicione:
      ~~~
