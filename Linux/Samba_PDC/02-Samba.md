@@ -2,10 +2,10 @@
 ## Instalação e configuração do Samba modo AD-DC
 
 * Diretórios importantes para o Samba AD-DC:
-    * **/etc/samba/** : Local onde fica o arquivo de configuração samba (smb.conf)
-    * **/var/samba/netlogon/** : Local onde fica o script de logon nos terminais
-    * **/var/profiles/** : Local onde fica os arquivos de perfil do usuário
-    * **/var/lib/samba/sysvol** : Local de Volume montado pelo Samba.
+    * **/etc/samba** : Local onde fica o arquivo de configuração samba (smb.conf)
+    * **/home/sysvol/meudominio.lan/Netlogon** : Local onde fica o script de logon nos terminais
+    * **/home/sysvol/meudominio.lan/Profiles** : Local onde fica os arquivos de perfil do usuário
+    * **/var/lib/samba/sysvol** : Local Original de Volume Montado pelo Samba.
 * Instale o Samba:
     * `apt install samba krb5-user krb5-config winbind libpam-winbind libnss-winbind`
     * Opções a serem definidas na instalação:
