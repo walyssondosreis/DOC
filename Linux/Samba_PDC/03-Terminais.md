@@ -34,17 +34,33 @@
 * Criação de diretiva de grupo (GPO):
   * GPO para Roaming Profile:
     * Esta GPO será utilizada para configurar o perfil dos usuários como remoto (no servidor)
-    * Gerenciamento de Diretiva de Grupo > "Clique com botão direito do mouse no nome do domínio" > Criar GPO : Renomeie como "GPO_RoamingProfile"
+    * Gerenciamento de Diretiva de Grupo > "Clique com botão direito do mouse no nome do domínio" > Criar GPO
     *  "Clique com botão direito do mouse na GPO criada" > Editar: Editor de Gerenciamento de Diretiva de Grupo
-    *  Navegue até o arquivo conforme abaixo:  
+    *  Navegue até o arquivo conforme abaixo: 
     ![image](https://user-images.githubusercontent.com/38730743/137502541-ed5af11d-3d33-4b61-a45f-edc888b7d67a.png)
+    * Habilite e insira como caminho de perfil: \\\srv.meudominio.lan\profiles\\%USERNAME% 
+  * GPO para Definição de Wallpaper:
+    * Esta GPO será utilizada para configurar o papel de parede dos usuários
+    * Gerenciamento de Diretiva de Grupo > "Clique com botão direito do mouse no nome do domínio" > Criar GPO
+    *  "Clique com botão direito do mouse na GPO criada" > Editar: Editor de Gerenciamento de Diretiva de Grupo
+    *  Navegue até o arquivo conforme abaixo: 
+    ![wallpaper](https://user-images.githubusercontent.com/38730743/137504908-a06d1fcd-27d8-41b7-a894-e18eb8b0cb7a.png)
+    * Habilite e insira em nome do papel de parede como: \\\srv.meudominio.lan\sysvol\\meudominio.lan\imgem01.bmp
+    * OBS: O Windows trabalha melhor com papeis de parede no forma Bitmap (.bmp)
 
-
+  * GPO para Mapeamento de Pastas:
+    * Esta GPO será utilizada para mapeamento de pastas compartilhadas
+    * Gerenciamento de Diretiva de Grupo > "Clique com botão direito do mouse no nome do domínio" > Criar GPO
+    *  "Clique com botão direito do mouse na GPO criada" > Editar: Editor de Gerenciamento de Diretiva de Grupo
+    *  Navegue até o arquivo conforme abaixo: 
+    ![map](https://user-images.githubusercontent.com/38730743/137506498-e93451dc-daed-49a5-b8c6-425eb620e2a4.png)
+    *  "Clique com botão direito do mouse em Mapas de Unidade" > Novo > Unidade Mapeada
+    *  Em "Local" insira o caminho da pasta compartilhada: \\\srv.meudominio.lan\minhapastacomp 
 -----
 ## Referências:
 https://mundodacomputacaointegral.blogspot.com/2020/01/ingressando-maquina-linux-no-dominio-ad.html   
 http://www.bosontreinamentos.com.br/linux/samba-4-adicionando-um-host-windows-ao-dominio-e-administracao-remota/   
-https://www.profissionaisti.com.br/active-directory-ad-inserir-um-papel-de-parede-via-gpo/#:~:text=Navegue%20em%20Configura%C3%A7%C3%B5es%20de%20Usu%C3%A1rio,de%20trabalho%2C%20conforme%20figura%20abaixo. 
+https://www.profissionaisti.com.br/active-directory-ad-inserir-um-papel-de-parede-via-gpo/#:~:text=Navegue%20em%20Configura%C3%A7%C3%B5es%20de%20Usu%C3%A1rio,de%20trabalho%2C%20conforme%20figura%20abaixo  
 https://techexpert.tips/pt-br/windows-pt-br/gpo-aplicar-a-um-usuario-ou-grupo-especifico/  
 https://www.tecmint.com/create-shared-directory-on-samba-ad-dc-and-map-to-windows-linux/  
 https://www.golinuxhub.com/2012/08/create-roaming-profiles-in-samba4/  
