@@ -3,7 +3,7 @@
 
 1. Diretórios importantes para o Samba AD-DC:
     * **/etc/samba** : Local do arquivo de configuração samba (smb.conf)
-    * **/home/sysvol/meudominio.lan/Netlogon** : Local dos script de logon nos terminais
+    * **/home/sysvol/meudominio.lan/Scripts** : Local dos script de logon nos terminais
     * **/home/sysvol/meudominio.lan/Profiles** : Local dos arquivos de perfil do usuário
     * **/home/sysvol/meudominio.lan/Polices** : Local das diretivas de segurança do AD
     * **/home/sysvol/meudominio.lan/Logs** : Local dos arquivos de log via auditoria
@@ -150,7 +150,7 @@
 [netlogon]
 	comment = Servico de Logon
 	browseable = No
-	path = /home/sysvol/meudominio.lan/Netlogon
+	path = /home/sysvol/meudominio.lan/Scripts
 	read only = No
 [profiles]
 	comment = Perfis dos Usuarios
