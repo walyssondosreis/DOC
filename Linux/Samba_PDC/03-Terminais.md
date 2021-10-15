@@ -10,7 +10,15 @@
 * `sudo cid-gtk`
 * `sudo cid status`
 * `sudo service cid status`
-
+~~~
+===============================================
+# Alterar Script de logon p/ aplicar Wallpaper em terminais
+> Editar smb.conf colocando em [global] logon script = logon.cmd
+> Copiar arquivo logon.cmd para diretório /var/samba/netlogon/
+* A imagem para papel de parede deve ser salva em um diretório q será montado p/ usuário
+* A imagem para papel de parede só pode ser .bmp (Bitmap)
+===============================================
+~~~
 -----
 ## Referências:
 https://mundodacomputacaointegral.blogspot.com/2020/01/ingressando-maquina-linux-no-dominio-ad.html   
