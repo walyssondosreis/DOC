@@ -17,7 +17,8 @@
 * Intalação de ferramenta RSAT no Windows:
   * Baixa a ferramenta RSAT de acordo com sistema operacional Windows a ser intalado:
     * [RSAT Windows 7 x64](https://thesystemcenterblog.files.wordpress.com/2021/02/9ec67-rsat-tools-for-windows-7-64-bit.zip)
-  * Após instalado as opções de recurso de gerenciamento para o host:     
+  * Ative as opções de recurso de gerenciamento para o host conforme a imagem abaixo:    
+  ![rsat](https://github.com/walyssondosreis/DOC/blob/main/Linux/Samba_PDC/Imagens/rsat.png?raw=true) 
 ~~~
 ===============================================
 # Alterar Script de logon p/ aplicar Wallpaper em terminais
