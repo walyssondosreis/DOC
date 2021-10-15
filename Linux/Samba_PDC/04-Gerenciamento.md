@@ -26,7 +26,7 @@
   * Será exibida a mensagem a primeira vez informado ter sido criado pasta do usuario. 
   * id - Mostra id do usuario logado
   * passwd - Troca senha do usuario Samba logado.
-  * 
+
 * Manipulação de **Politica de Senhas do Domínio**:
   * `samba-tool domain passwordsettings show` - *Exibe definições de política de senha*
   * `samba-tool domain passwordsettings -h` - *Ajuda para o comando*
