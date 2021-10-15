@@ -13,7 +13,6 @@
     * `exit` 
 * Instale alguns pacotes necessários:  
     * `apt install openssh-server`
-    * `apt install apt-transport-https`
     * `apt install proftpd`
     * `apt install mc`
     * `apt install tree`
@@ -43,5 +42,7 @@
 --------
 ## Referências
 https://purainfo.com.br/configurando-endereo-ip-esttico-no-ubuntu-server-derivados/  
+http://www.bosontreinamentos.com.br/linux/como-configurar-endereco-ip-estatico-no-linux-ubuntu-18-04-com-netplan/  
+
 
 
