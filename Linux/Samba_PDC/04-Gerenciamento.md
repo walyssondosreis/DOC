@@ -75,5 +75,10 @@ who
 ~~~
 --------------
 ## Referências:
-https://www.tecmint.com/manage-samba4-active-directory-linux-command-line/  
-https://www.hostinger.com.br/tutoriais/usuarios-sistema-linux  
+https://www.tecmint.com/manage-samba4-active-directory-linux-command-line  
+https://www.tecmint.com/manage-samba4-ad-from-windows-via-rsat/  
+https://www.tecmint.com/manage-samba4-dns-group-policy-from-windows/  
+https://guiafoca.org/guiaonline/avancado/ch18s13.html#s-samba-c-dominio  
+https://wiki.samba.org/index.php/Roaming_Windows_User_Profiles  
+https://www.stefanwienert.de/blog/2014/07/02/samba-4-active-directory-controller-with-windows-7-roaming-profiles-plus-linux-login-the-definitive-guide/  
+
