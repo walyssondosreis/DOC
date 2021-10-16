@@ -105,6 +105,7 @@
 	* `chmod -R 775 meudiretorio` - *Altera permissões de acesso, leitura e escrita para diretório/arquivo*
 	* `chown -R root:"domain users" meudiretorio` - *Atribui proprietário e grupo ao diretório/arquivo*
 	* `ls -alh | grep meudiretorio` - *Exibe as permissões e propriedades do diretório/arquivo*
+* **OBS: Ao se deparar erro de acesso a pastas e arquivos no Windows, certifique das permissões de segurança
 
 ## Arquivo SMB.CONF:
 ~~~
