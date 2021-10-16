@@ -3,7 +3,7 @@
 
 * Manipulação de **Usuários Samba**:
   * `samba-tool user add meuusuario`  - *Cria usuario*
-  * `samba-tool user setpassword meuusuario` - *Dedefine senha de usuário*
+  * `samba-tool user setpassword meuusuario` - *Redefine senha de usuário*
   * `samba-tool user list`  - *Lista usuarios*
   * `samba-tool user disable meusuario` - *Desabilita usuario*
   * `samba-tool user enable meuusuario` - *Habilita usuario*
