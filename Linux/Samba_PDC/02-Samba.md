@@ -187,4 +187,4 @@ https://www.vivaolinux.com.br/dica/Lixeira-no-Samba
 https://lucasatrindade.wordpress.com/2018/06/05/auditando-logs-samba4/  
 https://www.hardware.com.br/tutoriais/samba-configuracao-avancada/pagina7.html  
 https://hamacker.wordpress.com/2007/08/15/servidor-samba-lixeira-e-auditoria/  
-
+https://www.hardware.com.br/comunidade/pasta-home/1385186/
