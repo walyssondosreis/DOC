@@ -1,6 +1,12 @@
 # SAMBA 4 Active Directory Domain Controller  
 ## Instalação e configuração do Samba modo AD-DC
 
+1. Acesso aos compartilhamentos do domínio Samba AD-DC:
+    * **\\\meudominio.lan** - Leva aos compartilhamentos do domínio (SEM ACESSO AS PASTAS)
+    * **\\\srv.meudominio.lan** - Leva aos compartilhamentos da máquina servidor
+    * **\\\192.168.0.1** - Leva aos compartilhamentos da máquina servidor
+    * **\\\srv** - Leva aos compartilhamentos da máquina servidor
+ 
 1. Diretórios importantes para o Samba AD-DC:
     * **/etc/samba** : Local do arquivo de configuração samba (smb.conf)
     * **/home/sysvol/meudominio.lan/Scripts** : Local dos script de logon nos terminais
