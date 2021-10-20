@@ -36,7 +36,7 @@
   * `samba-tool domain passwordsettings set --max-pwd-age=0` - *Tempo máximo para renovação de senha*
   * `samba-tool domain passwordsettings set --min-pwd-length=4` - *Tamanho mínimo de senha aceitável*
 
-* Comandos uteis
+* Comandos uteis SERVIDOR LINUX
   * `sudo /etc/init.d/samba/ start` - *Inicia serviço do Samba*
   * `sudo systemctl start samba-ad-dc.service` - *Inicia serviço do Samba*
   * `sudo /etc/init.d/samba/ restart`  - *Reinicia serviço do Samba*
@@ -44,12 +44,18 @@
   * `sudo /etc/init.d/samba/ stop` - *Interrompe serviço do Samba*
   * `sudo systemctl stop samba-ad-dc.service` - *Interrompe serviço do Samba*
   * `smbstatus` - *Retorna informações de login de usuários no domínio*
+  * `smbcontrol all reload-config` - *Força Samba a recarregar arquivo de configuração*
   * `testparm` - *Verifica se há erros no arquivo smb.conf*
   * `wbinfo -g` - *Lista grupos usando ferramenta wimbindd*
   * `getent group | grep MEUDOMINIO` - *Lista grupos consultando diretamente arquivos*
   * `wbinfo -u` - *Lista usuários usando ferramenta wimbindd*
   * `getent passwd | grep MEUDOMINIO` - *Lista usuários consultando diretamente arquivos*
   * `wbinfo -i meusuario` - *Consulta informação de login de usuario usando ferramenta wimbindd*
+  * `smbclient -L localhost -U%` - *Verifica os compartilhamentos ativos no servidor* 
+
+* Comandos úteis TERMINAL WINDOWS
+  * `gpupdate /force` - *Força atualização de diretivas para determinado usuário*
+  * `dsa.msc` - Abre o utilitário de gerência Usuários e Computadores no Active Directory 
 
 * Conceder poderes root a usuário Samba-AD-DC
   * usermod -aG sudo 'DOMAIN\your_domain_user' - Coloca usuado samba ao grupo sudo e dá privilegios root no sistema local
