@@ -14,6 +14,7 @@
 1. Instale os pacotes utilitários:  
     * `apt install openssh-server`
     * `apt install proftpd`
+    * `apt install smbclient`
     * `apt install mc`
     * `apt install tree`
 1. Configure a permissão de login root via SSH:
