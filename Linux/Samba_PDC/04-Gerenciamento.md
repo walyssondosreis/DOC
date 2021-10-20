@@ -15,7 +15,7 @@
 * Manipulação de **Grupos Samba**:
   * `samba-tool group add meugrupo` - *Cria grupo* 
   * `samba-tool group addmembers meugrupo meuusuario` - *Adiciona usuário a grupo*
-  * `samba-tool group remove members meugrupo meuusuario` - *Remove usuário de grupo*
+  * `samba-tool group removemembers meugrupo meuusuario` - *Remove usuário de grupo*
   * `samba-tool group list` - *Lista grupos*
   * `samba-tool group listmembers meugrupo` - *Lista membros de um grupo*
   * `samba-tool group delete meugrupo` - *Deleta grupo*
