@@ -133,18 +133,13 @@
 	winbind nss info = rfc2307
 	winbind enum users = yes
 	winbind enum groups =yes
+	vfs objects = recycle
+	recycle:repository = /home/sysvol/meudominio.lan/Recycle/%U/%S
 	recycle:keeptree = yes
 	recycle:versions = yes
-	recycle:exclude = *.~*, ~*.*, *.bak, *.old, *.iso, *.tmp
-	recycle:exclude_dir = temp,cache,tmp1
-	log file = /home/sysvol/meudominio.lan/Logs/samba_full_audit.log
-	max log size = 1000
-	vfs objects = full_audit
-	full_audit:success = open,opendir,write,unlink,rename,mkdir,rmdir,chmod,chown
-	full_audit:prefix = %U|%I|%S
-	full_audit:failure = none
-	full_audit:facility = local5
-	full_audit:priority = notice
+	recycle:exclude = *.~*, ~*.*, *.bak, *.old, *.iso, *.tmp, *.temp, *.log, *ldb, *.o, *.obj
+	recycle:exclude_dir = temp,cache,tmp
+	recycle:maxsize = 100
 
 #================================================
 # Compartilhamento de pastas do Samba-AD-DC
@@ -164,7 +159,12 @@
 	browseable = No
 	path = /home/sysvol/meudomino.lan/Profiles
 	read only = No
-
+[homes]
+	comment = Pasta Home do usuário Samba
+	browseable = No
+	root preexec = su - %U ; exit
+	path = /home/%D/%U
+	read only = No
 #=================================================
 # Compartilhamentos de Pastas
 
@@ -173,8 +173,6 @@
 	browseable = yes 
 	path = /home/sysvol/meudominio.lan/Arquivos/MinhaPasta  
 	read only = No
-	vfs objects = recycle
-	recycle:repository = /home/sysvol/meudominio.lan/Recycle/%U
 ~~~
 -------------
 ## Referências:
