@@ -49,10 +49,65 @@
       * `ufw allow 990/tcp`
       * `ufw allow 40000:50000/tcp`
       * `ufw status`
+    * Gere o certificado SSL/TLS para o servidor FTP:
+      * `mkdir /etc/ssl/private`
+      * `openssl req -x509 -nodes -keyout /etc/ssl/private/vsftpd.pem -out /etc/ssl/private/vsftpd.pem -days 365 -newkey rsa:2048`
+      * OBS: Durante a geração do certificado será gerado um questionário, responda conforme necessário.
+    * Crie a lista de bloqueio de usuários do vsFTPd:
+      * `touch /etc/vsftpd.userlist`
     * Faça uma cópia de segurança do arquivo vsFTPd:
       * `sudo cp /etc/vsftpd.conf /etc/vsftpd.conf.initial` 
     * Abra para edição o arquivo de configuração do vsFTPd:
       * `mcedit /etc/vsftpd.conf`
+      * Certifique de estar ativo (descomentado '#') no arquivo os seguintes parâmetros:
+         ~~~
+         anonymous_enable=NO
+         local_enable=YES
+         write_enable=YES
+         dirmessage_enable=YES
+         xferlog_enable=YES
+         connect_from_port_20=YES
+         listen=NO
+         listen_ipv6=YES
+         pam_service_name=vsftpd
+         userlist_enable=YES
+         local_umask=022
+         xferlog_std_format=YES
+         ~~~
+      * Adicione os seguintes parâmetros ao final do arquivo:
+         ~~~
+         tcp_wrappers=YES
+         userlist_enable=YES 
+         userlist_deny=YES
+         userlist_file=/etc/vsftpd.userlist
+         ssl_enable=YES
+         ssl_tlsv1=YES
+         ssl_sslv2=NO
+         ssl_sslv3=NO
+         allow_anon_ssl=NO
+         force_local_data_ssl=YES
+         force_local_logins_ssl=YES
+         require_ssl_reuse=NO
+         ssl_ciphers=HIGH
+         pasv_min_port=40000
+         pasv_max_port=50000
+         debug_ssl=YES
+         ~~~
+      * Comente as linhas e adicione as entradas conforme abaixo:
+         ~~~
+         #rsa_cert_file=/etc/ssl/private/ssl-cert-snakeoil.pem
+         #rsa_private_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
+         rsa_cert_file=/etc/ssl/private/vsftpd.pem
+         rsa_private_key_file=/etc/ssl/private/vsftpd.pem
+         ~~~
+    * Certifique de remover o usuário root das listas de bloqueio:
+      * `mcedit /etc/ftpusers`
+      * `mcedit /etc/vsftpd.userlist`
+    * Reinicie os serviços vsFTPd:
+      * `systemctl restart vsftpd`
+      * `service vsftpd restart`
+    * OBS: O acesso FTP é feito atráves de programas como Filezilla
+    * OBS: No acesso certifique do parâmetro: Requer FTP sobre TLS Explicito
 --------
 ## Referências
 https://purainfo.com.br/configurando-endereo-ip-esttico-no-ubuntu-server-derivados/  
