@@ -107,6 +107,31 @@
     ~~~
     * Sempre que o modulo PAM for atualizado este ultimo passo deverá ser feito
 
+1. Instale e configure o Servidor de tempo NTP:
+    * `apt-get install ntp ntpdate`
+    * `mcedit /etc/ntp.conf`
+    * Verique no site https://www.pool.ntp.org/ a zona de NTP mais próxima a sua região
+    * Substitua no arquivo aberto os servidos padrão pelos verificados:
+     ~~~
+     server 0.south-america.pool.ntp.org iburst
+     server 1.south-america.pool.ntp.org iburst
+     server 2.south-america.pool.ntp.org iburst
+     server 3.south-america.pool.ntp.org iburst
+     ~~~
+    * Ainda com arquivo aberto vá uma linha abaixo da instrução driftfile e adicione:
+     ~~~
+     ntpsigndsocket /var/lib/samba/ntp_signd/
+     ~~~
+    * Vá ao final do arquivo e adicione a linha. após isso feche e salve o arquivo:
+     ~~~
+     restrict default kod nomodify notrap nopeer mssntp
+     ~~~
+    * `chown root:ntp /var/lib/samba/ntp_signd/` - *Altera grupo dono da pasta NTP para o Samba
+    * `chmod 750 /var/lib/samba/ntp_signd/` - *Altera permissões da pasta NTP para o Samba*
+    * `systemctl restart ntp`  - *Reinicia serviço NTP*
+    * `netstat –tulpn | grep ntp` - *Verifica se o NTP tem sockets abertos na tabela de rede*
+    * `ntpq -p` - *Verica o serviço NTP*
+
 * **OBS: Ao criar diretórios e arquivos para utilização do Samba considere:** 
 	* `chmod -R 775 meudiretorio` - *Altera permissões de acesso, leitura e escrita para diretório/arquivo*
 	* `chown -R root:"domain users" meudiretorio` - *Atribui proprietário e grupo ao diretório/arquivo*
