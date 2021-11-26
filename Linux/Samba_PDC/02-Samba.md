@@ -76,7 +76,7 @@
       * `host -t SRV _kerberos._udp.meudominio.lan` 
       * `host -t SRV _ldap._tcp.meudominio.lan` 
     * Verifique a autenticação no Kerberos:
-      * `kinit administrator@VOXCONEXAO.LAN`
+      * `kinit administrator@MEUDOMINIO.LAN`
       * `klist`  *(Lista usuários autenticados)*
 1. Autenticação local Samba usando contas de usuários do domínio:
     * Adicione ao arquivo smb.conf na sessão global:
