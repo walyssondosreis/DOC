@@ -61,18 +61,17 @@
       * `mcedit /etc/vsftpd.conf`
       * Certifique de estar ativo (descomentado '#') no arquivo os seguintes parâmetros:
          ~~~
+         listen=NO
+         listen_ipv6=YES
          anonymous_enable=NO
          local_enable=YES
          write_enable=YES
+         local_umask=022
          dirmessage_enable=YES
          xferlog_enable=YES
          connect_from_port_20=YES
-         listen=NO
-         listen_ipv6=YES
-         pam_service_name=vsftpd
-         userlist_enable=YES
-         local_umask=022
          xferlog_std_format=YES
+         pam_service_name=vsftpd
          ~~~
       * Adicione os seguintes parâmetros ao final do arquivo:
          ~~~
