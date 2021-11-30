@@ -56,7 +56,7 @@
     * Crie a lista de bloqueio de usuários do vsFTPd:
       * `touch /etc/vsftpd.userlist`
     * Faça uma cópia de segurança do arquivo vsFTPd:
-      * `sudo cp /etc/vsftpd.conf /etc/vsftpd.conf.initial` 
+      * `cp /etc/vsftpd.conf /etc/vsftpd.conf.initial` 
     * Abra para edição o arquivo de configuração do vsFTPd:
       * `mcedit /etc/vsftpd.conf`
       * Certifique de estar ativo (descomentado '#') no arquivo os seguintes parâmetros:
