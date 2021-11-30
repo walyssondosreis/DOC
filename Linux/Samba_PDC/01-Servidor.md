@@ -106,6 +106,7 @@
     * Reinicie os serviços vsFTPd:
       * `systemctl restart vsftpd`
       * `service vsftpd restart`
+    * OBS: Verifique erros e espaços extra no arquivo de configuração a fim de evitar erros 
     * OBS: O acesso FTP é feito atráves de programas como Filezilla
     * OBS: No acesso certifique do parâmetro: Requer FTP sobre TLS Explicito
 --------
