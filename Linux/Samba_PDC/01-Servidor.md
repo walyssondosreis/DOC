@@ -110,6 +110,8 @@
     * OBS: Verifique ortografia e espaços extra no arquivo de configuração a fim de evitar erros 
     * OBS: O acesso FTP é feito atráves de programas como Filezilla
     * OBS: No acesso certifique do parâmetro: Requer FTP sobre TLS Explicito
+    * OBS: Caso tenha problema na maquina Ubuntu com erros LOCALE execute o comando selecionando a sua codificação correta:
+      * `dpkg-reconfigure locales`    
 --------
 ## Referências
 https://purainfo.com.br/configurando-endereo-ip-esttico-no-ubuntu-server-derivados/  
@@ -117,3 +119,5 @@ http://www.bosontreinamentos.com.br/linux/como-configurar-endereco-ip-estatico-n
 https://www.tecmint.com/install-ftp-server-in-ubuntu/  
 https://serverfault.com/questions/34678/how-to-configure-vsftpd-to-allow-root-logins  
 https://www.tecmint.com/secure-ftp-server-using-ssl-tls-on-ubuntu/  
+https://draculaservers.com/tutorials/setting-locale-failed-ubuntu/#:~:text=One%20solution%20to%20fix%20this,defined%20for%20your%20user%20account.&text=To%20generate%20the%20missing%20locale,UTF%2D8%20.  
+
