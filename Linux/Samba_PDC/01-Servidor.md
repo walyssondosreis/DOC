@@ -12,7 +12,7 @@
     * `sudo passwd root`
     * `exit` 
 1. Configure o IP fixo no servidor linux:
-    * `mcedit /etc/network/interfaces`
+    * `vi /etc/network/interfaces`
     * Altere a configuração referente a placa de rede eth0 (Nome da placa pode variar) como a baixo:
       ~~~ 
       auto eth0 
@@ -25,6 +25,7 @@
           dns-nameserver 192.168.168.254
           dns-nameserver 8.8.8.8
       ~~~
+    * No vi salve o arquivo após apertar ESC :wq
     * Reinicie o serviço de rede:
     * `/etc/init.d/networking restart`
 1. Instale os pacotes utilitários:  
