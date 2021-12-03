@@ -77,7 +77,7 @@
       * Adicione os seguintes parâmetros ao final do arquivo:
          ~~~
          tcp_wrappers=YES
-         userlist_enable=YES 
+         userlist_enable=YES
          userlist_deny=YES
          userlist_file=/etc/vsftpd.userlist
          ssl_enable=YES
