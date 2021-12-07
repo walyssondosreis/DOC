@@ -52,9 +52,14 @@
   * `getent passwd | grep MEUDOMINIO` - *Lista usuários consultando diretamente arquivos*
   * `wbinfo -i meusuario` - *Consulta informação de login de usuario usando ferramenta wimbindd*
   * `smbclient -L localhost -U%` - *Verifica os compartilhamentos ativos no servidor* 
-  * `df -h` - *Lista partições montadas no sistema*
   * `dhclient eth0` - *Força a atualização de dispositivos de rede em DHCP*
   * `nmblookup -A 192.168.0.254` - *Solicita informações de dispositivo em rede*
+  * `df -h` - *Lista partições montadas no sistema*
+  * `du -hs MEUDIRETORIO` - *Exibe informações de tamanho de diretório*
+  * `du -hs MEUDIRETORIO | sort -h` - *Exibe informações de tamanho de diretório ordenando por tamanho*
+  * `du -h --time MEUDIRETORIO` - *Exibe informações de tamanho de diretório ordenando por data*
+  * `du -hs * | grep NOMEBUSCA -h` - *Exibe informações de tamanho de diretório buscando por nome de arquivo*
+  * `du -hsc MEUDIRETORIO` - *Exibe informações de tamanho de diretório totalizando soma no final*
 
 * Comandos úteis TERMINAL WINDOWS
   * `gpupdate /force` - *Força atualização de diretivas para determinado usuário*
@@ -93,6 +98,8 @@ https://www.stefanwienert.de/blog/2014/07/02/samba-4-active-directory-controller
 https://www.linuxnaweb.com/como-montar-dispositivo-de-armazenamento-no-linux/  
 https://www.vivaolinux.com.br/topico/Servidores-Linux-para-iniciantes/Ubuntu-Server-nao-reconhece-placa-de-rede-eth0  
 https://www.vivaolinux.com.br/topico/Iniciantes-no-Linux/Descobrir-nome-da-maquina-pelo-IP  
+https://diolinux.com.br/sistemas-operacionais/comando-du-no-linux-espaco-disco.html  
+
 
 
 
