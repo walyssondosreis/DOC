@@ -52,6 +52,9 @@
   * `getent passwd | grep MEUDOMINIO` - *Lista usuários consultando diretamente arquivos*
   * `wbinfo -i meusuario` - *Consulta informação de login de usuario usando ferramenta wimbindd*
   * `smbclient -L localhost -U%` - *Verifica os compartilhamentos ativos no servidor* 
+  * `df -h` - *Lista partições montadas no sistema*
+  * `dhclient eth0` - *Força a atualização de dispositivos de rede em DHCP*
+  * `nmblookup -A 192.168.0.254` - *Solicita informações de dispositivo em rede*
 
 * Comandos úteis TERMINAL WINDOWS
   * `gpupdate /force` - *Força atualização de diretivas para determinado usuário*
@@ -87,4 +90,9 @@ https://www.tecmint.com/manage-samba4-dns-group-policy-from-windows/
 https://guiafoca.org/guiaonline/avancado/ch18s13.html#s-samba-c-dominio  
 https://wiki.samba.org/index.php/Roaming_Windows_User_Profiles  
 https://www.stefanwienert.de/blog/2014/07/02/samba-4-active-directory-controller-with-windows-7-roaming-profiles-plus-linux-login-the-definitive-guide/  
+https://www.linuxnaweb.com/como-montar-dispositivo-de-armazenamento-no-linux/  
+https://www.vivaolinux.com.br/topico/Servidores-Linux-para-iniciantes/Ubuntu-Server-nao-reconhece-placa-de-rede-eth0  
+https://www.vivaolinux.com.br/topico/Iniciantes-no-Linux/Descobrir-nome-da-maquina-pelo-IP  
+
+
 
