@@ -53,16 +53,10 @@
          dns-nameservers 127.0.0.1 192.168.0.254
          dns-search meudominio.lan
          ~~~
-    * Configure o DNS no arquivo *resolv.conf*:
-      * `mcedit /etc/resolv.conf`
-      * Adicione ao arquivo:
-         ~~~
-         nameserver 192.168.0.254
-         nameserver 192.168.0.1
-         search meudominio.lan
-         ~~~
     * Reinicie o serviço de rede:
       * `/etc/init.d/networking restart`
+    * Verifique a alteração do DNS no arquivo *resolv.conf*:
+      * `cat /etc/resolv.conf` 
 1. O serviço wimbindd já esta incluso no samba, portanto desabilite o serviço antigo:
     * `systemctl disable winbind.service`
     * `systemctl stop winbind.service`
