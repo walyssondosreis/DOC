@@ -1,4 +1,4 @@
-# Speed Django
+# Help Django
 ---
 ### Walysson dos Reis
 ## `python manage.py`
