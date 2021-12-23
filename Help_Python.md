@@ -1,4 +1,4 @@
-# Speed Python
+# Help Python
 ### (by Walysson dos Reis)
 ---------------------
 ### STRINGS
