@@ -1,15 +1,21 @@
-# Help Java Script
+# Help JS-HTML5-CSS
 ### (by Walysson dos Reis)
 ---------------------
-### cod
+### JS
 ~~~JavaScript
 // Barras duplas para comentários
 /* aqui */  // Representa comentário
-var x; // Declara variável em JS
-var x = {topic: 'meu_texto', fat: true}; // Declara objetos em JS; equivale ao dicionário em Python
-var x = [ 2,3,65,12]; // Declara um array com alguns elementos
-x.lenght; // Retorna quantidade de elementos no array
-function f1(x) { //Define uma função
-  return x+1; } // Retorna valor de função
-typeof minhavar // Retorna tipo da variável 'minhavar'
+var x // Declara variável em JS
+typeof(x) // Retorna tipo da variável 'x'
+Number.parseInt(x) // Converte String passada em Inteiro
+Number.parseFloat(x) // Converte String passada em Num. Float
+Number(x) // Converte String passada em Num de forma auto
+~~~
+### HTML5
+~~~html
+<!-- Meu Comentario --> // Representa comentário em HTML5
+~~~
+### CSS
+~~~html
+/* aqui */  // Representa comentário em CSS
 ~~~
