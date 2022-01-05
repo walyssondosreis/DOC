@@ -27,7 +27,7 @@ x.replace('.',',') // Formata um numero substituindo '.' por ','
 x.toLocaleString('pr-BR',{style: 'currency', currency='BRL'}) //Formata valor monetário
 ~~~
 ### HTML5
-~~~html5
+~~~html
 <!-- Meu Comentario --> // Representa comentário em HTML5
 <br> // QUebra de linha 
 <html>...</html> // Tag de abertura de documento HTML
