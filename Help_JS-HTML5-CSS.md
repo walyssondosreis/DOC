@@ -42,4 +42,6 @@ x.toLocaleString('pr-BR',{style: 'currency', currency='BRL'}) //Formata valor mo
 ### CSS
 ~~~html
 /* aqui */  // Representa comentário em CSS
+.nomeclasse{} // Declara estilo de Classe
+#nomeid{} // Declara id estilo de ID
 ~~~
