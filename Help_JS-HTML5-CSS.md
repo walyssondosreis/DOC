@@ -60,7 +60,7 @@ window.document.body.style.background = 'black' // Altera plano de fundo do docu
 <p>...</p> // Tag para escrita de parágrafo
 <div>...</div> // Tag colocada em <body> que representa marca de divisão no documento; diferente de <p> não salta linha.
 <strong>...</strong> // Tag para escrita negrito
-<input ...> // Tag para designar entrada de dados, há vários tipos de entradas
+<input type='number' name='n1' id='n1'> // Tag para designar entrada de dados do tipo número
 
 ~~~
 ### CSS
