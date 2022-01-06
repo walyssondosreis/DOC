@@ -20,14 +20,27 @@ Number.parseFloat(x) // Converte String passada em Num. Float
 Number(x) // Converte String passada em Num de forma auto
 String(x) // Converte Valor passado para String
 x.toString() // Converte Valor passado para String
-document.write('minha string') // Método JS que escreve no corpo HTML; podendo ser passadas tags HTML junto.
-document.writeln('minha string') // Método JS que escreve no corpo HTML fazendo quebra de linha.
 x.toFixed(2) // Formata um número com duas casas decimais
 x.replace('.',',') // Formata um numero substituindo '.' por ',' 
 x.toLocaleString('pt-BR',{style: 'currency', currency='BRL'}) //Formata valor monetário por moeda
 x>2 ? 'SIM':'NÃO' // Exemplo de uso do operador ternário
+~~~
+#### DOM (Document Object Manipulation)
+~~~javascript
+window.document.write('minha string') // Método JS que escreve no corpo HTML; podendo ser passadas tags HTML junto.
+window.document.writeln('minha string') // Método JS que escreve no corpo HTML fazendo quebra de linha.
 window.document.getElementsByTagName('p') //Retorna objeto de elementos de parágrafo do documento
 window.document.getElementsByTagName('p')[0].innerText //Retorna texto contido no primeiro parágrafo do documento 
+window.document.getElementsByTagName('p')[0].innerHTML //Retorna cod HTML contido no primeiro parágrafo do documento 
+window.document.getELementsByTagName('p')[0].style.color='red' //Altera estilo de cor do parágrafo retornado
+window.document.getElementById('minha_id') // Retorna objeto de elemento com a id solicitada
+window.document.getElementsByName('meu_nome') // Retorna objeto de elemento com o nome solicitado
+window.document.getElementsByClassName('minha_classe') // Retorna objeto de elemento com o a classe solicitada
+window.document.querySelector('h1#myid') // Retorna objeto cujo ID CSS foi passado
+window.document.querySelector('h1.myclass') // Retorna objeto cujo CLASSE CSS foi passada
+window.document.body // Retorna objeto de corpo (body) do documento
+window.document.body.style.background = 'black' // Altera plano de fundo do documento
+
 ~~~
 ### HTML5
 ~~~html
@@ -40,7 +53,9 @@ window.document.getElementsByTagName('p')[0].innerText //Retorna texto contido n
 <body>...</body> // Tag colocada em <html> que representa o corpo do documento ;  onde fica basicamente todo conteúdo da pag.
 <h1>...</h1> // Tag para escrita de título
 <p>...</p> // Tag para escrita de parágrafo
+<div>...</div> // Tag colocada em <body> que representa marca de divisão no documento; diferente de <p> não salta linha.
 <strong>...</strong> // Tag para escrita negrito
+
 ~~~
 ### CSS
 ~~~css
