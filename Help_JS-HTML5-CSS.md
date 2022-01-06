@@ -26,6 +26,8 @@ x.toFixed(2) // Formata um número com duas casas decimais
 x.replace('.',',') // Formata um numero substituindo '.' por ',' 
 x.toLocaleString('pt-BR',{style: 'currency', currency='BRL'}) //Formata valor monetário por moeda
 x>2 ? 'SIM':'NÃO' // Exemplo de uso do operador ternário
+window.document.getElementsByTagName('p') //Retorna objeto de elementos de parágrafo do documento
+window.document.getElementsByTagName('p')[0].innerText //Retorna texto contido no primeiro parágrafo do documento 
 ~~~
 ### HTML5
 ~~~html
