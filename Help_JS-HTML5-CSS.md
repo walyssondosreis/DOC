@@ -24,7 +24,8 @@ document.write('minha string') // Método JS que escreve no corpo HTML; podendo 
 document.writeln('minha string') // Método JS que escreve no corpo HTML fazendo quebra de linha.
 x.toFixed(2) // Formata um número com duas casas decimais
 x.replace('.',',') // Formata um numero substituindo '.' por ',' 
-x.toLocaleString('pr-BR',{style: 'currency', currency='BRL'}) //Formata valor monetário
+x.toLocaleString('pt-BR',{style: 'currency', currency='BRL'}) //Formata valor monetário por moeda
+x>2 ? 'SIM':'NÃO' // Exemplo de uso do operador ternário
 ~~~
 ### HTML5
 ~~~html
