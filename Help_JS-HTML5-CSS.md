@@ -24,8 +24,10 @@ x.toFixed(2) // Formata um número com duas casas decimais
 x.replace('.',',') // Formata um numero substituindo '.' por ',' 
 x.toLocaleString('pt-BR',{style: 'currency', currency='BRL'}) //Formata valor monetário por moeda
 x>2 ? 'SIM':'NÃO' // Exemplo de uso do operador ternário
+function minhaFuncao(){} // Declara função em JS
+
 ~~~
-#### DOM (Document Object Manipulation)
+#### DOM (Document Object Model)
 ~~~javascript
 window.document.write('minha string') // Método JS que escreve no corpo HTML; podendo ser passadas tags HTML junto.
 window.document.writeln('minha string') // Método JS que escreve no corpo HTML fazendo quebra de linha.
@@ -40,6 +42,9 @@ window.document.querySelector('h1#myid') // Retorna objeto cujo ID CSS foi passa
 window.document.querySelector('h1.myclass') // Retorna objeto cujo CLASSE CSS foi passada
 window.document.body // Retorna objeto de corpo (body) do documento
 window.document.body.style.background = 'black' // Altera plano de fundo do documento
+.addEventListener('click',funcDisparo) // Método disparo do evento clique do mouse 
+.addEventListener('mouseenter',funcDisparo) // Método disparo do evento mouse entra no elemento 
+.addEventListener('mouseout',funcDisparo) // Método disparo do evento mouse sai do elemento 
 
 ~~~
 ### HTML5
@@ -55,6 +60,7 @@ window.document.body.style.background = 'black' // Altera plano de fundo do docu
 <p>...</p> // Tag para escrita de parágrafo
 <div>...</div> // Tag colocada em <body> que representa marca de divisão no documento; diferente de <p> não salta linha.
 <strong>...</strong> // Tag para escrita negrito
+<input ...> // Tag para designar entrada de dados, há vários tipos de entradas
 
 ~~~
 ### CSS
