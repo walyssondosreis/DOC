@@ -5,12 +5,15 @@
 ~~~JavaScript
 // Barras duplas para comentários
 /* aqui */  // Representa comentário
+var x // Declara variável de forma global; podendo ser undefined
+let x // Declara variável presa ao escopo do bloco; economiza memória; podendo ser undefined
+const x // Declara constante global ; não podendo ser undefined
 typeof(x) // Retorna tipo da variável 'x'
 x>2 ? 'SIM':'NÃO' // Exemplo de uso do operador ternário
 function minhaFuncao(){} // Declara função em JS
 console.log('Escrevendo') // Escreve no console JS
 ~~~
-#### Condições
+#### CONDIÇÕES
 ~~~javascript
 if(){} // Escopo de declaração de condicional SE em JS
 switch(condição){ // Espoco de declaração da condição múltipla
@@ -19,7 +22,7 @@ switch(condição){ // Espoco de declaração da condição múltipla
   case n: ... break // Condição n ; sempre interromper loop com break
   default: ... break }// Condição padrão caso não atenda a nenhum caso anterior
 ~~~
-#### Laços
+#### LAÇOS
 ~~~javascript
 while(){} //Escopo de declaração de laço WHILE
 do{}while() // Escopo de declaração de laço DO WHILE
@@ -27,7 +30,6 @@ for(incio;teste;Incremento){} // Escoppo de declaração de laço FOR
 ~~~
 #### STRING
 ~~~javascript
-var x // Declara variável em JS
 " " // Aspas duplas para escrita de string
 ' ' // Aspas simples para escrita de string
 ` ` //  Crase para escrita de Template string
@@ -52,8 +54,15 @@ x.lastIndexOf('a') // Retorna posição da última letra 'a' encontrada
 x.indexOf('a',3) // Retorna posição da primeira letra 'a' após a 3 posição
 x.split('.') // Retorna array de strings que foram separadas pelo intervalo de '.'
 x.replace('a','e') // Retorna string substituido onde tiver 'a' por 'e'
-
-
+~~~
+### ARRAYS
+~~~javascript
+/* Alguns métodos de string também funcionam para vetores e vice versa */
+var x=[] // Declara array
+x.push() // Adiciona elemento ao array
+x.pop() // Remove elemento do array
+x.legth // Atributo que retorna comprimento(qtd de posições) do array 
+x.sort() // Método que ordena array
 ~~~
 #### DOM (Document Object Model)
 ~~~javascript
