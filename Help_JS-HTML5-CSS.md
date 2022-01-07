@@ -5,13 +5,18 @@
 ~~~JavaScript
 // Barras duplas para comentários
 /* aqui */  // Representa comentário
+typeof(x) // Retorna tipo da variável 'x'
+x>2 ? 'SIM':'NÃO' // Exemplo de uso do operador ternário
+function minhaFuncao(){} // Declara função em JS
+~~~
+#### STRING
+~~~javascript
 var x // Declara variável em JS
 " " // Aspas duplas para escrita de string
 ' ' // Aspas simples para escrita de string
 ` ` //  Crase para escrita de Template string
 Place Holder: ${x}
 Template String: `'o aluno ${x} é dedicado`
-typeof(x) // Retorna tipo da variável 'x'
 x.length // Retorna tamanho da String
 x.toUpperCase() // Retorna String em Maiúscula
 x.toLowerCase() // Retorna String em Minúscula
@@ -23,8 +28,8 @@ x.toString() // Converte Valor passado para String
 x.toFixed(2) // Formata um número com duas casas decimais
 x.replace('.',',') // Formata um numero substituindo '.' por ',' 
 x.toLocaleString('pt-BR',{style: 'currency', currency='BRL'}) //Formata valor monetário por moeda
-x>2 ? 'SIM':'NÃO' // Exemplo de uso do operador ternário
-function minhaFuncao(){} // Declara função em JS
+x.charAt(0) // Retorna primeiro caractere da String
+x.substring(1,3) // Retorna String delimitada pelas posições vetoriais passadas por parâmetro
 
 ~~~
 #### DOM (Document Object Model)
