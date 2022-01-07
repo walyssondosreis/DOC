@@ -15,8 +15,8 @@ var x // Declara variável em JS
 " " // Aspas duplas para escrita de string
 ' ' // Aspas simples para escrita de string
 ` ` //  Crase para escrita de Template string
-Place Holder: ${x}
-Template String: `'o aluno ${x} é dedicado`
+${ } // Simbolo de place holder utilizada dentro da template string
+`o aluno ${x} é dedicado` // Passa variável x para a template string; exemplo
 x.length // Retorna tamanho da String
 x.toUpperCase() // Retorna String em Maiúscula
 x.toLowerCase() // Retorna String em Minúscula
@@ -30,6 +30,13 @@ x.replace('.',',') // Formata um numero substituindo '.' por ','
 x.toLocaleString('pt-BR',{style: 'currency', currency='BRL'}) //Formata valor monetário por moeda
 x.charAt(0) // Retorna primeiro caractere da String
 x.substring(1,3) // Retorna String delimitada pelas posições vetoriais passadas por parâmetro
+x.slice(1,3) // Retorna String delimitada pelas posições vetoriais passadas por parâmetro
+x.indexOf('a') // Retorna posição da primeira letra 'a' encontrada
+x.lastIndexOf('a') // Retorna posição da última letra 'a' encontrada
+x.indexOf('a',3) // Retorna posição da primeira letra 'a' após a 3 posição
+x.split('.') // Retorna array de strings que foram separadas pelo intervalo de '.'
+x.replace('a','e') // Retorna string substituido onde tiver 'a' por 'e'
+
 
 ~~~
 #### DOM (Document Object Model)
