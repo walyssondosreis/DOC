@@ -8,6 +8,22 @@
 typeof(x) // Retorna tipo da variável 'x'
 x>2 ? 'SIM':'NÃO' // Exemplo de uso do operador ternário
 function minhaFuncao(){} // Declara função em JS
+console.log('Escrevendo') // Escreve no console JS
+~~~
+#### Condições
+~~~javascript
+if(){} // Escopo de declaração de condicional SE em JS
+switch(condição){ // Espoco de declaração da condição múltipla
+  case 1: ... break // Condição 1 ; sempre interromper loop com break
+  case 2: ... break //  Condição 2 ; sempre interromper loop com break
+  case n: ... break // Condição n ; sempre interromper loop com break
+  default: ... break }// Condição padrão caso não atenda a nenhum caso anterior
+~~~
+#### Laços
+~~~javascript
+while(){} //Escopo de declaração de laço WHILE
+do{}while() // Escopo de declaração de laço DO WHILE
+for(incio;teste;Incremento){} // Escoppo de declaração de laço FOR
 ~~~
 #### STRING
 ~~~javascript
