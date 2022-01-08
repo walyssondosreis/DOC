@@ -1,4 +1,4 @@
-# Help JS-HTML5-CSS
+# Help JS-HTML-CSS
 ### (by Walysson dos Reis)
 ---------------------
 ### JS
@@ -12,6 +12,7 @@ typeof(x) // Retorna tipo da variável 'x'
 x>2 ? 'SIM':'NÃO' // Exemplo de uso do operador ternário
 function minhaFuncao(){} // Declara função em JS
 console.log('Escrevendo') // Escreve no console JS
+var x={} // Declara variável de objeto em JS; equivale a Dicionário em python
 ~~~
 #### CONDIÇÕES
 ~~~javascript
@@ -89,15 +90,20 @@ window.document.body.style.background = 'black' // Altera plano de fundo do docu
 <!-- Meu Comentario --> // Representa comentário em HTML5
 <br> // QUebra de linha 
 <html>...</html> // Tag de abertura de documento HTML
-<head>...</head> // Tag colocada em <html> que representa cabeçalho; geralmente onde fica as declarações da pag.
+<head>...</head> // Tag colocada em <html> que representa as declarações da pag.
 <title>...</title> // Tag colocada em <head> que representa o título da pag html
 <style>...</style> // Tag colocada em <head> para abertura de cod. CSS.
 <body>...</body> // Tag colocada em <html> que representa o corpo do documento ;  onde fica basicamente todo conteúdo da pag.
+<link rel="stylesheet" href="style.css"> // Tag colocada em <head> para ligar arquivo HTML ao arq CSS externo
+<script src="script.js"></script> // Tag que representa a ligação do HTML com um arquivo externo JS
 <h1>...</h1> // Tag para escrita de título
 <p>...</p> // Tag para escrita de parágrafo
 <div>...</div> // Tag colocada em <body> que representa marca de divisão no documento; diferente de <p> não salta linha.
 <strong>...</strong> // Tag para escrita negrito
 <input type='number' name='n1' id='n1'> // Tag para designar entrada de dados do tipo número
+<header>...</header> // Tag colocada em <body> que representa cabeçalho da pag; parte superior da pag
+<section>...</section> // Tag colocada em <body>  que representa uma sessão na pagina
+<footer>...</footer> // Tag coloda em <body> que representa rodapé da pag 
 
 ~~~
 ### CSS
