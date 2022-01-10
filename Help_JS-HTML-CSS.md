@@ -95,6 +95,7 @@ window.document.body.style.background = 'black' // Altera plano de fundo do docu
 <title>...</title> // Tag colocada em <head> que representa o título da pag html
 <style>...</style> // Tag colocada em <head> para abertura de cod. CSS.
 <body>...</body> // Tag colocada em <html> que representa o corpo do documento ;  onde fica basicamente todo conteúdo da pag.
+<body onload='minhafuncao()' ... // Evento de carregamento da página
 <link rel="stylesheet" href="style.css"> // Tag colocada em <head> para ligar arquivo HTML ao arq CSS externo
 <script src="script.js"></script> // Tag que representa a ligação do HTML com um arquivo externo JS
 <h1>...</h1> // Tag para escrita de título
@@ -105,7 +106,6 @@ window.document.body.style.background = 'black' // Altera plano de fundo do docu
 <header>...</header> // Tag colocada em <body> que representa cabeçalho da pag; parte superior da pag
 <section>...</section> // Tag colocada em <body>  que representa uma sessão na pagina
 <footer>...</footer> // Tag coloda em <body> que representa rodapé da pag 
-
 ~~~
 ### CSS
 ~~~css
