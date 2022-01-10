@@ -39,8 +39,8 @@ ${ } // Simbolo de place holder utilizada dentro da template string
 x.length // Retorna tamanho da String
 x.toUpperCase() // Retorna String em Maiúscula
 x.toLowerCase() // Retorna String em Minúscula
-Number.parseInt(x) // Converte String passada em Inteiro
-Number.parseFloat(x) // Converte String passada em Num. Float
+parseInt(x) // Converte String passada em Inteiro; pode ignorar o que vier junto com numero na string
+parseFloat(x) // Converte String passada em Num. Float;  pode ignorar o que vier junto com numero na string
 Number(x) // Converte String passada em Num de forma auto
 String(x) // Converte Valor passado para String
 x.toString() // Converte Valor passado para String
