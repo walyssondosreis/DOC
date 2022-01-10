@@ -55,6 +55,7 @@ x.lastIndexOf('a') // Retorna posição da última letra 'a' encontrada
 x.indexOf('a',3) // Retorna posição da primeira letra 'a' após a 3 posição
 x.split('.') // Retorna array de strings que foram separadas pelo intervalo de '.'
 x.replace('a','e') // Retorna string substituido onde tiver 'a' por 'e'
+x.valueOf() // Retorna valor de objeto em valor primitivo
 ~~~
 ### ARRAYS
 ~~~javascript
