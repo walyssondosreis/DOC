@@ -108,6 +108,9 @@ window.document.body.style.background = 'black' // Altera plano de fundo do docu
 <footer>...</footer> // Tag coloda em <body> que representa rodapé da pag 
 <ul> <li>...</li></ul> // Tag para inserção de lista não ordenada; 'li' é inserido para cada elemento novo
 <a href="meulink" >...</a> // Tag pra criação de hiperlink
+<nav> ... </nav> // Tag colocada em <body> usada para separar seção de links de navegação
+<span>...</span> // Tag colocada em <body> usada para conteúdo genérico assim como <div> diferença em ser linha 
+<form>...</form> // Tag que representa seção onde haverá controles interativos, submetendo ao servidor web
 ~~~
 ### CSS
 ~~~css
