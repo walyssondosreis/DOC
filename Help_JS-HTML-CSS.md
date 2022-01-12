@@ -111,6 +111,8 @@ window.document.body.style.background = 'black' // Altera plano de fundo do docu
 <nav> ... </nav> // Tag colocada em <body> usada para separar seção de links de navegação
 <span>...</span> // Tag colocada em <body> usada para conteúdo genérico assim como <div> diferença em ser linha 
 <form>...</form> // Tag que representa seção onde haverá controles interativos, submetendo ao servidor web
+<button>...</button> // Tag criar botão em HTML
+<main>...</main> // Tag colocada em <body> usada para definir sessão de contéudo principal do body
 ~~~
 ### CSS
 ~~~css
