@@ -106,6 +106,8 @@ window.document.body.style.background = 'black' // Altera plano de fundo do docu
 <header>...</header> // Tag colocada em <body> que representa cabeçalho da pag; parte superior da pag
 <section>...</section> // Tag colocada em <body>  que representa uma sessão na pagina
 <footer>...</footer> // Tag coloda em <body> que representa rodapé da pag 
+<ul> <li>...</li></ul> // Tag para inserção de lista não ordenada; 'li' é inserido para cada elemento novo
+<a href="meulink" >...</a> // Tag pra criação de hiperlink
 ~~~
 ### CSS
 ~~~css
