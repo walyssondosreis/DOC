@@ -15,11 +15,20 @@ Data Início: 29/09/2020*
 var x // Declara variável de forma global; podendo ser undefined
 let x // Declara variável presa ao escopo do bloco; economiza memória; podendo ser undefined
 const x // Declara constante global ; não podendo ser undefined
+this // Referência ao próprio document
 typeof(x) // Retorna tipo da variável 'x'
 x>2 ? 'SIM':'NÃO' // Exemplo de uso do operador ternário
 function minhaFuncao(){} // Declara função em JS
 console.log('Escrevendo') // Escreve no console JS
 var x={} // Declara variável de objeto em JS; equivale a Dicionário em python
+window.alert('Alerta') // Cria popup com mensagem com botão 'ok' apenas.
+window.prompt('Minha Msg') // Solicita ao usuário que escreva msg em popup
+window.confirm('confirmaai') // Cria popup de confirmação para usuário com 'ok' e 'cancelar'
+Math.round(valor) // Retorna valor arredondado
+Math.random() // Método que retorna um numero aleatório entre 0 e 1
+Math.PI // Constante de PI da classe Math
+isNaN("qqCoisa") // Verifica se o que foi passado não é um número; Se não for retorna TRUE.
+setInterval(func,30) // Define um intervalo de 30ms para a chamada da função func.
 ~~~
 #### CONDIÇÕES
 ~~~javascript
@@ -88,9 +97,6 @@ window.document.querySelector('h1#myid') // Retorna objeto cujo ID CSS foi passa
 window.document.querySelector('h1.myclass') // Retorna objeto cujo CLASSE CSS foi passada
 window.document.body // Retorna objeto de corpo (body) do documento
 window.document.body.style.background = 'black' // Altera plano de fundo do documento
-window.alert('Alerta') // Cria popup com mensagem com botão 'ok' apenas.
-window.prompt('Minha Msg') // Solicita ao usuário que escreva msg em popup
-window.confirm('confirmaai') // Cria popup de confirmação para usuário com 'ok' e 'cancelar'
 .addEventListener('click',funcDisparo) // Método disparo do evento clique do mouse 
 .addEventListener('mouseenter',funcDisparo) // Método disparo do evento mouse entra no elemento 
 .addEventListener('mouseout',funcDisparo) // Método disparo do evento mouse sai do elemento 
@@ -99,6 +105,7 @@ window.confirm('confirmaai') // Cria popup de confirmação para usuário com 'o
 ## HTML5
 ~~~html
 <!-- Meu Comentario --> // Representa comentário em HTML5
+
 <br> // QUebra de linha 
 <html>...</html> // Tag de abertura de documento HTML
 <head>...</head> // Tag colocada em <html> que representa as declarações da pag.
