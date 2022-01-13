@@ -1,4 +1,10 @@
 # **JAVASCRIPT-HTML-CSS**
+<div>
+<img src="https://cdn.iconscout.com/icon/free/png-256/javascript-23-1174949.png" alt="logoJS" width="50px"/> 
+<img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="logoHTML" width="50px"/> 
+<img src="https://devfriends.com.br/images/services/icon/02.png" alt="logocss" width="50px" height="50px"/> 
+</div>
+
 *Autor: Walysson dos Reis  
 Data Início: 29/09/2020*  
 
@@ -6,8 +12,7 @@ Data Início: 29/09/2020*
 *Conceitos e comandos rápidos das linguagens Javascript, HTML e CSS. Manual de consulta rápida.*  
 
 ---------------------
-
-## JAVASCRIPT
+<img src="https://cdn.iconscout.com/icon/free/png-256/javascript-23-1174949.png" alt="logoJS" width="50px"/>  
 
 ~~~JavaScript
 // Barras duplas para comentários
@@ -30,7 +35,7 @@ Math.PI // Constante de PI da classe Math
 isNaN("qqCoisa") // Verifica se o que foi passado não é um número; Se não for retorna TRUE.
 setInterval(func,30) // Define um intervalo de 30ms para a chamada da função func.
 ~~~
-#### CONDIÇÕES
+* #### CONDIÇÕES
 ~~~javascript
 if(){} // Escopo de declaração de condicional SE em JS
 switch(condição){ // Espoco de declaração da condição múltipla
@@ -39,13 +44,13 @@ switch(condição){ // Espoco de declaração da condição múltipla
   case n: ... break // Condição n ; sempre interromper loop com break
   default: ... break }// Condição padrão caso não atenda a nenhum caso anterior
 ~~~
-#### LAÇOS
+* #### LAÇOS
 ~~~javascript
 while(){} //Escopo de declaração de laço WHILE
 do{}while() // Escopo de declaração de laço DO WHILE
 for(incio;teste;Incremento){} // Escoppo de declaração de laço FOR
 ~~~
-#### STRING
+* #### STRING
 ~~~javascript
 " " // Aspas duplas para escrita de string
 ' ' // Aspas simples para escrita de string
@@ -73,7 +78,7 @@ x.split('.') // Retorna array de strings que foram separadas pelo intervalo de '
 x.replace('a','e') // Retorna string substituido onde tiver 'a' por 'e'
 x.valueOf() // Retorna valor de objeto em valor primitivo
 ~~~
-### ARRAYS
+* #### ARRAYS
 ~~~javascript
 /* Alguns métodos de string também funcionam para vetores e vice versa */
 var x=[] // Declara array
@@ -82,7 +87,7 @@ x.pop() // Remove elemento do array
 x.legth // Atributo que retorna comprimento(qtd de posições) do array 
 x.sort() // Método que ordena array
 ~~~
-#### DOM (Document Object Model)
+* #### DOM (Document Object Model)
 ~~~javascript
 window.document.write('minha string') // Método JS que escreve no corpo HTML; podendo ser passadas tags HTML junto.
 window.document.writeln('minha string') // Método JS que escreve no corpo HTML fazendo quebra de linha.
@@ -102,7 +107,9 @@ window.document.body.style.background = 'black' // Altera plano de fundo do docu
 .addEventListener('mouseout',funcDisparo) // Método disparo do evento mouse sai do elemento 
 
 ~~~
-## HTML5
+---------------------
+<img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="logoHTML" width="50px"/>  
+
 ~~~html
 <!-- Meu Comentario --> // Representa comentário em HTML5
 <!doctype html> // Tag que representa tipo do documento; colocada antes da abertura da tag <html>
@@ -140,7 +147,9 @@ window.document.body.style.background = 'black' // Altera plano de fundo do docu
 <table><tr><td><\td><\tr></table> // Tag para representação de tabela onde <tr> = linha e <td> coluna
 <canvas id="tela" width="600" height="400"></canvas> // Tag para definír área de desenho
 ~~~
-## CSS
+---------------------
+<img src="https://devfriends.com.br/images/services/icon/02.png" alt="logocss" width="50px" height="50px"/>  
+
 ~~~css
 /* aqui */  // Representa comentário em CSS
 .nomeclasse{} // Declara estilo de Classe
