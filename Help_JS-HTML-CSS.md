@@ -12,7 +12,10 @@ Data Início: 29/09/2020*
 *Conceitos e comandos rápidos das linguagens Javascript, HTML e CSS. Manual de consulta rápida.*  
 
 ---------------------
+<div>
 <img src="https://cdn.iconscout.com/icon/free/png-256/javascript-23-1174949.png" alt="logoJS" width="50px"/>  
+  _________________________________________<b>JAVASCRIPT</b>
+</div>
 
 ~~~JavaScript
 // Barras duplas para comentários
@@ -108,7 +111,10 @@ window.document.body.style.background = 'black' // Altera plano de fundo do docu
 
 ~~~
 ---------------------
-<img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="logoHTML" width="50px"/>  
+<div>
+<img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="logoHTML" width="50px"/>
+_________________________________________<b>HTML</b>
+</div>
 
 ~~~html
 <!-- Meu Comentario --> // Representa comentário em HTML5
@@ -148,7 +154,10 @@ window.document.body.style.background = 'black' // Altera plano de fundo do docu
 <canvas id="tela" width="600" height="400"></canvas> // Tag para definír área de desenho
 ~~~
 ---------------------
+<div>
 <img src="https://devfriends.com.br/images/services/icon/02.png" alt="logocss" width="50px" height="50px"/>  
+_________________________________________<b>CSS</b>
+</div>
 
 ~~~css
 /* aqui */  // Representa comentário em CSS
