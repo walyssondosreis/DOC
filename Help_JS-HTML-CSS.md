@@ -1,7 +1,14 @@
-# Help JS-HTML-CSS
-### (by Walysson dos Reis)
+# **JAVASCRIPT-HTML-CSS**
+*Autor: Walysson dos Reis  
+Data Início: 29/09/2020*  
+
+----------------------------------------------
+*Conceitos e comandos rápidos das linguagens Javascript, HTML e CSS. Manual de consulta rápida.*  
+
 ---------------------
-### JS
+
+## JAVASCRIPT
+
 ~~~JavaScript
 // Barras duplas para comentários
 /* aqui */  // Representa comentário
@@ -81,12 +88,15 @@ window.document.querySelector('h1#myid') // Retorna objeto cujo ID CSS foi passa
 window.document.querySelector('h1.myclass') // Retorna objeto cujo CLASSE CSS foi passada
 window.document.body // Retorna objeto de corpo (body) do documento
 window.document.body.style.background = 'black' // Altera plano de fundo do documento
+window.alert('Alerta') // Cria popup com mensagem com botão 'ok' apenas.
+window.prompt('Minha Msg') // Solicita ao usuário que escreva msg em popup
+window.confirm('confirmaai') // Cria popup de confirmação para usuário com 'ok' e 'cancelar'
 .addEventListener('click',funcDisparo) // Método disparo do evento clique do mouse 
 .addEventListener('mouseenter',funcDisparo) // Método disparo do evento mouse entra no elemento 
 .addEventListener('mouseout',funcDisparo) // Método disparo do evento mouse sai do elemento 
 
 ~~~
-### HTML5
+## HTML5
 ~~~html
 <!-- Meu Comentario --> // Representa comentário em HTML5
 <br> // QUebra de linha 
@@ -114,7 +124,7 @@ window.document.body.style.background = 'black' // Altera plano de fundo do docu
 <button>...</button> // Tag criar botão em HTML
 <main>...</main> // Tag colocada em <body> usada para definir sessão de contéudo principal do body
 ~~~
-### CSS
+## CSS
 ~~~css
 /* aqui */  // Representa comentário em CSS
 .nomeclasse{} // Declara estilo de Classe
