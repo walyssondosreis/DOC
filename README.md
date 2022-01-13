@@ -10,6 +10,11 @@ Diretório de documentos de ajuda a programação e tecnologias.
 * Help_Django: Comandos úteis e configurações sobre Django
 * Help_Python: Comandos úteis e configurações sobre Python
 * Help_Git: Comandos úteis e configurações sobre Git
+* Help_C#: Comandos úteis e configurações sobre C#
+* Help_C-C++: Comandos úteis e configurações sobre C e C++
+* Help_JS-HTML-CSS: Comandos úteis e configurações sobre JavaScript, HTML e CSS
+* Help_Java: Comandos úteis e configurações sobre Java
+* Help_SQL: Comandos úteis e configurações sobre SQL
 ~~~
 
 ###### by @walyssondosreis
