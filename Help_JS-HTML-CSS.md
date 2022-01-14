@@ -117,41 +117,41 @@ ____<b>HTML</b>
 </div>
 
 ~~~html
-<!-- Meu Comentario --> // Representa comentário em HTML5
-<!doctype html> // Tag que representa tipo do documento; colocada antes da abertura da tag <html>
-<br> // Quebra de linha 
-<hr> // Desenha linha
-<big>...</big> // Auta tamanho de texto
-<html>...</html> // Tag de abertura de documento HTML
-<html lang="pt-br">...</html> // Atributo que define idioma da página
-<head>...</head> // Tag colocada em <html> que representa as declarações da pag.
-<meta charset="UTF-8"> // Tag coloca em <head> para metadados; atributo habilita a codificação da página
-<title>...</title> // Tag colocada em <head> que representa o título da pag html
-<style>...</style> // Tag colocada em <head> para abertura de cod. CSS.
-<body>...</body> // Tag colocada em <html> que representa o corpo do documento ;  onde fica basicamente todo conteúdo da pag.
-<body onload='minhafuncao()' ... // Evento de carregamento da página
-<link rel="stylesheet" href="style.css"> // Tag colocada em <head> para ligar arquivo HTML ao arq CSS externo
-<script>...</script> // Tag para inserção de cod javascript
-<script src="script.js"></script> // Tag que representa a ligação do HTML com um arquivo externo JS
-<h1>...</h1> // Tag para escrita de título
-<p>...</p> // Tag para escrita de parágrafo
-<div>...</div> // Tag colocada em <body> que representa marca de divisão no documento; diferente de <p> não salta linha.
-<strong>...</strong> // Tag para escrita negrito
-<input type='number' name='n1' id='n1'> // Tag para designar entrada de dados do tipo número
-<input type="submit" value="Mensagem" /> //Tag para designar botão
-<header>...</header> // Tag colocada em <body> que representa cabeçalho da pag; parte superior da pag
-<section>...</section> // Tag colocada em <body>  que representa uma sessão na pagina
-<footer>...</footer> // Tag coloda em <body> que representa rodapé da pag 
-<ul> <li>...</li></ul> // Tag para inserção de lista não ordenada; 'li' é inserido para cada elemento novo
-<a href="meulink" >...</a> // Tag pra criação de hiperlink
-<nav> ... </nav> // Tag colocada em <body> usada para separar seção de links de navegação
-<span>...</span> // Tag colocada em <body> usada para conteúdo genérico assim como <div> diferença em ser linha 
-<form>...</form> // Tag que representa seção onde haverá controles interativos, submetendo ao servidor web
-<button>...</button> // Tag criar botão em HTML
-<main>...</main> // Tag colocada em <body> usada para definir sessão de contéudo principal do body
-<blockquote>...<\blockquote> // Tag para escrita de citações
-<table><tr><td><\td><\tr></table> // Tag para representação de tabela onde <tr> = linha e <td> coluna
-<canvas id="tela" width="600" height="400"></canvas> // Tag para definír área de desenho
+<!-- Meu Comentario --> <!-- Representa comentário em HTML5 -->
+<!doctype html> <!-- Tag que representa tipo do documento; colocada antes da abertura da tag <html> -->
+<br> <!-- Quebra de linha -->
+<hr> <!-- Desenha linha -->
+<big>...</big> <!-- Auta tamanho de texto -->
+<html>...</html> <!-- Tag de abertura de documento HTML -->
+<html lang="pt-br">...</html> <!-- Atributo que define idioma da página -->
+<head>...</head> <!-- Tag colocada em <html> que representa as declarações da pag. -->
+<meta charset="UTF-8"> <!-- Tag coloca em <head> para metadados; atributo habilita a codificação da página -->
+<title>...</title> <!-- Tag colocada em <head> que representa o título da pag html -->
+<style>...</style> <!-- Tag colocada em <head> para abertura de cod. CSS. -->
+<body>...</body> <!-- Tag colocada em <html> que representa o corpo do documento ;  onde fica basicamente todo conteúdo da pag. -->
+<body onload='minhafuncao()' ... <!-- Evento de carregamento da página -->
+<link rel="stylesheet" href="style.css"> <!-- Tag colocada em <head> para ligar arquivo HTML ao arq CSS externo -->
+<script>...</script> <!-- Tag para inserção de cod javascript -->
+<script src="script.js"></script> <!-- Tag que representa a ligação do HTML com um arquivo externo JS -->
+<h1>...</h1> <!-- Tag para escrita de título -->
+<p>...</p> <!-- Tag para escrita de parágrafo -->
+<div>...</div> <!-- Tag colocada em <body> que representa marca de divisão no documento; diferente de <p> não salta linha. -->
+<strong>...</strong> <!-- Tag para escrita negrito -->
+<input type='number' name='n1' id='n1'> <!-- Tag para designar entrada de dados do tipo número -->
+<input type="submit" value="Mensagem" /> <!-- Tag para designar botão -->
+<header>...</header> <!-- Tag colocada em <body> que representa cabeçalho da pag; parte superior da pag -->
+<section>...</section> <!-- Tag colocada em <body>  que representa uma sessão na pagina -->
+<footer>...</footer> <!-- Tag coloda em <body> que representa rodapé da pag -->
+<ul> <li>...</li></ul> <!-- Tag para inserção de lista não ordenada; 'li' é inserido para cada elemento novo -->
+<a href="meulink" >...</a> <!-- Tag pra criação de hiperlink -->
+<nav> ... </nav> <!-- Tag colocada em <body> usada para separar seção de links de navegação -->
+<span>...</span> <!-- Tag colocada em <body> usada para conteúdo genérico assim como <div> diferença em ser linha --> 
+<form>...</form> <!-- Tag que representa seção onde haverá controles interativos, submetendo ao servidor web -->
+<button>...</button> <!-- Tag criar botão em HTML -->
+<main>...</main> <!-- Tag colocada em <body> usada para definir sessão de contéudo principal do body -->
+<blockquote>...<\blockquote> <!-- Tag para escrita de citações -->
+<table><tr><td><\td><\tr></table> <!-- Tag para representação de tabela onde <tr> = linha e <td> coluna -->
+<canvas id="tela" width="600" height="400"></canvas> <!-- Tag para definír área de desenho -->
 ~~~
 ---------------------
 <div>
@@ -160,10 +160,10 @@ ____<b>CSS</b>
 </div>
 
 ~~~css
-/* aqui */  // Representa comentário em CSS
-.nomeclasse{} // Declara estilo de Classe
-#nomeid{} // Declara id estilo de ID
-@media print{} // Método que define estilo CSS para impressão da pag
+/* comentario_aqui */  /* Representa comentário em CSS */
+.nomeclasse{} /* Declara estilo de Classe */
+#nomeid{} /* Declara id estilo de ID */
+@media print{} /* Método que define estilo CSS para impressão da pag */
 ~~~
 
 --------
