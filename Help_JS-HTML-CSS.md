@@ -1,4 +1,4 @@
-# **JAVASCRIPT-HTML-CSS**
+# **JS-HTML-CSS**
 <div>
 <img src="https://cdn.iconscout.com/icon/free/png-256/javascript-23-1174949.png" alt="logoJS" width="50px"/> 
 <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="logoHTML" width="50px"/> 
@@ -14,7 +14,7 @@ Data Início: 29/09/2020*
 ---------------------
 <div>
 <img src="https://cdn.iconscout.com/icon/free/png-256/javascript-23-1174949.png" alt="logoJS" width="50px"/>  
-  _________________________________________<b>JAVASCRIPT</b>
+  _________________________________________<b>JS</b>
 </div>
 
 ~~~JavaScript
@@ -167,6 +167,9 @@ _________________________________________<b>CSS</b>
 ~~~
 
 --------
-## Referências
-https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array  
-https://developer.mozilla.org/pt-BR/docs/Web/Guide/HTML/Canvas_tutorial/Drawing_shapes  
+## Referências  
+https://www.w3schools.com/  
+https://developer.mozilla.org/pt-BR/  
+https://getbootstrap.com/  
+https://jquery.com/  
+
