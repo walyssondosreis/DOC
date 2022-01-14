@@ -111,9 +111,11 @@ window.document.body.style.background = 'black' // Altera plano de fundo do docu
 
 ~~~
 * Grids (Bootstrap) : São considerados da ordem de 12 colunas ;
+* `class="row"` // Classe usada para representar linhas 
+* `class="col-sm-6"` // Classe que irá representar cada peçado da grid como 1/2; propridade tela pequena 'sm'
 * `class="col-md-4"` // Classe que irá representar cada peçado da grid como 1/3; propridade tela média 'md'
 * `class="col-lg-3"` // Classe que irá representar cada peçado da grid como 1/4; propridade tela larga 'lg'
-* `class="row"` // Classe usada para representar linhas 
+* `class="col-xl-4"` // Classe que irá representar cada peçado da grid como 1/3; propridade tela extra larga 'xl'
 ---------------------
 <div>
 <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="logoHTML" width="50px"/>
