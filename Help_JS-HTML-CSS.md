@@ -14,7 +14,7 @@ Data Início: 29/09/2020*
 ---------------------
 <div>
 <img src="https://cdn.iconscout.com/icon/free/png-256/javascript-23-1174949.png" alt="logoJS" width="50px"/>  
-  _________________________________________<b>JS</b>
+ ____<b>JS</b>
 </div>
 
 ~~~JavaScript
@@ -113,7 +113,7 @@ window.document.body.style.background = 'black' // Altera plano de fundo do docu
 ---------------------
 <div>
 <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="logoHTML" width="50px"/>
-_________________________________________<b>HTML</b>
+____<b>HTML</b>
 </div>
 
 ~~~html
@@ -156,7 +156,7 @@ _________________________________________<b>HTML</b>
 ---------------------
 <div>
 <img src="https://devfriends.com.br/images/services/icon/02.png" alt="logocss" width="50px" height="50px"/>  
-_________________________________________<b>CSS</b>
+____<b>CSS</b>
 </div>
 
 ~~~css
