@@ -110,6 +110,10 @@ window.document.body.style.background = 'black' // Altera plano de fundo do docu
 .addEventListener('mouseout',funcDisparo) // Método disparo do evento mouse sai do elemento 
 
 ~~~
+* Grids (Bootstrap) : São considerados da ordem de 12 colunas ;
+* `class="col-md-4"` // Classe que irá representar cada peçado da grid como 1/3; propridade tela média 'md'
+* `class="col-lg-3"` // Classe que irá representar cada peçado da grid como 1/4; propridade tela larga 'lg'
+* `class="row"` // Classe usada para representar linhas 
 ---------------------
 <div>
 <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="logoHTML" width="50px"/>
@@ -152,7 +156,10 @@ ____<b>HTML</b>
 <blockquote>...<\blockquote> <!-- Tag para escrita de citações -->
 <table><tr><td><\td><\tr></table> <!-- Tag para representação de tabela onde <tr> = linha e <td> coluna -->
 <canvas id="tela" width="600" height="400"></canvas> <!-- Tag para definír área de desenho -->
+<figure><figcaption>...</figcaption></figure> <!-- Tag para inserção de figuras/imagens/elementos independentes; gerealmente acompanhado com legenda
+
 ~~~
+
 ---------------------
 <div>
 <img src="https://devfriends.com.br/images/services/icon/02.png" alt="logocss" width="50px" height="50px"/>  
