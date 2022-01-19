@@ -67,6 +67,7 @@ parseInt(x) // Converte String passada em Inteiro; pode ignorar o que vier junto
 parseFloat(x) // Converte String passada em Num. Float;  pode ignorar o que vier junto com numero na string
 Number(x) // Converte String passada em Num de forma auto
 String(x) // Converte Valor passado para String
+String.forCharCode(elemento) // Converte elemento passado em caractere Unicode
 x.toString() // Converte Valor passado para String
 x.toFixed(2) // Formata um número com duas casas decimais
 x.replace('.',',') // Formata um numero substituindo '.' por ',' 
@@ -110,12 +111,7 @@ window.document.body.style.background = 'black' // Altera plano de fundo do docu
 .addEventListener('mouseout',funcDisparo) // Método disparo do evento mouse sai do elemento 
 
 ~~~
-* Grids (Bootstrap) : São considerados da ordem de 12 colunas ;
-* `class="row"` // Classe usada para representar linhas 
-* `class="col-sm-6"` // Classe que irá representar cada peçado da grid como 1/2; propridade tela pequena 'sm'
-* `class="col-md-4"` // Classe que irá representar cada peçado da grid como 1/3; propridade tela média 'md'
-* `class="col-lg-3"` // Classe que irá representar cada peçado da grid como 1/4; propridade tela larga 'lg'
-* `class="col-xl-4"` // Classe que irá representar cada peçado da grid como 1/3; propridade tela extra larga 'xl'
+
 ---------------------
 <div>
 <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="logoHTML" width="50px"/>
@@ -174,6 +170,40 @@ ____<b>CSS</b>
 #nomeid{} /* Declara id estilo de ID */
 @media print{} /* Método que define estilo CSS para impressão da pag */
 ~~~
+---------------
+<div>
+<img src="https://cdn.iconscout.com/icon/free/png-256/javascript-23-1174949.png" alt="logoJS" width="50px"/>  
+ ____<b>JQuery</b>
+</div>  
+
+~~~javascript
+/* Uma expressão Jquery é formado por duas partes: 'o que será manipulado' + 'o que será feito' */
+/* '$()' é o mesmo que 'jquery()' */
+$('p').css('background-color','blue') // Método '.css' manipula estilo de elementos
+$('#meulabel').val('novo texto') // Método '.val' manipula valor de elementos
+$(meuarray).each(function(){};) // Método '.each' aplica função passada a cada elemento do array
+$('.elem').change(function(){};) // Método '.change' monitora evento de mudança do campo; assim que mudado dispara função 
+$(document).ready(function(){};) // Método de evento que é executado assim que a página é carregada
+$(function(){};) //  Método de evento que é executado assim que a página é carregada
+$('#meuinput').keydown(function(event){} // Método '.keydown' monitora evento de tecla; exige argumento 'event'
+$('#meuinput').off('keydown') //Método '.off' remove funções associadas a um evento
+$('#meuinput').off() // Método '.off' remove funções associadas a um evento
+$('#meuinput').on('keydown.namespace1',function(){}) // Método '.on' cria evento com namespace 
+$('#meuinput').off('keydown.namespace1') // Método irá remover evento específico passado namespace do evento
+
+~~~ 
+---------------
+<div>
+<img src="https://cdn.iconscout.com/icon/free/png-256/javascript-23-1174949.png" alt="logoJS" width="50px"/>  
+ ____<b>Bootstrap</b>
+</div>
+
+* Grids (Bootstrap) : São considerados da ordem de 12 colunas ;
+* `class="row"` // Classe usada para representar linhas 
+* `class="col-sm-6"` // Classe que irá representar cada peçado da grid como 1/2; propridade tela pequena 'sm'
+* `class="col-md-4"` // Classe que irá representar cada peçado da grid como 1/3; propridade tela média 'md'
+* `class="col-lg-3"` // Classe que irá representar cada peçado da grid como 1/4; propridade tela larga 'lg'
+* `class="col-xl-4"` // Classe que irá representar cada peçado da grid como 1/3; propridade tela extra larga 'xl'
 
 --------
 ## Referências  
