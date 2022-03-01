@@ -1,0 +1,40 @@
+# FAKE PRO
+---
+### Walysson dos Reis
+## Softwares 
+
+* Linux Mint 20.3 Una : Kernel 5.4.0-100-generic
+* ffmpeg 7:4.2.4-1ubuntu0.1
+* Pulse Audio Virtual Sink
+* v4l2loopback-dkms 0.12.3-1ubuntu0.4
+* OBS Studio 27.2.1-0obsproject1~focal
+* Android Studio Bumblebee | 2021.1.1 Patch 2
+
+## Instalação
+* `sudo apt-get install ffmpeg`  
+* `sudo xed /etc/pulse/default.pa` // Adicione ao final do arquivo:
+~~~
+load-module module-null-sink sink_name=Virtual_Sink sink_properties=device.description=Virtual_Sink
+~~~
+* `pacmd load-module module-null-sink sink_name=Virtual_Sink sink_properties=device.description=Virtual_Sink`
+* `sudo modprobe snd_aloop`
+* `sudo apt install v4l2loopback-dkms`
+* `sudo add-apt-repository ppa:obsproject/obs-studio`
+* `sudo apt update`
+* `sudo apt install obs-studio`
+
+--------
+## Referências
+https://obsproject.com/wiki/install-instructions#linux  
+https://askubuntu.com/questions/881305/is-there-any-way-ffmpeg-send-video-to-dev-video0-on-ubuntu  
+https://superuser.com/questions/411897/using-desktop-as-fake-webcam-on-linux  
+https://stackoverflow.com/questions/14012924/android-how-to-use-webcam-in-emulator  
+https://www.onetransistor.eu/2017/10/virtual-audio-cable-in-linux-ubuntu.html  
+https://stackoverflow.com/questions/37300811/android-studio-dev-kvm-device-permission-denied  
+https://cursos.alura.com.br/forum/topico-adicionar-e-remover-caminhos-do-path-46966  
+https://stackoverflow.com/questions/11779490/how-to-add-a-new-audio-not-mixing-into-a-video-using-ffmpeg  
+https://www.techtudo.com.br/dicas-e-tutoriais/noticia/2017/04/como-rodar-apps-android-no-ubuntu-sem-emulacao.html  
+https://www.onetransistor.eu/2017/10/virtual-audio-cable-in-linux-ubuntu.html  
+https://www.youtube.com/watch?v=Eca509IDLdM  
+https://www.youtube.com/watch?v=QQ3bzXeuo5I  
+
