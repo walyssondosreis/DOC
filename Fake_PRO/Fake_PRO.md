@@ -1,6 +1,10 @@
-# FAKE PRO
+# **FAKE PRO**
+*Autor: Walysson dos Reis  
+Data Início: 01/10/2021*  
+
 ---
-### Walysson dos Reis
+
+
 ## Softwares 
 
 * Linux Mint 20.3 Una : Kernel 5.4.0-100-generic
@@ -22,6 +26,8 @@ load-module module-null-sink sink_name=Virtual_Sink sink_properties=device.descr
 * `sudo add-apt-repository ppa:obsproject/obs-studio`
 * `sudo apt update`
 * `sudo apt install obs-studio`
+---- 
+![image](https://user-images.githubusercontent.com/38730743/156210953-ab4e2160-8f0c-4456-9412-5db01fb19470.png)
 
 --------
 ## Referências
