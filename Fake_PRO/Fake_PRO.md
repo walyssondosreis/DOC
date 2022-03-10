@@ -28,6 +28,11 @@ load-module module-null-sink sink_name=Virtual_Sink sink_properties=device.descr
 * `sudo apt install obs-studio`
 ---- 
 ![image](https://user-images.githubusercontent.com/38730743/156210953-ab4e2160-8f0c-4456-9412-5db01fb19470.png)
+![2022-03-01_16-22](https://user-images.githubusercontent.com/38730743/157657345-73046fda-49f2-4568-b1bf-9aad030e61a8.png)
+![2022-03-01_17-10](https://user-images.githubusercontent.com/38730743/157657350-f283d3b9-54a4-4356-9c2a-22f8aaee10c7.png)
+![2022-03-01_17-15](https://user-images.githubusercontent.com/38730743/157657355-90b0662a-e5f3-4104-857a-3c9cbb041de5.png)
+![2022-03-01_18-04](https://user-images.githubusercontent.com/38730743/157657372-63e9379d-f23d-4ded-9b88-10248c8316eb.png)
+
 
 --------
 ## Referências
