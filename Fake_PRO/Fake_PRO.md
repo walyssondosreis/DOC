@@ -26,6 +26,20 @@ load-module module-null-sink sink_name=Virtual_Sink sink_properties=device.descr
 * `sudo add-apt-repository ppa:obsproject/obs-studio`
 * `sudo apt update`
 * `sudo apt install obs-studio`
+
+## Opcional
+
+* `sudo xed ~/.bashrc` // Coloca Android SDK no path Ubuntu. Abra o arquivo 'bashrc' e adicione ao final:
+~~~~
+export PATH=$PATH:/home/USUARIO/android-studio/bin
+export ANDROID_SDK_HOME="~/Android/Sdk"
+alias emulator="$ANDROID_SDK_HOME/emulator/emulator"
+~~~~
+* `ls -ltrh /dev/video*` // Lista dispositivos de camêras conectados ao sistema
+* `ls -l /dev/video*` // Lista dispositivos de camêras conectados ao sistema
+* `v4l2-ctl --list-devices` // Lista ID do dispositivo de câmera virtual
+* `ffmpeg -f x11grab -r 15 -s 1366x768 -i :0.0+0,0 -vcodec rawvideo -pix_fmt yuv420p -threads 0 -f v4l2 /dev/video0` // Inicia camêra virtual pelo terminal capturando monitor
+* `ffmpeg -re -i input.mp4 -map 0:v -f v4l2 /dev/video0` // Inicia câmera virtual pelo terminal passando vídeo a ser reproduzido
 ---- 
 ![image](https://user-images.githubusercontent.com/38730743/156210953-ab4e2160-8f0c-4456-9412-5db01fb19470.png)
 ![2022-03-01_16-22](https://user-images.githubusercontent.com/38730743/157657345-73046fda-49f2-4568-b1bf-9aad030e61a8.png)
