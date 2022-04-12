@@ -55,8 +55,9 @@
       * ualpha-numeric-all-space : Letras maiúsculas, números e caracteres especiais.
       * mixalpha : Letras minúsculas e maiúsculas.
       * mixalpha-numeric-all-space : Letras maiúsculas, minúsculas, números, caracteres especiais e espaço. 
-* `crunch 4 6 1234567890 -o MinhaWordlist01.txt` - 
-* `crunch 9 9 1234567890 -t maria@@@@ -o /tmp/wordlist-maria.txt` - Exemplo de geração de lista
+
+* `crunch 4 6 1234567890 -o MinhaWordlist01.txt` - Exemplo: Gera lista numérica com palavras de 4 a 6 caracteres e armazena. 
+* `crunch 9 9 1234567890 -t palavra@@@@ -o MinhaWordlist02.txt` - Exemplo: Gera lista com parte da palavra fixa e variação numérica, armazenando resultado.
 * `crunch 4 8 -f charset.lst mixalpha -o /root/lista-com-charset.txt` - Exemplo de geração de lista
 * `crunch 8 8 -f charset.lst mixalpha-numeric-all-space -t @@abc@@@ -o /root/wordlist-gigante.txt` - Exemplo de geração de lista
 * `crunch 4 4 -f charset.lst mixalpha-numeric-all-space -o /root/thekingwordlist4-4.txt` - Exemplo de geração de lista
