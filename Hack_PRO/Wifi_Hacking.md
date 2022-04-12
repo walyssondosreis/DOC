@@ -62,6 +62,8 @@
 * `crunch 8 8 -f charset.lst mixalpha-numeric-all-space -t @@abc@@@ -o MinhaWordlist04.txt` - Exemplo: Gera lista com palavra de tamanho 8 combinando variáveis charset e palavras fixas armazenando resultado. 
 * `crunch 4 4 -f charset.lst mixalpha-numeric-all-space -o MinhaWordlist05.txt` - Exemplo: Gera lista com palavra de tamanho 4 utilizando todos os caracteres possíveis do charset e armazena resultado.
 * `crunch 8 8 abcdefghijklmnopqrstuvxz 1234567890 | aircrack --bssid 00:00:00:00:00:00 -w- ArqCap-01.cap` - Exemplo: Gera lista com palavra de tamanho 8 que contenha letras letras e números especificados passando diretamente para o software aircrack; não armazena resultado. 
+* `crunch 8 8 | john --stdin --session=session1 --stdout | aircrack-ng -b 00:00:00:00:00:00 -w- ArqCap-01.cap` - Exemplo: Gera lista com palavras de tamanho 8 apenas com o padrão letras minúsculas do alfabeto passando diretamente para o software aircrack; Diferencial utiliza o software john para guardar o progresso de execução.
+* `crunch 8 8 | john --restore=session1 | aircrack-ng -b 00:00:00:00:00:00 -w- ArqCap-01.cap` - Exemplo: Restaura execução da geração de lista passada diretamente para o software aircrack.
 --------
 ## Referências
 https://outpost24.com/blog/wps-cracking-with-reaver  
@@ -72,6 +74,7 @@ https://nsworld.com.br/crunch-gerador-de-wordlist/
 https://nsworld.com.br/aircrack-ng-pacote-de-ferramentas-para-monitorizar-e-analisar-redes-sem-fio/
 https://nsworld.com.br/cracking-wpa-com-aircrack-ng/  
 https://www.thinklinux.com.br/?p=130  
+https://cibersegurancawernik.blogspot.com/2018/01/capturando-pacotes-wifi-aircrack-e.html  
 
 
 
