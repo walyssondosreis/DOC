@@ -69,9 +69,9 @@
 https://outpost24.com/blog/wps-cracking-with-reaver  
 https://cienciacomputacao.com.br/tutorial/como-hackear-wi-fi-wpa2-psk-com-kali-linux/  
 https://www.cyberpratibha.com/blog/how-do-i-use-rockyou-wordlist-txt-in-kali-linux/  
-https://deadpackets.wordpress.com/2012/11/11/wireless-fun-crackeando-wpawpa2/
+https://deadpackets.wordpress.com/2012/11/11/wireless-fun-crackeando-wpawpa2/  
 https://nsworld.com.br/crunch-gerador-de-wordlist/  
-https://nsworld.com.br/aircrack-ng-pacote-de-ferramentas-para-monitorizar-e-analisar-redes-sem-fio/
+https://nsworld.com.br/aircrack-ng-pacote-de-ferramentas-para-monitorizar-e-analisar-redes-sem-fio/  
 https://nsworld.com.br/cracking-wpa-com-aircrack-ng/  
 https://www.thinklinux.com.br/?p=130  
 https://cibersegurancawernik.blogspot.com/2018/01/capturando-pacotes-wifi-aircrack-e.html  
