@@ -45,6 +45,22 @@
     * , representa letras maiúsculas
     * % representa números
     * ^ representa caracteres especiais
+ * `crunch 4 6 1234567890 -o /root/numerica6-8.txt` - Exemplo de geração de lista
+ * `crunch 9 9 1234567890 -t maria@@@@ -o /tmp/wordlist-maria.txt` - Exemplo de geração de lista
+ * Charset.lst: /usr/share/crunch/charset.lst
+    * Conjunto de caracteres disponíveis no charset.lst:
+      * lalpha: apenas letras minúsculas
+      * ualpha: apenas letras maiúsculas
+      * lalpha-numeric: letras minúsculas e números
+      * ualpha-numeric: letras maiúsculas e números
+      * lalpha-numeric-all-space: letras minúsculas, números e caracteres especiais como ?, ;, :, espaço, etc.;
+      * ualpha-numeric-all-space: letras maiúsculas, números e caracteres especiais como ?, ;, :, espaço, etc.;
+      * mixalpha: letras minúsculas e maiúsculas;
+      * mixalpha-numeric-all-space: letras maiúsculas, minúsculas, números, caracteres especiais e espaço. 
+* `crunch 4 8 -f charset.lst mixalpha -o /root/lista-com-charset.txt` - Exemplo de geração de lista
+* `crunch 8 8 -f charset.lst mixalpha-numeric-all-space -t @@abc@@@ -o /root/wordlist-gigante.txt` - Exemplo de geração de lista
+* `crunch 4 4 -f charset.lst mixalpha-numeric-all-space -o /root/thekingwordlist4-4.txt` - Exemplo de geração de lista
+* `crunch 8 8 abcdefghijklmnopqrstuvxz 1234567890 | aircrack --bssid 00:1D:AA:9D:27:AC -w- 'root/handshakes/Cafelocuraceb-00:1D:AA:9D:27:AC.cap` - Exemplo de geração
 --------
 ## Referências
 https://outpost24.com/blog/wps-cracking-with-reaver  
