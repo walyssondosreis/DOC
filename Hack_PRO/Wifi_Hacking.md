@@ -56,12 +56,12 @@
       * mixalpha : Letras minúsculas e maiúsculas.
       * mixalpha-numeric-all-space : Letras maiúsculas, minúsculas, números, caracteres especiais e espaço. 
 
-* `crunch 4 6 1234567890 -o MinhaWordlist01.txt` - Exemplo: Gera lista numérica com palavras de 4 a 6 caracteres e armazena. 
-* `crunch 9 9 1234567890 -t palavra@@@@ -o MinhaWordlist02.txt` - Exemplo: Gera lista com parte da palavra fixa e variação numérica, armazenando resultado.
-* `crunch 4 8 -f charset.lst mixalpha -o /root/lista-com-charset.txt` - Exemplo de geração de lista
-* `crunch 8 8 -f charset.lst mixalpha-numeric-all-space -t @@abc@@@ -o /root/wordlist-gigante.txt` - Exemplo de geração de lista
-* `crunch 4 4 -f charset.lst mixalpha-numeric-all-space -o /root/thekingwordlist4-4.txt` - Exemplo de geração de lista
-* `crunch 8 8 abcdefghijklmnopqrstuvxz 1234567890 | aircrack --bssid 00:1D:AA:9D:27:AC -w- 'root/handshakes/Cafelocuraceb-00:1D:AA:9D:27:AC.cap` - Exemplo de geração
+* `crunch 4 6 1234567890 -o MinhaWordlist01.txt` - Exemplo: Gera lista numérica com palavras de 4 a 6 caracteres e armazena resultado. 
+* `crunch 9 9 1234567890 -t palavra@@@@ -o MinhaWordlist02.txt` - Exemplo: Gera lista com parte da palavra fixa de 9 caracteres e variação numérica, armazenando resultado.
+* `crunch 4 8 -f charset.lst mixalpha -o MinhaWordlist03.txt` - Exemplo: Gera lista com palavras de 4 a 8 caracteres utilizando charset de letras minusculas e maiusculas e armazena resultado.
+* `crunch 8 8 -f charset.lst mixalpha-numeric-all-space -t @@abc@@@ -o MinhaWordlist04.txt` - Exemplo: Gera lista com palavra de tamanho 8 combinando variáveis charset e palavras fixas armazenando resultado. 
+* `crunch 4 4 -f charset.lst mixalpha-numeric-all-space -o MinhaWordlist05.txt` - Exemplo: Gera lista com palavra de tamanho 4 utilizando todos os caracteres possíveis do charset e armazena resultado.
+* `crunch 8 8 abcdefghijklmnopqrstuvxz 1234567890 | aircrack --bssid 00:00:00:00:00:00 -w- ArqCap-01.cap` - Exemplo: Gera lista com palavra de tamanho 8 que contenha letras letras e números especificados passando diretamente para o software aircrack; não armazena resultado. 
 --------
 ## Referências
 https://outpost24.com/blog/wps-cracking-with-reaver  
