@@ -20,10 +20,37 @@
 * /usr/share/wordlists/rockyou.txt.gz - Wordlist padrão do Kali Linux
 * `gzip -d rockyou.txt.gz` - Descompacta o arquivo de wordlist deletando o arquivo zipado
 * `aircrack-ng ArqCap-01.cap -w rockyou.txt` - Inicia o processo de teste de senha utilizando o arquivo de wordlist
+* `grep -E '^.{8,63}$' < rockyou.txt >> rockyou_wpa_passwd.txt` -  Filtra o arquivo rockyou para senhas WPA/WPA2 (8-63 caracteres)
+
+### Crunch : Gerador de Wordlist
+* `crunch <min> <max> [opções] ` - Uso padrão do Crunch
+*  lowUP123 @% # (letras minúsculas, letras maiúsculas, números e símbolos) - Ordem de Charset no Crunch
+* Principais parâmetros do crunch:
+    * -b: Tamanho máximo da lista de palavras (requer -o START)
+    * -c: números de linhas para escrever na lista de palavras (requer -o START)
+    * -d: limita o número de caracteres duplicados
+    * -e: para de gerar palavras em um determinado string
+    * -f: especifica uma lista de conjuntos de caracteres do arquivo charset.lst
+    * -i: inverte a ordem dos caracteres na lista de palavras
+    * -l: permite a interpretação literal de @,% ^ ao usar -t
+    * -o: o arquivo de lista de saída
+    * -p: imprime permutações sem repetir caracteres (não pode ser usado com -s)
+    * -q: Como a opção -p, exceto a leitura das sequências de um arquivo especificado
+    * -r: retoma uma sessão anterior (não pode ser usada com -s)
+    * -s : especifique uma string específica para iniciar a lista de palavras com
+    * -t: define um padrão específico de @,% ^
+    * -z: comprime o arquivo da lista de saída, acompanhado de -o
+ * Refência do crunch:
+    * @ representa letras minúsculas
+    * , representa letras maiúsculas
+    * % representa números
+    * ^ representa caracteres especiais
 --------
 ## Referências
 https://outpost24.com/blog/wps-cracking-with-reaver  
 https://cienciacomputacao.com.br/tutorial/como-hackear-wi-fi-wpa2-psk-com-kali-linux/  
 https://www.cyberpratibha.com/blog/how-do-i-use-rockyou-wordlist-txt-in-kali-linux/  
+https://deadpackets.wordpress.com/2012/11/11/wireless-fun-crackeando-wpawpa2/
+https://nsworld.com.br/crunch-gerador-de-wordlist/  
 
 
