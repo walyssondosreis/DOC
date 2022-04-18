@@ -1,4 +1,4 @@
-# Wifi Hacking -- Kali Linux
+# Wifi Cracking -- Kali Linux
 ### (by Walysson dos Reis)
 ---------------------
 ### WPS Cracking com Reaver
