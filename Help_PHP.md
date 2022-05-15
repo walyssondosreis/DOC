@@ -11,4 +11,6 @@ isset($minhaVar) // Função que verifica se uma variável existe
 foreach($meuvetor as $minhavar){}; //Laço de repetição q varre vetor e aplica
 *obs: Ao inserir PHP + HTML é usual coloca trechos como <?php foreach($meuvetor as $minhavar): ?> ... <?php endforeach; ?>
 *Isso pode se aplicar também a endwhile, endif, endfor etc..
+*Quando tiver PHP puro use o bloco de chaves comum foreach(){};
+
 ~~~
