@@ -6,7 +6,7 @@
 *Autor: Walysson dos Reis*
 
 ----------------------------------------------
-*Conceitos e comandos rápidos das linguagens Javascript, HTML e CSS. Manual de consulta rápida.*  
+*Manual de consulta rápida dos conceitos e principais comandos da(s) linguagem(s).*  
 
 ---------------------
 
