@@ -1,4 +1,6 @@
-ncpa.cpl =abre conexoes de rede do painel de controle
+~~~
+Executar Win+R
+cpa.cpl =abre conexoes de rede do painel de controle
 appwiz.cpl = abre o adicionar e remover programas do painel de controle
 msconfig = aplicativo de gerenciamento do windows
 regedit = acesso rapido ao registro do windows
@@ -6,11 +8,11 @@ cleanmgr = limpador de arquivos temporarios padrao do windows
 firewall.cpl= firewall do windows
 control = abre painel de controle
 -----------------------------------------
-compmgmt.msc – Gerenciamento do Computador
-eventvwr.msc – Visualizar Evento
-comexp.msc – Serviços de Componentes
+compmgmt.msc â€“ Gerenciamento do Computador
+eventvwr.msc â€“ Visualizar Evento
+comexp.msc â€“ ServiÃ§os de Componentes
 services.msc - configuracao de servicos
-fsmgmt.msc – Gerencia as pastas compartilhadas no windows
+fsmgmt.msc â€“ Gerencia as pastas compartilhadas no windows
 devmgmt.msc - Gerenciador de dispositivos de hardware instalado
 optionalfeatures - Ativar ou desativar recursos do windows
 ----------------------------------------
@@ -19,11 +21,12 @@ gpedit.msc = editor de diretiva de grupo local
 rsop.msc = conjunto de diretivas resultante
 sysdm.cpl = propriendades de meu computador``
 taskmgr = gerenciador de tarefas do windows
-perfmon.msc – Serviço de componentes, monitor de desempenho
-wscui.cpl - (Centerscui.cpl) – abre central de acoes/ atualizacoes e firewall
+perfmon.msc â€“ ServiÃ§o de componentes, monitor de desempenho
+wscui.cpl - (Centerscui.cpl) â€“ abre central de acoes/ atualizacoes e firewall
 control schedtasks - Agendar e exibir tarefas a serem executadas em hora determinada
 intl.cpl - configuracao de idiomas do sistema
 control printers - gerenciador de impressora
 powercfg.cpl - gerenciador de energia da maquina
-dfrg.msc(Win XP) - defrag(Vista) – Desfragmentador de Discos.
-control userpasswords2 ou netplwiz - Configurações de premissões avanaçadas de usuario
+dfrg.msc(Win XP) - defrag(Vista) â€“ Desfragmentador de Discos.
+control userpasswords2 ou netplwiz - ConfiguraÃ§Ãµes de premissÃµes avanaÃ§adas de usuario
+~~~
