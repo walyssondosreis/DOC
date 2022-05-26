@@ -42,6 +42,14 @@ alias emulator="$ANDROID_SDK_HOME/emulator/emulator"
 * `ffmpeg -re -i input.mp4 -map 0:v -f v4l2 /dev/video0` // Inicia câmera virtual pelo terminal passando vídeo a ser reproduzido
 * ` sudo apt install qemu-kvm` // Instala KVM caso não tenho já instalado
 * `sudo adduser %MEUUSUARIO kvm` // Adiciona o usuário ao grupo KVM
+
+## AVD Via Terminal (Sem Android Studio)
+~~~ubuntu
+emulator -list-avds
+
+emulator -avd NOME_AVD
+~~~
+
 ---- 
 ![image](https://user-images.githubusercontent.com/38730743/156210953-ab4e2160-8f0c-4456-9412-5db01fb19470.png)
 ![2022-03-01_16-22](https://user-images.githubusercontent.com/38730743/157657345-73046fda-49f2-4568-b1bf-9aad030e61a8.png)
@@ -64,4 +72,5 @@ https://www.techtudo.com.br/dicas-e-tutoriais/noticia/2017/04/como-rodar-apps-an
 https://www.onetransistor.eu/2017/10/virtual-audio-cable-in-linux-ubuntu.html  
 https://www.youtube.com/watch?v=Eca509IDLdM  
 https://www.youtube.com/watch?v=QQ3bzXeuo5I  
+https://pt.stackoverflow.com/questions/203299/como-executar-o-emulador-a-partir-da-linha-de-comandos-do-windows  
 

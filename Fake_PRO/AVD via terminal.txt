@@ -1,7 +1,0 @@
-emulator -list-avds
-
-emulator -avd NOME_AVD
-
-Font:
-https://pt.stackoverflow.com/questions/203299/como-executar-o-emulador-a-partir-da-linha-de-comandos-do-windows
-
