@@ -230,7 +230,7 @@ tutorial.
 ~~~
 --------
 ## Referências
-http://www.vivaolinux.com.br/dica/Lendo-strings-com-espaco-em-branco-usando-scanf/
-http://www.unidev.com.br/index.php?/topic/55417-dica-mudando-o-%C3%ADcone-do-execut%C3%A1vel-no-codeblocks-para-windows/  
-http://www.hardware.com.br/tutoriais/inno-setup/  
+http://www.vivaolinux.com.br/dica/Lendo-strings-com-espaco-em-branco-usando-scanf/  
+http://www.unidev.com.br/index.php?/topic/55417-dica-mudando-o-%C3%ADcone-do-execut%C3%A1vel-no-codeblocks-para-windows/    
+http://www.hardware.com.br/tutoriais/inno-setup/   
 
