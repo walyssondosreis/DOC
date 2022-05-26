@@ -1,5 +1,13 @@
-# Help PHP
-### (by Walysson dos Reis)
+# **PHP**
+<div>
+<img src="https://brandslogos.com/wp-content/uploads/thumbs/php-logo-vector.svg" alt="logoJS" width="50px"/> 
+</div>
+
+*Autor: Walysson dos Reis*
+
+----------------------------------------------
+*Manual de consulta rápida dos conceitos e principais comandos.*  
+
 ---------------------
 ### Info
 ~~~PHP
@@ -18,3 +26,5 @@ $_SESSION // Variavel que guarda sessão do usuário
 
 
 ~~~
+--------
+## Referências 
