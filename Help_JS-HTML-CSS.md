@@ -2,7 +2,7 @@
 <div>
 <img src="https://cdn.iconscout.com/icon/free/png-256/javascript-23-1174949.png" alt="logoJS" width="50px"/> 
 <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="logoHTML" width="50px"/> 
-<img src="https://devfriends.com.br/images/services/icon/02.png" alt="logocss" width="50px" height="50px"/> 
+<img src="https://cdn-icons-png.flaticon.com/512/528/528255.png" alt="logocss" width="50px" height="50px"/> 
 </div>
 
 *Autor: Walysson dos Reis  
@@ -160,7 +160,7 @@ ____<b>HTML</b>
 
 ---------------------
 <div>
-<img src="https://devfriends.com.br/images/services/icon/02.png" alt="logocss" width="50px" height="50px"/>  
+<img src="https://cdn-icons-png.flaticon.com/512/528/528255.png" alt="logocss" width="50px" height="50px"/>  
 ____<b>CSS</b>
 </div>
 
