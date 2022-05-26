@@ -7,11 +7,10 @@
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png" alt="logoJS" width="50px"/>
 </div>
 
-*Autor: Walysson dos Reis  
-Data Início: 29/09/2020*  
+*Autor: Walysson dos Reis*  
 
 ----------------------------------------------
-*Conceitos e comandos rápidos das linguagens Javascript, HTML e CSS. Manual de consulta rápida.*  
+*Manual de consulta rápida dos conceitos e principais comandos.*   
 
 ---------------------
 <div>
