@@ -1,3 +1,14 @@
+# **WINDOWS**
+<div>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Windows_logo_-_2012.svg/2048px-Windows_logo_-_2012.svg.png" alt="logoJS" width="50px"/> 
+</div>
+
+*Autor: Walysson dos Reis*
+
+----------------------------------------------
+*Manual de consulta rápida dos conceitos e principais comandos.*  
+
+---------------------
 ~~~
 Executar Win+R
 cpa.cpl =abre conexoes de rede do painel de controle
@@ -30,3 +41,6 @@ powercfg.cpl - gerenciador de energia da maquina
 dfrg.msc(Win XP) - defrag(Vista) – Desfragmentador de Discos.
 control userpasswords2 ou netplwiz - Configurações de premissões avanaçadas de usuario
 ~~~
+
+--------
+## Referências 
