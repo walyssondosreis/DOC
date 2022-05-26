@@ -1,4 +1,4 @@
-# **Django**
+# **DJANGO**
 <div>
 <img src="https://brandslogos.com/wp-content/uploads/images/large/django-logo.png" alt="logoJS" width="50px"/> 
 </div>
