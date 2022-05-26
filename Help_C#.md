@@ -6,7 +6,7 @@
 *Autor: Walysson dos Reis*
 
 ----------------------------------------------
-*Manual de consulta rápida dos conceitos e principais comandos da(s) linguagem(s).*  
+*Manual de consulta rápida dos conceitos e principais comandos.*  
 
 ---------------------
 
