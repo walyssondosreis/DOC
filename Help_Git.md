@@ -9,7 +9,7 @@
 *Manual de consulta rápida dos conceitos e principais comandos.*
 
 ---------------------
-
+~~~git
 git clone URL
 git status
 git add *
@@ -23,6 +23,6 @@ git pull // BAIXA DO SERVIDOR PARA O PC
 git config --global user.name "Walysson dos Reis"
 git config --global user.email walyssondosreis@gmail.com
 git config --global user.signingKey 'senha'
-
+~~~~
 --------
 ## Referências  
