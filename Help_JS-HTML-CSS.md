@@ -3,6 +3,8 @@
 <img src="https://cdn.iconscout.com/icon/free/png-256/javascript-23-1174949.png" alt="logoJS" width="50px"/> 
 <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="logoHTML" width="50px"/> 
 <img src="https://cdn-icons-png.flaticon.com/512/528/528255.png" alt="logocss" width="50px" height="50px"/> 
+<img src="https://cdn.iconscout.com/icon/free/png-256/jquery-7-1175152.png" alt="logoJS" width="50px"/>  
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png" alt="logoJS" width="50px"/>
 </div>
 
 *Autor: Walysson dos Reis  
@@ -172,7 +174,7 @@ ____<b>CSS</b>
 ~~~
 ---------------
 <div>
-<img src="https://cdn.iconscout.com/icon/free/png-256/javascript-23-1174949.png" alt="logoJS" width="50px"/>  
+<img src="https://cdn.iconscout.com/icon/free/png-256/jquery-7-1175152.png" alt="logoJS" width="50px"/>  
  ____<b>JQuery</b>
 </div>  
 
@@ -194,7 +196,7 @@ $('#meuinput').off('keydown.namespace1') // Método irá remover evento específ
 ~~~ 
 ---------------
 <div>
-<img src="https://cdn.iconscout.com/icon/free/png-256/javascript-23-1174949.png" alt="logoJS" width="50px"/>  
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png" alt="logoJS" width="50px"/>  
  ____<b>Bootstrap</b>
 </div>
 
