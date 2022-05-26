@@ -1,5 +1,13 @@
-# Help Python
-### (by Walysson dos Reis)
+# **PYTHON**
+<div>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png" alt="logoJS" width="50px"/> 
+</div>
+
+*Autor: Walysson dos Reis*
+
+----------------------------------------------
+*Manual de consulta rápida dos conceitos e principais comandos.*  
+
 ---------------------
 ### STRINGS
 ~~~PYTHON
@@ -269,4 +277,7 @@ callable(objeto) # Método que permite descobrir se uma funcao, classe, objeto e
 
 * Em python pode-se criar alias ou apelidos para facilitar a utilização de métodos de outros módulos . ex:  os.startfile('c:/arquivo.txt') é mesmo que atalho=os.startfile atalho('c:/..etc).
 
----------
+--------
+## Referências  
+
+
