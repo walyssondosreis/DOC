@@ -1,6 +1,14 @@
-# Help Django
----
-### Walysson dos Reis
+# **Django**
+<div>
+<img src="https://brandslogos.com/wp-content/uploads/images/large/django-logo.png" alt="logoJS" width="50px"/> 
+</div>
+
+*Autor: Walysson dos Reis*
+
+----------------------------------------------
+*Manual de consulta rápida dos conceitos e principais comandos da(s) linguagem(s).*  
+
+---------------------  
 ## `python manage.py`
 
 * `runserver`  // Executa servidor na porta padrao 8000.
@@ -111,4 +119,5 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 > Criar modelos de dados para meu APP.  
 
-------------------
+--------
+## Referências 
