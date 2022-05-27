@@ -1,4 +1,12 @@
-# SAMBA 4 Active Directory Domain Controller  
+# **SAMBA 4**
+<div>
+<img src="https://www.guiadoti.com/2014/08/como-instalar-e-configurar-o-samba-4-1-11/samba_logo_4/" alt="logoJS" width="200px"/> 
+</div>
+
+*Autor: Walysson dos Reis*
+
+----------------------------------------------
+# Active Directory Domain Controller  
 ## Manipulação e Gerenciamento de Terminais
 
 ### Configuração de Terminais
