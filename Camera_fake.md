@@ -1,4 +1,4 @@
-# **FAKE CAM**
+# **CAMERA FAKE**
 <div>
 <img src="https://static.cdnlogo.com/logos/g/65/google-camera.svg" alt="logoJS" width="50px"/> 
 </div>
