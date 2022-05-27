@@ -1,7 +1,0 @@
-sudo dpkg -i pacote.deb 
-sudo dpkg --configire -a && sudo apt-get install -f 
-
-# Alternativamente baixe o app EDDY para instalar graficamente.
-
-Referências:
-https://www.vivaolinux.com.br/topico/Elementary-OS-1/Nao-consigo-instalar-pacotes-deb-na-distrohttps://plus.diolinux.com.br/t/usando-o-dark-mode-no-elementary-os-5-0/133

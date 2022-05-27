@@ -1,5 +1,0 @@
-pulseaudio -k
-
-
-https://askubuntu.com/questions/1132924/audio-issues-using-lutris-wine
-

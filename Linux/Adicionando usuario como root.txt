@@ -1,1 +1,0 @@
-https://www.vivaolinux.com.br/dica/Concedendo-permissao-de-root-para-um-usuario-comum-via-sudo

@@ -1,9 +1,0 @@
-
-Ver lista de processos 
-pid
-
-matar processo
-kill -9 Id_PID
-
-
-https://canaltech.com.br/linux/conheca-6-comandos-para-gerenciar-processos-do-linux/
