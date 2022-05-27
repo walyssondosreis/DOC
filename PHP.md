@@ -14,6 +14,7 @@
 <?php // Inicia bloco de código PHP.
 ... // Meu código PHP aqui 
 ?> <!-- Finaliza bloco de código PHP. -->
+include "meuarquivo.php" // Incorpora
 ----------------------------------------------
 $minhaVariavel // Cifrão ($) define variável no PHP.
 ----------------------------------------------
