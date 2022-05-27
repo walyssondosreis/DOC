@@ -1,6 +1,15 @@
-# Wifi Cracking -- Kali Linux
-### (by Walysson dos Reis)
+# **KALI LINUX**
+<div>
+<img src="https://seeklogo.com/images/K/kali-linux-logo-5A3B1D1555-seeklogo.com.png" alt="logoJS" width="50px"/> 
+</div>
+
+*Autor: Walysson dos Reis*
+
+----------------------------------------------
+*Manual de consulta rápida dos conceitos e principais comandos.*  
+
 ---------------------
+## Wifi Cracking 
 ### WPS Cracking com Reaver
 * `airmon-ng check kill` - Interrompe processos que estejam utilizando a interface wifi.
 * `airmon-ng start wlan0` - Coloca a interface wlan0 em modo de monitoramento.
