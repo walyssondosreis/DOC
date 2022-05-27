@@ -28,8 +28,9 @@ foreach($meuvetor as $minhavar){}; // Laço de repetição que percorre todo vet
 ~~~
 ### Métodos Úteis
 ~~~PHP
-session_start() // Inicia/Define variável de sessão do usuário.
-isset($minhaVar) // Retorna boleano para existência de variável.
+session_start() // Inicia/Define variável de sessão do usuário. Retorna booleano.
+isset($minhaVar) // Retorna booleano para existência de variável.
+array() // Retorna objeto array.
 ~~~
 ### Variáveis Globais
 ~~~PHP
@@ -38,3 +39,4 @@ $_SESSION // Variavel que guarda sessão do usuário.
 ~~~
 --------
 ## Referências 
+https://www.php.net/manual/pt_BR/  
