@@ -9,22 +9,32 @@
 *Manual de consulta rápida dos conceitos e principais comandos.*  
 
 ---------------------
-### Info
+### Conceitos 
 ~~~PHP
-<?php // Inicia um bloco de cod php
-?>  // Finaliza um bloco de cod php
-function nomeFuncao(){} // Estrutura de função
-$minhaVariavel // Cifrão ($) define variável no PHP
-isset($minhaVar) // Função que verifica se uma variável existe
-foreach($meuvetor as $minhavar){}; //Laço de repetição q varre vetor e aplica
-*obs: Ao inserir PHP + HTML é usual coloca trechos como <?php foreach($meuvetor as $minhavar): ?> ... <?php endforeach; ?>
-*Isso pode se aplicar também a endwhile, endif, endfor etc..
-*Quando tiver PHP puro use o bloco de chaves comum foreach(){};
-$_GET // Variável global q captura todos os dados inseridos na pag
-$_SESSION // Variavel que guarda sessão do usuário
-<?php session_start(); ?> // Antes de utilizar a session deve-se definir no inicio da pag, antes da tag html
-
-
+<?php // Inicia bloco de código PHP.
+... // Meu código PHP aqui 
+?> <!-- Finaliza bloco de código PHP. -->
+----------------------------------------------
+$minhaVariavel // Cifrão ($) define variável no PHP.
+----------------------------------------------
+// Laços e decisões entre código HTML 
+<?php foreach($meuvetor as $minhavar): ?> 
+... <!-- Meu código HTML aqui -->
+<?php endforeach; ?>
+*Este conceito pode ser estendido também a: while/endwhile, if/endif, for/endfor.
+----------------------------------------------
+function nomeFuncao(){} // Define função em PHP.
+foreach($meuvetor as $minhavar){}; // Laço de repetição que percorre todo vetor e atribuindo em cada ciclo à variável $minhavar.
+~~~
+### Métodos Úteis
+~~~PHP
+session_start() // Inicia/Define variável de sessão do usuário.
+isset($minhaVar) // Retorna boleano para existência de variável.
+~~~
+### Variáveis Globais
+~~~PHP
+$_GET // Variável global que captura todos os dados inseridos com 'name' no código html.
+$_SESSION // Variavel que guarda sessão do usuário.
 ~~~
 --------
 ## Referências 
