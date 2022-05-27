@@ -1,9 +1,14 @@
-# **FAKE PRO**
-*Autor: Walysson dos Reis  
-Data Início: 01/10/2021*  
+# **FAKE CAM**
+<div>
+<img src="https://static.cdnlogo.com/logos/g/65/google-camera.svg" alt="logoJS" width="50px"/> 
+</div>
 
----
+*Autor: Walysson dos Reis*
 
+----------------------------------------------
+*Manual de consulta rápida dos conceitos e principais comandos.*  
+
+---------------------
 
 ## Softwares 
 
