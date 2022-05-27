@@ -1,3 +1,14 @@
+# **LINUX**
+<div>
+<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/54bd1b08-ae69-4d4c-97c2-0c08d9a56554/d5k4ghu-0391d69d-0c66-4233-a4f9-3e2fa666f789.png/v1/fill/w_256,h_256,strp/simple_linux_logo_by_dablim_d5k4ghu-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjU2IiwicGF0aCI6IlwvZlwvNTRiZDFiMDgtYWU2OS00ZDRjLTk3YzItMGMwOGQ5YTU2NTU0XC9kNWs0Z2h1LTAzOTFkNjlkLTBjNjYtNDIzMy1hNGY5LTNlMmZhNjY2Zjc4OS5wbmciLCJ3aWR0aCI6Ijw9MjU2In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.hR1HqwHmZ7YRuntimaklPyEcHDi8TdiD5OdE5edc1Ic" alt="logoJS" width="50px"/> 
+</div>
+
+*Autor: Walysson dos Reis*
+
+----------------------------------------------
+*Manual de consulta rápida dos conceitos e principais comandos.*  
+
+---------------------
 ~~~
 
 Aplicativos:
@@ -76,8 +87,8 @@ timedatectl set-local-rtc 1 --adjust-system-clock
 Reconfigurar teclado
 sudo dpkg-reconfigure keyboard-configuration
 ~~~
--------
-Referências:
+--------
+## Referências  
 
 https://www.vivaolinux.com.br/topico/vivaolinux/Configurar-Teclado-para-ABNT2-Ubuntu-1404  
 https://ubuntuhandbook.org/index.php/2016/05/time-differences-ubuntu-1604-windows-10/  
