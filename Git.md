@@ -1,6 +1,6 @@
 # **GIT**
 <div>
-<img src="http://git-scm.com/images/logos/downloads/Git-Logo-1788C.png" alt="logoJS" width="200px"/> 
+<img src="http://git-scm.com/images/logos/downloads/Git-Logo-1788C.png" alt="logoJS" width="50px"/> 
 </div>
 
 *Autor: Walysson dos Reis*
