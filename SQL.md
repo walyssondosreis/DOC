@@ -9,8 +9,13 @@
 *Manual de consulta rápida dos conceitos e principais comandos.*  
 
 ---------------------
-
-
+~~~SQL
+--- Alterar senha usuário root ou outro no MySQL
+# mysql
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'digitesuasenha';
+FLUSH PRIVILEGES;
+~~~
 --------
 ## Referências  
+https://pt.stackoverflow.com/questions/399732/phpmyadmin-problema-no-login  
 
