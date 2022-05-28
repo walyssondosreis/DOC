@@ -1,4 +1,4 @@
-# **SQL**
+# **MySQL**
 <div>
 <img src="https://seeklogo.com/images/A/azure-sql-database-logo-D7A32C9CD9-seeklogo.com.png" alt="logoJS" width="50px"/> 
 </div>
@@ -9,6 +9,27 @@
 *Manual de consulta rápida dos conceitos e principais comandos.*  
 
 ---------------------
+### Tipos de dados
+~~~SQL
+INTEGER -- Tipo inteiro
+TEXT -- Tipo texto
+DATE -- Tipo data
+BOOLEAN -- Tipo booleano
+~~~
+### Parâmetros
+~~~SQL
+AUTO_INCREMENT
+PRIMARY KEY
+NOT NULL
+~~~
+---------------------
+### *CREATE TABLE*
+~~~SQL
+CREATE TABLE minhatabela(
+... -- Campos da tabela.
+); -- Cria tabela 'minhatabela' no banco. 
+~~~
+### Definições
 ~~~SQL
 --- Alterar senha usuário root ou outro no MySQL
 # mysql
