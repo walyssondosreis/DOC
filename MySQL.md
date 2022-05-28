@@ -1,6 +1,6 @@
 # **MySQL**
 <div>
-<img src="https://seeklogo.com/images/A/azure-sql-database-logo-D7A32C9CD9-seeklogo.com.png" alt="logoJS" width="50px"/> 
+<img src="https://logodownload.org/wp-content/uploads/2016/10/mysql-logo-1.png" alt="logoJS" width="50px"/> 
 </div>
 
 *Autor: Walysson dos Reis*
