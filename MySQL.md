@@ -28,9 +28,20 @@ NOT NULL
 CREATE TABLE minhatabela(
 ... -- Campos da tabela.
 ); -- Cria tabela 'minhatabela' no banco. 
+---------------------
+CREATE TABLE tarefas(
+    id          INTEGER AUTO_INCREMENT PRIMARY KEY, -- Define coluna de inteiros de chave primária com autoincremento.
+    nome        VARCHAR(20) NOT NULL, -- Define coluna de tipo caractere de tamanho max 20; Campo não pode ser nulo.
+    descricao   TEXT, -- Define coluna do tipo texto.
+    prazo       DATE, -- Define coluna do tipo data.
+    prioridade  INTEGER(1), -- Define coluna do tipo inteiro para um caractere/digito.
+    concluida   BOOLEAN -- Define coluna do tipo booleano.
+);
 ~~~
 ### Definições
 ~~~SQL
+-- (Traço duplo) Define comentário no MySQL.
+---------------------
 --- Alterar senha usuário root ou outro no MySQL
 # mysql
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'digitesuasenha';
