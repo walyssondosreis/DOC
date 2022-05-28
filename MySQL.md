@@ -38,6 +38,14 @@ CREATE TABLE tarefas(
     concluida   BOOLEAN -- Define coluna do tipo booleano.
 );
 ~~~
+### *INSERT INTO*
+~~~SQL
+INSERT INTO minhatabela(
+... -- Nome dos campos da tabela
+)VALUES(
+... -- Valores respectivos aos campos
+);
+~~~
 ### Definições
 ~~~SQL
 -- (Traço duplo) Define comentário no MySQL.
