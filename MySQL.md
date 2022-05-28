@@ -62,25 +62,25 @@ INSERT INTO tarefas( -- Solicita inserção na tabela 'tarefas'.
 ~~~
 ### *SELECT \* FROM*
 ~~~SQL
-SELECT algumcampo
-FROM minhatabela
-WHERE condicao
-LIKE 'algumacoisa'
+SELECT ... -- Campos que deve ser selecionados/retornados.
+FROM ...  -- Tabelas as quais contem esses campos.
+WHERE ... -- Condição de busca desses campos.
+LIKE ... -- Comparação dos valores que estou buscando.
 ---------------------
-SELECT * 
-FROM tarefas
+SELECT * -- Retorna todos os campos
+FROM tarefas  -- Da tabela 'tarefas'
 ---------------------
-SELECT nome,descricao
-FROM tarefas
-WHERE prioridade=1;
+SELECT nome,descricao -- Retorna campos 'nome' e 'descricao'
+FROM tarefas -- Da tabela 'tarefas'
+WHERE prioridade=1; -- Onde no campo 'prioridade' esteja o valor 1
 ---------------------
-SELECT nome,prioridade
-FROM tarefas
+SELECT nome,prioridade -- Retorna campos 'nome' e 'prioridade'
+FROM tarefas -- Da tabela 'tarefas'
 ---------------------
-SELECT id, nome, descricao
-FROM tarefas
-WHERE descricao
-LIKE '%golf%'
+SELECT id, nome, descricao -- Retorna campos 'id','nome','descricao'
+FROM tarefas -- Da tabela 'tarefas'
+WHERE descricao -- Onde no campo 'descricao'
+LIKE '%golf%' -- Esteja como 'qualquer coisa + golf + qualquer coisa'
 ~~~~
 ### Definições
 ~~~SQL
