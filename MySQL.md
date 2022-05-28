@@ -60,6 +60,28 @@ INSERT INTO tarefas( -- Solicita inserção na tabela 'tarefas'.
     2); -- Valor a ser inserido no campo 'prioridade'.
 
 ~~~
+### *SELECT \* FROM*
+~~~SQL
+SELECT algumcampo
+FROM minhatabela
+WHERE condicao
+LIKE 'algumacoisa'
+---------------------
+SELECT * 
+FROM tarefas
+---------------------
+SELECT nome,descricao
+FROM tarefas
+WHERE prioridade=1;
+---------------------
+SELECT nome,prioridade
+FROM tarefas
+---------------------
+SELECT id, nome, descricao
+FROM tarefas
+WHERE descricao
+LIKE '%golf%'
+~~~~
 ### Definições
 ~~~SQL
 -- (Traço duplo) Define comentário no MySQL.
