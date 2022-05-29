@@ -89,11 +89,11 @@ $_SESSION // Variavel que guarda valores $GET da sessão do usuário.
 
 ## Outras informações
 
-* `/var/www/html/meuprojeto...` : Local padrão do projeto no Linux.
-* `c:\xampp\htdocs\meuprojeto...` : Local padrão do projeto no Windows.
+* /var/www/html/meuprojeto... : Local padrão do projeto no Linux.
+* c:\xampp\htdocs\meuprojeto... : Local padrão do projeto no Windows.
 * http://localhost/meuprojeto : Endereço padrão de acesso ao projeto para ambos. 
-* `http://localhost/phpmyadmin` : Endereço padrão de acesso ao PHP My Admin.
-* `CTRL + F5` : Atualiza página do navegador limpando cache da página.
+* http://localhost/phpmyadmin : Endereço padrão de acesso ao PHP My Admin.
+* CTRL + F5 : Atualiza página do navegador limpando cache da página.
 * Edite o arquivo `php.ini` para ajustar hora no PHP: `data.timezone = America/Sao_Paulo`. Após reinicie o serviço do apache.
 --------
 ## Referências 
