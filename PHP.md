@@ -38,6 +38,15 @@ array() // Retorna objeto array.
 $_GET // Variável global que captura todos os dados inseridos com 'name' no código html.
 $_SESSION // Variavel que guarda sessão do usuário.
 ~~~
+## Instalação e Configuração
+* No Windows apenas instale o pacote [XAMPP](https://www.apachefriends.org/pt_br/index.html). Este conterá os softwares necessários:
+    * Apache : Servidor Web.
+    * PHP : Linguagem de programação.
+    * MySQL : Banco de dados.
+    * PHPmyAdmin : Interface de manipulação do MySQL.
+--------
+* No Linux instale:
 --------
 ## Referências 
 https://www.php.net/manual/pt_BR/  
+https://www.apachefriends.org/pt_br/index.html
