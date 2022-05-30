@@ -40,11 +40,11 @@ array(); // Retorna objeto array.
 array_push($meuarray,'meu valor'); // Adiciona valor em array.
 date('d/m/y'); // Retorna data atual conforme padrão passado como parâmetro.
 count($meuvetor); // Retorna quantidade de elementos no vetor.
-mysqli_connect($servidor, $usuario, $senha, $banco); // 
-mysqli_connect_errno();
-mysqli_query($conexao, $sqlBusca);
-mysqli_fetch_assoc($resultado));
-die(); 
+mysqli_connect($servidor, $usuario, $senha, $banco); // Efetua conexão com banco. Retorna obj. conector do banco.
+mysqli_connect_errno(); // Retorna/Dispara excessão caso haja erro na conexão.
+mysqli_query($conexao, $meucodSQL); // Realiza requisição com o banco. Retorna obj. de consulta.
+mysqli_fetch_assoc($resultado)); // Percorre linhas de uma requisição sql.
+die(); // Interrompe execusão do programa.
 ~~~
 ### Variáveis Globais
 ~~~PHP
