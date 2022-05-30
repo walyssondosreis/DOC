@@ -32,7 +32,7 @@ echo "Meu texto" .$minhavar; // Retorna na página o texto seguido do valor a va
 echo "Meu" .$minhavar. "texto"; // Retorna na página o texto seguido do valor da variável, seguido de outro texto. 
 $_SESSION['tarefas'][]='Valor' // Insere na matriz na útima posição do vetor de nome 'tarefa' o 'Valor'.
 ~~~
-### Métodos Úteis
+### Métodos
 ~~~PHP
 session_start(); // Inicia/Define variável de sessão do usuário. Retorna booleano.
 isset($minhaVar); // Retorna booleano para existência de variável.
@@ -40,6 +40,11 @@ array(); // Retorna objeto array.
 array_push($meuarray,'meu valor'); // Adiciona valor em array.
 date('d/m/y'); // Retorna data atual conforme padrão passado como parâmetro.
 count($meuvetor); // Retorna quantidade de elementos no vetor.
+mysqli_connect($servidor, $usuario, $senha, $banco); // 
+mysqli_connect_errno();
+mysqli_query($conexao, $sqlBusca);
+mysqli_fetch_assoc($resultado));
+die(); 
 ~~~
 ### Variáveis Globais
 ~~~PHP
