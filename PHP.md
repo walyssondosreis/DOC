@@ -31,7 +31,7 @@ echo "Meu texto"; // Retorna na página o texto informado.
 echo "Meu texto" .$minhavar; // Retorna na página o texto seguido do valor a variável.
 echo "Meu" .$minhavar. "texto"; // Retorna na página o texto seguido do valor da variável, seguido de outro texto. 
 $_SESSION['tarefas'][]='Valor' // Insere na matriz na útima posição do vetor de nome 'tarefa' o 'Valor'.
-"editar.php?id=<?php echo $tarefa['id'];?>" // String que aponta para arquivo 'editar.php' e para campo 'id' setado.
+"editar.php?id=<?php echo $tarefa['id'];?>" // String que aponta para arquivo 'editar.php' e parâmetro 'id' setado com uma variável php.
 ~~~
 ### Métodos
 ~~~PHP
