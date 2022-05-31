@@ -14,7 +14,8 @@
 <?php // Inicia bloco de código PHP.
 ... // Meu código PHP aqui 
 ?> <!-- Finaliza bloco de código PHP. -->
-include "meuarquivo.php" // Incorpora
+<?= echo 'teste' ?> // Mesmo que <?php porém usado pra retornos apenas.
+include "meuarquivo.php" // Incorpora arquivo externo.
 ----------------------------------------------
 $minhaVariavel // Cifrão ($) define variável no PHP.
 ----------------------------------------------
@@ -32,6 +33,7 @@ echo "Meu texto" .$minhavar; // Retorna na página o texto seguido do valor a va
 echo "Meu" .$minhavar. "texto"; // Retorna na página o texto seguido do valor da variável, seguido de outro texto. 
 $_SESSION['tarefas'][]='Valor' // Insere na matriz na útima posição do vetor de nome 'tarefa' o 'Valor'.
 "editar.php?id=<?php echo $tarefa['id'];?>" // String que aponta para arquivo 'editar.php' e parâmetro 'id' setado com uma variável php.
+echo ($minhavar == 42) ? 'sim' : 'não' // Uso do operador ternário. Verifica se '$minhavar' é igual a '42' e retorna 'sim' ou 'não'. 
 ~~~
 ### Métodos
 ~~~PHP
@@ -46,6 +48,9 @@ mysqli_connect_errno(); // Retorna/Dispara excessão caso haja erro na conexão.
 mysqli_query($conexao, $meucodSQL); // Realiza requisição com o banco. Retorna obj. de consulta.
 mysqli_fetch_assoc($resultado)); // Percorre linhas de uma requisição sql.
 die(); // Interrompe execusão do programa.
+header('Location: meuarq.php'); // Método de cabeçalho HTTP. 'Location' irá direcionar a página para o arquivo informado.
+print_r($minhavar); //Método que imprime valor da variável diretamente na página.
+exit(); // Interrompe execusão do programa.
 ~~~
 ### Variáveis Globais
 ~~~PHP
