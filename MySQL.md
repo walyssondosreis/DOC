@@ -66,21 +66,21 @@ UPDATE minhatabela SET
 ... -- Campos seguidos de valores a serem atualizados.
 WHERE ... -- Condição para atualização.
 ---------------------
-UPDATE tarefas SET // Atualize os campos da tabela 'tarefas' definido-os como:
+UPDATE tarefas SET -- Atualize os campos da tabela 'tarefas' definido-os como:
     nome='Tarefa 33', 
     descricao='Passear no parque',
     prioridade=3,
     prazo=2020-02-01,
     concluida=1
-WHERE id =33; // Só atualize onde o campo 'id' for igual a '33'.
+WHERE id =33; -- Só atualize onde o campo 'id' for igual a '33'.
 ~~~~
 ### *DELETE FROM tabela*
 ~~~SQL
 DELETE FROM minhatabela
-WHERE ... - Condição para exclusão.
+WHERE ... -- Condição para exclusão.
 ---------------------
-DELETE FROM tarefas // Delete as linhas da tabela 'tarefas'
-WHERE id =44; // Onde o campo 'id' corresponder ao valor '44'.
+DELETE FROM tarefas -- Delete as linhas da tabela 'tarefas'
+WHERE id =44; -- Onde o campo 'id' corresponder ao valor '44'.
 ~~~~
 ### *SELECT campos FROM*
 ~~~SQL
