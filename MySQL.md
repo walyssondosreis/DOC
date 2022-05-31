@@ -70,7 +70,7 @@ UPDATE tarefas SET -- Atualize os campos da tabela 'tarefas' definido-os como:
     nome='Tarefa 33', 
     descricao='Passear no parque',
     prioridade=3,
-    prazo=2020-02-01,
+    prazo='2020-02-01',
     concluida=1
 WHERE id =33; -- Só atualize onde o campo 'id' for igual a '33'.
 ~~~~
