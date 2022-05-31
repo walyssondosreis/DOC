@@ -23,7 +23,7 @@ PRIMARY KEY
 NOT NULL
 ~~~
 ---------------------
-### *CREATE TABLE*
+### *CREATE TABLE tabela*
 ~~~SQL
 CREATE TABLE minhatabela(
 ... -- Campos da tabela.
@@ -38,7 +38,7 @@ CREATE TABLE tarefas( -- Solicita criação da tabela de nome 'tarefas'.
     concluida   BOOLEAN -- Define coluna do tipo booleano.
 ); -- Finaliza bloco de parâmetros da tabela.
 ~~~
-### *INSERT INTO*
+### *INSERT INTO tabela*
 ~~~SQL
 INSERT INTO minhatabela(
 ... -- Nome dos campos da tabela
@@ -60,7 +60,29 @@ INSERT INTO tarefas( -- Solicita inserção na tabela 'tarefas'.
     2); -- Valor a ser inserido no campo 'prioridade'.
 
 ~~~
-### *SELECT \* FROM*
+### *UPDATE tabela SET*
+~~~SQL
+UPDATE minhatabela SET
+... -- Campos seguidos de valores a serem atualizados.
+WHERE ... -- Condição para atualização.
+---------------------
+UPDATE tarefas SET // Atualize os campos da tabela 'tarefas' definido-os como:
+    nome='Tarefa 33', 
+    descricao='Passear no parque',
+    prioridade=3,
+    prazo=2020-02-01,
+    concluida=1
+WHERE id =33; // Só atualize onde o campo 'id' for igual a '33'.
+~~~~
+### *DELETE FROM tabela*
+~~~SQL
+DELETE FROM minhatabela
+WHERE ... - Condição para exclusão.
+---------------------
+DELETE FROM tarefas // Delete as linhas da tabela 'tarefas'
+WHERE id =44; // Onde o campo 'id' corresponder ao valor '44'.
+~~~~
+### *SELECT campos FROM*
 ~~~SQL
 SELECT ... -- Campos que deve ser selecionados/retornados.
 FROM ...  -- Tabelas as quais contem esses campos.
