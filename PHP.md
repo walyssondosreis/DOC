@@ -42,6 +42,7 @@ session_start(); // Inicia/Define variável de sessão do usuário. Retorna bool
 isset($minhaVar); // Retorna booleano para existência de variável.
 array(); // Retorna objeto array.
 array_push($meuarray,'meu valor'); // Adiciona valor em array.
+in_array('valor_procurado',$meuarray); // Retorna booleano. Verifica se valor esta presente em array.
 strlen('minha_string'); // Retorna quantidade de caracteres na string passada.
 explode('-','minha-string') // Retorna vetor quebrando string utilizando o caractere passado ('-').
 date('d/m/y'); // Retorna data atual conforme padrão passado como parâmetro.
