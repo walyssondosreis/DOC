@@ -43,7 +43,9 @@ isset($minhaVar); // Retorna booleano para existência de variável.
 array(); // Retorna objeto array.
 array_push($meuarray,'meu valor'); // Adiciona valor em array.
 strlen('minha_string'); // Retorna quantidade de caracteres na string passada.
+explode('-','minha-string') // Retorna vetor quebrando string utilizando o caractere passado ('-').
 date('d/m/y'); // Retorna data atual conforme padrão passado como parâmetro.
+checkdate($mes,$dia,$ano); // Retorna booleano. Verifica se uma data é válida.
 count($meuvetor); // Retorna quantidade de elementos no vetor.
 mysqli_connect($servidor, $usuario, $senha, $banco); // Efetua conexão com banco. Retorna obj. conector do banco.
 mysqli_connect_errno(); // Retorna/Dispara excessão caso haja erro na conexão.
@@ -53,6 +55,7 @@ die(); // Interrompe execusão do programa.
 header('Location: meuarq.php'); // Método de cabeçalho HTTP. 'Location' irá direcionar a página para o arquivo informado.
 print_r($minhavar); //Método que imprime valor da variável diretamente na página.
 exit(); // Interrompe execusão do programa.
+preg_match('/^[0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4}$/','01/06/2022'); // Retorna booleano. Verifica segundo argumento confrontado com expressão regular passada.
 ~~~
 ### Variáveis Globais
 ~~~PHP
