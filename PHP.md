@@ -28,6 +28,7 @@ $minhaVariavel // Cifrão ($) define variável no PHP.
 function nomeFuncao(){} // Define função em PHP.
 foreach($meuvetor as $minhavar){}; // Laço de repetição que percorre todo vetor e atribuindo em cada ciclo à variável $minhavar.
 for($i=0;$i<4;$i++){}; // Laço de repetição 'for'. Exige variável de inicialização, condição de parada e incremento.
+switch($vardecontrole):{ case 1: ... break; case 2: ... break; default: ... break;} // Condicional switch case.
 echo "Meu texto"; // Retorna na página o texto informado.
 echo "Meu texto" .$minhavar; // Retorna na página o texto seguido do valor a variável.
 echo "Meu" .$minhavar. "texto"; // Retorna na página o texto seguido do valor da variável, seguido de outro texto. 
@@ -41,6 +42,7 @@ session_start(); // Inicia/Define variável de sessão do usuário. Retorna bool
 isset($minhaVar); // Retorna booleano para existência de variável.
 array(); // Retorna objeto array.
 array_push($meuarray,'meu valor'); // Adiciona valor em array.
+strlen('minha_string'); // Retorna quantidade de caracteres na string passada.
 date('d/m/y'); // Retorna data atual conforme padrão passado como parâmetro.
 count($meuvetor); // Retorna quantidade de elementos no vetor.
 mysqli_connect($servidor, $usuario, $senha, $banco); // Efetua conexão com banco. Retorna obj. conector do banco.
@@ -54,7 +56,8 @@ exit(); // Interrompe execusão do programa.
 ~~~
 ### Variáveis Globais
 ~~~PHP
-$_GET // Variável global que captura todos os dados inseridos com tag 'name' no código html.
+$_GET // Variável global que captura todos os dados inseridos/passados com o método 'GET' (Padrão no HTML).
+$_POST // Variável global que captura todos os dados inseridos/passados com o método 'POST'.
 $_SESSION // Variavel que guarda valores $GET da sessão do usuário.
 ~~~
 ## Instalação e Configuração
