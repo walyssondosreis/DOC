@@ -111,4 +111,6 @@ $_SESSION // Variavel que guarda valores $GET da sessão do usuário.
 https://www.php.net/manual/pt_BR/  
 https://www.apachefriends.org/pt_br/index.html  
 https://www.php.com.br/instalacao-php-linux  
+https://www.regexpal.com/  
+
 
