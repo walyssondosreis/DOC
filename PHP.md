@@ -58,12 +58,14 @@ header('Location: meuarq.php'); // Método de cabeçalho HTTP. 'Location' irá d
 print_r($minhavar); //Método que imprime valor da variável diretamente na página.
 exit(); // Interrompe execusão do programa.
 preg_match('/^[0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4}$/','01/06/2022'); // Retorna booleano. Verifica segundo argumento confrontado com expressão regular passada.
+move_uploaded_file('nome_arq',"caminhoarq/novonomearq"); // Método que move arquivo do $_FILES para determinada pasta. 
 ~~~
 ### Variáveis Globais
 ~~~PHP
 $_GET // Variável global que captura todos os dados inseridos/passados com o método 'GET' (Padrão no HTML).
 $_POST // Variável global que captura todos os dados inseridos/passados com o método 'POST'.
-$_SESSION // Variavel que guarda valores $GET da sessão do usuário.
+$_SESSION // Variavel global que guarda valores $GET da sessão do usuário.
+$_FILES // Variável global que guarda arquivos enviados. Criado apenas quando há submissão de arquivos na pag.
 ~~~
 ## Instalação e Configuração
 * No Windows apenas instale o pacote [XAMPP](https://www.apachefriends.org/pt_br/index.html). Este conterá os softwares necessários:
