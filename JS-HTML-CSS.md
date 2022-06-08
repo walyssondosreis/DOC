@@ -141,8 +141,11 @@ ____<b>HTML</b>
 <div>...</div> <!-- Tag colocada em <body> que representa marca de divisão no documento; diferente de <p> não salta linha. -->
 <strong>...</strong> <!-- Tag para escrita negrito -->
 <input type='number' name='n1' id='n1'> <!-- Tag para designar entrada de dados do tipo número -->
-<input type="submit" value="Mensagem" /> <!-- Tag para designar botão do tipo submissão-->
-<input type="submit" value="Mensagem" /> <!-- Tag para designar botão do tipo submissão-->
+<input type="submit" value="Mensagem" /> <!-- Tag para designar entrada do tipo submissão-->
+<input type="reset" value="Mensagem" /> <!-- Tag para designar entrada do tipo resetar formulario-->
+<input type="hidden" value="Mensagem" /> <!-- Tag para designar entrada do tipo não visivel na página-->
+<input type="radio" value="Mensagem" /> <!-- Tag para designar entrada do tipo radio(marcação)-->
+<input type="checkbox" value="Mensagem" /> <!-- Tag para designar entrada do tipo caixa de marcar (marcação)-->
 <header>...</header> <!-- Tag colocada em <body> que representa cabeçalho da pag; parte superior da pag -->
 <section>...</section> <!-- Tag colocada em <body>  que representa uma sessão na pagina -->
 <footer>...</footer> <!-- Tag coloda em <body> que representa rodapé da pag -->
@@ -151,6 +154,7 @@ ____<b>HTML</b>
 <nav> ... </nav> <!-- Tag colocada em <body> usada para separar seção de links de navegação -->
 <span>...</span> <!-- Tag colocada em <body> usada para conteúdo genérico assim como <div> diferença em ser linha --> 
 <form>...</form> <!-- Tag que representa seção onde haverá controles interativos, submetendo ao servidor web -->
+<form method="POST">...</form> <!--Tag method altera o método do formulário. Padrão 'GET'. -->b
 <form method="POST" enctype="multipart/form-data">...</form> <!-- Codifica formulário para envio de arquivos. Só funciona com método 'POST'. -->
 <button>...</button> <!-- Tag criar botão em HTML -->
 <main>...</main> <!-- Tag colocada em <body> usada para definir sessão de contéudo principal do body -->
@@ -158,7 +162,10 @@ ____<b>HTML</b>
 <table><tr><td><\td><\tr></table> <!-- Tag para representação de tabela onde <tr> = linha e <td> coluna/dados -->
 <table><th>Minha Coluna1</th><th> <!-- <th> Define cabeçalho para coluna da tabela -->
 <canvas id="tela" width="600" height="400"></canvas> <!-- Tag para definír área de desenho -->
-<figure><figcaption>...</figcaption></figure> <!-- Tag para inserção de figuras/imagens/elementos independentes; gerealmente acompanhado com legenda
+<figure><figcaption>...</figcaption></figure> <!-- Tag para inserção de figuras/imagens/elementos independentes; gerealmente acompanhado com legenda -->
+<fieldset>...</fieldset> <!-- Tag para campo de caixa circulada.  -->
+<legend>...</legend> <!-- Define legenda para campo fieldset.  -->
+<label> Meu rotulo </label> <!-- Define campo de texto. -->
 
 ~~~
 
