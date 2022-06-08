@@ -45,6 +45,7 @@ array_push($meuarray,'meu valor'); // Adiciona valor em array.
 in_array('valor_procurado',$meuarray); // Retorna booleano. Verifica se valor esta presente em array.
 strlen('minha_string'); // Retorna quantidade de caracteres na string passada.
 explode('-','minha-string') // Retorna vetor quebrando string utilizando o caractere passado ('-').
+implode('-','$meuvetor') // Retorna string juntando os campos do vetor pelo separador ('-').
 date('d/m/y'); // Retorna data atual conforme padrão passado como parâmetro.
 checkdate($mes,$dia,$ano); // Retorna booleano. Verifica se uma data é válida.
 count($meuvetor); // Retorna quantidade de elementos no vetor.
