@@ -42,8 +42,17 @@ session_start(); // Inicia/Define variável de sessão do usuário. Retorna bool
 isset($minhaVar); // Retorna booleano para existência de variável.
 array(); // Retorna objeto array.
 array_push($meuarray,'meu valor'); // Adiciona valor em array.
+array_search('valor_procurado',$meuvetor); // Retorna chave correspondente do valor procurado no array.
+array_column($meuvetor,'chave_de_busca'); // Retorna valores de coluna em determinado array. 
 in_array('valor_procurado',$meuarray); // Retorna booleano. Verifica se valor esta presente em array.
+rtrim('minha_string','-'); //Apara string removendo caractere passado como argumento da extrema direita.
+ltrim('minha_string','-'); //Apara string removendo caractere passado como argumento da extrema esquerda.
+trim('minha_string','-'); //Apara string removendo caractere passado como argumento de ambos os lados.
 strlen('minha_string'); // Retorna quantidade de caracteres na string passada.
+nl2br('minha \n string'); // Retorna \n presente na string como <br>.
+empty($meuvetor); // Retorna booleano para vetor vazio.
+addslashes($minhaString);// Adiciona '\' para normalizar string que contém caracteres como apóstrofo ' ou aspas ".
+stripslashes($minhaString);// Remove '\' para representar string que foi normalizada.
 explode('-','minha-string') // Retorna vetor quebrando string utilizando o caractere passado ('-').
 implode('-','$meuvetor') // Retorna string juntando os campos do vetor pelo separador ('-').
 date('d/m/y'); // Retorna data atual conforme padrão passado como parâmetro.
@@ -59,6 +68,8 @@ print_r($minhavar); //Método que imprime valor da variável diretamente na pág
 exit(); // Interrompe execusão do programa.
 preg_match('/^[0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4}$/','01/06/2022'); // Retorna booleano. Verifica segundo argumento confrontado com expressão regular passada.
 move_uploaded_file('nome_arq',"caminhoarq/novonomearq"); // Método que move arquivo do $_FILES para determinada pasta. 
+date_default_timezone_set('America/Sao_Paulo'); // Define fuso horario para função data e hora.
+
 ~~~
 ### Variáveis Globais
 ~~~PHP
