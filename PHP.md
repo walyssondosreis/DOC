@@ -22,6 +22,7 @@ $minhavar='teste '. $minhavar2 // Ponto (.) é utilizado para concatenar string.
 PHP_EOL // Constante Php end of line q representa quebra de linha. ex: $minavar='caraca' . PHP_EOL.
 || or // Operador lógico de OU php ; pode ser representado das duas formas.
 && and // Operador lógico de E php ; pode ser representado das duas formas.
+=== // Operador idêntico. Leva em consideração o tipo do variável na comparação.
 continue // Operador utilizado para pular/continuar loop.
 break // Operador utilizado para interromper/quebrar loop.
 
