@@ -16,8 +16,12 @@
 ?> <!-- Finaliza bloco de código PHP. -->
 <?= echo 'teste' ?> // Mesmo que <?php porém usado pra retornos apenas.
 include "meuarquivo.php" // Incorpora arquivo externo.
-' meu texto '// Aspas simples exige . para concatenar string.
-" meu texto $minhavar" // Aspas duplas pode-se colocar variável dentro da string.
+' meu texto '// Com aspas simples a string não interpreta variaveis e caracter de escape '\'.
+" meu texto $minhavar \n\t" //  Aspas duplas pode-se colocar variáveis e caracter de escape para interpretação direto na string.
+$minhavar='teste '. $minhavar2 // Ponto (.) é utilizado para concatenar string.
+PHP_EOL // Constante Php end of line q representa quebra de linha. ex: $minavar='caraca' . PHP_EOL.
+|| or // Operador lógico de OU php ; pode ser representado das duas formas.
+&& and // Operador lógico de E php ; pode ser representado das duas formas.
 ----------------------------------------------
 $minhaVariavel // Cifrão ($) define variável no PHP.
 ----------------------------------------------
@@ -32,7 +36,7 @@ foreach($meuvetor as $minhavar){}; // Laço de repetição que percorre todo vet
 for($i=0;$i<4;$i++){}; // Laço de repetição 'for'. Exige variável de inicialização, condição de parada e incremento.
 switch($vardecontrole):{ case 1: ... break; case 2: ... break; default: ... break;} // Condicional switch case.
 echo "Meu texto"; // Retorna na página o texto informado.
-echo "Meu texto" .$minhavar; // Retorna na página o texto seguido do valor a variável.
+echo "Meu texto" . $minhavar; // Retorna na página o texto seguido do valor a variável.
 echo "Meu" .$minhavar. "texto"; // Retorna na página o texto seguido do valor da variável, seguido de outro texto. 
 $_SESSION['tarefas'][]='Valor' // Insere na matriz na útima posição do vetor de nome 'tarefa' o 'Valor'.
 "editar.php?id=<?php echo $tarefa['id'];?>" // String que aponta para arquivo 'editar.php' e parâmetro 'id' setado com uma variável php.
@@ -131,7 +135,7 @@ $_FILES // Variável global que guarda arquivos enviados. Criado apenas quando h
 * CTRL + F5 : Atualiza página do navegador limpando cache da página.
 * Edite o arquivo `php.ini` para ajustar hora no PHP: `data.timezone = America/Sao_Paulo`. Após reinicie o serviço do apache.
 * `php -v` - No terminal verifica versão do php instalada.
-* `php -a` - No terminal inicia shell interativo do php.
+* `php -a` - No terminal inicia shell interativo do php. Exige 'quit' para retornar ao terminal.
 --------
 ## Referências 
 https://www.php.net/manual/pt_BR/  
