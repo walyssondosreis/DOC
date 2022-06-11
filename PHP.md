@@ -22,6 +22,9 @@ $minhavar='teste '. $minhavar2 // Ponto (.) é utilizado para concatenar string.
 PHP_EOL // Constante Php end of line q representa quebra de linha. ex: $minavar='caraca' . PHP_EOL.
 || or // Operador lógico de OU php ; pode ser representado das duas formas.
 && and // Operador lógico de E php ; pode ser representado das duas formas.
+continue // Operador utilizado para pular/continuar loop.
+break // Operador utilizado para interromper/quebrar loop.
+
 ----------------------------------------------
 $minhaVariavel // Cifrão ($) define variável no PHP.
 ----------------------------------------------
@@ -35,6 +38,7 @@ function nomeFuncao(){} // Define função em PHP.
 foreach($meuvetor as $minhavar){}; // Laço de repetição que percorre todo vetor e atribuindo em cada ciclo à variável $minhavar.
 for($i=0;$i<4;$i++){}; // Laço de repetição 'for'. Exige variável de inicialização, condição de parada e incremento.
 switch($vardecontrole):{ case 1: ... break; case 2: ... break; default: ... break;} // Condicional switch case.
+match(); // A partir do php 8; switch case melhorado;
 echo "Meu texto"; // Retorna na página o texto informado.
 echo "Meu texto" . $minhavar; // Retorna na página o texto seguido do valor a variável.
 echo "Meu" .$minhavar. "texto"; // Retorna na página o texto seguido do valor da variável, seguido de outro texto. 
@@ -42,7 +46,7 @@ $_SESSION['tarefas'][]='Valor' // Insere na matriz na útima posição do vetor 
 "editar.php?id=<?php echo $tarefa['id'];?>" // String que aponta para arquivo 'editar.php' e parâmetro 'id' setado com uma variável php.
 echo ($minhavar == 42) ? 'sim' : 'não' // Uso do operador ternário. Verifica se '$minhavar' é igual a '42' e retorna 'sim' ou 'não'. 
 ~~~
-### Métodos
+### Funções
 ~~~PHP
 session_start(); // Inicia/Define variável de sessão do usuário. Retorna booleano.
 isset($minhaVar); // Retorna booleano para existência de variável.
