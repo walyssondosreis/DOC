@@ -16,6 +16,8 @@
 ?> <!-- Finaliza bloco de código PHP. -->
 <?= echo 'teste' ?> // Mesmo que <?php porém usado pra retornos apenas.
 include "meuarquivo.php" // Incorpora arquivo externo.
+' meu texto '// Aspas simples exige . para concatenar string.
+" meu texto $minhavar" // Aspas duplas pode-se colocar variável dentro da string.
 ----------------------------------------------
 $minhaVariavel // Cifrão ($) define variável no PHP.
 ----------------------------------------------
@@ -40,6 +42,7 @@ echo ($minhavar == 42) ? 'sim' : 'não' // Uso do operador ternário. Verifica s
 ~~~PHP
 session_start(); // Inicia/Define variável de sessão do usuário. Retorna booleano.
 isset($minhaVar); // Retorna booleano para existência de variável.
+gettype($minhavar); // Retorna qual o tipo de variável passada.
 array(); // Retorna objeto array.
 array_push($meuarray,'meu valor'); // Adiciona valor em array.
 array_search('valor_procurado',$meuvetor); // Retorna chave correspondente do valor procurado no array.
@@ -127,6 +130,8 @@ $_FILES // Variável global que guarda arquivos enviados. Criado apenas quando h
 * http://localhost/phpmyadmin : Endereço padrão de acesso ao PHP My Admin.
 * CTRL + F5 : Atualiza página do navegador limpando cache da página.
 * Edite o arquivo `php.ini` para ajustar hora no PHP: `data.timezone = America/Sao_Paulo`. Após reinicie o serviço do apache.
+* `php -v` - No terminal verifica versão do php instalada.
+* `php -a` - No terminal inicia shell interativo do php.
 --------
 ## Referências 
 https://www.php.net/manual/pt_BR/  
