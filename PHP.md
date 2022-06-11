@@ -25,6 +25,7 @@ PHP_EOL // Constante Php end of line q representa quebra de linha. ex: $minavar=
 === // Operador idêntico. Leva em consideração o tipo do variável na comparação.
 continue // Operador utilizado para pular/continuar loop.
 break // Operador utilizado para interromper/quebrar loop.
+$meuarray=['chave1'=> 'meuvalor'] // Define array associativo. Equivale a dicionário em python.
 
 ----------------------------------------------
 $minhaVariavel // Cifrão ($) define variável no PHP.
