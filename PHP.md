@@ -15,7 +15,8 @@
 ... // Meu código PHP aqui 
 ?> <!-- Finaliza bloco de código PHP. -->
 <?= echo 'teste' ?> // Mesmo que <?php porém usado pra retornos apenas.
-include "meuarquivo.php" // Incorpora arquivo externo.
+include "meuarquivo.php" // Incorpora arquivo externo. É utilizado para partes não fundamentais. Programa não para caso arquivo não exista.
+require "meuarquivo.php" //Incorpora arquvio externo. É utilizado para partes fundamentais. Programa para caso arquivo não exista.
 ' meu texto '// Com aspas simples a string não interpreta variaveis e caracter de escape '\'.
 " meu texto $minhavar \n\t" //  Aspas duplas pode-se colocar variáveis e caracter de escape para interpretação direto na string.
 $minhavar='teste '. $minhavar2 // Ponto (.) é utilizado para concatenar string.
@@ -29,7 +30,7 @@ $meuarray=['chave1'=> 'meuvalor'] // Define array associativo. Equivale a dicion
 function minhafun(array $meuvetor, float $valor): array { }// Informa a função com tipagem de dados nos parâmetros e também no retorno.
 echo " teste $vetor['nome']" // Isso não funciona no PHP devido a confusão de aspas. Abre-se excessão abaixo ara que funcione:
 echo " teste $vetor[nome]" // Tirando as aspas da chave dentro do vetor este funcionará na criação da string. Excessão total. 
-echo " teste {$vetor['nome']} " //  Método convencional para representar variável vetorial dentro de string. Utiliza-se chaves em volta da variável.
+echo " teste {$vetor['nome']} " //  Método convencional para interpolar variável vetorial dentro de string. Utiliza-se chaves em volta da variável.
 
 ----------------------------------------------
 $minhaVariavel // Cifrão ($) define variável no PHP.
