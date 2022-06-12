@@ -33,6 +33,7 @@ function minhafun(&$minhavar){} // Informa que função recebe passagem de var p
 echo " teste $vetor['nome']" // Isso não funciona no PHP devido a confusão de aspas. Abre-se excessão abaixo ara que funcione:
 echo " teste $vetor[nome]" // Tirando as aspas da chave dentro do vetor este funcionará na criação da string. Excessão total. 
 echo " teste {$vetor['nome']} " //  Método convencional para interpolar array associativo dentro de string. Utiliza-se chaves em volta da variável.
+unset($minhavar); // Remove variavel da memoria; se usado com indices de lista consegue também remover valor de vetor.
 
 ----------------------------------------------
 $minhaVariavel // Cifrão ($) define variável no PHP.
