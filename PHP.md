@@ -38,6 +38,7 @@ $minhaVariavel // Cifrão ($) define variável no PHP.
 ----------------------------------------------
 function nomeFuncao(){} // Define função em PHP.
 foreach($meuvetor as $minhavar){}; // Laço de repetição que percorre todo vetor e atribuindo em cada ciclo à variável $minhavar.
+foreach($meuvetor as $chave => $valor){}; // Metodo para acessar chaves na passada do foreach. 
 for($i=0;$i<4;$i++){}; // Laço de repetição 'for'. Exige variável de inicialização, condição de parada e incremento.
 switch($vardecontrole):{ case 1: ... break; case 2: ... break; default: ... break;} // Condicional switch case.
 match(); // A partir do php 8; switch case melhorado;
