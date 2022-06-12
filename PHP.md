@@ -14,7 +14,7 @@
 <?php // Inicia bloco de código PHP.
 ... // Meu código PHP aqui 
 ?> <!-- Finaliza bloco de código PHP. -->
-<?= echo 'teste' ?> // Mesmo que <?php porém usado pra retornos apenas.
+<?= echo 'teste' ?> // Mesmo que <?php porém usado pra exibir valores.
 include "meuarquivo.php" // Incorpora arquivo externo. É utilizado para partes não fundamentais. Programa não para caso arquivo não exista.
 require "meuarquivo.php" //Incorpora arquvio externo. É utilizado para partes fundamentais. Programa para caso arquivo não exista.
 require_once "meuarquivo.php" // Inclui um arquivo no modo require caso este ainda não foi incluido. Evita duplicidade de inclusão.
