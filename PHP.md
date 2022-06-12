@@ -55,6 +55,9 @@ echo "Meu" .$minhavar. "texto"; // Retorna na página o texto seguido do valor d
 $_SESSION['tarefas'][]='Valor' // Insere na matriz na útima posição do vetor de nome 'tarefa' o 'Valor'.
 "editar.php?id=<?php echo $tarefa['id'];?>" // String que aponta para arquivo 'editar.php' e parâmetro 'id' setado com uma variável php.
 echo ($minhavar == 42) ? 'sim' : 'não' // Uso do operador ternário. Verifica se '$minhavar' é igual a '42' e retorna 'sim' ou 'não'. 
+list($nome1,$nome2,$nome3)=$meuvetor; // Atribui as variaveis passadas por parâmtro os valores do vetor em suas respectivas posições.
+list('n1'=> $nome1, 'n2=> $nome2) =$meuvetor; // Atribui valores as variáveis $nome 1 e $nome2 lançando atributo a suas respectivas chaves 'n1' e 'n2'.
+['n1' => $nome1, 'n2'=> $nome2] = $meuvetor; // Nova sintaxe apartir do PHP 7.1 faz  a mesma coisa q o list acima.
 ~~~
 ### Funções
 ~~~PHP
