@@ -69,6 +69,8 @@ rtrim('minha_string','-'); //Apara string removendo caractere passado como argum
 ltrim('minha_string','-'); //Apara string removendo caractere passado como argumento da extrema esquerda.
 trim('minha_string','-'); //Apara string removendo caractere passado como argumento de ambos os lados.
 strlen('minha_string'); // Retorna quantidade de caracteres na string passada.
+strtoupper('minha_string'); // Retorna string em maiúsculo porém não coloca caracteres acentuados pois este exige mais de 1byte.
+mb_strtoupper('minha_string'); // Retorna string em maúsculo, incluido caracteres acentuadose outros. Necessario instalação de extensão 'mbstring'.
 nl2br('minha \n string'); // Retorna \n presente na string como <br>.
 empty($meuvetor); // Retorna booleano para vetor vazio.
 addslashes($minhaString);// Adiciona '\' para normalizar string que contém caracteres como apóstrofo ' ou aspas ".
@@ -98,6 +100,19 @@ $_POST // Variável global que captura todos os dados inseridos/passados com o m
 $_SESSION // Variavel global que guarda valores $GET da sessão do usuário.
 $_FILES // Variável global que guarda arquivos enviados. Criado apenas quando há submissão de arquivos na pag.
 ~~~
+
+### Error
+~~~ PHP
+E_NOTICE // PHP dá um aviso mas "se vira" e continua com a execução.
+E_WARNNING // PHP dá um aviso e excuta o que da pra executar.
+E_ERROR // PHP dá erro e para a execução do programa.
+~~~
+### Extensões
+* Para instalar extensões abra o arquivo 'php.ini' para edição.
+* Descomente a linha caso Windows: `extension_dir="D:\xampp\php\ext"`.
+* Descomente também a linha referente a extensão instalada.
+    * `extension=mbstring` : Extensão que trabalha com strings de forma precisa.
+
 ## Instalação e Configuração
 * No Windows apenas instale o pacote [XAMPP](https://www.apachefriends.org/pt_br/index.html). Este conterá os softwares necessários:
     * Apache : Servidor Web.
