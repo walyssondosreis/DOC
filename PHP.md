@@ -169,6 +169,7 @@ E_ERROR // PHP dá erro e para a execução do programa.
 * Edite o arquivo `php.ini` para ajustar hora no PHP: `data.timezone = America/Sao_Paulo`. Após reinicie o serviço do apache.
 * `php -v` - No terminal verifica versão do php instalada.
 * `php -a` - No terminal inicia shell interativo do php. Exige 'quit' para retornar ao terminal.
+* `php -S localhost:8080` - Por padrão as novas versões do PHP ja vem com um servidor de teste, basta iniciar. Não necessita do XAMPP.
 --------
 ## Referências 
 https://www.php.net/manual/pt_BR/  
