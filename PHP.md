@@ -29,6 +29,7 @@ continue // Operador utilizado para pular/continuar loop.
 break // Operador utilizado para interromper/quebrar loop.
 $meuarray=['chave1'=> 'meuvalor'] // Define array associativo. Equivale a dicionário em python.
 function minhafun(array $meuvetor, float $valor): array { }// Informa a função com tipagem de dados nos parâmetros e também no retorno.
+function minhafun(&$minhavar){} // Informa que função recebe passagem de var por referência(ponteiro). Utiliza-se o '&' antes da variável. Só deve ser utilizado na definição da função. Para passar segue normal ex.: minhafun($minhavar); 
 echo " teste $vetor['nome']" // Isso não funciona no PHP devido a confusão de aspas. Abre-se excessão abaixo ara que funcione:
 echo " teste $vetor[nome]" // Tirando as aspas da chave dentro do vetor este funcionará na criação da string. Excessão total. 
 echo " teste {$vetor['nome']} " //  Método convencional para interpolar array associativo dentro de string. Utiliza-se chaves em volta da variável.
