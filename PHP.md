@@ -86,7 +86,7 @@ function minhafun(&$minhavar){};
 Só deve ser utilizado na definição da função. Para passar segue normal ex.: minhafun($minhavar);
 ------------------------------------------------*/
 echo "teste $vetor['nome']"; // Isso não funciona no PHP devido a 'confusão' de aspas que o PHP faz.
-echo "teste $vetor[nome]"; // Tirando as aspas da chave dentro do vetor este funcionará na criação da string. Excessão que foge a sintaxe padrão. 
+echo "teste $vetor[nome]"; // Funcionará na criação da string. Excessão que foge a sintaxe padrão. 
 echo "teste {$vetor['nome']}"; // Utilizando chaves. Método convencional.
 /*  Métodos para interpolar array associativo dentro de string.
 ------------------------------------------------*/
@@ -111,7 +111,7 @@ echo ($minhavar == 42) ? 'sim' : 'não';
 list($nome1,$nome2,$nome3)=$meuvetor; 
 /* Atribui as variaveis passadas por parâmetro os valores do vetor em suas respectivas posições.
 ------------------------------------------------*/
-list('n1'=> $nome1, 'n2=> $nome2) =$meuvetor; 
+list('n1'=> $nome1, 'n2'=> $nome2) =$meuvetor; 
 /* Atribui valores as variáveis $nome 1 e $nome2 lançando atributo a suas respectivas chaves 'n1' e 'n2'.
 ------------------------------------------------*/
 ['n1' => $nome1, 'n2'=> $nome2] = $meuvetor; 
@@ -119,7 +119,7 @@ list('n1'=> $nome1, 'n2=> $nome2) =$meuvetor;
 /*----------------------------------------------*/
 <?php foreach($meuvetor as $minhavar): ?> 
    <!-- Meu código HTML aqui -->
-<?php endforeach; ?>/* 
+<?php endforeach; ?> <?php /* 
 Permite escrever código html dentro de um bloco. 
 Este conceito pode ser estendido também a: while/endwhile, if/endif, for/endfor.
 /*----------------------------------------------*/
