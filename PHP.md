@@ -174,7 +174,6 @@ $_FILES // Variável global que guarda arquivos enviados. Criado apenas quando h
 ### Error
 ~~~ PHP
 E_NOTICE // PHP dá um aviso mas "se vira" e continua com a execução.
-E_WARNNING // PHP dá um aviso e excuta o que da pra executar.
 E_ERROR // PHP dá erro e para a execução do programa.
 ~~~
 ### Extensões
