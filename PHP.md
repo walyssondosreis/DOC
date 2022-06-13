@@ -125,7 +125,7 @@ Este conceito pode ser estendido também a: while/endwhile, if/endif, for/endfor
 /*----------------------------------------------*/
 ?>  <!-- Finaliza bloco de código PHP. --> 
 ~~~
-### Funções
+### *Funções*
 ~~~PHP
 session_start(); 
 /* Inicia/Define variável de sessão do usuário. Retorna booleano.
@@ -231,7 +231,7 @@ date_default_timezone_set('America/Sao_Paulo');
 /*----------------------------------------------*/
 
 ~~~
-### Variáveis Globais
+### *Variáveis Globais*
 ~~~PHP
 $_GET // Variável global que captura todos os dados inseridos/passados com o método 'GET' (Padrão no HTML).
 $_POST // Variável global que captura todos os dados inseridos/passados com o método 'POST'.
@@ -239,12 +239,12 @@ $_SESSION // Variavel global que guarda valores $GET da sessão do usuário.
 $_FILES // Variável global que guarda arquivos enviados. Criado apenas quando há submissão de arquivos na pag.
 ~~~
 
-### Error
+### *Error*
 ~~~ PHP
 E_NOTICE // PHP dá um aviso mas "se vira" e continua com a execução.
 E_ERROR // PHP dá erro e para a execução do programa.
 ~~~
-### Extensões
+### *Extensões*
 * Para instalar extensões abra o arquivo 'php.ini' para edição.
 * Descomente a linha caso Windows: `extension_dir="D:\xampp\php\ext"`.
 * Descomente também a linha referente a extensão instalada.
