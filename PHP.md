@@ -3,7 +3,9 @@
 <img src="https://brandslogos.com/wp-content/uploads/thumbs/php-logo-vector.svg" alt="logoJS" width="50px"/> 
 </div>
 
-*Autor: Walysson dos Reis*
+
+*Autor: Walysson dos Reis  
+Revisão: 12/06/2022*
 
 ----------------------------------------------
 *Manual de consulta rápida dos conceitos e principais comandos.*  
