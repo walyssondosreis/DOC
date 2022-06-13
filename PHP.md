@@ -9,42 +9,62 @@
 *Manual de consulta rápida dos conceitos e principais comandos.*  
 
 ---------------------
-### Conceitos 
+### *Conceitos* 
 ~~~PHP
-<?php // Inicia bloco de código PHP.
-... // Meu código PHP aqui 
-?> <!-- Finaliza bloco de código PHP. -->
-<?= echo 'teste' ?> // Mesmo que <?php porém usado pra exibir valores.
-include "meuarquivo.php" // Incorpora arquivo externo. É utilizado para partes não fundamentais. Programa não para caso arquivo não exista.
-require "meuarquivo.php" //Incorpora arquvio externo. É utilizado para partes fundamentais. Programa para caso arquivo não exista.
-require_once "meuarquivo.php" // Inclui um arquivo no modo require caso este ainda não foi incluido. Evita duplicidade de inclusão.
-' meu texto '// Com aspas simples a string não interpreta variaveis e caracter de escape '\'.
-" meu texto $minhavar \n\t" //  Aspas duplas pode-se colocar variáveis e caracter de escape para interpretação direto na string.
-$minhavar='teste '. $minhavar2 // Ponto (.) é utilizado para concatenar string.
-PHP_EOL // Constante Php end of line q representa quebra de linha. ex: $minavar='caraca' . PHP_EOL.
-|| or // Operador lógico de OU php ; pode ser representado das duas formas.
-&& and // Operador lógico de E php ; pode ser representado das duas formas.
-=== // Operador idêntico. Leva em consideração o tipo do variável na comparação.
-continue // Operador utilizado para pular/continuar loop.
-break // Operador utilizado para interromper/quebrar loop.
-$meuarray=['chave1'=> 'meuvalor'] // Define array associativo. Equivale a dicionário em python.
+<?= echo 'teste' ?> 
+/* Mesmo que '<?php' porém usado pra exibir valores.
+------------------------------------------------*/
+<?php 
+/*Inicia bloco de código PHP.
+------------------------------------------------*/
+$minhaVariavel = 1 ;
+/* Cifrão ($) define variável no PHP.
+------------------------------------------------*/
+include "meuarquivo.php" ;
+/* Incorpora arquivo externo. É utilizado para partes não fundamentais. Programa não para caso arquivo não exista.
+------------------------------------------------*/
+require "meuarquivo.php" ; 
+/* Incorpora arquvio externo. É utilizado para partes fundamentais. Programa para caso arquivo não exista.
+------------------------------------------------*/
+require_once "meuarquivo.php"; 
+/* Inclui um arquivo no modo require caso este ainda não foi incluido. Evita duplicidade de inclusão.
+------------------------------------------------*/
+$minhavar='meu texto';
+/* Com aspas simples a string não interpreta variaveis e caracter de escape '\'.
+------------------------------------------------*/
+$minhavar="meu texto $minhavar \n\t"; 
+/*  Com aspas duplas pode-se colocar variáveis e caracter de escape para interpretação direto na string.
+------------------------------------------------*/
+$minhavar='teste '. $minhavar2; 
+/* Ponto (.) é utilizado para concatenar string.
+------------------------------------------------*/
+$minhavar = 'caraca' .PHP_EOL ;
+/* Constante PHP 'end of line' que insere quebra de linha.
+------------------------------------------------*/
+if( 1 || 2 ){}; if( 3 && 4 );
+/* Operador binário de OU e E respectivamente . Tem precedência sobre operador lógico.
+------------------------------------------------*/
+if( 1 or 2 ){}; if( 3 and 4 );
+/* Operador lógico de OU e E respectivamente .
+------------------------------------------------*/
+if( $minhavar === 0 ) {}; 
+/* Operador idêntico. Leva em consideração o tipo da variável na comparação.
+------------------------------------------------*/
+for{$i=0;$i<8;$i++){
+   if($i == 3) continue;
+   if($i ==7) break;
+}/* 
+continue: Método chave da linguagem utilizado para pular/continuar/saltar no loop.
+break: Método chave da linguagem utilizado para interromper/quebrar/parar no loop.
+------------------------------------------------*/
+$meuarray=['chave1'=> 'meuvalor'] // Define array associativo.
+function nomeFuncao(){} // Define função em PHP.
 function minhafun(array $meuvetor, float $valor): array { }// Informa a função com tipagem de dados nos parâmetros e também no retorno.
-function minhafun(&$minhavar){} // Informa que função recebe passagem de var por referência(ponteiro). Utiliza-se o '&' antes da variável. Só deve ser utilizado na definição da função. Para passar segue normal ex.: minhafun($minhavar); 
+function minhafun(&$minhavar){}; // Informa que função recebe passagem de var por referência(ponteiro). Utiliza-se o '&' antes da variável. Só deve ser utilizado na definição da função. Para passar segue normal ex.: minhafun($minhavar); 
 echo " teste $vetor['nome']" // Isso não funciona no PHP devido a confusão de aspas. Abre-se excessão abaixo ara que funcione:
 echo " teste $vetor[nome]" // Tirando as aspas da chave dentro do vetor este funcionará na criação da string. Excessão total. 
 echo " teste {$vetor['nome']} " //  Método convencional para interpolar array associativo dentro de string. Utiliza-se chaves em volta da variável.
 unset($minhavar); // Remove variavel da memoria; se usado com indices de lista consegue também remover valor de vetor.
-
-----------------------------------------------
-$minhaVariavel // Cifrão ($) define variável no PHP.
-----------------------------------------------
-// Laços e decisões entre código HTML 
-<?php foreach($meuvetor as $minhavar): ?> 
-... <!-- Meu código HTML aqui -->
-<?php endforeach; ?>
-*Este conceito pode ser estendido também a: while/endwhile, if/endif, for/endfor.
-----------------------------------------------
-function nomeFuncao(){} // Define função em PHP.
 foreach($meuvetor as $minhavar){}; // Laço de repetição que percorre todo vetor e atribuindo em cada ciclo à variável $minhavar.
 foreach($meuvetor as $chave => $valor){}; // Metodo para acessar chaves na passada do foreach. 
 for($i=0;$i<4;$i++){}; // Laço de repetição 'for'. Exige variável de inicialização, condição de parada e incremento.
@@ -53,12 +73,20 @@ match(); // A partir do php 8; switch case melhorado;
 echo "Meu texto"; // Retorna na página o texto informado.
 echo "Meu texto" . $minhavar; // Retorna na página o texto seguido do valor a variável.
 echo "Meu" .$minhavar. "texto"; // Retorna na página o texto seguido do valor da variável, seguido de outro texto. 
-$_SESSION['tarefas'][]='Valor' // Insere na matriz na útima posição do vetor de nome 'tarefa' o 'Valor'.
+$_SESSION['tarefas'][]='Valor'; // Insere na matriz na útima posição do vetor de nome 'tarefa' o 'Valor'.
 "editar.php?id=<?php echo $tarefa['id'];?>" // String que aponta para arquivo 'editar.php' e parâmetro 'id' setado com uma variável php.
 echo ($minhavar == 42) ? 'sim' : 'não' // Uso do operador ternário. Verifica se '$minhavar' é igual a '42' e retorna 'sim' ou 'não'. 
 list($nome1,$nome2,$nome3)=$meuvetor; // Atribui as variaveis passadas por parâmtro os valores do vetor em suas respectivas posições.
 list('n1'=> $nome1, 'n2=> $nome2) =$meuvetor; // Atribui valores as variáveis $nome 1 e $nome2 lançando atributo a suas respectivas chaves 'n1' e 'n2'.
 ['n1' => $nome1, 'n2'=> $nome2] = $meuvetor; // Nova sintaxe apartir do PHP 7.1 faz  a mesma coisa q o list acima.
+/*----------------------------------------------*/
+// Laços e decisões entre código HTML 
+<?php foreach($meuvetor as $minhavar): ?> 
+... <!-- Meu código HTML aqui -->
+<?php endforeach; ?>
+*Este conceito pode ser estendido também a: while/endwhile, if/endif, for/endfor.
+/*----------------------------------------------*/
+?>  <!-- Finaliza bloco de código PHP. --> 
 ~~~
 ### Funções
 ~~~PHP
