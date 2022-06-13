@@ -52,41 +52,76 @@ if( 1 or 2 ){}; if( 3 and 4 );
 if( $minhavar === 0 ) {}; 
 /* Operador idêntico. Leva em consideração o tipo da variável na comparação.
 ------------------------------------------------*/
-for{$i=0;$i<8;$i++){
+for{$i=0;$i<8;$i++){ 
    if($i == 3) continue;
    if($i ==7) break;
 }/* 
+Laço de repetição 'for'. Exige variável de inicialização, condição de parada e incremento.
 continue: Método chave da linguagem utilizado para pular/continuar/saltar no loop.
 break: Método chave da linguagem utilizado para interromper/quebrar/parar no loop.
 ------------------------------------------------*/
-$meuarray=['chave1'=> 'meuvalor'] // Define array associativo.
-function nomeFuncao(){} // Define função em PHP.
-function minhafun(array $meuvetor, float $valor): array { }// Informa a função com tipagem de dados nos parâmetros e também no retorno.
-function minhafun(&$minhavar){}; // Informa que função recebe passagem de var por referência(ponteiro). Utiliza-se o '&' antes da variável. Só deve ser utilizado na definição da função. Para passar segue normal ex.: minhafun($minhavar); 
-echo " teste $vetor['nome']" // Isso não funciona no PHP devido a confusão de aspas. Abre-se excessão abaixo ara que funcione:
-echo " teste $vetor[nome]" // Tirando as aspas da chave dentro do vetor este funcionará na criação da string. Excessão total. 
-echo " teste {$vetor['nome']} " //  Método convencional para interpolar array associativo dentro de string. Utiliza-se chaves em volta da variável.
-unset($minhavar); // Remove variavel da memoria; se usado com indices de lista consegue também remover valor de vetor.
-foreach($meuvetor as $minhavar){}; // Laço de repetição que percorre todo vetor e atribuindo em cada ciclo à variável $minhavar.
-foreach($meuvetor as $chave => $valor){}; // Metodo para acessar chaves na passada do foreach. 
-for($i=0;$i<4;$i++){}; // Laço de repetição 'for'. Exige variável de inicialização, condição de parada e incremento.
-switch($vardecontrole):{ case 1: ... break; case 2: ... break; default: ... break;} // Condicional switch case.
-match(); // A partir do php 8; switch case melhorado;
-echo "Meu texto"; // Retorna na página o texto informado.
-echo "Meu texto" . $minhavar; // Retorna na página o texto seguido do valor a variável.
-echo "Meu" .$minhavar. "texto"; // Retorna na página o texto seguido do valor da variável, seguido de outro texto. 
-$_SESSION['tarefas'][]='Valor'; // Insere na matriz na útima posição do vetor de nome 'tarefa' o 'Valor'.
-"editar.php?id=<?php echo $tarefa['id'];?>" // String que aponta para arquivo 'editar.php' e parâmetro 'id' setado com uma variável php.
-echo ($minhavar == 42) ? 'sim' : 'não' // Uso do operador ternário. Verifica se '$minhavar' é igual a '42' e retorna 'sim' ou 'não'. 
-list($nome1,$nome2,$nome3)=$meuvetor; // Atribui as variaveis passadas por parâmtro os valores do vetor em suas respectivas posições.
-list('n1'=> $nome1, 'n2=> $nome2) =$meuvetor; // Atribui valores as variáveis $nome 1 e $nome2 lançando atributo a suas respectivas chaves 'n1' e 'n2'.
-['n1' => $nome1, 'n2'=> $nome2] = $meuvetor; // Nova sintaxe apartir do PHP 7.1 faz  a mesma coisa q o list acima.
+foreach($meuvetor as $minhavar){}; 
+/* Laço de repetição que percorre todo vetor e atribui em cada ciclo valor à variável '$minhavar'.
+------------------------------------------------*/
+foreach($meuvetor as $chave => $valor){}; 
+/* Metodo para acessar chaves na passada do 'foreach'.
+------------------------------------------------*/
+switch($vardecontrole){ case 1: ... break; case 2: ... break; default: ... break;}; 
+/* Condicional switch case. Exige break nos casos e dafault como caso padrão.
+------------------------------------------------*/
+match(); 
+/* A partir do php 8; switch case melhorado;
+------------------------------------------------*/
+$meuarray=['chave1'=> 'meuvalor']; 
+/* Define array associativo.
+------------------------------------------------*/
+function nomeFuncao(){}; 
+/* Define função em PHP.
+------------------------------------------------*/
+function minhafun(array $meuvetor, float $valor): array { };
+/* Declara função com tipagem de dados nos parâmetros e também no retorno.
+------------------------------------------------*/
+function minhafun(&$minhavar){}; 
+/* Informa que função recebe passagem de var por referência(ponteiro). Utiliza-se o '&' antes da variável.
+Só deve ser utilizado na definição da função. Para passar segue normal ex.: minhafun($minhavar);
+------------------------------------------------*/
+echo "teste $vetor['nome']"; // Isso não funciona no PHP devido a 'confusão' de aspas que o PHP faz.
+echo "teste $vetor[nome]"; // Tirando as aspas da chave dentro do vetor este funcionará na criação da string. Excessão que foge a sintaxe padrão. 
+echo "teste {$vetor['nome']}"; // Utilizando chaves. Método convencional.
+/*  Métodos para interpolar array associativo dentro de string.
+------------------------------------------------*/
+unset($minhavar); 
+/* Remove variavel da memoria; se usado com indices de lista consegue também remover valor de vetor.
+------------------------------------------------*/
+echo 'Meu texto'; 
+/* Retorna/imprime na página o texto informado.
+------------------------------------------------*/
+echo 'Meu texto' . $minhavar; 
+/* Retorna/imprime na página o texto seguido do valor da variável. Ponto utilizado para concatenar string.
+------------------------------------------------*/
+$_SESSION['tarefas'][]='Valor'; 
+/* Insere na matriz na útima posição do vetor de nome 'tarefa' o 'Valor'.
+------------------------------------------------*/
+$meulink="editar.php?id=<?php echo $tarefa['id'];?>"; 
+/* String que aponta para arquivo 'editar.php' e parâmetro 'id' setado com uma variável php.
+------------------------------------------------*/
+echo ($minhavar == 42) ? 'sim' : 'não'; 
+/* Uso do operador ternário. Verifica se '$minhavar' é igual a '42' e retorna 'sim' ou 'não'. 
+------------------------------------------------*/
+list($nome1,$nome2,$nome3)=$meuvetor; 
+/* Atribui as variaveis passadas por parâmetro os valores do vetor em suas respectivas posições.
+------------------------------------------------*/
+list('n1'=> $nome1, 'n2=> $nome2) =$meuvetor; 
+/* Atribui valores as variáveis $nome 1 e $nome2 lançando atributo a suas respectivas chaves 'n1' e 'n2'.
+------------------------------------------------*/
+['n1' => $nome1, 'n2'=> $nome2] = $meuvetor; 
+/* Nova sintaxe apartir do PHP 7.1 faz  a mesma coisa q o list acima.
 /*----------------------------------------------*/
-// Laços e decisões entre código HTML 
 <?php foreach($meuvetor as $minhavar): ?> 
-... <!-- Meu código HTML aqui -->
-<?php endforeach; ?>
-*Este conceito pode ser estendido também a: while/endwhile, if/endif, for/endfor.
+   <!-- Meu código HTML aqui -->
+<?php endforeach; ?>/* 
+Permite escrever código html dentro de um bloco. 
+Este conceito pode ser estendido também a: while/endwhile, if/endif, for/endfor.
 /*----------------------------------------------*/
 ?>  <!-- Finaliza bloco de código PHP. --> 
 ~~~
