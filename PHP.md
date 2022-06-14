@@ -125,6 +125,21 @@ Este conceito pode ser estendido também a: while/endwhile, if/endif, for/endfor
 /*----------------------------------------------*/
 ?>  <!-- Finaliza bloco de código PHP. --> 
 ~~~
+### *Orientação a Objetos*
+~~~PHP
+class MinhaClasse{
+   public $minhavar;
+   public $minhavar2;
+   private $minhavar3;
+}
+/* Definição de classe.
+As variáveis assim como em outras liguagens são definidas como públicas ou privadas.
+/*----------------------------------------------*/
+$meuobj= new MinhaClass();
+$meuobj->minhavar3 = 'um texto qualquer';
+/* Cria um objeto de classe. Atribui valor à variável de objeto de classe.
+/*----------------------------------------------*/
+~~~
 ### *Funções*
 ~~~PHP
 var_dump($minhavar);
