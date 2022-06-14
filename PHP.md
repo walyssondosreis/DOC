@@ -127,6 +127,9 @@ Este conceito pode ser estendido também a: while/endwhile, if/endif, for/endfor
 ~~~
 ### *Funções*
 ~~~PHP
+var_dump($minhavar);
+/* Retorna conteúdo e tipo de variável. retorna estrutura da variável.
+/*----------------------------------------------*/
 session_start(); 
 /* Inicia/Define variável de sessão do usuário. Retorna booleano.
 /*----------------------------------------------*/
