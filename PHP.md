@@ -153,7 +153,8 @@ classe Carro{
       private float $valor
    ){}
 }
-/* A partir do PHP 8 é possivel já passar argumentos para construtor já definindo como propriedades. 'Constructor Property Promotion'.
+/* 'Constructor Property Promotion'.
+A partir do PHP 8 é possivel já passar argumentos para construtor já definindo como propriedades. 
 /*----------------------------------------------*/
 $meuobj= new MinhaClass();
 $meuobj->minhavar3 = 'um texto qualquer';
