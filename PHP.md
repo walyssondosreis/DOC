@@ -147,6 +147,14 @@ void: Informa retorno vazio; Sem retorno.
 __construct: Define método construtor da classe (underline duplo + construct).
 readonly: Propriedade criada a partir do PHP 8.0 que indica um atributo somente leitura; ou seja, pode ser gravada apenas uma vez.
 /*----------------------------------------------*/
+classe Carro{
+   function __contruct(
+      public string $nome,
+      private float $valor
+   ){}
+}
+/* A partir do PHP 8 é possivel já passar argumentos para construtor já definindo como propriedades. 'Constructor Property Promotion'.
+/*----------------------------------------------*/
 $meuobj= new MinhaClass();
 $meuobj->minhavar3 = 'um texto qualquer';
 /* Cria um objeto de classe. Atribui valor à variável de objeto de classe.
