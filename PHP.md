@@ -156,9 +156,27 @@ classe Carro{
 /* 'Constructor Property Promotion'.
 A partir do PHP 8 é possivel já passar argumentos para construtor já definindo como propriedades. 
 /*----------------------------------------------*/
+classe Aluno{
+   private static $faltas=0;
+   private static $escola;
+
+   function __construct(){
+      Aluno::$faltas++;
+      self::$escola='Felicio';
+   }
+   function obterFaltas(){
+      return self::$faltas;
+   }
+}
+/* static: Define variáveis da prória classe, ou seja, não pertencentes ao objeto.
+NomeDaClasse::$variavel/método  : Forma de acessar variáveis e métodos estáticos (pertencentes a classe).
+self::$variável/método : De dentro da classe 'self' refere-se ao nome dela, assim como $this se refere ao objeto.
+/*----------------------------------------------*/
 $meuobj= new MinhaClass();
 $meuobj->minhavar3 = 'um texto qualquer';
+echo Aluno::$obterFaltas();
 /* Cria um objeto de classe. Atribui valor à variável de objeto de classe.
+Acessa um método da classe Aluno (não do objeto Aluno) para objter numero de faltas.
 /*----------------------------------------------*/
 ~~~
 ### *Funções*
