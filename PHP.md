@@ -134,7 +134,7 @@ class MinhaClasse{
 }
 public function __construct(string $nome,$nome2): void{
    $this->minhavar=$nome;
-   public readonly $minhavar4=$nome2;
+   public readonly string $minhavar4=$nome2;
 }
 public function meumetodo():void{
    $this->$minhavar3 = 'valor';
