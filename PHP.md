@@ -132,8 +132,9 @@ class MinhaClasse{
    public $minhavar2;
    private $minhavar3;
 }
-public function __construct(string $nome): void{
+public function __construct(string $nome,$nome2): void{
    $this->minhavar=$nome;
+   public readonly $minhavar4=$nome2;
 }
 public function meumetodo():void{
    $this->$minhavar3 = 'valor';
@@ -144,6 +145,7 @@ Public/Private: As variáveis e métodos assim como em outras liguagens são def
 $this: Objeto da classe que se refere a própria classe, ou seja, ao valor do obj de classe que está chamando o método.
 void: Informa retorno vazio; Sem retorno.
 __construct: Define método construtor da classe (underline duplo + construct).
+readonly: Propriedade criada a partir do PHP 8.0 que indica um atributo somente leitura; ou seja, pode ser gravada apenas uma vez.
 /*----------------------------------------------*/
 $meuobj= new MinhaClass();
 $meuobj->minhavar3 = 'um texto qualquer';
