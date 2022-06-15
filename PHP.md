@@ -174,7 +174,7 @@ self::$variável/método : De dentro da classe 'self' refere-se ao nome dela, as
 /*----------------------------------------------*/
 $meuobj= new MinhaClass();
 $meuobj->minhavar3 = 'um texto qualquer';
-echo Aluno::$obterFaltas();
+echo Aluno::obterFaltas();
 /* Cria um objeto de classe. Atribui valor à variável de objeto de classe.
 Acessa um método da classe Aluno (não do objeto Aluno) para objter numero de faltas.
 /*----------------------------------------------*/
