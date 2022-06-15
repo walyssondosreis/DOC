@@ -164,13 +164,18 @@ classe Aluno{
       Aluno::$faltas++;
       self::$escola='Felicio';
    }
+   function __destruct(){
+      echo 'obj foi destruido';
+   }
    function obterFaltas(){
       return self::$faltas;
    }
+   
 }
 /* static: Define variáveis da prória classe, ou seja, não pertencentes ao objeto.
 NomeDaClasse::$variavel/método  : Forma de acessar variáveis e métodos estáticos (pertencentes a classe).
 self::$variável/método : De dentro da classe 'self' refere-se ao nome dela, assim como $this se refere ao objeto.
+__destruct : Método especial da classe que é executado quando o objeto é destruido.
 /*----------------------------------------------*/
 $meuobj= new MinhaClass();
 $meuobj->minhavar3 = 'um texto qualquer';
