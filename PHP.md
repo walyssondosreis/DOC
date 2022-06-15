@@ -132,7 +132,10 @@ class MinhaClasse{
    public $minhavar2;
    private $minhavar3;
 }
-public meumetodo():void{
+public function __construct(string $nome): void{
+   $this->minhavar=$nome;
+}
+public function meumetodo():void{
    $this->$minhavar3 = 'valor';
 }
 
@@ -140,6 +143,7 @@ public meumetodo():void{
 Public/Private: As variáveis e métodos assim como em outras liguagens são definidas como públicas ou privadas.
 $this: Objeto da classe que se refere a própria classe, ou seja, ao valor do obj de classe que está chamando o método.
 void: Informa retorno vazio; Sem retorno.
+__construct: Define método construtor da classe (underline duplo + construct).
 /*----------------------------------------------*/
 $meuobj= new MinhaClass();
 $meuobj->minhavar3 = 'um texto qualquer';
