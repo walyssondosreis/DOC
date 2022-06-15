@@ -370,3 +370,5 @@ https://www.php.net/manual/pt_BR/
 https://www.apachefriends.org/pt_br/index.html  
 https://www.php.com.br/instalacao-php-linux  
 https://www.regexpal.com/  
+https://regexr.com/  
+
