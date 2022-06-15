@@ -132,8 +132,13 @@ class MinhaClasse{
    public $minhavar2;
    private $minhavar3;
 }
+public meumetodo(){
+   $this->$minhavar3 = 'valor';
+}
+
 /* Definição de classe.
-As variáveis assim como em outras liguagens são definidas como públicas ou privadas.
+Public/Private: As variáveis e métodos assim como em outras liguagens são definidas como públicas ou privadas.
+$this: Objeto da classe que se refere a própria classe, ou seja, ao valor do obj de classe que está chamando o método.
 /*----------------------------------------------*/
 $meuobj= new MinhaClass();
 $meuobj->minhavar3 = 'um texto qualquer';
