@@ -36,8 +36,11 @@ Revisão: 17/06/2022*
 ### *Diagrama de Atividades*  
 ![image](https://user-images.githubusercontent.com/38730743/174324251-4e25abd7-ae04-4de5-9af7-168dc3cc48a6.png)
 
+### *Diagrama de Estados*
+![image](https://user-images.githubusercontent.com/38730743/174351762-8ede58e5-cc43-4134-9f6e-2a90902b2ff9.png)
 
-
+### *Diagrama de Componentes*
+![image](https://user-images.githubusercontent.com/38730743/174353356-4423e701-2e0f-4eee-bcdf-113d46bba006.png)
 
 --------
 ## Referências 
