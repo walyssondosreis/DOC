@@ -1,18 +1,20 @@
 # **UML**
 <div>
-<img src="https://brandslogos.com/wp-content/uploads/thumbs/php-logo-vector.svg" alt="logoJS" width="50px"/> 
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/UML_logo.svg/400px-UML_logo.svg.png" alt="logoJS" width="50px"/> 
 </div>
 
 
 *Autor: Walysson dos Reis  
-Revisão: 12/06/2022*
+Revisão: 17/06/2022*
 
 ----------------------------------------------
 *Manual de consulta rápida dos conceitos e principais comandos.*  
 
 ---------------------
 ### *Diagrama de Caso de Uso* 
-\*boneco Representa ator; ator pode ser um usuário ou sistema ; que tem ações.
+\*boneco Representa ator; ator pode ser um usuário ou sistema ; que tem ações.  
+\*balão Representa as ações do do ator.  
+\*setas Representa as relações entre atores e ações.  
 
 ### *Diagrama de Classes*
 \- Representa atributo/método privado  
