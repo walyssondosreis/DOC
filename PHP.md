@@ -183,6 +183,21 @@ echo Aluno::obterFaltas();
 /* Cria um objeto de classe. Atribui valor à variável de objeto de classe.
 Acessa um método da classe Aluno (não do objeto Aluno) para objter numero de faltas.
 /*----------------------------------------------*/
+class Pessoa {
+   protected $endereco;
+   public function __construct($nome,$cpf){
+   }
+}
+
+class Professor extends Pessoa {
+   public function __construct($nome,$cpf){
+         parent::__construct($nome,$cpf);
+   }
+}
+/* protected : É o escopo na qual o atributo/método pode ser acessado por filhos e pai , não externamente.
+extends : Indica herança.
+parent:: .. : Assim como $this e self, indica classe pai, ou seja, acesso a itens da classe pai.
+/*----------------------------------------------*/
 ~~~
 ### *Funções*
 ~~~PHP
