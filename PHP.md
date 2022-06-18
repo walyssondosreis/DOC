@@ -159,6 +159,7 @@ A partir do PHP 8 é possivel já passar argumentos para construtor já definind
 namespace : Serve para organizar/empacotar logicamente as classes.
 Para utilizar em os arquivos do namespace em outro arquivo .: */
 use Modelo/Automovel/Carro;
+use Modelo/Automóvel/{Carro, Moto, Trator}; // Sintaxe para importação de mais de uma classe de uma só vez.
 /*----------------------------------------------*/
 classe Aluno{
    private static $faltas=0;
