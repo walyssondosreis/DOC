@@ -217,6 +217,18 @@ assim que este não é encontrado explicitamente. Este cod irá buscas esses nom
 o path através da manipulação de string para que este seja carregado com um 'require_once'.
 DIRECTORY_SEPARATOR : Constante que representa barra de separação do sistema operacional. \ (windows) ou / (linux).
 /*----------------------------------------------*/
+abstract class Conta {
+   abstract protected minhaFun(): void;
+}
+
+class ContaPoupanca extends Conta{
+   protected minhaFun(){
+   }
+}
+/* Utilização de classe abstrata; métodos abstratos só podem ser declarados em classes abstratas.
+Abstrato significa que esta classe não pode instanciar objetos. Na utilização (herança dos filhos)
+o método declarado como abstrato deverá ser implementado.
+/*----------------------------------------------*/
 ~~~
 ### *Funções*
 ~~~PHP
