@@ -215,7 +215,7 @@ spl_autoload_register(function (string $nomeCompletoDaClasse){
 /* O autoload é uma função padrão do PHP que busca o nome deas classes nos namespaces
 assim que este não é encontrado explicitamente. Este cod irá buscas esses nomes e modificar
 o path através da manipulação de string para que este seja carregado com um 'require_once'.
-DIRECTORY_SEPARATOR : Constante que representa para de sepação do sistema operacional. \ (windows) ou / (linux).
+DIRECTORY_SEPARATOR : Constante que representa barra de sepação do sistema operacional. \ (windows) ou / (linux).
 /*----------------------------------------------*/
 ~~~
 ### *Funções*
