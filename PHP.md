@@ -203,6 +203,20 @@ class Professor extends Pessoa {
 extends : Indica herança.
 parent:: .. : Assim como $this e self, indica classe pai, ou seja, acesso a itens da classe pai.
 /*----------------------------------------------*/
+spl_autoload_register(function (string $nomeCompletoDaClasse){
+    $caminhoArquivo = str_replace('Alura\\Banco', 'src', $nomeCompletoDaClasse);
+    $caminhoArquivo = str_replace('\\', DIRECTORY_SEPARATOR, $caminhoArquivo);
+    $caminhoArquivo .= '.php';
+
+    if(file_exists($caminhoArquivo)) {
+        require_once $caminhoArquivo;
+    }
+});
+/* O autoload é uma função padrão do PHP que busca o nome deas classes nos namespaces
+assim que este não é encontrado explicitamente. Este cod irá buscas esses nomes e modificar
+o path através da manipulação de string para que este seja carregado com um 'require_once'.
+DIRECTORY_SEPARATOR : Constante que representa para de sepação do sistema operacional. \ (windows) ou / (linux).
+/*----------------------------------------------*/
 ~~~
 ### *Funções*
 ~~~PHP
@@ -244,6 +258,9 @@ trim('minha_string','-');
 /*----------------------------------------------*/
 strlen('minha_string'); 
 /* Retorna quantidade de caracteres na string passada.
+/*----------------------------------------------*/
+str_replace('xv','nvw', $minhavar);
+/* Substitui string dentro de outra; busca por 'xv' e escreve 'nvw' dentro da variável $minhavar.
 /*----------------------------------------------*/
 strtoupper('minha_string'); 
 /* Retorna string em maiúsculo porém não coloca caracteres acentuados pois este exige mais de 1byte.
