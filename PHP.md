@@ -5,7 +5,7 @@
 
 
 *Autor: Walysson dos Reis  
-Revisão: 12/06/2022*
+Revisão: 18/06/2022*
 
 ----------------------------------------------
 *Manual de consulta rápida dos conceitos e principais comandos.*  
