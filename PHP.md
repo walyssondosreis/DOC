@@ -240,7 +240,12 @@ Na interface todos os métodos são abstratos portanto eles devem ser implementa
 Para utilizar uma interface em um classe basta preceder o seu nome a palavra implements.
 /*----------------------------------------------*/
 function __toString():String; 
-/* Método especial de uma classe para que seus objetos ao serem chamados como strings retorne algo. 
+/* Método especial de classe para que seus objetos ao serem chamados como strings retorne algo. ex.: */
+echo " Meu texto {$meuObjto} "; // Ele irá exibir a string do objeto como foi descrito no metodo _toString da classe.
+/*----------------------------------------------*/
+function __get(string $nomeAtributo);
+/* Método especial de classe que recebe nome de atributo que a chamada ta tentando acessar. ex.: */
+$meuObjt->nome; // Ele irar chamar o método __get caso o atributo $nome não seja público.
 /*----------------------------------------------*/
 ~~~
 ### *Funções*
@@ -289,6 +294,9 @@ str_replace('xv','nvw', $minhavar);
 /*----------------------------------------------*/
 strtoupper('minha_string'); 
 /* Retorna string em maiúsculo porém não coloca caracteres acentuados pois este exige mais de 1byte.
+/*----------------------------------------------*/
+ucfirst('palavra');
+/* Retorna uma string com a primeira letra da palavra em maiúsculo.
 /*----------------------------------------------*/
 mb_strtoupper('minha_string'); 
 /* Retorna string em maúsculo, incluido caracteres acentuadose outros. Necessario instalação de extensão 'mbstring'.
