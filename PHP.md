@@ -255,6 +255,12 @@ $meuObjt->nome; // Ele irar chamar o método __get caso o atributo $nome não se
  /* Annotations serve pra informar para IDE qual atributo manipulado no __get() terá suporte a ajuda.
  @property-read informa que este atributo e somente leitura, portanto a IDE deve apresentar erro caso receba valor.
 /*----------------------------------------------*/
+final class ClasseAbs{
+}
+final protected function meuMetodo():void;
+/* Final quando aplicado a classe informa que aquela classe não pode ser herdada.
+Quando aplicada a um método de classe informa que aquale método não pode ser sobrescrito.
+/*----------------------------------------------*/
 ~~~
 ### *Funções*
 ~~~PHP
