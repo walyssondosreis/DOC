@@ -229,6 +229,16 @@ class ContaPoupanca extends Conta{
 Abstrato significa que esta classe não pode instanciar objetos. Na utilização (herança dos filhos)
 o método declarado como abstrato deverá ser implementado.
 /*----------------------------------------------*/
+interface Autenticavel{
+   public function meuMetodo(): void;
+}
+class Diretor extends Funcionario implements Autenticavel{
+   public function meuMetodo(): void;
+}
+/* O PHP não permite herança múltipla; a interface é o que se assemelha a isto.
+Na interface todos os métodos são abstratos portanto eles devem ser implementados as classes que a chamam.
+Para utilizar uma interface em um classe basta preceder o seu nome a palavra implements.
+/*----------------------------------------------*/
 ~~~
 ### *Funções*
 ~~~PHP
