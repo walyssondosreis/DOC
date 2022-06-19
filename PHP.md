@@ -246,6 +246,14 @@ echo " Meu texto {$meuObjto} "; // Ele irá exibir a string do objeto como foi d
 function __get(string $nomeAtributo);
 /* Método especial de classe que recebe nome de atributo que a chamada ta tentando acessar. ex.: */
 $meuObjt->nome; // Ele irar chamar o método __get caso o atributo $nome não seja público.
+/**
+ * Class Endereco
+ * @package Alura\Banco\Modelo
+ * @property-read string $cidade
+ * @property-read string $bairro
+ */
+ /* Annotations serve pra informar para IDE qual atributo manipulado no __get() terá suporte a ajuda.
+ @property-read informa que este atributo e somente leitura, portanto a IDE deve apresentar erro caso receba valor.
 /*----------------------------------------------*/
 ~~~
 ### *Funções*
