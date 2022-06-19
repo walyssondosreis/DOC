@@ -235,7 +235,7 @@ interface Autenticavel{
 class Diretor extends Funcionario implements Autenticavel{
    public function meuMetodo(): void;
 }
-/* O PHP não permite herança múltipla; a interface é o que se assemelha a isto.
+/* O PHP não permite herança múltipla; a interface é o que se assemelha a isto. Uma interface contém apenas métodos. 
 Na interface todos os métodos são abstratos portanto eles devem ser implementados as classes que a chamam.
 Para utilizar uma interface em um classe basta preceder o seu nome a palavra implements.
 /*----------------------------------------------*/
