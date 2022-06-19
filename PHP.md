@@ -240,7 +240,7 @@ Na interface todos os métodos são abstratos portanto eles devem ser implementa
 Para utilizar uma interface em um classe basta preceder o seu nome a palavra implements.
 /*----------------------------------------------*/
 function __toString():String; 
-/* Método especial que pode ser implementado em uma classe para que seu objetos ao serem chamados como strings retorne valores definidos. 
+/* Método especial de uma classe para que seus objetos ao serem chamados como strings retorne algo. 
 /*----------------------------------------------*/
 ~~~
 ### *Funções*
