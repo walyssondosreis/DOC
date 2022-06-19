@@ -261,6 +261,16 @@ final protected function meuMetodo():void;
 /* Final quando aplicado a classe informa que aquela classe não pode ser herdada.
 Quando aplicada a um método de classe informa que aquale método não pode ser sobrescrito.
 /*----------------------------------------------*/
+trait Acesso {
+     public function minhaFun34(): void;
+}
+class Minhaclasse{
+   use Acesso;
+   private $nome;
+}
+/* Traits são estruturas do PHP assim como Class e Interface porém com grande diferença.
+Trais apenas copia o codigo contido nela e joga dentro da classe exatamente no lugar onde esta sendo utilizada (use).
+/*----------------------------------------------*/
 ~~~
 ### *Funções*
 ~~~PHP
