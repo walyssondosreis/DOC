@@ -301,6 +301,20 @@ array_column($meuvetor,'chave_de_busca');
 in_array('valor_procurado',$meuarray); 
 /* Retorna booleano. Verifica se valor esta presente em array.
 /*----------------------------------------------*/
+sort($meuArray);
+/* Recebe um array por referência, ou seja irá manipular diretamente o elemento  e ordena os seus elementos.
+Nâo é possivel passar um array diretamente array([8,5,4]), exatamente por ele não ter retorno e sim modificar por referência.
+/*----------------------------------------------*/
+usort($meuArray,callback: 'minhaFunCallback'); 
+/* Outro método de ordenação porém utilizado para matrizes onde deve-se passar uma função de callback onde
+é necessario informar como os elementos do array serão ordenados; exemplo de função:*/
+function ordenaArray($meuv1, $meuv2): int{
+   if($meuv1['nota'] > $meuv2['nota']) return -1; // Elemento do primeiro vetor é maior e portanto deve vir mais a esquerda.
+   if($meuv1['nota'] < $meuv2['nota']) return 1; // Elemento do primeiro vetor e menor e portanto deve vir mais a direita.
+   return 0; // Elementos são iguais e portanto não deve ser alterado as suas posições.
+}
+
+/*----------------------------------------------*/
 rtrim('minha_string','-'); 
 /* Apara string removendo caractere passado como argumento da extrema direita.
 /*----------------------------------------------*/
