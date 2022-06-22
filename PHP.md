@@ -323,6 +323,10 @@ array_combine($meuArrayChaves,$meuArrayValores);
 array_flip($meuArray);
 /* Retorna array tendo invertido o que era chave pra valor e o que era valor para chave.
 /*----------------------------------------------*/
+array_merge($meuArray1,$meuArray2);
+/* Retorna array onde o segundo array é adicionado ao final do primeiro.
+Sequencia chaves numéricas; Chaves não numéricas é substuido valor pelo valor do segunto array caso ambiguo.
+/*----------------------------------------------*/
 in_array('valor_procurado',$meuarray); 
 in_array('valor_procurado',$meuarray, true); 
 /* Retorna booleano. Verifica se valor esta presente em qualquer chave do array.
