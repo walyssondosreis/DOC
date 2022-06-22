@@ -304,12 +304,24 @@ array_column($meuvetor,'chave_de_busca');
 /* Retorna valores de coluna em determinado array. 
 /*----------------------------------------------*/
 array_diff($meuarray1,$meuarray2);
-/* Retorna outro array contendo os elementos que não são comuns a ambos os arrays.
+/* Retorna array contendo os elementos que não são comuns a ambos os arrays.
 É levado em consideração na comparação apenas os valores dos elementos, não as suas chaves.
 /*----------------------------------------------*/
 array_diff_key($meuarray, $meuarray2);
-/* Retorna outro array contendo os elementos que não são comuns a ambos os arrays.
+/* Retorna array contendo os elementos que não são comuns a ambos os arrays.
 Desta vez é usado para comparação apenas as chaves dos elementos.
+/*----------------------------------------------*/
+array_keys($meuArray); 
+/* Retorna array contendo somente as chaves de um array passado como parâmetro.
+/*----------------------------------------------*/
+array_values($meuArray);
+/* Retorna array contendo somente os valores de um um array passado como parâmetro.
+/*----------------------------------------------*/
+array_combine($meuArrayChaves,$meuArrayValores);
+/* Retorna array contendo valores do primeiro array como chaves e do segundo como valores.
+/*----------------------------------------------*/
+array_flip($meuArray);
+/* Retorna array tendo invertido o que era chave pra valor e o que era valor para chave.
 /*----------------------------------------------*/
 in_array('valor_procurado',$meuarray); 
 in_array('valor_procurado',$meuarray, true); 
