@@ -281,7 +281,7 @@ session_start();
 /* Inicia/Define variável de sessão do usuário. Retorna booleano.
 /*----------------------------------------------*/
 isset($minhaVar); 
-/* Retorna booleano para existência de variável.
+/* Retorna booleano para que uma variável esteja definida, ou seja não pode estar com valor 'null'.
 /*----------------------------------------------*/
 gettype($minhavar); 
 /* Retorna qual o tipo de variável passada.
@@ -295,11 +295,18 @@ array_push($meuarray,'meu valor');
 array_search('valor_procurado',$meuvetor); 
 /* Retorna chave correspondente do valor procurado no array.
 /*----------------------------------------------*/
+array_key_exists('MinhaChave', $meuArray);
+/* Retorna booleano caso chave exista no vetor, mesmo estando esta nula 'null'.
+/*----------------------------------------------*/
 array_column($meuvetor,'chave_de_busca'); 
 /* Retorna valores de coluna em determinado array. 
 /*----------------------------------------------*/
 in_array('valor_procurado',$meuarray); 
 /* Retorna booleano. Verifica se valor esta presente em array.
+/*----------------------------------------------*/
+array_is_list($meuArray);
+/* Verifica se um array é uma estrutura de lista, ou seja, se tem suas chaves
+numéricas e sequênciais. ex. 0=>'', 1=>'' etc. Útil para verificar se um array e percorrível por foreach.
 /*----------------------------------------------*/
 sort($meuArray);
 /* Recebe um array por referência, ou seja irá manipular diretamente o elemento  e ordena os seus elementos.
