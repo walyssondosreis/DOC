@@ -313,7 +313,18 @@ function ordenaArray($meuv1, $meuv2): int{
    if($meuv1['nota'] < $meuv2['nota']) return 1; // Elemento do primeiro vetor e menor e portanto deve vir mais a direita.
    return 0; // Elementos são iguais e portanto não deve ser alterado as suas posições.
 }
-
+function ordenaArray($meuv1, $meuv2):int{
+   return $meuv1['nota'] <==> $meuv2['nota'] ; // Operador espaçonave faz algo semelhante ao que o cod acima.
+}
+/* Este operador irá retornar 1 caso $meuv1['nota'] seja maior que $meuv2; no usort joga $meuv1 a direita;
+Irá retornar -1 caso $meuv1['nota1'] seja menor; no usort joga $meuv1 mais a esquerda ;
+Irá retornar 0 caso $meuv1['nota'] seja igual a $meuv2; no usort não irá mudar posição.
+/*----------------------------------------------*/
+asort($meuArray);
+/* Ordena o array sem perder os valores de associação 'chave'=>1
+/*----------------------------------------------*/
+ksort($meuArray);
+/* Ordena o array pelos índices das chaves.
 /*----------------------------------------------*/
 rtrim('minha_string','-'); 
 /* Apara string removendo caractere passado como argumento da extrema direita.
