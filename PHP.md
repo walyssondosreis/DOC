@@ -293,7 +293,9 @@ array_push($meuarray,'meu valor');
 /* Adiciona valor em array.
 /*----------------------------------------------*/
 array_search('valor_procurado',$meuvetor); 
-/* Retorna chave correspondente do valor procurado no array.
+array_search('valor_procurado',$meuvetor, true); 
+/* Retorna chave correspondente ao valor procurado no array.
+Mesma forma de verificação porém com valores restritos ou seja compara com o operador ===.
 /*----------------------------------------------*/
 array_key_exists('MinhaChave', $meuArray);
 /* Retorna booleano caso chave exista no vetor, mesmo estando esta nula 'null'.
@@ -302,7 +304,9 @@ array_column($meuvetor,'chave_de_busca');
 /* Retorna valores de coluna em determinado array. 
 /*----------------------------------------------*/
 in_array('valor_procurado',$meuarray); 
-/* Retorna booleano. Verifica se valor esta presente em array.
+in_array('valor_procurado',$meuarray, true); 
+/* Retorna booleano. Verifica se valor esta presente em qualquer chave do array.
+Mesma forma de verificação porém com valores restritos ou seja compara com o operador ===.
 /*----------------------------------------------*/
 array_is_list($meuArray);
 /* Verifica se um array é uma estrutura de lista, ou seja, se tem suas chaves
