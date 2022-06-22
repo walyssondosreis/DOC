@@ -5,7 +5,7 @@
 
 
 *Autor: Walysson dos Reis  
-Revisão: 21/06/2022*
+Revisão: 22/06/2022*
 
 ----------------------------------------------
 *Manual de consulta rápida dos conceitos e principais comandos.*  
@@ -302,6 +302,14 @@ array_key_exists('MinhaChave', $meuArray);
 /*----------------------------------------------*/
 array_column($meuvetor,'chave_de_busca'); 
 /* Retorna valores de coluna em determinado array. 
+/*----------------------------------------------*/
+array_diff($meuarray1,$meuarray2);
+/* Retorna outro array contendo os elementos que não são comuns a ambos os arrays.
+É levado em consideração na comparação apenas os valores dos elementos, não as suas chaves.
+/*----------------------------------------------*/
+array_diff_key($meuarray, $meuarray2);
+/* Retorna outro array contendo os elementos que não são comuns a ambos os arrays.
+Desta vez é usado para comparação apenas as chaves dos elementos.
 /*----------------------------------------------*/
 in_array('valor_procurado',$meuarray); 
 in_array('valor_procurado',$meuarray, true); 
