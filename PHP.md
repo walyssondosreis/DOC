@@ -544,4 +544,8 @@ https://www.apachefriends.org/pt_br/index.html
 https://www.php.com.br/instalacao-php-linux  
 https://www.regexpal.com/  
 https://regexr.com/  
+[Array unpacking](https://www.php.net/manual/en/language.types.array.php#language.types.array.unpacking)  
+[Variable-lengh argument list](https://www.php.net/manual/en/functions.arguments.php#functions.variable-arg-list)  
+
+
 
