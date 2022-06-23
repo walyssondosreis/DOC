@@ -122,6 +122,12 @@ $meuvetor=[ ...$meuvetor2, 'Texto', ...$meuvetor3];
 Irá desempacotar o array despejando assim os seus elementos.
 Esse comportamento do operador esta associado apenas quando utilizado com arrays.
 /*----------------------------------------------*/
+extract($meuVetor);
+/* A partir de um array passado ele cria variaveis utilizando nomes das chaves e seus valores.
+/*----------------------------------------------*/
+compact($v1,$v2,$v3);
+/* Inverso do extract; recria um vetor utilizando as variáveis passadas.
+/*----------------------------------------------*/
 function minhaFun(int ...$alunos);
 /* Spread Operator: ...
 Quando este operado é utilizado em parâmetros de função significa que
