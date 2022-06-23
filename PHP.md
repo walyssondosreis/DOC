@@ -311,6 +311,15 @@ array();
 array_push($meuarray,'meu valor','meu valor2'); 
 /* Adiciona valor ao array passado por referência, ou seja, o array é modificado diretamente.
 /*----------------------------------------------*/
+array_unshift($meuArray, 'teste','blabla');
+/* Adiciona elementos ao início do array.
+/*----------------------------------------------*/
+array_shitf($meuArray);
+/* Remove primeiro elemento do array e retorna esse elemento removido.
+/*----------------------------------------------*/
+array_pop($meuArray);
+/* Remove último elemento do array e retorna esse elemento removido.
+/*----------------------------------------------*/
 array_search('valor_procurado',$meuvetor); 
 array_search('valor_procurado',$meuvetor, true); 
 /* Retorna chave correspondente ao valor procurado no array.
