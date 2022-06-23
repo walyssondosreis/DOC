@@ -118,11 +118,12 @@ list('n1'=> $nome1, 'n2'=> $nome2) =$meuvetor;
 /* Nova sintaxe apartir do PHP 7.1 faz  a mesma coisa q o list acima.
 /*----------------------------------------------*/
 $meuvetor=[ ...$meuvetor2, 'Texto', ...$meuvetor3];
-/* Operador ... irá desempacotar o array despejando assim os seus elementos.
+/* Unpacking Operator: ... 
+Irá desempacotar o array despejando assim os seus elementos.
 Esse comportamento do operador esta associado apenas quando utilizado com arrays.
 /*----------------------------------------------*/
 function minhaFun(int ...$alunos);
-/* Spred Operator: ...
+/* Spread Operator: ...
 Quando este operado é utilizado em parâmetros de função significa que
 a função pode ter inumeros argumentos recebidos do tipo informado. ex.: */
 minhaFun(5,6,7,8);
