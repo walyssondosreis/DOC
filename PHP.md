@@ -326,6 +326,19 @@ array_shitf($meuArray);
 array_pop($meuArray);
 /* Remove último elemento do array e retorna esse elemento removido.
 /*----------------------------------------------*/
+array_map(function($v1){},$meuArray);
+/* Retorna um array ; recebe uma função por parâmetro e aplica cada elemento 
+do array recebido a esta função.
+/*----------------------------------------------*/
+array_reduce($meuArray, function($a,$b){},$valorInicial);
+/* Retorna um valor onde são passados cada elemento do array 'meuArray' a uma 
+função onde, $a = atual e $b = valor acumulado, sendo também necessario informar o valor inicial.
+/*----------------------------------------------*/
+array_filter($meuArray, function($item){});
+/* Retorna array ; recebe função anônima que deve retornar 'true' ou 'false'
+com base nisso a função sabe se o elemento passado a cada interação deve ou não entrar
+na composição do novo array.
+/*----------------------------------------------*/
 array_search('valor_procurado',$meuvetor); 
 array_search('valor_procurado',$meuvetor, true); 
 /* Retorna chave correspondente ao valor procurado no array.
