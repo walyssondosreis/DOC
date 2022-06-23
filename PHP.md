@@ -308,8 +308,8 @@ gettype($minhavar);
 array(); 
 /* Retorna objeto array.
 /*----------------------------------------------*/
-array_push($meuarray,'meu valor'); 
-/* Adiciona valor em array.
+array_push($meuarray,'meu valor','meu valor2'); 
+/* Adiciona valor ao array passado por referência, ou seja, o array é modificado diretamente.
 /*----------------------------------------------*/
 array_search('valor_procurado',$meuvetor); 
 array_search('valor_procurado',$meuvetor, true); 
