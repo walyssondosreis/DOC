@@ -584,6 +584,8 @@ https://regexr.com/
 [Variable-lengh argument list](https://www.php.net/manual/en/functions.arguments.php#functions.variable-arg-list)  
 https://www.codigofonte.net/dicas/php/883_adicionando-mudando-a-senha-do-phpmyadmin  
 https://kinsta.com/pt/base-de-conhecimento/senha-mysql-no-xampp/  
+https://github.com/PHPMailer/PHPMailer  
+
 
 
 
