@@ -21,7 +21,7 @@ git pull // BAIXA DO SERVIDOR PARA O PC
 # Configurar GIT no linux
 
 git config --global user.name "Walysson dos Reis"
-git config --global user.email walyssondosreis@gmail.com
+git config --global user.email walyxxxx@xxxxx.com
 git config --global user.signingKey 'senha'
 ~~~~
 --------
