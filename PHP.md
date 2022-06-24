@@ -564,7 +564,11 @@ E_ERROR // PHP dá erro e para a execução do programa.
 * Edite o arquivo `php.ini` para ajustar hora no PHP: `data.timezone = America/Sao_Paulo`. Após reinicie o serviço do apache.
 * `php -v` - No terminal verifica versão do php instalada.
 * `php -a` - No terminal inicia shell interativo do php. Exige 'quit' para retornar ao terminal.
-* `php -S localhost:8080` - Por padrão as novas versões do PHP ja vem com um servidor de teste, basta iniciar. Não necessita do XAMPP.
+* `php -S localhost:8080` - Por padrão as novas versões do PHP ja vem com um servidor de teste, basta iniciar. Não necessita do XAMPP.  
+* Para alterar a senha root do MySql através do phpMyadmin.:   
+  * Abra o Xampp e clique em *Shell*. Digite o comando .: `mysqladmin -u root password`   
+  * Busque no arquivo *config.inc.php* e altere a seguinte linha `$cfg['Servers'][$i]['password']=MinhaNovaSenha`.  
+  * Reinicie o serviço do mysql e estará funcionando.  
 --------
 ## Referências 
 https://www.php.net/manual/pt_BR/  
@@ -574,6 +578,10 @@ https://www.regexpal.com/
 https://regexr.com/  
 [Array unpacking](https://www.php.net/manual/en/language.types.array.php#language.types.array.unpacking)  
 [Variable-lengh argument list](https://www.php.net/manual/en/functions.arguments.php#functions.variable-arg-list)  
+https://www.codigofonte.net/dicas/php/883_adicionando-mudando-a-senha-do-phpmyadmin  
+https://kinsta.com/pt/base-de-conhecimento/senha-mysql-no-xampp/  
+
+
 
 
 
