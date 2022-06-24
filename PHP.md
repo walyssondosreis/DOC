@@ -22,6 +22,10 @@ Revisão: 22/06/2022*
 $minhaVariavel = 1 ;
 /* Cifrão ($) define variável no PHP.
 ------------------------------------------------*/
+define("NOME_CONST","valor_const");
+/* Define constantes no PHP. Para exibição de constantes ex .: */
+echo "Minha constante é : " . NOME_CONST ;
+------------------------------------------------*/
 include "meuarquivo.php" ;
 /* Incorpora arquivo externo. É utilizado para partes não fundamentais. Programa não para caso arquivo não exista.
 ------------------------------------------------*/
