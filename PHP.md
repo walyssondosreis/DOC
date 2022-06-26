@@ -129,6 +129,10 @@ Esse comportamento do operador esta associado apenas quando utilizado com arrays
 extract($meuVetor);
 /* A partir de um array passado ele cria variaveis utilizando nomes das chaves e seus valores.
 /*----------------------------------------------*/
+htmlspecialchars($minhaString);
+/* Retorna string de forma que caracteres especiais como '< & >' não serão excutados;
+Isso evita injessões de codigo em campos input, caso entrem não serão interpretados pela página.
+/*----------------------------------------------*/
 compact($v1,$v2,$v3);
 /* Inverso do extract; recria um vetor utilizando as variáveis passadas.
 /*----------------------------------------------*/
