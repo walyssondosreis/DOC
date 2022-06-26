@@ -430,6 +430,16 @@ str_replace('xv','nvw', $minhavar);
 strtoupper('minha_string'); 
 /* Retorna string em maiúsculo porém não coloca caracteres acentuados pois este exige mais de 1byte.
 /*----------------------------------------------*/
+strpos($minhaString, '@');
+/* Retorna posição do caractere passado como argumento dentro da string passada.
+/*----------------------------------------------*/
+substr($mihaString,0,10);
+/* Retorna uma string onde é cortado $minhaString da posição 0 a posição 10.
+/*----------------------------------------------*/
+strncmp($string1,$string2,$numCachar);
+/* Retorna inteiro para comparação; compara string1 com string2 com o critério
+do números de caracteres a serem comparados. 
+/*----------------------------------------------*/
 ucfirst('palavra');
 /* Retorna uma string com a primeira letra da palavra em maiúsculo.
 /*----------------------------------------------*/
