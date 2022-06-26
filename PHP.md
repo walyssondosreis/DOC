@@ -421,6 +421,10 @@ ltrim('minha_string','-');
 trim('minha_string','-'); 
 /* Apara string removendo caractere passado como argumento de ambos os lados.
 /*----------------------------------------------*/
+filter_var($meuEmail,FILTER_VALIDADE_EMAIL);
+/* Retorna email passado caso válido ou bool false.
+FILTER VALIDADE_EMAIL é uma constante padrão do PHP.
+/*----------------------------------------------*/
 strlen('minha_string'); 
 /* Retorna quantidade de caracteres na string passada.
 /*----------------------------------------------*/
@@ -595,6 +599,8 @@ https://regexr.com/
 https://www.codigofonte.net/dicas/php/883_adicionando-mudando-a-senha-do-phpmyadmin  
 https://kinsta.com/pt/base-de-conhecimento/senha-mysql-no-xampp/  
 https://github.com/PHPMailer/PHPMailer  
+https://www.php.net/manual/en/filter.filters.validate.php  
+
 
 
 
