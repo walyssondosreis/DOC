@@ -594,6 +594,8 @@ E_ERROR // PHP dá erro e para a execução do programa.
 --------
 ## Referências 
 https://www.php.net/manual/pt_BR/  
+https://phptherightway.com/  
+http://br.phptherightway.com/  
 https://www.apachefriends.org/pt_br/index.html  
 https://www.php.com.br/instalacao-php-linux  
 https://www.regexpal.com/  
