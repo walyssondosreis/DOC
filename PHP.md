@@ -516,6 +516,18 @@ date_default_timezone_set('America/Sao_Paulo');
 /*----------------------------------------------*/
 
 ~~~
+### *Manipulação de Arquivos*
+~~~PHP
+$arquivo= fopen('meuArq.txt', 'r');
+/* Abre arquivo como somente leitura.
+/*----------------------------------------------*/
+while(!feof($arquivo) $minhaVar=fgets($arquivo);
+/* Enquanto não for o fim do arquivo irá capturar uma linha do arquivo.
+/*----------------------------------------------*/
+fclose($arquivo);
+/* Fecha arquivo.
+~~~
+
 ### *Variáveis Globais*
 ~~~PHP
 $_GET // Variável global que captura todos os dados inseridos/passados com o método 'GET' (Padrão no HTML).
