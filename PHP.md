@@ -537,9 +537,16 @@ file_get_contents('meuArquivo.txt');
 /* Retorna todo arquivo lido. 
 A função irá abrir o arquivo para leitura e fechar automaticamente.
 /*----------------------------------------------*/
-file('meuArquivo.txt);
+file('meuArquivo.txt');
 /* Retorna cada linha do arquivo como uma elento de array.
 A função irá abrir o arquivo para leitura e fechar automaticamente.
+/*----------------------------------------------*/
+fwrite($meuArquivo,$meuTexto, 20);
+/* Escreve no arquivo somente os 20 primeiros bytes do texto passado.
+/*----------------------------------------------*/
+file_put_contents('meuArquivo.txt', $minhaFrase, FILE_APPEND);
+/* Escreve no arquivo passado a frase passada; 
+Flag informa que conteúdo deve ser adicionado ao final do arquivo.
 /*----------------------------------------------*/
 ~~~
 
