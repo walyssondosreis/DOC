@@ -526,6 +526,21 @@ while(!feof($arquivo) $minhaVar=fgets($arquivo);
 /*----------------------------------------------*/
 fclose($arquivo);
 /* Fecha arquivo.
+/*----------------------------------------------*/
+filesize('meuArquivo.txt');
+/* Retorna o tamanho de um arquivo em bytes.
+/*----------------------------------------------*/
+fread($arquivo, $numBytes);
+/* Lê determinado número de bytes de um arquivo.
+/*----------------------------------------------*/
+file_get_contents('meuArquivo.txt');
+/* Retorna todo arquivo lido. 
+A função irá abrir o arquivo para leitura e fechar automaticamente.
+/*----------------------------------------------*/
+file('meuArquivo.txt);
+/* Retorna cada linha do arquivo como uma elento de array.
+A função irá abrir o arquivo para leitura e fechar automaticamente.
+/*----------------------------------------------*/
 ~~~
 
 ### *Variáveis Globais*
