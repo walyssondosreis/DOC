@@ -537,6 +537,15 @@ file_get_contents('meuArquivo.txt');
 /* Retorna todo arquivo lido. 
 A função irá abrir o arquivo para leitura e fechar automaticamente.
 /*----------------------------------------------*/
+stream_filter_append('meuarquivo.txt', 'string.toupper');
+/* Aplica filtro de entrada de dados padrão do PHP o qual coloca todos
+os caracteres de entrada em maiúsculo. Filtros também podem ser criados.
+/*----------------------------------------------*/
+file_get_contents('http://swapi.co/api/films/4/');
+file_get_contents('zip://arquivos.zip#lista-cursos.txt');
+/* O file get também pode ser utilizado para outro tipos de entrada de dados, 
+como zip:// file:// http:// entre outros. No zip consegue abrir arquivos diretamente armazenados.
+/*----------------------------------------------*/
 file('meuArquivo.txt');
 /* Retorna cada linha do arquivo como uma elento de array.
 A função irá abrir o arquivo para leitura e fechar automaticamente.
