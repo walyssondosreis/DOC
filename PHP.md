@@ -557,6 +557,12 @@ file_put_contents('meuArquivo.txt', $minhaFrase, FILE_APPEND);
 /* Escreve no arquivo passado a frase passada; 
 Flag informa que conteúdo deve ser adicionado ao final do arquivo.
 /*----------------------------------------------*/
+fgets(STDIN);
+/* Captura e retorna elementos de entrada do teclado.
+/*----------------------------------------------*/
+stream_copy_to_stream('meuTexto.txt', STDOUT);
+/* Retorna para a saída de terminal ou tela os ementos do arquivo passado.
+/*----------------------------------------------*/
 ~~~
 
 ### *Variáveis Globais*
