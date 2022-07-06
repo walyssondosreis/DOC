@@ -608,7 +608,7 @@ Método 'eof' retorna se leitura do arquivo chegou no final. 'fgetcsv' retorna c
 linha lida do arquivo csv ara a variável $linha.
 /*----------------------------------------------*/
 utf8_decode($curso);
-/* Função que resolve problemas de codificação .
+/* Função que resolve problemas de codificação alterarando a tabela charset.
 Irá alterar fluxo de caracteres lidos para o padrão de codificação ISO e com isso 
 fazer com que o excel por exemplo consiga ler os dados com acento de um csv.
 /*----------------------------------------------*/
