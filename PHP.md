@@ -607,6 +607,16 @@ while (!$arquivoCursos->eof()) {
 Método 'eof' retorna se leitura do arquivo chegou no final. 'fgetcsv' retorna cada
 linha lida do arquivo csv ara a variável $linha.
 /*----------------------------------------------*/
+utf8_decode($curso);
+/* Função que resolve problemas de codificação .
+Irá alterar fluxo de caracteres lidos para o padrão de codificação ISO e com isso 
+fazer com que o excel por exemplo consiga ler os dados com acento de um csv.
+/*----------------------------------------------*/
+utf8_encode($linhaArq);
+/* Função retorna o inverso da anterior. Lê dados de codificação ISO e retorna UTF8.
+Faz com que caractereres acentuados lidos errados pelo terminal do PHP por exemplo se 
+apresentem de forma correta.
+/*----------------------------------------------*/
 ~~~
 
 ### *Variáveis Globais*
