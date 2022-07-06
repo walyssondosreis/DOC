@@ -490,8 +490,14 @@ mysqli_connect_errno();
 mysqli_query($conexao, $meucodSQL); 
 /* Realiza requisição com o banco. Retorna obj. de consulta.
 /*----------------------------------------------*/
-mysqli_fetch_assoc($resultado)); 
-/* Percorre linhas de uma requisição sql.
+mysqli_fetch_assoc($resultado); 
+/* Retorna apartir de um resultado de query linha por linha 
+desse resultado; a cada vez que e chamada lê e define ponteiro 
+para a proxima linha no resultado.
+/*----------------------------------------------*/
+mysqli_fetch_all($resultado);
+/* Retorna todo resultado da consulta query sendo cada 
+resultado uma linha da matriz. Pode ser percorrido com foreach.
 /*----------------------------------------------*/
 die(); 
 /* Interrompe execusão do programa.
