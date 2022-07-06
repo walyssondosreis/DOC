@@ -563,6 +563,26 @@ fgets(STDIN);
 stream_copy_to_stream('meuTexto.txt', STDOUT);
 /* Retorna para a saída de terminal ou tela os ementos do arquivo passado.
 /*----------------------------------------------*/
+$contexto = stream_context_create([
+   'http' => [
+        'method' => 'POST',
+        'header' => "X-From: PHP\r\nContent-Type: text/plain",
+        'content' => 'Teste de corpo do request'
+]);
+file_get_contents('http://httpbin.org/post', false, $contexto);
+/* O contexto para manipulação de arquivos é muito importante pois nele é possivel
+definir os parêmetros para a requisição. Exemplo de contexto para uma requisição http.
+O parâmetro false na função de chamada é obrigatório e indica negação para passar outro caminho localizado o contexto.
+/*----------------------------------------------*/
+$contexto = stream_context_create([
+   'zip' => [
+        'password' => '123456'
+    ]
+]);
+file_get_contents('zip://arquivos.zip#lista-cursos.txt',false,$contexto);
+/* Contexto pode ser utilizado para manipulação de outros wrappers PHP como o zip://.
+Exemplo cria um contexto que contém a senha do arquivo zip permitindo assim abri-lo.
+/*----------------------------------------------*/
 ~~~
 
 ### *Variáveis Globais*
