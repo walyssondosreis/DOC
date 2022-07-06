@@ -583,6 +583,30 @@ file_get_contents('zip://arquivos.zip#lista-cursos.txt',false,$contexto);
 /* Contexto pode ser utilizado para manipulação de outros wrappers PHP como o zip://.
 Exemplo cria um contexto que contém a senha do arquivo zip permitindo assim abri-lo.
 /*----------------------------------------------*/
+fputcsv('meuArqCsv.csv',$meuArray,';');
+/* Escreve dentro de arquivo CSV. Deve passar sempre um array e tambem um separator.
+Por padrão o separador CSV é a virgula ',' porém no excel e o ponto e virgula ';'.
+/*----------------------------------------------*/
+$diretorioAtual= dir('.');
+echo $diretorioAtual->path;
+while ($arquivo = $diretorioAtual->read()) {
+    echo $arquivo . PHP_EOL;
+}
+/* Sintaxe diferente porem irá criar um objeto do tipo diretório.
+Este objeto tem metodos como 'path' que retorna o caminho atual do diretorio
+e 'read' que irá retornar o nome de todos os arquivos e diretorios dentro desde diretório.
+/*----------------------------------------------*/
+$arquivoCursos = new SplFileObject('cursos.csv');
+
+while (!$arquivoCursos->eof()) {
+    $linha = $arquivoCursos->fgetcsv(';');
+    echo $linha[0] . PHP_EOL;
+}
+
+/* O Objeto SplFileObjetct é utilizado para manipular arquivos e suas propriedades.
+Método 'eof' retorna se leitura do arquivo chegou no final. 'fgetcsv' retorna cada
+linha lida do arquivo csv ara a variável $linha.
+/*----------------------------------------------*/
 ~~~
 
 ### *Variáveis Globais*
