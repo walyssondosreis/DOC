@@ -650,6 +650,7 @@ E_ERROR // PHP dá erro e para a execução do programa.
     * PHP : Linguagem de programação.
     * MySQL : Banco de dados.
     * PHPmyAdmin : Interface de manipulação do MySQL.
+    * Na pasta C:\xampp\php renomeie o arquivo `php.ini-development` para `php.ini`. 
 --------
 * No Linux instale os softwares:
     * Instale o PHP e o servidor Apache:
