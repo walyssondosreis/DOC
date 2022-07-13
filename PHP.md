@@ -657,6 +657,9 @@ try{
 }
 /* Pode-se usar o operador pipe '|' para tratar mais de um tipo de erro da mesma forma.
 /*----------------------------------------------*/
+$minhaExcessao =  new RunTimeException(); // Cria nova instância do erro tempo de execução.
+throw $minhaExcessao ; // Lança um excessão que o programa trate ou exiba o erro.
+/*----------------------------------------------*/
 
 ~~~
 ### *Variáveis Globais*
