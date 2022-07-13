@@ -624,7 +624,41 @@ Faz com que caractereres acentuados lidos errados pelo terminal do PHP por exemp
 apresentem de forma correta.
 /*----------------------------------------------*/
 ~~~
+### *Tratamento de Erros*
+~~~PHP
+try{
+  echo "faça alguma coisa";
+} catch(RunTimeException $varExcessao){
+  echo "tratamento do erro";
+  echo $varExcessao->getMessage(); // Obtem a mensagem de erro da variavel de excessão.
+  echo $varExcessao->getLine(); // Obtem a linha a qual ocorreu o erro. 
+  echo $varExcessao->getTrace(); // Obtem a pilha de excecussão ate o erro como array.
+  echo $varExcessao->getTraceAsString(); // Obtem a pilha de execussão ate o erro como string.
+}
+/*----------------------------------------------*/
+/* Bloco de tratamento de erro onde é acionado assim que houver 
+na área de teste uma excessão do tipo 'RunTimeException'.
+Métodos da variável de erro pertencem a classe de error padrão do php.
+/*----------------------------------------------*/
+try{
+  echo "faça alguma coisa";
+} catch(RunTimeException $varExcessao){
+  echo "tratamento do erro";
+} catch(MeuOutroTipoDeErro $varExcessao){
+  echo "traba o segundo tipo de erro";
+}
+/*----------------------------------------------*/
+/* Um mesmo try pode ter varios catch tratando excessões diferentes.
+/*----------------------------------------------*/
+try{
+  echo "faça alguma coisa";
+} catch(RunTimeException | MeuOutroTipoDeErro $varExcessao){
+  echo "tratamento ambos tipos de erros";
+}
+/* Pode-se usar o operador pipe '|' para tratar mais de um tipo de erro da mesma forma.
+/*----------------------------------------------*/
 
+~~~
 ### *Variáveis Globais*
 ~~~PHP
 $_GET // Variável global que captura todos os dados inseridos/passados com o método 'GET' (Padrão no HTML).
