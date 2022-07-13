@@ -658,9 +658,17 @@ try{
 /* Pode-se usar o operador pipe '|' para tratar mais de um tipo de erro da mesma forma.
 /*----------------------------------------------*/
 $minhaExcessao =  new RunTimeException(); // Cria nova instância do erro tempo de execução.
+$minhaExcessao =  new RunTimeException('Minha msg de erro'); // Cria nova instância do erro tempo de execução.
 throw $minhaExcessao ; // Lança um excessão que o programa trate ou exiba o erro.
 /*----------------------------------------------*/
-
+/** 
+* @throws RunTimeException
+*/
+function minhaFuncao();
+/* Notation são códigos não para o PHP e sim para outras ferramentas como as próprias
+IDES. Informa a ferramenta através da notation '@throws' que a função abaixo da anotação 
+irá lançar uma exceção do tipo 'RunTimeException. Muito útil para que as IDE consiga orientar
+na criação de try cats.
 ~~~
 ### *Variáveis Globais*
 ~~~PHP
