@@ -669,6 +669,32 @@ function minhaFuncao();
 IDES. Informa a ferramenta através da notation '@throws' que a função abaixo da anotação 
 irá lançar uma exceção do tipo 'RunTimeException. Muito útil para que as IDE consiga orientar
 na criação de try cats.
+/*----------------------------------------------*/
+try{
+  echo "faça alguma coisa";
+} catch(Exception $varExcessao){
+  echo "tratamento do erro";
+}
+/* O tipo Exception irá aceitar qualquer tipo que estende esta classe,
+ou seja qualquer tipo de excessão será tratado.
+/*----------------------------------------------*/
+try{
+  echo "faça alguma coisa";
+} catch(Error $varExcessao){
+  echo "tratamento do erro";
+}
+/* O tipo Error irá aceitar qualquer tipo que estende esta classe,
+ou seja qualquer tipo de erro será tratado.
+/*----------------------------------------------*/
+try{
+  echo "faça alguma coisa";
+} catch(Throwable $varExcessao){
+  echo "tratamento do erro";
+}
+/* A classe throwable é a interface genérica do PHP que extende as classes
+de erro e excessão; ou seja ele irá capturar qualquer coisa, tanto erro
+quanto excessão que houver.
+/*----------------------------------------------*/
 ~~~
 ### *Variáveis Globais*
 ~~~PHP
