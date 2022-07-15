@@ -728,11 +728,6 @@ $_SESSION // Variavel global que guarda valores $GET da sessão do usuário.
 $_FILES // Variável global que guarda arquivos enviados. Criado apenas quando há submissão de arquivos na pag.
 ~~~
 
-### *Error*
-~~~ PHP
-E_NOTICE // PHP dá um aviso mas "se vira" e continua com a execução.
-E_ERROR // PHP dá erro e para a execução do programa.
-~~~
 ### *Extensões*
 * Para instalar extensões abra o arquivo 'php.ini' para edição.
 * Descomente a linha caso Windows: `extension_dir="D:\xampp\php\ext"`.
