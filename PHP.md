@@ -695,6 +695,15 @@ try{
 de erro e excessão; ou seja ele irá capturar qualquer coisa, tanto erro
 quanto excessão que houver.
 /*----------------------------------------------*/
+try{
+  echo "faça alguma coisa";
+} catch(Throwable $varExcessao){
+  echo "tratamento do erro";
+} finally{
+   echo "meucod";
+}
+/* O finally é executado independente do try catch  ou retorno dos mesmo.
+/*----------------------------------------------*/
 ~~~
 ### *Variáveis Globais*
 ~~~PHP
