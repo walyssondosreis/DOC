@@ -704,6 +704,21 @@ try{
 }
 /* O finally é executado independente do try catch  ou retorno dos mesmo.
 /*----------------------------------------------*/
+error_reporting(E_LL);
+/* Função do PHP que irá definir com a constante 'E_ALL' passada como parâmentro
+para que todos os erros sejam exibidos. Pode-se alterar essa configuração também
+diretamente no arquivo 'php.ini'.
+/*----------------------------------------------*/
+ini_set('error_reporting',E_ALL);
+/* Mesmo que o codigo acima porém função pode ser utilizada para definir outros
+parâmetros do arquivo 'php.ini'.
+/*----------------------------------------------*/
+ini_set('display_errors',0); // Desabilita a exbição de erros;
+ini_set('log_errors',1); // Habilita o registro de logs.
+ini_set('error_log','/var/log/minhaApp.txt'); // Define/Altera arquivo de logs.
+/* Configuração geralmente utilizada no ambiente de produção onde eu quero
+ocultar os meus erros porém registra-los em logs para tratamento posterior.
+/*----------------------------------------------*/
 ~~~
 ### *Variáveis Globais*
 ~~~PHP
