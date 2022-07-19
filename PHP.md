@@ -793,6 +793,7 @@ $_FILES // Variável global que guarda arquivos enviados. Criado apenas quando h
 --------
 ## Referências 
 https://www.php.net/manual/pt_BR/  
+https://www.php-fig.org/  
 https://phptherightway.com/  
 http://br.phptherightway.com/  
 https://www.apachefriends.org/pt_br/index.html  
