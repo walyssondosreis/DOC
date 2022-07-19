@@ -19,7 +19,7 @@
 * Instalação: baixe o composer e instale em <https://getcomposer.org/>.
 
 ### *Comandos* 
-~~~PHP
+~~~
 composer --version // Verifica a versão do composer intalada.
 /*------------------------------------------------*/
 composer init // Inicia a criação do arquivo 'composer.json'.
@@ -31,6 +31,16 @@ composer require // Instala todas as dependências listadas no arquivo 'composer
 /*------------------------------------------------*/
 composer update // Atualiza as versões dos pacotes instalados.
 /*------------------------------------------------*/
+...
+,"autoload" : {
+    "psr-4" : {
+        "Alura\\BuscadorDeCursos\\": "src/"
+    }
+}
+/* Autoload configurado no arquivo 'composer.json'. Informa padrão de autoload ao composer,
+ele ira utilizar o padrão 'psr-4' onde "Alura\\BuscadorDeCursos\\" representa o vendor e 'src/'
+a pasta a qual estou mapeando esse vendor. 
+------------------------------------------------*/
  ~~~
  
  --------
