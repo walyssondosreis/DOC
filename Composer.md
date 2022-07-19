@@ -22,5 +22,3 @@ adicionando o nome do pacote necessario dentro do arquivo composer.json no campo
  composer update // Comando irá atualizar as versões dos pacotes instalados.
  
  
- 
- 
