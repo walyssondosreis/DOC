@@ -1,24 +1,42 @@
-O composer de forma resumida é um gerenciador de dependências ou bibliotecas
+# **COMPOSER**
+<div>
+<img src="https://seeklogo.com/images/C/composer-logo-41AA794AAD-seeklogo.com.png" alt="logoJS" width="50px"/> 
+</div>
 
-baixe o composer e instale em https://getcomposer.org/
 
-O composer por padrão é definido por projeto ou seja, as dêpendencias ficam restritas a um projeto
-, sendo possivel também ter dêpendencias globais instalada.
+*Autor: Walysson dos Reis  
+Revisão: 05/07/2022*
 
-composer init : No prompt de comandos inicia a criação do arquivo composer.json.
+----------------------------------------------
+*Manual de consulta rápida dos conceitos e principais comandos.*  
 
+---------------------
+### *Conceitos e Instalação* 
+* O composer de forma resumida é um gerenciador de dependências ou bibliotecas do PHP.
+* O composer por padrão é definido por projeto ou seja, as dêpendencias ficam restritas a um projeto
+, sendo possível também ter dêpendencias globais instaladas.
+* O [Packagist](https://packagist.org/) é o repositório principal do composer, podendo ser adicionado outros repositórios ou até mesmo criado.
+* Instalação: baixe o composer e instale em <https://getcomposer.org/>.
+
+### *Comandos* 
+~~~PHP
 composer --version // Verifica a versão do composer intalada.
-
-https://packagist.org/ repositório principal do composer, útil para realizar buscas de pacote
-antes da instalação.
-
-composer require guzzlehttp/guzzle // Instala pacote do guzzle no projeto
-
-adicionando o nome do pacote necessario dentro do arquivo composer.json no campo require
-é possivel também instalar pacotes. Após isso rode no terminal :
+/*------------------------------------------------*/
+composer init // Inicia a criação do arquivo 'composer.json'.
+/*------------------------------------------------*/
+composer require guzzlehttp/guzzle // Instala pacote do guzzle no projeto.
+/* Adicionando o nome do pacote necessário dentro do arquivo 'composer.json' no campo 'require'
+é possivel também instalar pacotes. Após isso execute: */
+composer require // Instala todas as dependências listadas no arquivo 'composer.json'.
+/*------------------------------------------------*/
+composer update // Atualiza as versões dos pacotes instalados.
+/*------------------------------------------------*/
+ ~~~
  
- composer require // Irá instalar todas as dependências do arquivo composer.json do projeto.
- 
- composer update // Comando irá atualizar as versões dos pacotes instalados.
- 
+ --------
+## Referências 
+https://getcomposer.org/  
+https://packagist.org/  
+
+
  
