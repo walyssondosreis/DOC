@@ -39,7 +39,9 @@ composer update // Atualiza as versões dos pacotes instalados.
 }
 /* Autoload configurado no arquivo 'composer.json'. Informa padrão de autoload ao composer,
 ele ira utilizar o padrão 'psr-4' onde "Alura\\BuscadorDeCursos\\" representa o vendor e 'src/'
-a pasta a qual estou mapeando esse vendor. 
+a pasta a qual estou mapeando esse vendor. Após inserir os parâmetros de autoload execute: */
+
+composer dump-autoload // Atualiza arquivo de autoload do composer.
 ------------------------------------------------*/
  ~~~
  
