@@ -43,8 +43,24 @@ a pasta a qual estou mapeando esse vendor. Após inserir os parâmetros de autol
 
 composer dump-autoload // Atualiza arquivo de autoload do composer.
 ------------------------------------------------*/
- ~~~
+"autoload" : {
+    "classmap": [
+        "./Teste.php"
+    ]
+}
  
+ /* Classmap é utilizado para fazer autoload em arquivos de classes que não seguem a PSR-4,
+ ele ira carregar todas as classes contidas no arquivo informado (Teste.php). Após autereções
+no arquivo 'composer.json' execute o comando 'composer dump-autoload'.
+ ------------------------------------------------*/
+ "autoload" : {
+    "files": ["./functions.php"]
+}
+/* Files informa para que ele carregue o arquivo informado 'functions.php para o autoload.
+Não utilizado para classes; geralmente utilizado para arquivos de helpers'. Após autereções
+no arquivo 'composer.json' execute o comando 'composer dump-autoload'.
+ ------------------------------------------------*/
+ ~~~
  --------
 ## Referências 
 https://getcomposer.org/  
