@@ -50,7 +50,7 @@ composer dump-autoload // Atualiza arquivo de autoload do composer.
 }
  
  /* Classmap é utilizado para fazer autoload em arquivos de classes que não seguem a PSR-4,
- ele ira carregar todas as classes contidas no arquivo informado (Teste.php). Após autereções
+ele ira carregar todas as classes contidas no arquivo informado (Teste.php). Após autereções
 no arquivo 'composer.json' execute o comando 'composer dump-autoload'.
  ------------------------------------------------*/
  "autoload" : {
