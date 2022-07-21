@@ -141,13 +141,12 @@ eventos disponíveis pode ser verificados na documentação do composer.
 * Veja alterações do repositório com `git status`. Adicione os arquivos alterados com `git add *`.
 * Crie um commit do seu código com `git -m "Meu commit"` e informe a versão do pacote com `git tag -a v1.0.0`.
 * Os padrões de versionamento do código devem atender conforme as normas do [Versionamento Semântico](https://semver.org/lang/pt-BR/).
-* 
-~~~
-
-
-
-------------------------------------------------*/
-~~~
+* Criado o repositório vazio no GitHub posso linkar meu código da máquina com este repositório com `git remote add origin https:meulink`.
+* Para publicar o código após isso com `git push origin master`.
+* Após publicar o código podemos publicar a tag de versão com `git push origin v1.0.0`.
+* No site do [Packagist]( https://packagist.org) crie uma conta ou logue com GitHub.
+* Submeta o repositorio com o link; neste processo ele irá buscar informações do pacote em um arquivo 'readme.md' se tiver do projeto.
+* Pacote publicado no repositório principal do composer.
  --------
 ## Referências 
 https://getcomposer.org/  
