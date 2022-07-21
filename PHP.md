@@ -792,20 +792,20 @@ $_FILES // Variável global que guarda arquivos enviados. Criado apenas quando h
   * Reinicie o serviço do mysql e estará funcionando.  
 --------
 ## Referências 
-https://www.php.net/manual/pt_BR/  
-https://www.php-fig.org/  
-https://phptherightway.com/  
-http://br.phptherightway.com/  
-https://www.apachefriends.org/pt_br/index.html  
-https://www.php.com.br/instalacao-php-linux  
-https://www.regexpal.com/  
-https://regexr.com/  
-[Array unpacking](https://www.php.net/manual/en/language.types.array.php#language.types.array.unpacking)  
-[Variable-lengh argument list](https://www.php.net/manual/en/functions.arguments.php#functions.variable-arg-list)  
-https://www.codigofonte.net/dicas/php/883_adicionando-mudando-a-senha-do-phpmyadmin  
-https://kinsta.com/pt/base-de-conhecimento/senha-mysql-no-xampp/  
-https://github.com/PHPMailer/PHPMailer  
-https://www.php.net/manual/en/filter.filters.validate.php  
+<https://www.php.net/manual/pt_BR/>  
+<https://www.php-fig.org/>  
+<https://phptherightway.com/>  
+<http://br.phptherightway.com/>  
+<https://www.apachefriends.org/pt_br/index.html>  
+<https://www.php.com.br/instalacao-php-linux>  
+<https://www.regexpal.com/>  
+<https://regexr.com/>  
+<https://www.php.net/manual/en/language.types.array.php#language.types.array.unpacking>
+<https://www.php.net/manual/en/functions.arguments.php#functions.variable-arg-list>
+<https://www.codigofonte.net/dicas/php/883_adicionando-mudando-a-senha-do-phpmyadmin>  
+<https://kinsta.com/pt/base-de-conhecimento/senha-mysql-no-xampp/>  
+<https://github.com/PHPMailer/PHPMailer>  
+<https://www.php.net/manual/en/filter.filters.validate.php>  
 
 
 
