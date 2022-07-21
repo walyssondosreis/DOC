@@ -161,6 +161,8 @@ irá rodar através do interpretador 'php' do sistema.
 https://getcomposer.org/  
 https://packagist.org/  
 https://semver.org/lang/pt-BR/  
+https://getcomposer.org/doc/articles/versions.md  
+
 
 
 
