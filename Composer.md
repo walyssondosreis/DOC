@@ -118,6 +118,22 @@ ele irá tentar executar de fato o comando 'phan','cs' etc.
 /* Dentro dos scritps do composer consigo colocar qualquer tipo de comando suportado pelo terminal.
 Este exemplo quando chamar 'composer ls' ele irá executar 'dir' que irá exibir a árvore de pastas no windows.
 ------------------------------------------------*/
+"scripts-descriptions": {
+    "check": "Roda as verificações do código. PHAN, PHPCS e PHPUNIT"
+}
+/* Define descrição aos scripts. Descrição é vista no comando 'composer --help'.
+------------------------------------------------*/
+"scripts": {
+    "test": "phpunit tests\\TestBuscadorDeCursos.php",
+    "post-update-cmd": [
+        "@test"
+    ]
+},
+/* O composer trabalha com eventos ; o 'post-update-cmd' e o evento que é disparado
+após a excução do comando 'composer update'. Utilizado em scripts é informado ao composer
+que após a execução deste evento será rodado o codigo do script de 'test'. Todos os 
+eventos disponíveis pode ser verificados na documentação do composer.
+------------------------------------------------*/
  ~~~
  --------
 ## Referências 
