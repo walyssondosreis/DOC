@@ -60,6 +60,28 @@ no arquivo 'composer.json' execute o comando 'composer dump-autoload'.
 Não utilizado para classes; geralmente utilizado para arquivos de helpers'. Após autereções
 no arquivo 'composer.json' execute o comando 'composer dump-autoload'.
  ------------------------------------------------*/
+  composer require --dev meuVendor/MeuPacote
+ /* Informa ao composer que aquele biblioteca será instalada apenas no ambiente de desenvolvimento.
+ ------------------------------------------------*/
+ composer install --no-dev 
+ /* Irá instalar todos os pacotes em require do arquivo composer.json para o ambiente de produção.
+  ------------------------------------------------*/
+ ~~~
+ ### *Ferramentas de Desenvolvimento*  
+ 
+* Toda ferramenta de desenvolvimento deve ser instalada no modo `--dev` no composer.
+* As ferramentas no composer ficam dentro da pasta `vendor\bin\MEUPACOTE`. 
+~~~
+composer require --dev phpunit/phpunit
+/* PHPUnit é uma ferramenta para teste de código.
+ ------------------------------------------------*/
+composer require --dev squizlabs/php_codesniffer
+/* O PHPCs é uma ferramenta para verificar padrões (PSRs) no código.*/
+
+vendor\bin\phpcs --standard=PSR12 src\
+/* Executa o PHPCs solicitando a verificação do padrão da PSR12 nos arquivos
+da pasta 'src\'.
+  ------------------------------------------------*/
  ~~~
  --------
 ## Referências 
