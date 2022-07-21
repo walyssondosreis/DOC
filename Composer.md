@@ -147,6 +147,15 @@ eventos disponíveis pode ser verificados na documentação do composer.
 * No site do [Packagist]( https://packagist.org) crie uma conta ou logue com GitHub.
 * Submeta o repositorio com o link; neste processo ele irá buscar informações do pacote em um arquivo 'readme.md' se tiver do projeto.
 * Pacote publicado no repositório principal do composer.
+
+### *Outras Informações*  
+* No arquivo 'composer.json' podemos adicionar uma sessão `bin: ["meu-arq.php"]`; isso faria com que meu programa
+fosse chamado por `php vendor\bin\meu-arq.php`.
+* Para que eu possa chamar meu programa por apenas `vendor\bin\meu-arq.php` devo adicionar no início do arquivo 
+'meu-arq.php', antes da abertura '<?php' o código `#!/usr/bin/env php`, assim eu informo ao sistema que aquele arquivo 
+irá rodar através do interpretador 'php' do sistema.
+* Podemos explicitar a lincensa do software que estou distribuindo colocando a seguinte seção no arquivo 'composer.json',
+`license: "GPL-3.0"`.
  --------
 ## Referências 
 https://getcomposer.org/  
