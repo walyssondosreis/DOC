@@ -112,6 +112,12 @@ cs : define que 'composer phpcs' será utilizado para executar 'vendor\bin\phpcs
 executar o script de 'test', 'cs' e 'phan' respectivamente. Sem escrever o '@'
 ele irá tentar executar de fato o comando 'phan','cs' etc.
 ------------------------------------------------*/
+"scripts": {
+    "ls": "dir"
+}
+/* Dentro dos scritps do composer consigo colocar qualquer tipo de comando suportado pelo terminal.
+Este exemplo quando chamar 'composer ls' ele irá executar 'dir' que irá exibir a árvore de pastas no windows.
+------------------------------------------------*/
  ~~~
  --------
 ## Referências 
