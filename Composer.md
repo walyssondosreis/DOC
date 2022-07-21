@@ -82,8 +82,8 @@ vendor\bin\phpcs --standard=PSR12 src\
 /* Executa o PHPCs solicitando a verificação do padrão da PSR12 nos arquivos
 da pasta 'src\'.
  ------------------------------------------------*/
- composer require --dev phan/phan3
- /* PHAN é uma ferramenta que busca erro de sintaxe no código PHP.
+composer require --dev phan/phan3
+/* PHAN é uma ferramenta que busca erro de sintaxe no código PHP.
  ------------------------------------------------*/
  ~~~
  --------
