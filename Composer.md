@@ -136,7 +136,7 @@ eventos disponíveis pode ser verificados na documentação do composer.
 ------------------------------------------------*/
  ~~~
 ### *Publicação de pacote*
-* O projeto do pacote criado geralmente é feito no GitHub; portanto crie um repositório para seu projeto. 
+* O projeto do pacote criado geralmente é feito no GitHub; portanto crie um repositório público para seu projeto. 
 * É interessante não subir para o git a pasta `vendor` do composer, para isto basta inserir no arquivo `.gitignore` do projeto.
 * Veja alterações do repositório com `git status`. Adicione os arquivos alterados com `git add *`.
 * Crie um commit do seu código com `git -m "Meu commit"` e informe a versão do pacote com `git tag -a v1.0.0`.
