@@ -18,7 +18,7 @@
 * O [Packagist](https://packagist.org/) é o repositório principal do composer, podendo ser adicionado outros repositórios ou até mesmo criado.
 * Instalação: baixe o composer e instale em <https://getcomposer.org/>.
 
-### *Comandos* 
+### *Comandos principais* 
 ~~~
 composer --version // Verifica a versão do composer intalada.
 /*------------------------------------------------*/
@@ -31,6 +31,15 @@ composer require // Instala todas as dependências listadas no arquivo 'composer
 /*------------------------------------------------*/
 composer update // Atualiza as versões dos pacotes instalados.
 /*------------------------------------------------*/
+composer require --dev meuVendor/MeuPacote
+/* Informa ao composer que aquele biblioteca será instalada apenas no ambiente de desenvolvimento.
+------------------------------------------------*/
+composer install --no-dev 
+/* Irá instalar todos os pacotes em require do arquivo composer.json para o ambiente de produção.
+------------------------------------------------*/
+~~~
+### *Autoload* 
+~~~
 ...
 ,"autoload" : {
     "psr-4" : {
@@ -60,12 +69,6 @@ no arquivo 'composer.json' execute o comando 'composer dump-autoload'.
 Não utilizado para classes; geralmente utilizado para arquivos de helpers'. Após autereções
 no arquivo 'composer.json' execute o comando 'composer dump-autoload'.
  ------------------------------------------------*/
-  composer require --dev meuVendor/MeuPacote
- /* Informa ao composer que aquele biblioteca será instalada apenas no ambiente de desenvolvimento.
- ------------------------------------------------*/
- composer install --no-dev 
- /* Irá instalar todos os pacotes em require do arquivo composer.json para o ambiente de produção.
-  ------------------------------------------------*/
  ~~~
  ### *Ferramentas de Desenvolvimento*  
  
@@ -74,17 +77,28 @@ no arquivo 'composer.json' execute o comando 'composer dump-autoload'.
 ~~~
 composer require --dev phpunit/phpunit
 /* PHPUnit é uma ferramenta para teste de código.
- ------------------------------------------------*/
+------------------------------------------------*/
 composer require --dev squizlabs/php_codesniffer
 /* O PHPCs é uma ferramenta para verificar padrões (PSRs) no código.*/
 
 vendor\bin\phpcs --standard=PSR12 src\
 /* Executa o PHPCs solicitando a verificação do padrão da PSR12 nos arquivos
 da pasta 'src\'.
- ------------------------------------------------*/
+------------------------------------------------*/
 composer require --dev phan/phan3
 /* PHAN é uma ferramenta que busca erro de sintaxe no código PHP.
- ------------------------------------------------*/
+------------------------------------------------*/
+ ~~~
+ ### *Scripts*
+ * Como o próprio nome diz serve para automatizar a execução de comandos que o composer 'gerencia'.
+~~~
+ "scripts": {
+    "test": "phpunit tests\\TestBuscadorDeCursos",
+    "cs": "phpcs --standard=PSR12 src/"
+}
+/* test: define que 'composer test' será utilizado para executar 'vendor\bin\phpunit tests\TestBuscadorDeCursos'.
+cs : define que 'composer phpcs' será utilizado para executar 'vendor\bin\phpcs --standard=PSR12 src/'.
+------------------------------------------------*/
  ~~~
  --------
 ## Referências 
