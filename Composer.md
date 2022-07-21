@@ -90,7 +90,6 @@ composer require --dev phan/phan3
 ------------------------------------------------*/
  ~~~
  ### *Scripts*
- * Como o próprio nome diz serve para automatizar a execução de comandos que o composer 'gerencia'.
 ~~~
  "scripts": {
     "test": "phpunit tests\\TestBuscadorDeCursos",
