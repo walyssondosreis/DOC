@@ -98,6 +98,20 @@ composer require --dev phan/phan3
 /* test: define que 'composer test' será utilizado para executar 'vendor\bin\phpunit tests\TestBuscadorDeCursos'.
 cs : define que 'composer phpcs' será utilizado para executar 'vendor\bin\phpcs --standard=PSR12 src/'.
 ------------------------------------------------*/
+"scripts": {
+    "test": "phpunit tests\\TestBuscadorDeCursos.php",
+    "cs": "phpcs --standard=PSR12 src/",
+    "phan": "phan --allow-polyfill-parser",
+    "check": [
+        "@phan",
+        "@cs",
+        "@test"
+    ]
+}
+/* Check irá ser um script de scripts, ou seja rodando 'composer check' ele irá
+executar o script de 'test', 'cs' e 'phan' respectivamente. Sem escrever o '@'
+ele irá tentar executar de fato o comando 'phan','cs' etc.
+------------------------------------------------*/
  ~~~
  --------
 ## Referências 
