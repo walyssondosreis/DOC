@@ -165,7 +165,7 @@ de função tenho que importar para o escopo da função a variável '$multi' pa
 ser utilizada. */
 
 $valor = array_map(fn($item)-> $item * $multi ,$meuArray);
-/* Arrow Functions são funções apartir do PHP 7.0 feitas para estes casos; a função deve
+/* Arrow Functions são funções apartir do PHP 7.4 feitas para estes casos; a função deve
 ter no corpo máximo 1 linha. Este codigo terá o mesmo resultado do acima citado. */
 /*----------------------------------------------*/
 ?>  <!-- Finaliza bloco de código PHP. --> 
