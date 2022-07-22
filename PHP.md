@@ -156,6 +156,18 @@ minhaFun(...[5,6,8]);
 Permite escrever código html dentro de um bloco. 
 Este conceito pode ser estendido também a: while/endwhile, if/endif, for/endfor.
 /*----------------------------------------------*/
+$meuArray=[1,2,3,5];
+$multi=2;
+
+$valor = array_map(function($item)use($multi){ return $item * $multi; } ,$meuArray);
+/* Simplesmente rodando um array_map utilizando uma função anônima; nisso além de todo corpo
+de função tenho que importar para o escopo da função a variável '$multi' para que esta possa 
+ser utilizada. */
+
+$valor = array_map(fn($item)-> $item * $multi ,$meuArray);
+/* Arrow Functions são funções apartir do PHP 7.0 feitas para estes casos; a função deve
+ter no corpo máximo 1 linha. Este codigo terá o mesmo resultado do acima citado. */
+/*----------------------------------------------*/
 ?>  <!-- Finaliza bloco de código PHP. --> 
 ~~~
 ### *Orientação a Objetos*
