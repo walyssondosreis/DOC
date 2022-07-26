@@ -64,6 +64,9 @@ $preparedStatement->bindValue(parameter: 1, value: 4, data_type: PDO::PARAM_INT)
 /* O terceiro parâmetro do método bindValue ou bindParam é o tipo da variável a ser passada;
 esse tipo pode ser definido por uma constante do proprio PDO, como no exemplo define um inteiro.
 ------------------------------------------------*/
+$preparedStatement->execute();
+/* Irá executar de fato o preparedStatement no banco.
+------------------------------------------------*/
 ~~~~
 
 https://www.php.net/manual/pt_BR/book.pdo.php  
