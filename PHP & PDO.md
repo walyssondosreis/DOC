@@ -10,13 +10,26 @@ $pdo->exec("Minha Consulta SQL);
 de linhas com inteiro afetas pela execução.
 ------------------------------------------------*/
 $statement =$pdo->query("Minha consulta SQL");
-vardum($statment->fetchAll());
+vardump($statment->fetchAll());
 /* O método query irá retornar o resultado de alguma consulta.
 fetchALL irá converter o $statement ara um único array. Por padrão o fetchALL retorna
 este array com linhas duplicadas para que seus índices possam ser acessados tanto 
 quanto a posição quanto pelo nome do campo na tabela. ex: $statement[0][0] retorna 'banana',
 $statenebt['nomeFruta'][0] irá retornar a mesma banana.
 ------------------------------------------------*/
+vardump($statment->fetchAll(PDO::FETCH_ASSOC));
+/* Passando constante do PDO Fetch Assoc o resultado será apenas um array associativo,
+diferente do método padrão.
+------------------------------------------------*/
+vardump($statment->fetchAll(PDO::FETCH_CLASS, MinhaCkass:: Classe));
+/* A constante Class irá retornar um array onde cada resultado irá preencher um objeto de uma classe.
+Necessário que os campos da tabela buscados no resultado estejam identicos aos nome de variáveis do 
+objeto. Muitas vezes é melhor percorrer o FETCH_ASSOC para preencher o objeto em vez de usar desse modo.
+------------------------------------------------*/
+
+
+
+
 ~~~~
 
 https://www.php.net/manual/pt_BR/book.pdo.php  
