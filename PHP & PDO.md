@@ -59,6 +59,11 @@ $statement->bindValue(parameter: ':birth_date', $student->birthDate()->format(fo
 são passados por referência e não por valor ,ou seja, se eu passo $valor chamo o bindParam e 
 altero e variavel depois o valor a ser executado é o ultimo da alteração.
 ------------------------------------------------*/
+$preparedStatement = $pdo->prepare(statement: 'DELETE FROM students WHERE id = ?;');
+$preparedStatement->bindValue(parameter: 1, value: 4, data_type: PDO::PARAM_INT);
+/* O terceiro parâmetro do método bindValue ou bindParam é o tipo da variável a ser passada;
+esse tipo pode ser definido por uma constante do proprio PDO, como no exemplo define um inteiro.
+------------------------------------------------*/
 ~~~~
 
 https://www.php.net/manual/pt_BR/book.pdo.php  
