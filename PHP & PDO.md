@@ -34,6 +34,18 @@ vardump($statment->fetchColumn(column_number:1));
 /*O método fetchColumn irá buscar todos os dados mas apenas de 1 coluna. Podendo ser informado
 qual coluna a busca será feita. 
 ------------------------------------------------*/
+$sqlInsert = "INSERT INTO students (name, birth_date) VALUES (?, ?);";
+$statement = $pdo->prepare($sqlInsert);
+$statement->bindValue(parameter:1, $student->name());
+$statement->bindValue(parameter:2, $student->birthDate()->format(format:'Y-m-d'));
+echo $sqlInsert; exit();
+/* O prepare statement previne ataque de SqlInjection. No código sera criado uma variável
+com a instrução SQL utilizando '?' no lugar dos valores. Um codigo intermediário será gerado 
+para uma variável chamada $statement. Os valores então são substituídos através do método 'bindValue'
+onde são passados o número da posição a ser substituida e o valor a ser inserido. 
+------------------------------------------------*/
+
+var_dump($pdo->exec($sqlInsert));
 
 ~~~~
 
