@@ -26,10 +26,17 @@ vardump($statment->fetchAll(PDO::FETCH_CLASS, MinhaCkass:: Classe));
 Necessário que os campos da tabela buscados no resultado estejam identicos aos nome de variáveis do 
 objeto. Muitas vezes é melhor percorrer o FETCH_ASSOC para preencher o objeto em vez de usar desse modo.
 ------------------------------------------------*/
-
-
-
+vardump($statment->fetch(PDO::FETCH_ASSOC));
+/*O método fetch irá buscar apenas 1 linha; ideal para economizar memória em busca de muitos dados
+ou de fato necessito apenas de um dado.
+------------------------------------------------*/
+vardump($statment->fetchColumn(column_number:1));
+/*O método fetchColumn irá buscar todos os dados mas apenas de 1 coluna. Podendo ser informado
+qual coluna a busca será feita. 
+------------------------------------------------*/
 
 ~~~~
 
 https://www.php.net/manual/pt_BR/book.pdo.php  
+https://www.php.net/manual/en/pdostatement.fetch#refsect1-pdostatement.fetch-parameters  
+
