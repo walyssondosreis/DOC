@@ -38,15 +38,27 @@ $sqlInsert = "INSERT INTO students (name, birth_date) VALUES (?, ?);";
 $statement = $pdo->prepare($sqlInsert);
 $statement->bindValue(parameter:1, $student->name());
 $statement->bindValue(parameter:2, $student->birthDate()->format(format:'Y-m-d'));
-echo $sqlInsert; exit();
 /* O prepare statement previne ataque de SqlInjection. No código sera criado uma variável
 com a instrução SQL utilizando '?' no lugar dos valores. Um codigo intermediário será gerado 
 para uma variável chamada $statement. Os valores então são substituídos através do método 'bindValue'
 onde são passados o número da posição a ser substituida e o valor a ser inserido. 
 ------------------------------------------------*/
-
-var_dump($pdo->exec($sqlInsert));
-
+$sqlInsert = "INSERT INTO students (name, birth_date) VALUES (:name, :birth_date);";
+$statement = $pdo->prepare($sqlInsert);
+$statement->bindValue(parameter: ':name', $student->name());
+$statement->bindValue(parameter: ':birth_date', $student->birthDate()->format(format:'Y-m-d'));
+/* Os valores a serem passados na string de SQL podem ter nomes, para isto basta utilizar
+o ':nomedoparametro'; e serem refenciados da mesma forma. Os dois padrões de referencia não
+podem serem misturados '?' e ':' .
+------------------------------------------------*/
+$sqlInsert = "INSERT INTO students (name, birth_date) VALUES (:name, :birth_date);";
+$statement = $pdo->prepare($sqlInsert);
+$statement->bindParam(parameter: ':name', &variable: $name);
+$statement->bindValue(parameter: ':birth_date', $student->birthDate()->format(format:'Y-m-d'));
+/*O bindParam é bem semelhante ao bindValue com a diferença de que os valores de variáveis
+são passados por referência e não por valor ,ou seja, se eu passo $valor chamo o bindParam e 
+altero e variavel depois o valor a ser executado é o ultimo da alteração.
+------------------------------------------------*/
 ~~~~
 
 https://www.php.net/manual/pt_BR/book.pdo.php  
