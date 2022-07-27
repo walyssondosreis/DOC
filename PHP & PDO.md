@@ -84,6 +84,15 @@ $preparedStatement->execute();
 $id=$pdo->lastInsertId();
 /* Retorna o id do útimo registro inserido no banco.
 ------------------------------------------------*/
+$connection->beginTransaction();
+//Minhas execusões de banco aqui ...
+$connection->commit();
+/* Mecanismo de transação previne erros na persistência de dados. Exemplo.: Para fechamento de 
+uma turma eu preciso q todos os alunos estejam cadastrados;  então eu executaria o codigo de inserção
+dos alunos e de fato gravaria isso no banco apenas no final, para isso usario o commit.
+------------------------------------------------*//*
+
+
 ~~~~
 
 https://www.php.net/manual/pt_BR/book.pdo.php  
