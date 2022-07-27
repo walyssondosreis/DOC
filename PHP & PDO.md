@@ -1,3 +1,17 @@
+# **PHP & PDO**
+<div>
+<img src="https://brandslogos.com/wp-content/uploads/thumbs/php-logo-vector.svg" alt="logoJS" width="50px"/> 
+</div>
+
+
+*Autor: Walysson dos Reis  
+@walyssondosreis*
+
+----------------------------------------------
+*Manual de consulta rápida dos conceitos e principais comandos.*  
+
+---------------------
+
 * O PDO é uma abstração para acesso a diversos bancos de dados. Isso se dá através de um driver.
 * Os drivers são habilitados através da instalação de extensões no PHP.
 * Cada driver de banco tem suas caracteristicas.
