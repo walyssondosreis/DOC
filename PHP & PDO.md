@@ -67,6 +67,9 @@ esse tipo pode ser definido por uma constante do proprio PDO, como no exemplo de
 $preparedStatement->execute();
 /* Irá executar de fato o preparedStatement no banco.
 ------------------------------------------------*/
+$id=$pdo->lastInsertId();
+/* Retorna o id do útimo registro inserido no banco.
+------------------------------------------------*/
 ~~~~
 
 https://www.php.net/manual/pt_BR/book.pdo.php  
