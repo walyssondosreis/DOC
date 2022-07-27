@@ -95,6 +95,11 @@ $connection->rollBack();
 /* Ao contrário do commit cancela a persistência dos dados no banco.
 ------------------------------------------------*/
 
+$connection = new PDO(dsn: 'sqlite:' . $databasePath);
+$connection->setAttribute(attribute:PDO::ATTR_ERRMODE, value:PDO::ERRMODE_EXCEPTION);
+/* Configura a conexão PDO para que dipare excessões do tipo Exception.
+ ------------------------------------------------*/       
+
 
 ~~~~
 
