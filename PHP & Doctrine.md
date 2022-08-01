@@ -30,4 +30,21 @@
 /*------------------------------------------------*/
 ~~~~
 
+~~~~PHP
+public function getEntityManager(): EntityManagerInterface{
+        $rootDir = __DIR__ . '/../..';
+        $config= Setup::createAnnotationMetadataConfiguration(
+            [$rootDir .'/src'],
+            true
+        );
+        $connection = [
+            'driver' => 'pdo_sqlite',
+            'path' => $rootDir . '/var/data/banco.sqlite'
+        ];
+        return EntityManager::create($connection,$config);
+/* Método EntityManager é o responsável por criar a conexão do doctrine com o banco de dados,
+nele é passado o caminho da pasta das nossas classes e os parâmetros de configuração de conexão com o banco
+------------------------------------------------*/
+~~~~
 
+https://www.doctrine-project.org/projects/doctrine-dbal/en/2.9/reference/configuration.html  
