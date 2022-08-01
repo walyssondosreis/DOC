@@ -48,3 +48,5 @@ nele é passado o caminho da pasta das nossas classes e os parâmetros de config
 ~~~~
 
 https://www.doctrine-project.org/projects/doctrine-dbal/en/2.9/reference/configuration.html  
+https://www.doctrine-project.org/index.html  
+
