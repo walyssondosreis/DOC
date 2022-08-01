@@ -12,7 +12,8 @@
 
 ---------------------
 * Trabalhar com doctrine é trabalhar com entidades. Uma entidade é basicamente uma classe que irá 
-ser mapeada para o banco de dados.
+ser mapeada para o banco de dados. Na orientação a objetos entidades são classes significativas como 'Pessoa',
+'Carro' etc. Algo que mesmo que algo seja alterado nos seus atributos este não irá perder a sua essência.
 * Para que esse mecanismo funcione vc deve instalar a biblioteca do doctrine e configurar o mecanismo 
 de entidade ('EntityManager'). 
 * Instale o Doctrine atráves do composer com:
