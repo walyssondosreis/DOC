@@ -99,9 +99,9 @@ $connection = new PDO(dsn: 'sqlite:' . $databasePath);
 $connection->setAttribute(attribute:PDO::ATTR_ERRMODE, value:PDO::ERRMODE_EXCEPTION);
 /* Configura a conexão PDO para que dipare excessões do tipo Exception.
  ------------------------------------------------*/       
-
-
 ~~~~
+ --------
+## Referências 
 
 https://www.php.net/manual/pt_BR/book.pdo.php  
 https://www.php.net/manual/en/pdostatement.fetch#refsect1-pdostatement.fetch-parameters  
