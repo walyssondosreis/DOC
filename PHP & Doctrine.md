@@ -274,6 +274,29 @@ public function addTelefone(Telefone $telefone)
 /* Fazendo isso posso alterar o método addTelefone para utilizar o setter do aluno.
 ------------------------------------------------*/
 ~~~~
+### *Migrations*
+* `composer require doctrine/migrations` - Instale o doctrine/migrations.
+~~~~PHP
+// Na raiz do projeto crie o arquivo 'migrations.php' com o seguinte conteúdo.:
+<?php
+
+return [
+    'name' => 'Fundamentos Doctrine',
+    'migrations_namespace' => 'Alura\\Doctrine\\Migrations',
+    'table_name' => 'doctrine_migration_versions',
+    'column_name' => 'version',
+    'column_length' => 14,
+    'executed_at_column_name' => 'executed_at',
+    'migrations_directory' => 'src/Migrations',
+    'all_or_nothing' => true,
+];
+~~~~
+* Após definido o migrations podemos acessar o `vendor\bin\doctrine-migrations`.
+* Entre as opções do comando acima temos o `migrations:status` que lista informações das migrations.
+* O comando `migrations:diff` gera os arquivos de migrations comparando o mapeamento com o banco.
+* `migrations:execute --up` irá de fato executar a migration. 
+* `migrations:execute --down` irá reverter o que foi feito pela migration.
+* `vendor\bin\doctrine-migrations migrations:migrate` irá executar todos arquivos de migração de uma vez.
  --------
 ## Referências 
 
