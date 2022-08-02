@@ -124,6 +124,38 @@ $entityManager->flush();
 /* O método persiste irá apontar o objeto de aluno para gravação;
 Após isso o método flush de fato irá ao banco gravar o que foi persistido.
 ------------------------------------------------*/
+<?php
+
+use Alura\Doctrine\Entity\Aluno;
+use Alura\Doctrine\Helper\EntityManagerFactory;
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+$entityManagerFactory = new EntityManagerFactory();
+$entityManager = $entityManagerFactory->getEntityManager();
+
+$alunoRepository = $entityManager->getRepository(Aluno::class);
+/* Através do método getRepository é possivel fazer o caminho inverso que é mapear
+entidades do banco para classes. É informado a classe ao qual esta entidade pertence e então
+é retonado um objeto repository desta classe/tabela.*/
+
+$alunoList = $alunoRepository->findAll();
+/* O método finAll irá retornar um array apartir do repository com cada objeto mapeado. */
+$nico = $alunoRepository->find(4);
+/* Retorna o objeto que tem id 4 dentro desse repositorio. */
+
+$sergioLopes = $alunoRepository->findBy([
+    'nome' => 'Sergio Lopes'
+]);
+/* findBy irá buscar no repository os elementos que correspondam ao parâmetro
+onde o campo 'nome' for igual a 'Sergio Lopes'.*/
+
+$sergioLopes = $alunoRepository->findOneBy([
+    'nome' => 'Sergio Lopes'
+]);
+/* Irá buscar apenas 1 elemento que corresponda aos critérios; retornando assim
+o objeto e não um array como o caso acima.
+------------------------------------------------*/
 ~~~~
  --------
 ## Referências 
