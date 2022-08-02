@@ -156,6 +156,33 @@ $sergioLopes = $alunoRepository->findOneBy([
 /* Irá buscar apenas 1 elemento que corresponda aos critérios; retornando assim
 o objeto e não um array como o caso acima.
 ------------------------------------------------*/
+
+$entityManagerFactory = new EntityManagerFactory();
+$entityManager = $entityManagerFactory->getEntityManager();
+$alunoRepository = $entityManager->getRepository(Aluno::class);
+
+$id = $argv[1];
+$novoNome = $argv[2];
+
+$aluno = $alunoRepository->find($id);
+$aluno->setNome($novoNome);
+
+$entityManager->flush();
+
+/* Método find irá buscar um elemento atraves do repositorio ; após isso definimos um 
+novo nome e então gravamos no banco através do flush. Não é necessário o método persist
+devido ao elemento que é fruto de busca do próprio doctrine já estar associado a ele; ou 
+seja, se estive criando um objeto do tipo e quero gravar ele devo utilizar o persist para 
+que este objeto seja relacionado ao doctrine antes de gravar.
+------------------------------------------------*/
+$aluno = $entityManager->find(Aluno::class, $id);
+$aluno->setNome($novoNome);
+$entityManager->flush();
+
+/* Uma outra forma de atualizar os dados do banco é buscar diretamente através do entityManager,
+fazer as alterações que quiser e já gravar com o método flush.
+------------------------------------------------*/
+
 ~~~~
  --------
 ## Referências 
