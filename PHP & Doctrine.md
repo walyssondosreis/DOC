@@ -104,7 +104,27 @@ return ConsoleRunner::createHelperSet($entityManager);
 * `vendor\bin\doctrine.bat orm:info` - Busca entidades mapeadas no codigo.
 * `vendor\bin\doctrine.bat orm:mapping:describe MinhaClasse` - Descreve em detalhe como será o mapeamento da classe informada.
 * `vendor\bin\doctrine.bat orm:schema-tool:create` - Executa de fato a criação de tabelas no banco.
+~~~~PHP
+<?php
 
+use Alura\Doctrine\Entity\Aluno;
+use Alura\Doctrine\Helper\EntityManagerFactory;
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+$aluno = new Aluno();
+$aluno->setNome('Vinicius Dias');
+
+$entityManagerFactory = new EntityManagerFactory();
+$entityManager = $entityManagerFactory->getEntityManager();
+
+$entityManager->persist($aluno);
+
+$entityManager->flush();
+/* O método persiste irá apontar o objeto de aluno para gravação;
+Após isso o método flush de fato irá ao banco gravar o que foi persistido.
+------------------------------------------------*/
+~~~~
  --------
 ## Referências 
 
