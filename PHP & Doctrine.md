@@ -182,6 +182,18 @@ $entityManager->flush();
 /* Uma outra forma de atualizar os dados do banco é buscar diretamente através do entityManager,
 fazer as alterações que quiser e já gravar com o método flush.
 ------------------------------------------------*/
+$aluno = $entityManager->find(Aluno::class, $id);
+
+$entityManager->remove($aluno);
+$entityManager->flush();
+/* Para remover um elemento do banco há dois caminhos ; o primeiro buscar de fato o elemento no 
+banco com uma query find e logo em seguida executar a query de remoção remove e finalizar.
+Ou então passar uma parte do elemento já conhecida por referência e mandar excluir poupando assim
+uma query no banco. : */
+$aluno = $entityManager->getReference(Aluno::class, $id);
+$entityManager->remove($aluno);
+$entityManager->flush();
+/*------------------------------------------------*/
 
 ~~~~
  --------
