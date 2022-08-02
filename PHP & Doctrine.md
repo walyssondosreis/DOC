@@ -72,6 +72,38 @@ nele é passado o caminho da pasta das nossas classes e os parâmetros de config
  esta variável irá ser do tipo  string.
 ------------------------------------------------*/
 ~~~~
+* `vendor\bin\doctrine.bat` - Lista todos os comandos executaveis do doctrine.
+~~~PHP
+<?php
+use Doctrine\ORM\Tools\Console\ConsoleRunner;
+
+// replace with file to your own project bootstrap
+require_once 'bootstrap.php';
+
+// replace with mechanism to retrieve EntityManager in your app
+$entityManager = GetEntityManager();
+
+return ConsoleRunner::createHelperSet($entityManager);
+/* Após rodar doctrine caso não exista o arquivo cli-config.php ou config/cli-config.php 
+ele dara o codigo acima como instrução de criação deste arquivo fundamental para execução
+do doctrine onde infomamos o arquvio de autoload do programa e objeto gerenciador de entidade.*/
+
+<?php
+
+use Alura\Doctrine\Helper\EntityManagerFactory;
+use Doctrine\ORM\Tools\Console\ConsoleRunner;
+
+require_once __DIR__ . '/vendor/autoload.php';
+
+$entityManagerFactory = new EntityManagerFactory();
+$entityManager = $entityManagerFactory->getEntityManager();
+
+return ConsoleRunner::createHelperSet($entityManager);
+/*------------------------------------------------*/
+~~~
+* `vendor\bin\doctrine.bat orm:info` - Busca entidades mapeadas no codigo.
+* `vendor\bin\doctrine.bat orm:mapping:describe MinhaClasse` - Descreve em detalhe como será o mapeamento da classe informada.
+* `vendor\bin\doctrine.bat orm:schema-tool:create` - Executa de fato a criação de tabelas no banco.
 
  --------
 ## Referências 
