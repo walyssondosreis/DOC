@@ -11,12 +11,12 @@
 *Manual de consulta rápida dos conceitos e principais comandos.*  
 
 ---------------------
+### *Conceitos e Instalação*
 * Trabalhar com doctrine é trabalhar com entidades. Uma entidade é basicamente uma classe que irá 
-ser mapeada para o banco de dados. Na orientação a objetos entidades são classes significativas como 'Pessoa',
-'Carro' etc. Algo que mesmo que algo seja alterado nos seus atributos este não irá perder a sua essência.
-* Para que esse mecanismo funcione vc deve instalar a biblioteca do doctrine e configurar o mecanismo 
-de entidade ('EntityManager'). 
-* Instale o Doctrine atráves do composer com:
+ser mapeada para o banco de dados. Na orientação a objetos entidades são classes significativas, como 'Pessoa',
+'Carro' etc. Algo que mesmo que seja alterado não é perdido sua essência.Para que esse mecanismo funcione, devemos 
+instalar a biblioteca do doctrine e configurar o mecanismo de entidade ('EntityManager'). 
+* Instale o Doctrine atráves do composer editando o arquivo `composer.json`:
 ~~~~
 {
     "require": {
@@ -32,10 +32,9 @@ de entidade ('EntityManager').
         }
     }
 }
-/*------------------------------------------------*/
 ~~~~
-
-~~~~PHP
+### *Criando o EntityManager*
+~~~PHP
 public function getEntityManager(): EntityManagerInterface{
         $rootDir = __DIR__ . '/../..';
         $config= Setup::createAnnotationMetadataConfiguration(
@@ -50,6 +49,9 @@ public function getEntityManager(): EntityManagerInterface{
 /* Método EntityManager é o responsável por criar a conexão do doctrine com o banco de dados,
 nele é passado o caminho da pasta das nossas classes e os parâmetros de configuração de conexão com o banco
 ------------------------------------------------*/
+~~~
+### *Definindo e Persistindo Entidade*
+~~~PHP
 /**
 * @Entity
 */
