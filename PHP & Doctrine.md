@@ -50,7 +50,7 @@ public function getEntityManager(): EntityManagerInterface{
 nele é passado o caminho da pasta das nossas classes e os parâmetros de configuração de conexão com o banco
 ------------------------------------------------*/
 ~~~
-### *Definindo e Persistindo Entidade*
+### *Definindo Entidade*
 ~~~PHP
 /**
 * @Entity
@@ -74,6 +74,7 @@ nele é passado o caminho da pasta das nossas classes e os parâmetros de config
  esta variável irá ser do tipo  string.
 ------------------------------------------------*/
 ~~~~
+### *Configurando Doctrine*
 * `vendor\bin\doctrine.bat` - Lista todos os comandos executaveis do doctrine.
 ~~~PHP
 <?php
@@ -103,9 +104,12 @@ $entityManager = $entityManagerFactory->getEntityManager();
 return ConsoleRunner::createHelperSet($entityManager);
 /*------------------------------------------------*/
 ~~~
+### *Comandos do Doctrine*
 * `vendor\bin\doctrine.bat orm:info` - Busca entidades mapeadas no codigo.
 * `vendor\bin\doctrine.bat orm:mapping:describe MinhaClasse` - Descreve em detalhe como será o mapeamento da classe informada.
 * `vendor\bin\doctrine.bat orm:schema-tool:create` - Executa de fato a criação de tabelas no banco.
+
+### *Persistindo dados no banco*
 ~~~~PHP
 <?php
 
@@ -126,8 +130,10 @@ $entityManager->flush();
 /* O método persiste irá apontar o objeto de aluno para gravação;
 Após isso o método flush de fato irá ao banco gravar o que foi persistido.
 ------------------------------------------------*/
+~~~~
+### *Obtendo dados do banco*
+~~~~PHP
 <?php
-
 use Alura\Doctrine\Entity\Aluno;
 use Alura\Doctrine\Helper\EntityManagerFactory;
 
@@ -158,7 +164,9 @@ $sergioLopes = $alunoRepository->findOneBy([
 /* Irá buscar apenas 1 elemento que corresponda aos critérios; retornando assim
 o objeto e não um array como o caso acima.
 ------------------------------------------------*/
-
+~~~~
+### *Atualizando dados do banco*
+~~~~PHP
 $entityManagerFactory = new EntityManagerFactory();
 $entityManager = $entityManagerFactory->getEntityManager();
 $alunoRepository = $entityManager->getRepository(Aluno::class);
@@ -184,6 +192,10 @@ $entityManager->flush();
 /* Uma outra forma de atualizar os dados do banco é buscar diretamente através do entityManager,
 fazer as alterações que quiser e já gravar com o método flush.
 ------------------------------------------------*/
+
+~~~~
+### *Removendo dados do banco*
+~~~~PHP
 $aluno = $entityManager->find(Aluno::class, $id);
 
 $entityManager->remove($aluno);
@@ -196,6 +208,9 @@ $aluno = $entityManager->getReference(Aluno::class, $id);
 $entityManager->remove($aluno);
 $entityManager->flush();
 /*------------------------------------------------*/
+~~~~
+### *Mapeamento UM para MUITOS*
+~~~~PHP
 public function __construct()
 {
     $this->telefones = new ArrayCollection();
