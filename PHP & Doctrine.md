@@ -194,7 +194,68 @@ $aluno = $entityManager->getReference(Aluno::class, $id);
 $entityManager->remove($aluno);
 $entityManager->flush();
 /*------------------------------------------------*/
+public function __construct()
+{
+    $this->telefones = new ArrayCollection();
+}
+public function addTelefone(Telefone $telefone)
+{
+    $this->telefones->add($telefone);
+}
+public function getTelefones(): Collection
+{
+    return $this->telefones;
+}
+public function addTelefone(Telefone $telefone)
+{
+    $this->telefones->add($telefone);
+    return $this;
+}
+/* Uma ArrayCollection é uma classe do doctrine que como nome diz cria objetos
+do tipo coleção de array. Com a variável do tipo de ArrayCollection podemos chamar o método add
+para adicionar um item a coleção. Em um método de obter telefone caso seja tipado é interessante 
+definir o tipo do retorno como a classe Collection que é a classe pai da ArrayCollection devido 
+haver outros tipos desse q pode ser retornado, não necessariamente um ArrayCollection. O método 
+addTelefone é um método que adiciona o telefone ao ArrayCollection e retorna o proprio objeto 
+que chamou, sendo assim possível ter criar uma chamada encadeada.*/
 
+$aluno->addTelefone(telefone)->addTelefone(telefone);
+/* Passo 2 telefones de forma encadeada para cadastro.*/
+
+/**
+     * @OneToMany(targetEntity="Telefone", mappedBy="Aluno")
+ */
+private $telefones;
+/* Mapeando a classe para entidade através das annotations, informo ao doctrine que
+esse atributo é Um para Muitos e que a classe que ele pertence é a Telefone./*
+
+/**
+     * @ManyToOne(targetEntity="Aluno")
+ */
+    private $aluno;
+/* Tenho que definir ainda na classe Telefone o atributo aluno onde informo que
+é do tipo Muitos para Um e que a entidade que ele pertence é da classe Aluno.*/
+
+public function getAluno(): Aluno
+{
+    return $this->aluno;
+}
+
+public function setAluno(Aluno $aluno): self
+{
+    $this->aluno = $aluno;
+    return $this;
+}
+/* Na classe telefone posso criar getter e setters para este atributo que não esta sendo
+utilizado para a ser útil. */ 
+public function addTelefone(Telefone $telefone)
+{
+    $this->telefones->add($telefone);
+    $telefone->setAluno($this);
+    return $this;
+}
+/* Fazendo isso posso alterar o método addTelefone para utilizar o setter do aluno.
+------------------------------------------------*/
 ~~~~
  --------
 ## Referências 
