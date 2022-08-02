@@ -168,6 +168,11 @@ $valor = array_map(fn($item)-> $item * $multi ,$meuArray);
 /* Arrow Functions são funções apartir do PHP 7.4 feitas para estes casos; a função deve
 ter no corpo máximo 1 linha. Este codigo terá o mesmo resultado do acima citado. */
 /*----------------------------------------------*/
+echo $argv[1];
+/* Variável utilizada para pegar entrada do terminal. Ou seja ao executar o arquivo contendo esta
+instrução ele irá pegar o que foi digitado após o comando de execução no terminal e atribuir a esta 
+variável , retornando na tela o que foi digitado logo em seguida.
+----------------------------------------------*/
 ?>  <!-- Finaliza bloco de código PHP. --> 
 ~~~
 ### *Orientação a Objetos*
