@@ -209,7 +209,7 @@ $entityManager->remove($aluno);
 $entityManager->flush();
 /*------------------------------------------------*/
 ~~~~
-### *Mapeamento UM para MUITOS*
+### *Mapeamento OneToMany*
 ~~~~PHP
 public function __construct()
 {
@@ -341,6 +341,55 @@ anônima que irá receber cada parâmetro do array passado por vez e retornar. P
 para array foi utilizado a função toArray.
 ------------------------------------------------*/
  ~~~~
+ ### *Mapeamento ManyToMany*
+ ~~~PHP
+
+ /**
+ * @ManyToMany(targetEntity="Aluno", inversedBy="cursos")
+ */
+private $alunos;
+/* Defino na classe nova 'Cursos' o atributo que será relacionado com a outra Classe/Tabela.
+Informo que o rótulo de entidade é Aluno. O inversedBy irá informar que esse atributo 
+também é mapeado pela variável cursos da classe Aluno.*/
+
+public function __construct()
+{
+   $this->alunos = new ArrayCollection();
+}
+/* No contrutor atribua a variável $alunos a um novo objeto de ArrayCollection. */
+
+/**
+  * @ManyToMany(targetEntity="Curso", mappedBy="alunos")
+*/
+private $cursos;
+/* Na classe aluno também é mapeado o atribuno $cursos; nele informo o rotulo de 
+entidade e que este atributo é mapeado pelo atribuno alunos da outra classe.
+Com tudo isso definido na classe Aluno podemos definir agora os métodos: */
+
+public function addCurso(Curso $curso): self
+{
+
+    if ($this->cursos->contains($curso)) {
+        return $this;
+    }
+
+    $this->cursos->add($curso);
+    $curso->addAluno($this);
+
+    return $this;
+}
+
+public function getCursos(): Collection
+{
+    return $this->cursos;
+}
+
+/* Métodos que irão adicionar cursos ao objeto de Aluno e obter
+os cursos que este objeto Aluno contém. 
+------------------------------------------------*/
+ 
+ ~~~
+ 
 ## Referências 
 
 https://www.doctrine-project.org/projects/doctrine-dbal/en/2.9/reference/configuration.html  
