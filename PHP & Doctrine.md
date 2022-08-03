@@ -298,8 +298,32 @@ return [
 * `migrations:execute --down` irá reverter o que foi feito pela migration.
 * `vendor\bin\doctrine-migrations migrations:migrate` irá executar todos arquivos de migração de uma vez.
  --------
- ## *Outras Métodos Doctrine*
+ ### *Continuando CRUD no banco de dados*
  ~~~~PHP
+$entityManagerFactory = new EntityManagerFactory();
+$entityManager = $entityManagerFactory->getEntityManager();
+
+for ($i = 2; $i < $argc; $i++) {
+    $numeroTelefone = $argv[$i];
+    $telefone = new Telefone();
+    $telefone->setNumero($numeroTelefone);
+
+    $entityManager->persist($telefone);
+
+    $aluno->addTelefone($telefone);
+
+}
+
+$entityManager->persist($aluno);
+$entityManager->flush();
+/* Código acima irá pegar todos os telefones passados e atribuir ao usuário no banco.
+Uma outra forma a ser feito isso diretamente pelo mapeamento é utilizando 'cascade' e 'persist': /*
+
+/**
+ * @OneToMany(targetEntity="Telefone", mappedBy="Aluno", cascade={"remove", "persist"})
+ */
+private $telefones;
+------------------------------------------------*/
  foreach ($alunoList as $aluno) {
     $telefones = $aluno
         ->getTelefones()
