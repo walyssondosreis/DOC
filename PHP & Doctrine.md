@@ -317,7 +317,8 @@ for ($i = 2; $i < $argc; $i++) {
 $entityManager->persist($aluno);
 $entityManager->flush();
 /* Código acima irá pegar todos os telefones passados e atribuir ao usuário no banco.
-Uma outra forma a ser feito isso diretamente pelo mapeamento é utilizando 'cascade' e 'persist': /*
+Uma outra forma a ser feito isso diretamente pelo mapeamento é utilizando 'cascade' e 'persist'.
+Feito isso o '$entityManager->persist($telefone)' do codigo acima poderá ser removido: /*
 
 /**
  * @OneToMany(targetEntity="Telefone", mappedBy="Aluno", cascade={"remove", "persist"})
