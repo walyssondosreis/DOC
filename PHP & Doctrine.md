@@ -298,8 +298,28 @@ return [
 * `migrations:execute --down` irá reverter o que foi feito pela migration.
 * `vendor\bin\doctrine-migrations migrations:migrate` irá executar todos arquivos de migração de uma vez.
  --------
+ ## *Outras Métodos Doctrine*
+ ~~~~PHP
+ foreach ($alunoList as $aluno) {
+    $telefones = $aluno
+        ->getTelefones()
+        ->map(function (Telefone $telefone){
+            return $telefone->getNumero();
+        })
+        ->toArray();
+
+    echo "ID: {$aluno->getId()}\nNome: {$aluno->getNome()}\n\n";
+    echo "Telefones: " . implode(',', $telefones);
+}
+/* O método 'map' do doctrine funciona assim como o 'array_map'; é recebido uma função
+anônima que irá receber cada parâmetro do array passado por vez e retornar. Para alterar retorno
+para array foi utilizado a função toArray.
+------------------------------------------------*/
+ ~~~~
 ## Referências 
 
 https://www.doctrine-project.org/projects/doctrine-dbal/en/2.9/reference/configuration.html  
 https://www.doctrine-project.org/index.html  
+https://www.doctrine-project.org/projects/doctrine-migrations/en/3.0/reference/configuration.html  
+
 
