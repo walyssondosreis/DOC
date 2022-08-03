@@ -356,7 +356,13 @@ public function __construct()
 {
    $this->alunos = new ArrayCollection();
 }
-/* No contrutor atribua a variável $alunos a um novo objeto de ArrayCollection. */
+/* No contrutor da classe Cursos atribua a variável $alunos a um novo objeto de ArrayCollection. */
+public function __construct()
+{
+    $this->alunos = new ArrayCollection();
+    $this->cursos = new ArrayCollection();
+}
+/* No construtor da classe Alunos atribua a variável $alunos e $cursos ArrayCollections. */
 
 /**
   * @ManyToMany(targetEntity="Curso", mappedBy="alunos")
