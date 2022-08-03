@@ -12,6 +12,15 @@
 
 ---------------------
 ### *Conceitos*
+~~~~
+composer create-project laravel/laravel example-app
+php artisan serve
 
+composer require dragon-code/laravel-app --dev
+php artisan app:name meuapp // Altera o namespace da aplicação.
+~~~~
 --------
 ## Referências 
+
+https://github.com/TheDragonCode/laravel-app  
+
