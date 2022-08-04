@@ -413,7 +413,23 @@ os cursos que este objeto Aluno contém.
  ~~~
 
  ### *DQL*
+ * DQL é a consulta de SQL através do doctrine com sua sintaxe voltada as Entidades.
 ~~~PHP
+$dql = 'SELECT aluno FROM Alura\\Doctrine\Entity\Aluno aluno';
+$query = $entityManager->createQuery($dql);
+$alunoList = $query->getResult();
+/* Codigo irá buscar da Entidade aluno todos os alunos.
+------------------------------------------------*/
+$dql = 'SELECT aluno FROM Alura\\Doctrine\Entity\Aluno aluno WHERE aluno.id=1';
+$query = $entityManager->createQuery($dql);
+$alunoList = $query->getResult();
+/* Busca da Entidade Aluno os alunos cujo código ID é igual a 1. 
+------------------------------------------------*/
+$dql = "SELECT aluno FROM Alura\\Doctrine\Entity\Aluno aluno WHERE aluno.id=1 OR aluno.nome = 'Nico Steppat'";
+$query = $entityManager->createQuery($dql);
+$alunoList = $query->getResult();
+/* Busca da Entidade Aluno todos os alunos cujo campo nome é 'Nico Steppat'. 
+------------------------------------------------*/
 ~~~
 
 ## Referências 
