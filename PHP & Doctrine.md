@@ -393,9 +393,11 @@ public function getCursos(): Collection
 /* Métodos que irão adicionar cursos ao objeto de Aluno e obter
 os cursos que este objeto Aluno contém. 
 ------------------------------------------------*/
- 
  ~~~
- 
+ * `vendor\bin\doctrine orm:înfo` - Execute para garantir que não há erros no mapeamento.
+ * `vendor\bin\doctrine orm:mapping:describe Curso` - Detalha o mapeamento da entidade Curso.
+
+
 ## Referências 
 
 https://www.doctrine-project.org/projects/doctrine-dbal/en/2.9/reference/configuration.html  
