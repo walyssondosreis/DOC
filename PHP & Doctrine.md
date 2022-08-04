@@ -431,7 +431,27 @@ $alunoList = $query->getResult();
 /* Busca da Entidade Aluno todos os alunos cujo campo nome é 'Nico Steppat'. 
 ------------------------------------------------*/
 ~~~
+ ### *Eager Joins*
+ ~~~PHP
+/**
+ * @OneToMany(targetEntity="Telefone", mappedBy="Aluno", cascade="remove", {"persist"}, fetch="EAGER")
+ */
+private $telefones;
+/* O fetch EAGER informa ao doctrine que aquele atributo sempre sera chamado quando o objeto ao qual 
+ele esta mapeado for requisitado, ou seja, sempre que for trazer dados de um aluno eu trago junto 
+também o seus telefones.*/
 
+$classeAluno = Aluno::class;
+$dql = "SELECT aluno, telefones, cursos FROM $classeAluno aluno JOIN aluno.telefones telefones JOIN aluno.cursos cursos";
+$query = $entityManager->createQuery($dql);
+/**@var Aluno[] $alunos */
+$alunos = $query->getResult();
+/* Utilizando o DQL eu consigo trazes todos os dados de alunos, telefone e cursos com uma só consulta 
+gerado pelo doctrine, ganhando assim desempenho em vez de ter várias consultas. Os nomes na consulta 
+DQL é opcionando; esta última consulta também poderia ser.: */
+$dql = "SELECT a, t, c FROM $classeAluno a JOIN a.telefones t JOIN a.cursos c";
+------------------------------------------------*/
+~~~
 ## Referências 
 
 https://www.doctrine-project.org/projects/doctrine-dbal/en/2.9/reference/configuration.html  
