@@ -473,7 +473,27 @@ $dql = "SELECT AVG(a.idades FROM $classeAluno a";
 /* Busca média de idades do aluno. Operação é feita no banco.
 ------------------------------------------------*/
 ~~~
+ ### *Criando Próprio repositório*
+ ~~~PHP
+class AlunoRepository extends EntityRepository
+{
+    public function buscaCursosPorAluno()
+    {
+        $entityManager = $this->getEntityManager();
+        $classeAluno = Aluno::class;
+        $dql = "SELECT aluno, telefones, cursos FROM $classeAluno aluno JOIN aluno.telefones telefones JOIN aluno.cursos cursos";
+        $query = $entityManager->createQuery($dql);
+        return $query->getResult();
+    }
+}
+/* Primeiro deve herdar da classe EntityRepository e após isso alterar no código da classe Aluno 
+que esta classe criada é por padrão o seu repositório.: */
+/**
+ * @Entity(repositoryClass="Alura\Doctrine\Repository\AlunoRepository")
+ */
 
+class Aluno
+~~~
 ## Referências 
 
 https://www.doctrine-project.org/projects/doctrine-dbal/en/2.9/reference/configuration.html  
