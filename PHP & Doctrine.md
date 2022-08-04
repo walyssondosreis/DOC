@@ -488,10 +488,10 @@ class AlunoRepository extends EntityRepository
 }
 /* Primeiro deve herdar da classe EntityRepository e após isso alterar no código da classe Aluno 
 que esta classe criada é por padrão o seu repositório.: */
+
 /**
  * @Entity(repositoryClass="Alura\Doctrine\Repository\AlunoRepository")
  */
-
 class Aluno
 ~~~
 ## Referências 
