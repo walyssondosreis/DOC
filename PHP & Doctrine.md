@@ -464,7 +464,9 @@ $totalAlunos = $query->getSingleScalarResult();
 
 echo "Total de alunos: " . $totalAlunos[0];
 /* Busca a quantidade de alunos no banco sem que estes alunos sejam tragos,
-a operação é feita no banco e traga. */
+a operação é feita no banco e traga. O getSingleScalarResult infoma que o resultado desta 
+consulta é um valor escalar, ou seja, não é uma entidade conforme estamos acustumados 
+a trabalhar com o doctrine.*/
 
 $classeAluno = Aluno::class;
 $dql = "SELECT AVG(a.idades FROM $classeAluno a";
