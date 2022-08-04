@@ -508,8 +508,9 @@ class AlunoRepository extends EntityRepository
         return $query->getResult();
     }
 }
-/* É possivel construir a consulta DQL também atravé do QueryBuilder como 
-visto acima. É a mesma consulta do codigo anterior porém construida.
+/* É possivel construir a consulta também através do QueryBuilder como 
+visto acima. É a mesma consulta do codigo anterior porém construida apenas
+com orientação a objetos, ou seja, sem DQL nem SQL.
 ------------------------------------------------*/
 ~~~
 ## Referências 
