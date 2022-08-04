@@ -493,6 +493,24 @@ que esta classe criada é por padrão o seu repositório.: */
  * @Entity(repositoryClass="Alura\Doctrine\Repository\AlunoRepository")
  */
 class Aluno
+/*------------------------------------------------*/
+
+class AlunoRepository extends EntityRepository
+{
+    public function buscaCursosPorAluno()
+    {
+        $query = $this->createQueryBuilder('a')
+            ->join('a.telefones', 't')
+            -> join('a.cursos', 'c')
+            ->addSelect('t')
+            ->addSelect('c')
+            ->getQuery();
+        return $query->getResult();
+    }
+}
+/* É possivel construir a consulta DQL também atravé do QueryBuilder como 
+visto acima. É a mesma consulta do codigo anterior porém construida.
+------------------------------------------------*/
 ~~~
 ## Referências 
 
