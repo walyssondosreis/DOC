@@ -439,7 +439,8 @@ $alunoList = $query->getResult();
 private $telefones;
 /* O fetch EAGER informa ao doctrine que aquele atributo sempre sera chamado quando o objeto ao qual 
 ele esta mapeado for requisitado, ou seja, sempre que for trazer dados de um aluno eu trago junto 
-também o seus telefones.*/
+também o seus telefones. Por padrão o fetch é  LAZY; que irá fazer a busca preguiçosa ou seja, somente quando 
+realmente solicitado.*/
 
 $classeAluno = Aluno::class;
 $dql = "SELECT aluno, telefones, cursos FROM $classeAluno aluno JOIN aluno.telefones telefones JOIN aluno.cursos cursos";
