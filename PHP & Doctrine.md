@@ -513,6 +513,21 @@ visto acima. É a mesma consulta do codigo anterior porém construida apenas
 com orientação a objetos, ou seja, sem DQL nem SQL.
 ------------------------------------------------*/
 ~~~
+### *Migração para banco de dados MySQL*
+ ~~~PHP
+$connection = [
+    'driver' => 'pdo_mysql',
+    'host' => 'localhost',
+    'dbname' => 'curso_doctrine',
+    'user' => 'root',
+    'password' => 'senhalura'
+];
+/* Basta alterar o arquivo de conexão do banco, todo o resto já estara funcionando.
+Para a criação das tabelas é necessario apenas gerar o schema do banco basta executar.: */
+
+vendor\bin\doctrine.bat orm:schema-tool:create
+------------------------------------------------*/
+~~~
 ## Referências 
 
 https://www.doctrine-project.org/projects/doctrine-dbal/en/2.9/reference/configuration.html  
