@@ -453,6 +453,25 @@ DQL é opcionando; esta última consulta também poderia ser.: */
 $dql = "SELECT a, t, c FROM $classeAluno a JOIN a.telefones t JOIN a.cursos c";
 ------------------------------------------------*/
 ~~~
+ ### *Comandos simples*
+ ~~~PHP
+$classeAluno = Aluno::class;
+$dql = "SELECT COUNT(a) FROM $classeAluno a";
+
+$query = $entityManager->createQuery($dql);
+$totalAlunos = $query->getSingleScalarResult();
+
+
+echo "Total de alunos: " . $totalAlunos[0];
+/* Busca a quantidade de alunos no banco sem que estes alunos sejam tragos,
+a operação é feita no banco e traga. */
+
+$classeAluno = Aluno::class;
+$dql = "SELECT AVG(a.idades FROM $classeAluno a";
+/* Busca média de idades do aluno. Operação é feita no banco.
+------------------------------------------------*/
+~~~
+
 ## Referências 
 
 https://www.doctrine-project.org/projects/doctrine-dbal/en/2.9/reference/configuration.html  
