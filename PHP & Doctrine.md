@@ -397,6 +397,24 @@ os cursos que este objeto Aluno contém.
  * `vendor\bin\doctrine orm:înfo` - Execute para garantir que não há erros no mapeamento.
  * `vendor\bin\doctrine orm:mapping:describe Curso` - Detalha o mapeamento da entidade Curso.
 
+ ### *Debug Stack*
+ ~~~PHP
+ $debugStack = new DebugStack();
+ $entityManager->getConfiguration()->setSQLLogger($debugStack);
+ /* O debugStack é uma classe para debugar o codigo. Dessa forma eu estou pegando as configurações
+ e consultas que meu entityManager gera e passando para um objeto de debug. Assim quando eu ler 
+ esse objeto debugStack com var_dump por exemplo eu estarei vendo quais consultas foram disparadas
+ na utilização das minhas funções. */
+ 
+ foreach ($debugStack->queries as $queryInfo) {
+    echo $queryInfo['sql'] . "\n";
+}
+/* No foreach acima estou filtrando apenas as linhas SQL do debugStack. */
+ ~~~
+
+ ### *DQL*
+~~~PHP
+~~~
 
 ## Referências 
 
