@@ -751,6 +751,9 @@ ini_set('error_log','/var/log/minhaApp.txt'); // Define/Altera arquivo de logs.
 ocultar os meus erros porém registra-los em logs para tratamento posterior.
 /*----------------------------------------------*/
 ~~~
+### *MVC*
+~~~PHP
+~~~
 ### *Variáveis Globais*
 ~~~PHP
 $_SERVER // Variável que contem informações da página como o que foi digitado na requição etc. 
