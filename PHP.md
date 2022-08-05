@@ -753,6 +753,7 @@ ocultar os meus erros porém registra-los em logs para tratamento posterior.
 ~~~
 ### *Variáveis Globais*
 ~~~PHP
+$_SERVER // Variável que contem informações da página como o que foi digitado na requição etc. 
 $_GET // Variável global que captura todos os dados inseridos/passados com o método 'GET' (Padrão no HTML).
 $_POST // Variável global que captura todos os dados inseridos/passados com o método 'POST'.
 $_SESSION // Variavel global que guarda valores $GET da sessão do usuário.
