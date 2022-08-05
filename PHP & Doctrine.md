@@ -138,6 +138,12 @@ $entityManager->flush();
 /* O método persiste irá apontar o objeto de aluno para gravação;
 Após isso o método flush de fato irá ao banco gravar o que foi persistido.
 ------------------------------------------------*/
+$estudante = $enityManager->find(Estudante::class, 4);
+/* O método find poderá ser utilizado diretamente no EntityManager para buscar
+exclusivamente 1 resultado no banco; não necessitando assim de ser chamado
+a partir de um repositorio.Para isto basta no argumento do método informar a qual 
+entidade pertence o meu alvo de busca. Isso é utilizado para atualizar 1 objeto.
+------------------------------------------------*/
 ~~~~
 ### *Obtendo dados do banco*
 ~~~~PHP
