@@ -26,6 +26,16 @@ $minhaVariavel = 1 ;
 #[Atributo1, Atributo2, Atributo3]
 /* Sintaxe de atributtes, a partir do PHP 8. Atributos também podem serem agrupados.
 ------------------------------------------------*/
+/**
+* @return interable<MinhaClasse>
+*/
+public function minhaFun(){
+   return $this->phone;
+}
+/* Anotation que informa a IDE de que esta função tem o retorno de 
+um tipo interável ou seja algo q é passivel de foreach. Assim a IDE
+parassará a sugerir as funçãoes dessa classe no uso. 
+------------------------------------------------*/
 define("NOME_CONST","valor_const");
 /* Define constantes no PHP. Para exibição de constantes ex .: */
 echo "Minha constante é : " . NOME_CONST ;
