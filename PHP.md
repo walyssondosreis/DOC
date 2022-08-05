@@ -30,7 +30,7 @@ $minhaVariavel = 1 ;
 * @return interable<MinhaClasse>
 */
 public function minhaFun(){
-   return $this->phone;
+   return $this->objMinhaClasse;
 }
 /* Anotation que informa a IDE de que esta função tem o retorno de 
 um tipo interável ou seja algo q é passivel de foreach. Assim a IDE
