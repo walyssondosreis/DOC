@@ -22,8 +22,9 @@
 $minhaVariavel = 1 ;
 /* Cifrão ($) define variável no PHP.
 ------------------------------------------------*/
-#[Entity]
-/* Sintaxe de atributtes, a partir do PHP 8.
+#[Atributo]
+#[Atributo1, Atributo2, Atributo3]
+/* Sintaxe de atributtes, a partir do PHP 8. Atributos também podem serem agrupados.
 ------------------------------------------------*/
 define("NOME_CONST","valor_const");
 /* Define constantes no PHP. Para exibição de constantes ex .: */
