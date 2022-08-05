@@ -73,6 +73,14 @@ nele é passado o caminho da pasta das nossas classes e os parâmetros de config
  /* Notação colocada acima de uma variável a ser mapeada ; informa ao doctrine que
  esta variável irá ser do tipo  string.
 ------------------------------------------------*/
+/**
+* @var Aluno[] $listaDeAlunos
+*/
+/* Anotação que informa a IDE que aquela variável é do tipo array e que 
+contém itens de objetos do tipo Aluno. Utilizado apenas em casos onde a IDE
+não da dicas de métodos para a variável pois não sabe qual foi o retorno que esta 
+recebeu ou não criou nenhuma associação com o tipo do elemento.
+------------------------------------------------*/
 ~~~~
 ### *Configurando Doctrine*
 * `vendor\bin\doctrine.bat` - Lista todos os comandos executaveis do doctrine.
@@ -533,5 +541,7 @@ vendor\bin\doctrine.bat orm:schema-tool:create
 https://www.doctrine-project.org/projects/doctrine-dbal/en/2.9/reference/configuration.html  
 https://www.doctrine-project.org/index.html  
 https://www.doctrine-project.org/projects/doctrine-migrations/en/3.0/reference/configuration.html  
+https://www.doctrine-project.org/projects/doctrine-orm/en/current/reference/attributes-reference.html  
+
 
 
