@@ -222,6 +222,9 @@ $aluno = $entityManager->getReference(Aluno::class, $id);
 $entityManager->remove($aluno);
 $entityManager->flush();
 /*------------------------------------------------*/
+$aluno = $entityManager->getPartialReference(Aluno::class, $id);
+/* Na nova versão do Doctrine o método de reference muda para o nome acima.
+------------------------------------------------*/
 ~~~~
 ### *Mapeamento OneToMany*
 ~~~~PHP
