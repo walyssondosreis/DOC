@@ -480,6 +480,9 @@ $classeAluno = Aluno::class;
 $dql = "SELECT AVG(a.idades FROM $classeAluno a";
 /* Busca média de idades do aluno. Operação é feita no banco.
 ------------------------------------------------*/
+studentrepository->count();
+/* Na nova versão do do Doctrine é possivel executar o codigo count direto
+de um repository. 
 ~~~
  ### *Criando Próprio repositório*
  ~~~PHP
