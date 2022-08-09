@@ -761,6 +761,7 @@ $_GET // Variável global que captura todos os dados inseridos/passados com o m�
 $_POST // Variável global que captura todos os dados inseridos/passados com o método 'POST'.
 $_SESSION // Variavel global que guarda valores $GET da sessão do usuário.
 $_FILES // Variável global que guarda arquivos enviados. Criado apenas quando há submissão de arquivos na pag.
+$_REQUEST// Variável global que contém dados da requisição como informações de POST, Query e cookies.
 ~~~
 
 ### *Extensões*
