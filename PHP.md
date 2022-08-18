@@ -463,9 +463,9 @@ ltrim('minha_string','-');
 trim('minha_string','-'); 
 /* Apara string removendo caractere passado como argumento de ambos os lados.
 /*----------------------------------------------*/
-filter_var($meuEmail,FILTER_VALIDADE_EMAIL);
+filter_var($meuEmail,FILTER_VALIDATE_EMAIL);
 /* Retorna email passado caso válido ou bool false.
-FILTER VALIDADE_EMAIL é uma constante padrão do PHP.
+FILTER VALIDATE_EMAIL é uma constante padrão do PHP.
 /*----------------------------------------------*/
 strlen('minha_string'); 
 /* Retorna quantidade de caracteres na string passada.
