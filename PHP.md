@@ -187,6 +187,13 @@ echo $argv[1];
 instrução ele irá pegar o que foi digitado após o comando de execução no terminal e atribuir a esta 
 variável , retornando na tela o que foi digitado logo em seguida.
 ----------------------------------------------*/
+<?php
+return [
+    'Valor1 ' => 123,
+    'Valor2 ' => 321
+];
+/* Um arquivo PHP mesmo não contendo uma classe pode ser retornado. 
+----------------------------------------------*/
 ?>  <!-- Finaliza bloco de código PHP. --> 
 ~~~
 ### *Orientação a Objetos*
@@ -536,6 +543,18 @@ die();
 header('Location: meuarq.php'); 
 /* Método de cabeçalho HTTP. 'Location' irá direcionar a página para o arquivo informado.
 /*----------------------------------------------*/
+http_response_code(404);
+/* Função PHP que envia cabeçalhos HTTP. 
+/*----------------------------------------------*/
+ $descricao = filter_input(
+            INPUT_POST,
+            'descricao',
+            FILTER_SANITIZE_STRING
+ );
+ /* Função filter irá filtrar a entrada da variável 'descricao' para que 
+ não haja caracteres especiais para execução de cod na pagina.
+/*----------------------------------------------*/
+
 print_r($minhavar); 
 /* Método que imprime valor da variável diretamente na página.
 /*----------------------------------------------*/
