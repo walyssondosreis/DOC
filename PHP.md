@@ -570,6 +570,12 @@ move_uploaded_file('nome_arq',"caminhoarq/novonomearq");
 date_default_timezone_set('America/Sao_Paulo'); 
 /* Define fuso horario para função data e hora.
 /*----------------------------------------------*/
+ob_start();
+$html = ob_get_contents();
+ob_clean();
+/* Método OB utilizado para captura de buffer; Inicia a captura,
+atribui a uma variável e limpa o cache. ob_get_clean() pode ser utilizado também.
+/*----------------------------------------------*/
 
 ~~~
 ### *Manipulação de Arquivos*
