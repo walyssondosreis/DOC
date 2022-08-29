@@ -31,6 +31,18 @@ php artisan make:controller --resource
 /* Gera arquivo controller já com métodos padrões.
 ------------------------------------------------*/
 ~~~~
+
+### *Routes*
+~~~~PHP
+Route::get('/teste',function(){ echo 'Teste Otário!'; });
+/* Exemplo de rota teste que envia diretamente um texto como resposta.
+------------------------------------------------*/
+Route::get('/series',[SeriesController::class,'index']);
+/* Rota passando um controller onde é informado o nome da classe do controlador
+bem como o nome da função dentro desta classe a ser chamada.
+------------------------------------------------*/
+~~~~
+
 ### *Métodos HTTP*
 ~~~~PHP
 response($html);
@@ -47,6 +59,7 @@ redirect('http://globo.com');
 os parâmetros de status http etc. porém esta é a função facilitadora do laravel.
 ------------------------------------------------*/
 ~~~~
+
 --------
 ## Referências 
 https://laravel.com/   
