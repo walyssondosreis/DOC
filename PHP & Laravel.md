@@ -70,6 +70,12 @@ nome da variável e seu valor. Com a função compact obtem-se o mesmo resultado
 que anterior ; ela ira pegar uma variável e retonar um array com o nome => valor.
 O método with é mais uma sintaxe que pode obter o  mesmo resultado.
 ------------------------------------------------*/
+return view('series.index',compact('series'));
+/* O padrão de nomes de views é estar com o mesmo nome da funão de controller. 
+Neste caso, dentro da pasta view teriamos uma pasta 'series' e o arquivo 'index.php'
+representaria a função do controller. Chamada de uma view dentro do padrão; note o ponto
+representa o path da view dentro da pasta 'view.
+------------------------------------------------*/
 @comando_php
 {{ codigo_php }}
 /* O Blade é uma poderosa ferramenta do laravel. Sintaxe do blade para substituição 
