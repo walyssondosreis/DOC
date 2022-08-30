@@ -83,7 +83,19 @@ de chaves php no codigo html. O arquivo deve conter a extensão '.blade.php'.
 Verificar documentação para sintaxe.
 ------------------------------------------------*/
 
+
+
 ~~~
+### *Vite e MIX*
+~~~
+npm install laravel-mix --save-dev
+webpack.mix.js // Criar arquivo na raiz do projeto
+const mix = require('laravel-mix'); // Conteudo do arquivo criado.
+
+------------------------------------------------*/
+~~~
+
+
 
 --------
 ## Referências 
