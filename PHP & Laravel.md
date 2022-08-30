@@ -68,7 +68,14 @@ bem como um array de dados que serão utilizados naquela view onde deve conter
 nome da variável e seu valor. Com a função compact obtem-se o mesmo resultado 
 que anterior ; ela ira pegar uma variável e retonar um array com o nome => valor.
 ------------------------------------------------*/
+@comando_php
+{{ codigo_php }}
+/* Sintaxe do blade do laravel para substituição de chaves php no codigo html.
+O arquivo deve conter a extençao .blade.php. 
+------------------------------------------------*/
+
 ~~~
+
 --------
 ## Referências 
 https://laravel.com/   
