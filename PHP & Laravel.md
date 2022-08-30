@@ -63,15 +63,18 @@ os parâmetros de status http etc. porém esta é a função facilitadora do lar
 ~~~PHP
 view('meuarqhtml',[array=>$array]);
 view('meuarqhtml',compact('array'));
+view('meuarqhtml')->with('series',$series);
 /* A função view retorna uma view como nome diz. Recebe um arquivo html ou php
 bem como um array de dados que serão utilizados naquela view onde deve conter
 nome da variável e seu valor. Com a função compact obtem-se o mesmo resultado 
 que anterior ; ela ira pegar uma variável e retonar um array com o nome => valor.
+O método with é mais uma sintaxe que pode obter o  mesmo resultado.
 ------------------------------------------------*/
 @comando_php
 {{ codigo_php }}
-/* Sintaxe do blade do laravel para substituição de chaves php no codigo html.
-O arquivo deve conter a extençao .blade.php. 
+/* O Blade é uma poderosa ferramenta do laravel. Sintaxe do blade para substituição 
+de chaves php no codigo html. O arquivo deve conter a extensão '.blade.php'.
+Verificar documentação para sintaxe.
 ------------------------------------------------*/
 
 ~~~
@@ -80,6 +83,6 @@ O arquivo deve conter a extençao .blade.php.
 ## Referências 
 https://laravel.com/   
 https://github.com/TheDragonCode/laravel-app  
- 
+https://laravel.com/docs/9.x/blade  
 
 
