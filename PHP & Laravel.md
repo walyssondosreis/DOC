@@ -60,7 +60,7 @@ os parâmetros de status http etc. porém esta é a função facilitadora do lar
 ------------------------------------------------*/
 ~~~~
 ### *VIEW*
-~~~~PHP
+~~~PHP
 view('meuarqhtml',[array=>$array]);
 view('meuarqhtml',compact('array'));
 /* A função view retorna uma view como nome diz. Recebe um arquivo html ou php
