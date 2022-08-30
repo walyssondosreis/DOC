@@ -62,7 +62,7 @@ os parâmetros de status http etc. porém esta é a função facilitadora do lar
 ### *VIEW*
 ~~~~PHP
 view('meuarqhtml',[array=>$array]);
-view('meuarqhtml',compact($array));
+view('meuarqhtml',compact('array'));
 /* A função view retorna uma view como nome diz. Recebe um arquivo html ou php
 bem como um array de dados que serão utilizados naquela view onde deve conter
 nome da variável e seu valor. Com a função compact obtem-se o mesmo resultado 
