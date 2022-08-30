@@ -90,5 +90,6 @@ Verificar documentação para sintaxe.
 https://laravel.com/   
 https://github.com/TheDragonCode/laravel-app  
 https://laravel.com/docs/9.x/blade  
+https://laravel.com/docs/9.x/blade#components  
 
 
