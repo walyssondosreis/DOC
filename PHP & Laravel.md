@@ -94,6 +94,15 @@ const mix = require('laravel-mix'); // Conteudo do arquivo criado.
 
 ------------------------------------------------*/
 ~~~
+### *Vite e MIX*
+~~~
+php artisan make:migration minha_migration 
+/* Cria arquivo de migration para ser persistido no banco.
+------------------------------------------------*/
+php artisan migrate 
+/* Persiste migrations pendentes no banco.
+------------------------------------------------*/
+~~~
 
 
 
