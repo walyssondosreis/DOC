@@ -102,6 +102,9 @@ php artisan make:migration minha_migration
 php artisan migrate 
 /* Persiste migrations pendentes no banco.
 ------------------------------------------------*/
+php artisan make:model MinhaModel
+/* Cria model.
+------------------------------------------------*/
 ~~~
 
 
@@ -112,5 +115,7 @@ https://laravel.com/
 https://github.com/TheDragonCode/laravel-app  
 https://laravel.com/docs/9.x/blade  
 https://laravel.com/docs/9.x/blade#components  
+https://laravel.com/docs/9.x/eloquent#building-queries  
+
 
 
