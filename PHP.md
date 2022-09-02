@@ -576,7 +576,10 @@ ob_clean();
 /* Método OB utilizado para captura de buffer; Inicia a captura,
 atribui a uma variável e limpa o cache. ob_get_clean() pode ser utilizado também.
 /*----------------------------------------------*/
-
+dd($variavel);
+/* Mesmo que vardum() exit() função que irá dar retorno de uma variável e interromper
+a execução do programa.
+/*----------------------------------------------*/
 ~~~
 ### *Manipulação de Arquivos*
 ~~~PHP
