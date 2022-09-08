@@ -23,10 +23,6 @@ de código e também manipulações do servidor da aplicaão.
 php artisan serve
 /* Inicia o servidor
 ------------------------------------------------*/
-composer require dragon-code/laravel-app --dev
-php artisan app:name meuapp 
-/* Pacote necessário para alteraão do namespace de forma simplificada da aplicação.
-------------------------------------------------*/
 php artisan make:controller --resource 
 /* Gera arquivo controller já com métodos padrões.
 ------------------------------------------------*/
@@ -86,11 +82,15 @@ Verificar documentação para sintaxe.
 
 
 ~~~
-### *Vite e MIX*
+### * Instalando Bootstrap via WebPack : Via MIX*
 ~~~
-npm install laravel-mix --save-dev
+npm install laravel-mix --save-dev // Instale o Mix
 webpack.mix.js // Criar arquivo na raiz do projeto
 const mix = require('laravel-mix'); // Conteudo do arquivo criado.
+No arquivo package.json altera a linha para : "dev": "mix".
+Na pasta resources/css renomeie o arquivo app.css para app.scss
+insira dentro do arquivo a linha : @import "~bootstrap/scss/bootstrap";
+
 
 ------------------------------------------------*/
 ~~~
