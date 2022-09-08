@@ -82,7 +82,7 @@ Verificar documentação para sintaxe.
 
 
 ~~~
-### * Instalando Bootstrap via WebPack : Via MIX*
+### *Instalando Bootstrap via WebPack : Via MIX*
 ~~~
 npm install laravel-mix --save-dev // Instale o Mix
 webpack.mix.js // Criar arquivo na raiz do projeto
