@@ -88,10 +88,15 @@ npm install laravel-mix --save-dev // Instale o Mix
 webpack.mix.js // Criar arquivo na raiz do projeto
 const mix = require('laravel-mix'); // Conteudo do arquivo criado.
 No arquivo package.json altera a linha para : "dev": "mix".
+npm install bootstrap // Instale o bootstrap
 Na pasta resources/css renomeie o arquivo app.css para app.scss
 insira dentro do arquivo a linha : @import "~bootstrap/scss/bootstrap";
-
-
+No arquivo webpack.mix.js adicione ao final do arquivo: 
+mix
+    .sass('resources/css/app.scss', 'public/css');
+    
+npm run dev // Ira executar o laravel mix que ira por sua vez compilar o arquivo scss. Rode 2 vezes.
+Pronto Bootstrap instalado para utilizar basta na view colocar : <link rel="stylesheet" href={{ asset('css/app.css') }}>
 ------------------------------------------------*/
 ~~~
 ### *Model*
