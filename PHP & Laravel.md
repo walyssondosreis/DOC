@@ -111,8 +111,26 @@ php artisan make:model MinhaModel
 /* Cria model.
 ------------------------------------------------*/
 ~~~
+### Etapas de Projeto  
 
-
+Etapa                        | Novo Projeto          | Já Instanciado
+------------                 | :------------:        | :------------: 
+Instalar PHP                 |  v                    | v
+Instalar Composer            |  v                    | v
+Instalar Node e NPM          |  v                    | v
+Add Laravel Mix Projeto      |  v                    |
+Add Bootstrap Projeto        |  v                    |
+Criar Controller             |  v                    |
+(Request e Response)         |  v                    |
+Criar component com blade    |  v                    |
+Criar View                   |  v                    |
+Configurar Rotas             |  v                    |
+Configurar DB projeto        |  v                    | v
+Credenciais DB na var de amb |  v                    | v
+Criar model                  |  v                    |
+Configurar Migrations        |  v                    | v
+Configurar CSRF              |  v                    |
+Configurar Eloquent ORM      |  v                    |
 
 --------
 ## Referências 
