@@ -107,8 +107,8 @@ php artisan make:migration minha_migration
 php artisan migrate 
 /* Persiste migrations pendentes no banco.
 ------------------------------------------------*/
-php artisan make:model MinhaModel
-/* Cria model.
+php artisan make:model MinhaModel --migrate
+/* Cria model já com arquivo de migration.
 ------------------------------------------------*/
 ~~~
 ### Etapas de Projeto  
