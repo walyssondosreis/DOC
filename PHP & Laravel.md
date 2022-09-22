@@ -26,6 +26,9 @@ php artisan serve
 php artisan make:controller --resource 
 /* Gera arquivo controller já com métodos padrões.
 ------------------------------------------------*/
+php artisan make:request SeriesFormRequest
+/* Criar uma arquivo de request
+------------------------------------------------*/
 ~~~~
 
 ### *Routes*
