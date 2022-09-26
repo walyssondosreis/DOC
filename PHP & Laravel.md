@@ -29,6 +29,9 @@ php artisan make:controller --resource
 php artisan make:request SeriesFormRequest
 /* Criar uma arquivo de request
 ------------------------------------------------*/
+composer require barryvdh/laravel-debugbar --dev
+
+
 ~~~~
 
 ### *Routes*
