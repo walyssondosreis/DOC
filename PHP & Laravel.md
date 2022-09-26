@@ -110,6 +110,9 @@ php artisan make:migration minha_migration
 php artisan migrate 
 /* Persiste migrations pendentes no banco.
 ------------------------------------------------*/
+php artisan migrate:fresh
+/* Remove todas as tabelas do banco criadas pelas migrates e adiciona novamente.
+------------------------------------------------*/
 php artisan make:model MinhaModel --migrate
 /* Cria model já com arquivo de migration.
 ------------------------------------------------*/
