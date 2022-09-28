@@ -31,6 +31,10 @@ php artisan make:request SeriesFormRequest
 ------------------------------------------------*/
 composer require barryvdh/laravel-debugbar --dev
 
+php artisan make:component form.input --view
+/* Cria um componente dentro da pasta form sem uma classe de componente.
+chamado componente anonimo. */
+
 
 ~~~~
 
