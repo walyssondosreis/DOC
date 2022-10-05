@@ -38,7 +38,15 @@ chamado componente anonimo. */
 DB::transaction(function()use($request,&$serie){  
 });
 /* Função transaction para persistencia de dados no banco em commit com possiibilidade de roolback.
-Para mandar um rollback basta lançar um excessão.
+Para mandar um rollback basta lançar um excessão. E para evitar deadlock dentro da função basta passar 
+um segundo parametro para função transaction informando o max de loops.
+*/
+
+DB::beginTransaction();
+DB::commit();
+DB::rollback();
+/* Outra abordagem para persistência de dados no banco; ideal para quando eu vá tratar os erros 
+lançando excessões. Funciona assim como o PDO.
 */
 
 ~~~~
