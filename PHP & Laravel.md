@@ -35,6 +35,11 @@ php artisan make:component form.input --view
 /* Cria um componente dentro da pasta form sem uma classe de componente.
 chamado componente anonimo. */
 
+DB::transaction(function()use($request,&$serie){  
+});
+/* Função transaction para persistencia de dados no banco em commit com possiibilidade de roolback.
+Para mandar um rollback basta lançar um excessão.
+*/
 
 ~~~~
 
