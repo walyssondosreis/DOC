@@ -142,19 +142,20 @@ php artisan make:model MinhaModel --migrate
 Etapa                        | Novo Projeto          | Já Instanciado
 ------------                 | :------------:        | :------------: 
 Instalar PHP                 |  v                    | v
-Instalar Composer            |  v                    | v
+Instalar Composer            |  v                    | composer require --dev
 Instalar Node e NPM          |  v                    | v
-Add Laravel Mix Projeto      |  v                    |
+Add Laravel Mix/Vite         |  v                    | npm run build
 Add Bootstrap Projeto        |  v                    |
 Criar Controller             |  v                    |
 (Request e Response)         |  v                    |
 Criar component com blade    |  v                    |
 Criar View                   |  v                    |
 Configurar Rotas             |  v                    |
+Configurar .env              |  v                    | cp .env.example .env
 Configurar DB projeto        |  v                    | v
 Credenciais DB na var de amb |  v                    | v
 Criar model                  |  v                    |
-Configurar Migrations        |  v                    | v
+Configurar Migrations        |  v                    | php artisan migrate
 Configurar CSRF              |  v                    |
 Configurar Eloquent ORM      |  v                    |
 
