@@ -49,6 +49,9 @@ DB::rollback();
 lançando excessões. Funciona assim como o PDO.
 */
 
+Criar middleware
+php artisan make:middleware meuMideware
+
 ~~~~
 
 ### *Routes*
