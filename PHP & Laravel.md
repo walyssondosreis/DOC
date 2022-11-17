@@ -52,6 +52,9 @@ lançando excessões. Funciona assim como o PDO.
 Criar middleware
 php artisan make:middleware meuMideware
 
+php artisan tinker 
+/* Utilitario equivalente a 'php -a' porém que já carrega o laravel no sistema.
+*/
 ~~~~
 
 ### *Routes*
