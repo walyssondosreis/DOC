@@ -26,7 +26,13 @@
 * DB Facade
 * Eloquent ORM
 
-### *Conhecendo o Laravel*
+### *Conhecendo o Laravel*  
+
+Etapa                        | Novo Projeto          | Já Instanciado
+------------                 | :------------:        | :------------: 
+Instalar PHP                 |  v                    | v
+Instalar Composer            |  v                    | composer require --dev  
+
 ~~~PHP
 
 ~~~
