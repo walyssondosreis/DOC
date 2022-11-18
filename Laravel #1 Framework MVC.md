@@ -28,10 +28,11 @@
 
 ### *Conhecendo o Laravel*  
 
-Etapa                        | Novo Projeto          | Já Instanciado
-------------                 | :------------:        | :------------: 
-Instalar PHP                 |  v                    | v
-Instalar Composer            |  v                    | composer require --dev  
+Etapa         | Novo Projeto        | Instanciado
+------------  | :------------:      | :------------: 
+PHP           | Instalar PHP        | - 
+Composer      | Instalar Composer   | composer require --dev  
+Node/NPM      | Instalar Node/NPM   | npm run build
 
 ~~~PHP
 
