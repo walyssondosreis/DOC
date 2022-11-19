@@ -11,7 +11,6 @@
 *Manual de consulta rápida dos conceitos e principais comandos.*  
 
 ---------------------
-
 * Instalando Laravel
 * Definindo Rotas
 * Definindo Controllers
@@ -26,13 +25,31 @@
 * DB Facade
 * Eloquent ORM
 
-### *Conhecendo o Laravel*  
+### *Instalando Laravel*  
 
-Etapa         | Novo Projeto        | Instanciado
-------------  | :------------:      | :------------: 
-PHP           | Instalar PHP        | - 
-Composer      | Instalar Composer   | composer require --dev  
-Node/NPM      | Instalar Node/NPM   | npm run build
+Etapa         | Novo Projeto                  | Instanciado
+------------  | :------------:                | :------------: 
+PHP           | Instalar e configurar PHP     | - 
+Composer      | Instalar Composer             | composer require --dev  
+Node/NPM      | Instalar Node/NPM             | -
+
+
+* `composer create-project laravel/laravel meu-app` - *Cria estrutura de projeto com laravel*
+* `php artisan` - *Ferramenta Artisan é uma das principais do Laravel; Auxilia na criação de código e também manipulações do servidor da aplicação*
+* `php artisan serve` - *Inicia o servidor*
+
+### *Definindo Rotas*
+~~~PHP
+Route::get('/teste',function(){ echo 'Teste Otário!'; });
+/* Exemplo de rota teste que envia diretamente um texto como resposta.
+------------------------------------------------*/
+Route::get('/series',[SeriesController::class,'index']);
+/* Rota passando um controller onde é informado o nome da classe do controlador
+bem como o nome da função dentro desta classe a ser chamada.
+------------------------------------------------*/
+~~~
+### *Definindo Controllers*
+* `php artisan make:controller --resource` - *Gera arquivo controller já com métodos padrões*
 
 ~~~PHP
 
