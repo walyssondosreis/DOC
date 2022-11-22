@@ -34,8 +34,8 @@ Node/NPM      | Instalar Node/NPM             | -
 
 
 * `composer create-project laravel/laravel meu-app` - *Cria estrutura de projeto com laravel*
-* `php artisan` - *Ferramenta Artisan é uma das principais do Laravel; Auxilia na criação de código e também manipulações do servidor da aplicação*
-* `php artisan serve` - *Inicia o servidor*
+* `php artisan` - *Lista comandos do auxiliador de criação de código e manipulações do servidor da aplicação*
+* `php artisan serve` - *Inicia o servidor PHP da aplicação*
 
 ### *Routes*
 ~~~PHP
@@ -69,10 +69,10 @@ representa o path da view dentro da pasta 'view.
 ------------------------------------------------*/
 ~~~
 ### *Models*
-* `php artisan make:model MinhaModel --migrate` - *Cria model já com arquivo de migration.*
+* `php artisan make:model MinhaModel --migrate` - *Cria um model já com arquivo de migration.*
  
 ### *Requests e Reponses*
-* `php artisan make:request MinhaRequest` - *Criar uma arquivo de request*  
+* `php artisan make:request MinhaRequest` - *Criar uma arquivo de request*    
 ~~~PHP
 response($html);
 /* O método response irá retornar um objeto response a página através do protocolo HTTP
@@ -90,14 +90,14 @@ os parâmetros de status http etc. porém esta é a função facilitadora do lar
 ~~~
 
 ### *Blade, Layouts e Components*
-* `php artisan make:component form.input --view` - *Cria um componente dentro da pasta form sem uma classe; chamado componente anonimo*
+* Todo arquivo que utiliza blade deve ter a extensão '.blade.php'
+*  `php artisan make:component form.input --view` - *Cria um componente dentro da pasta form sem uma classe; chamado componente anonimo*
 
-~~~PHP
-@comando_php
-{{ codigo_php }}
-/* O Blade é uma poderosa ferramenta do laravel. Sintaxe do blade para substituição 
-de chaves php no codigo html. O arquivo deve conter a extensão '.blade.php'.
-Verificar documentação para sintaxe.
+~~~bash
+@comando # Descreve comando php utlizando blade
+{{ codigo }} # Descreve codigo php utilizando blade
+{{-- Meu comentario -- }} # Descreve comentarios em blade
+$loop->index # Dentro de um loop blade é possivel obter o index atraves dessa var.
 ------------------------------------------------*/
 ~~~
 
@@ -133,17 +133,10 @@ falar sobre conf banco
 Etapa                 | Novo Projeto                  | Instanciado
 ------------          | :------------:                | :------------: 
 Migrations        |  php artisan migrate                    | php artisan migrate
-~~~
-php artisan make:migration minha_migration 
-/* Cria arquivo de migration para ser persistido no banco.
-------------------------------------------------*/
-php artisan migrate 
-/* Persiste migrations pendentes no banco.
-------------------------------------------------*/
-php artisan migrate:fresh
-/* Remove todas as tabelas do banco criadas pelas migrates e adiciona novamente.
-------------------------------------------------*/
-~~~
+
+* `php artisan make:migration minha_migration` - *Cria arquivo de migration para ser persistido no banco*
+* `php artisan migrate` - *Persiste migrations pendentes no banco*
+* `php artisan migrate:fresh`- *Remove todas as tabelas do banco criadas pelas migrates e adiciona novamente*
 
 ### Middleware
 * `php artisan make:middleware meuMideware` - *Cria arquivo de middleware*
