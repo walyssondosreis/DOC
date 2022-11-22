@@ -166,7 +166,7 @@ falar algo
 
 * `composer require barryvdh/laravel-debugbar --dev` - *Utilitario para barra de depuração*
 * `composer require dragon-code/laravel-app --dev` - *Utilitario para alterar namespace da aplicação*
-
+* `composer require laravel/breeze --dev` - *Utilitário para criar tela de login inicial* 
 
 ### *Outros comandos*
 * `php artisan tinker` - *Utilitario equivalente a 'php -a' porém que já carrega o laravel no sistema*
