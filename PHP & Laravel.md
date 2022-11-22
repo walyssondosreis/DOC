@@ -1,4 +1,4 @@
-# **LARAVEL : Framework PHP**
+# **LARAVEL**
 <div>
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/985px-Laravel.svg.png" alt="logoJS" width="50px"/> 
 </div>
