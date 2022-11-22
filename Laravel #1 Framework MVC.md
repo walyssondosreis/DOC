@@ -1,4 +1,4 @@
-# **LARAVEL : Criando uma aplicação com MVC**
+# **LARAVEL : Framework PHP**
 <div>
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/985px-Laravel.svg.png" alt="logoJS" width="50px"/> 
 </div>
@@ -12,9 +12,11 @@
 
 ---------------------
 * Instalando Laravel
-* Definindo Rotas
-* Definindo Controllers
-* Lidando com Request e Response
+* Routes
+* Controllers
+* Views
+* Models
+* Request e Response
 * Blade, Layouts e Components
 * Webpack Mix e Vite: Habilitando bootstrap e método 'asset'
 * Configurações Laravel e Variáveis de ambiente (.env)
@@ -35,7 +37,7 @@ Node/NPM      | Instalar Node/NPM             | -
 * `php artisan` - *Ferramenta Artisan é uma das principais do Laravel; Auxilia na criação de código e também manipulações do servidor da aplicação*
 * `php artisan serve` - *Inicia o servidor*
 
-### *Definindo Rotas*
+### *Routes*
 ~~~PHP
 Route::get('/teste',function(){ echo 'Teste de rota!'; });
 /* Exemplo de rota teste que envia diretamente um texto como resposta.
@@ -45,10 +47,31 @@ Route::get('/series',[SeriesController::class,'index']);
 bem como o nome da função dentro desta classe a ser chamada.
 ------------------------------------------------*/
 ~~~
-### *Definindo Controllers*
+### *Controllers*
 * `php artisan make:controller --resource` - *Gera arquivo controller já com métodos padrões*
 
-### *Lidando com Requests e Reponses*
+### *Views*
+~~~PHP
+view('meuarqhtml',[array=>$array]);
+view('meuarqhtml',compact('array'));
+view('meuarqhtml')->with('series',$series);
+/* A função view retorna uma view como nome diz. Recebe um arquivo html ou php
+bem como um array de dados que serão utilizados naquela view onde deve conter
+nome da variável e seu valor. Com a função compact obtem-se o mesmo resultado 
+que anterior ; ela ira pegar uma variável e retonar um array com o nome => valor.
+O método with é mais uma sintaxe que pode obter o  mesmo resultado.
+------------------------------------------------*/
+return view('series.index',compact('series'));
+/* O padrão de nomes de views é estar com o mesmo nome da funão de controller. 
+Neste caso, dentro da pasta view teriamos uma pasta 'series' e o arquivo 'index.php'
+representaria a função do controller. Chamada de uma view dentro do padrão; note o ponto
+representa o path da view dentro da pasta 'view.
+------------------------------------------------*/
+~~~
+### *Models*
+* `php artisan make:model MinhaModel --migrate` - *Cria model já com arquivo de migration.*
+ 
+### *Requests e Reponses*
 * `php artisan make:request MinhaRequest` - *Criar uma arquivo de request*  
 ~~~PHP
 response($html);
@@ -122,6 +145,9 @@ php artisan migrate:fresh
 ------------------------------------------------*/
 ~~~
 
+### Middleware
+* `php artisan make:middleware meuMideware` - *Cria arquivo de middleware*
+
 ### *DB Facade*
 ~~~PHP
 
@@ -143,6 +169,15 @@ lançando excessões. Funciona assim como o PDO.
 ### *Eloquent ORM*
 falar algo
 
+### *Bibliotecas Uteis*
+
+* `composer require barryvdh/laravel-debugbar --dev` - *Utilitario para barra de depuração*
+* `composer require dragon-code/laravel-app --dev` - *Utilitario para alterar namespace da aplicação*
+
+
+### *Outros comandos*
+* `php artisan tinker` - *Utilitario equivalente a 'php -a' porém que já carrega o laravel no sistema*
+
 --------
 ## Referências 
 https://laravel.com/   
@@ -150,3 +185,5 @@ https://cursos.alura.com.br/course/laravel-criando-aplicacao-mvc
 https://laravel.com/docs/9.x/blade  
 https://laravel.com/docs/9.x/blade#components  
 https://laravel.com/docs/9.x/eloquent#building-queries  
+https://github.com/TheDragonCode/laravel-app  
+
