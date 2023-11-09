@@ -1,6 +1,6 @@
-# **MySQL**
+# **SQL**
 <div>
-<img src="https://logodownload.org/wp-content/uploads/2016/10/mysql-logo-1.png" alt="logoJS" width="50px"/> 
+<img src="https://static-00.iconduck.com/assets.00/sql-database-generic-icon-380x512-ez505zus.png" alt="logoJS" width="50px"/> 
 </div>
 
 *Autor: Walysson dos Reis*
