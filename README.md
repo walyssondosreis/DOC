@@ -1,5 +1,3 @@
-# **DOC**
+# **DOCUMENT**
 ----------------------------------------------
-Meu caderno de estudos.
-
 ###### by @walyssondosreis
