@@ -23,6 +23,7 @@ git pull // BAIXA DO SERVIDOR PARA O PC
 git config --global user.name "Walysson dos Reis"
 git config --global user.email walyxxxx@xxxxx.com
 git config --global user.signingKey 'senha'
+git config --global credential.helper store
 ~~~~
 --------
 ## Referências  
